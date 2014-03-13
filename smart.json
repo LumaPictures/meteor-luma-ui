@@ -1,9 +1,11 @@
 {
   "name": "module-layout",
-  "description": "REPLACEME - What does this package (or the original one you're wrapping) do?",
-  "homepage": "",
-  "author": "Your Name <your@email> (http://yoursite)",
+  "description": "Basic layout module for little sister",
+  "homepage": "https://github.com/lumapictures/module-layout",
+  "author": "Austin Rivas <austinrivas@gmail.com> (http://github.com/austinrivas)",
   "version": "0.0.1",
-  "git": "",
-  "packages": {}
+  "git": "https://github.com/lumapictures/module-layout.git",
+  "packages": {
+  	"iron-router": {}
+  }
 }
