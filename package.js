@@ -3,11 +3,38 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
-  api.add_files('module-layout.coffee', ['client']);
+  api.use([
+    'standard-app-packages',
+    'iron-router',
+    'coffeescript'
+  ],['client', 'server']);
+
+  api.use([
+    'templating',
+    'handlebars',
+    'jquery'
+  ], ['client']);
+
+  /* Page Layout */
+  api.add_files([
+    'page/page.controller.coffee',
+    'page/page.layout.html',
+    'page/page.layout.coffee'
+  ], ['client']);
+
+  /* Full Page Layout */
+  api.add_files([
+    'full_page/full_page.controller.coffee',
+    'full_page/full_page.layout.html',
+    'full_page/full_page.layout.coffee'
+  ],['client']);
+
+  api.export([
+    'PageLayoutController',
+    'FullPageLayoutController'
+  ],['client'])
 });
 
 Package.on_test(function (api) {
   api.use('module-layout');
-
-  api.add_files('module-layout_tests.coffee', ['client']);
 });
