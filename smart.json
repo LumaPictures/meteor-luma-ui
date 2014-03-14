@@ -6,6 +6,7 @@
   "version": "0.0.1",
   "git": "https://github.com/lumapictures/module-layout.git",
   "packages": {
+    "bootstrap3-less": {},
   	"iron-router": {}
   }
 }

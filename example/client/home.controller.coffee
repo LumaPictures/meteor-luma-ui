@@ -1,0 +1,1 @@
+class @HomeController extends PageController

@@ -12,7 +12,8 @@ Package.on_use(function (api, where) {
   api.use([
     'templating',
     'handlebars',
-    'jquery'
+    'jquery',
+    'less'
   ], ['client']);
 
   /* Page Layout */
