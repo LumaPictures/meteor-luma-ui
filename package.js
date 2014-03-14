@@ -16,6 +16,14 @@ Package.on_use(function (api, where) {
     'less'
   ], ['client']);
 
+  /* Components */
+  api.add_files([
+    'components/navbar/default_navbar.html',
+    'components/navbar/default_navbar_brand.html',
+    'components/navbar/default_navbar_header.html',
+    'components/navbar/default_navbar_right.html'
+  ],['client']);
+
   /* Page Layout */
   api.add_files([
     'page/page.controller.coffee',
