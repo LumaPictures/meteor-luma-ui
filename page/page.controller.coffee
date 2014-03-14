@@ -16,6 +16,7 @@ class @PageController extends RouteController
     'default_navbar_right':
       to: 'navbar_right'
   data: ->
+    return
     brand:
       name: 'module-layout'
       logo: 'http://placehold.it/81x16'
