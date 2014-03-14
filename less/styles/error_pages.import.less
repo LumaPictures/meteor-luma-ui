@@ -1,0 +1,160 @@
+/* # Error and Login pages styling
+================================================== */
+@import-once "../bootstrap.import.less";
+.error-wrapper {
+  padding-bottom: 35px;
+  h1 {
+    color: #fff;
+    font-size: 200px;
+    line-height: 1;
+    margin-bottom: 35px;
+    font-weight: 300;
+    text-stroke: 1px transparent;
+    display: block;
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+  }
+  h6 {
+    margin-bottom: 15px;
+  }
+  .offline {
+    h1 {
+      font-size: 120px;
+    }
+  }
+}
+
+.page-condensed .error-wrapper {
+  padding-top: 35px;
+}
+
+
+.error-content {
+  width: 440px;
+  margin: auto;
+  input[type=text] {
+    background: #fff url(static/images/interface/filter.png) no-repeat 12px;
+    padding-left: 32px;
+  }
+}
+
+.login-wrapper {
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  margin-left: -150px;
+  margin-top: -150px;
+  border: 5px solid rgba(255,255,255, 0.1);
+  form {
+    .well {
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 0px;
+      #login-buttons {
+        #login-buttons-google {
+          span {
+            .btn;
+            .btn-block;
+            .btn-primary;
+          }
+        }
+        #login-buttons-logout {
+          .btn;
+          .btn-block;
+          .btn-info;
+        }
+        .login-display-name {
+          .btn;
+          .btn-block;
+          .btn-warning;
+        }
+      }
+    }
+    .popup-header {
+      background-color: transparent;
+      border-bottom: 5px solid rgba(255,255,255, 0.1);
+    }
+    .checkbox, .radio {
+      margin: 7px 0;
+    }
+    .form-actions {
+      label {
+        padding-top: 9px;
+      }
+    }
+  }
+  .thumb {
+    width: 150px;
+    margin: 0 auto;
+    img {
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+    }
+  }
+  .thumb-options {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+  }
+  .thumbnail {
+    h6 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.page-condensed .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+@media (max-width: 480px) {
+  .login-wrapper,
+  .error-wrapper {
+    width: 100%;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: auto;
+    position: static;
+  }
+  .login-wrapper {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .error-wrapper,
+  .error-content {
+    width: 100%;
+  }
+  .error-wrapper h1 {
+    font-size: 140px;
+    padding-top: 0px;
+  }
+  .error-wrapper.offline h1 {
+    font-size: 100px;
+  }
+
+  .page-condensed .error-wrapper {
+    padding-top: 35px;
+  }
+  .page-condensed .footer {
+    display: none;
+  }
+}
+

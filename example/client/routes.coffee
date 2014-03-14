@@ -1,10 +1,8 @@
+# Define the base application layout, this can be modified per route using the `layoutTemplate` property
+Router.configure
+  notFoundTemplate: "error404"
+
 Router.map ->
-  @route "home", path: "/"
-
-  @route 'fullPage',
-    path: "/full-page-layout"
-    template: "home"
-
-  @route 'page',
-    path: "/page-layout"
-    template: "home"
+  # The first param is the name of the route, this must be unique
+  @route "home", path: '/'
+  @route "dashboard", path: "/dashboard"

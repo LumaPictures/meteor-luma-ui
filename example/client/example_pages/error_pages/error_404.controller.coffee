@@ -1,0 +1,1 @@
+class @Error404Controller extends FullPageController

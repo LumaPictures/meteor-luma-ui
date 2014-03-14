@@ -1,0 +1,376 @@
+<template name="infoBlocks">
+    <!-- infoBlocks -->
+    <!-- Statistics -->
+    <div class="block">
+        <ul class="statistics">
+            <li>
+                <div class="statistics-info">
+                    <a href="#" title="" class="bg-success"><i class="icon-user-plus"></i></a>
+                    <strong>12,476</strong>
+                </div>
+                <div class="progress progress-micro">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        <span class="sr-only">60% Complete</span>
+                    </div>
+                </div>
+                <span>User registrations</span>
+            </li>
+            <li>
+                <div class="statistics-info">
+                    <a href="#" title="" class="bg-warning"><i class="icon-point-up"></i></a>
+                    <strong>621,873</strong>
+                </div>
+                <div class="progress progress-micro">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                        <span class="sr-only">20% Complete</span>
+                    </div>
+                </div>
+                <span>Total clicks</span>
+            </li>
+            <li>
+                <div class="statistics-info">
+                    <a href="#" title="" class="bg-info"><i class="icon-cart-plus"></i></a>
+                    <strong>562</strong>
+                </div>
+                <div class="progress progress-micro">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                        <span class="sr-only">90% Complete</span>
+                    </div>
+                </div>
+                <span>New orders</span>
+            </li>
+            <li>
+                <div class="statistics-info">
+                    <a href="#" title="" class="bg-danger"><i class="icon-coin"></i></a>
+                    <strong>$45,360</strong>
+                </div>
+                <div class="progress progress-micro">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                        <span class="sr-only">70% Complete</span>
+                    </div>
+                </div>
+                <span>General balance</span>
+            </li>
+            <li>
+                <div class="statistics-info">
+                    <a href="#" title="" class="bg-primary"><i class="icon-people"></i></a>
+                    <strong>562K+</strong>
+                </div>
+                <div class="progress progress-micro">
+                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                        <span class="sr-only">50% Complete</span>
+                    </div>
+                </div>
+                <span>Total users</span>
+            </li>
+            <li>
+                <div class="statistics-info">
+                    <a href="#" title="" class="bg-info"><i class="icon-facebook"></i></a>
+                    <strong>36,290</strong>
+                </div>
+                <div class="progress progress-micro">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100" style="width: 93%;">
+                        <span class="sr-only">93% Complete</span>
+                    </div>
+                </div>
+                <span>Facebook fans</span>
+            </li>
+        </ul>
+    </div>
+    <!-- /statistics -->
+
+
+    <hr>
+
+
+    <!-- Real time statistics -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="block">
+                <div class="bg-success realtime-stats">
+                    <div id="updating-widget-1" class="graph"></div>
+                </div>
+
+                <div class="section-details text-center container-fluid">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            13.5 M <span>total visits</span>
+                        </div>
+                        <div class="col-xs-4">
+                            12.245 <span>new visitors</span>
+                        </div>
+                        <div class="col-xs-4">
+                            $34.290 <span>current balance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="block">
+                <div class="bg-info realtime-stats">
+                    <div id="updating-widget-2" class="graph"></div>
+                </div>
+
+                <div class="section-details text-center container-fluid">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            431 <span>new orders</span>
+                        </div>
+                        <div class="col-xs-4">
+                            45.209 <span>total orders</span>
+                        </div>
+                        <div class="col-xs-4">
+                            $51.356 <span>total value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="block">
+                <div class="bg-danger realtime-stats">
+                    <div id="updating-widget-3" class="graph"></div>
+                </div>
+
+                <div class="section-details text-center container-fluid">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            35.1 Gb <span>data uploaded</span>
+                        </div>
+                        <div class="col-xs-4">
+                            92.56 Gb <span>data downloaded</span>
+                        </div>
+                        <div class="col-xs-4">
+                            104.45 Gb <span>available space</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /real time statistics -->
+
+
+    <hr>
+
+
+    <!-- Grid buttons -->
+    <div class="info-buttons">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row block-inner">
+                    <div class="col-md-3">
+                        <a href="#"><i class="icon-cogs"></i> <span>Layout settings</span> <strong class="label label-danger">10</strong></a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="#"><i class="icon-wrench"></i> <span>Admin tools</span> <strong class="label label-success">20</strong></a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="#"><i class="icon-users"></i> <span>User list</span> <strong class="label label-warning">30</strong></a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="#"><i class="icon-upload"></i> <span>Upload files</span> <strong class="label label-info">40</strong></a>
+                    </div>
+                </div>
+
+                <div class="row block">
+                    <div class="col-md-4">
+                        <a href="#"><i class="icon-truck"></i> <span>Shipped items</span> <strong class="label label-primary">10</strong></a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="#"><i class="icon-thumbs-up2"></i> <span>View rating</span> <strong class="label label-success">20</strong></a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="#"><i class="icon-support"></i> <span>Support desk</span> <strong class="label label-danger">30</strong></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="row block-inner">
+                    <div class="col-md-8">
+                        <a href="#"><i class="icon-stats2"></i> <span>Website statistics</span> <strong class="label label-primary">10</strong></a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="#"><i class="icon-stack"></i> <span>Invoice history</span> <strong class="label label-warning">20</strong></a>
+                    </div>
+                </div>
+
+                <div class="row block">
+                    <div class="col-md-6">
+                        <a href="#"><i class="icon-people"></i> <span>Visitor statistics</span> <strong class="label label-info">30</strong></a>
+                    </div>
+
+                    <div class="col-md-6">
+                        <a href="#"><i class="icon-lab"></i> <span>Developer version</span> <strong class="label label-success">40</strong></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /grid buttons -->
+
+
+    <!-- Justified buttons -->
+    <div class="info-buttons block row">
+        <a href="#" class="col-sm-2"><i class="icon-cogs"></i> <span>Layout settings</span> <strong class="label label-important">10</strong></a>
+        <a href="#" class="col-sm-2"><i class="icon-wrench"></i> <span>Admin tools</span> <strong class="label label-success">20</strong></a>
+        <a href="#" class="col-sm-2"><i class="icon-users"></i> <span>User list</span> <strong class="label label-warning">30</strong></a>
+        <a href="#" class="col-sm-2"><i class="icon-upload"></i> <span>Upload files</span> <strong class="label label-info">40</strong></a>
+        <a href="#" class="col-sm-2"><i class="icon-people"></i> <span>Visitor statistics</span> <strong class="label label-info">30</strong></a>
+        <a href="#" class="col-sm-2"><i class="icon-lab"></i> <span>Developer version</span> <strong class="label label-success">40</strong></a>
+    </div>
+    <!-- /justified buttons -->
+
+
+    <hr>
+
+
+    <!-- Default info blocks -->
+    <ul class="info-blocks">
+        <li class="bg-primary">
+            <div class="top-info">
+                <a href="#">Add new post</a>
+                <small>post management</small>
+            </div>
+            <a href="#"><i class="icon-spinner7"></i></a>
+            <span class="bottom-info bg-danger">12 drafts in progress</span>
+        </li>
+        <li class="bg-success">
+            <div class="top-info">
+                <a href="#">Site parameters</a>
+                <small>layout settings</small>
+            </div>
+            <a href="#"><i class="icon-cogs"></i></a>
+            <span class="bottom-info bg-primary">No updates</span>
+        </li>
+        <li class="bg-danger">
+            <div class="top-info">
+                <a href="#">Site statistics</a>
+                <small>visits, users, orders stats</small>
+            </div>
+            <a href="#"><i class="icon-bars"></i></a>
+            <span class="bottom-info bg-primary">3 new updates</span>
+        </li>
+        <li class="bg-info">
+            <div class="top-info">
+                <a href="#">My messages</a>
+                <small>messages history</small>
+            </div>
+            <a href="#"><i class="icon-bubbles3"></i></a>
+            <span class="bottom-info bg-primary">24 new messages</span>
+        </li>
+        <li class="bg-primary">
+            <div class="top-info">
+                <a href="#">Orders history</a>
+                <small>purchases statistics</small>
+            </div>
+            <a href="#"><i class="icon-cart4"></i></a>
+            <span class="bottom-info bg-danger">17 new orders</span>
+        </li>
+        <li class="bg-success">
+            <div class="top-info">
+                <a href="#">Invoices stats</a>
+                <small>invoices archive</small>
+            </div>
+            <a href="#"><i class="icon-coin"></i></a>
+            <span class="bottom-info bg-primary">9 new invoices</span>
+        </li>
+    </ul>
+    <!-- /default info blocks -->
+
+
+    <hr>
+
+
+    <!-- Page statistics -->
+    <ul class="page-stats list-justified">
+        <li class="bg-default">
+            <div class="page-stats-showcase">
+                <span>New visits</span>
+                <h2>22.504</h2>
+            </div>
+            <div class="bar-warning chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-default">
+            <div class="page-stats-showcase">
+                <span>My balance</span>
+                <h2>$16.290</h2>
+            </div>
+            <div class="bar-primary chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-default">
+            <div class="page-stats-showcase">
+                <span>New visits</span>
+                <h2>22.504</h2>
+            </div>
+            <div class="bar-info chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-default">
+            <div class="page-stats-showcase">
+                <span>My balance</span>
+                <h2>$16.290</h2>
+            </div>
+            <div class="bar-danger chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-default">
+            <div class="page-stats-showcase">
+                <span>My balance</span>
+                <h2>$16.290</h2>
+            </div>
+            <div class="bar-success chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+    </ul>
+    <!-- /page statistics -->
+
+
+    <!-- Page statistics -->
+    <ul class="page-stats list-justified">
+        <li class="bg-primary">
+            <div class="page-stats-showcase">
+                <span>New visits</span>
+                <h2>22.504</h2>
+            </div>
+            <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-danger">
+            <div class="page-stats-showcase">
+                <span>My balance</span>
+                <h2>$16.290</h2>
+            </div>
+            <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-success">
+            <div class="page-stats-showcase">
+                <span>New visits</span>
+                <h2>22.504</h2>
+            </div>
+            <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-info">
+            <div class="page-stats-showcase">
+                <span>My balance</span>
+                <h2>$16.290</h2>
+            </div>
+            <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-warning">
+            <div class="page-stats-showcase">
+                <span>My balance</span>
+                <h2>$16.290</h2>
+            </div>
+            <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+    </ul>
+    <!-- /page statistics -->
+    <!-- /infoBlocks -->
+</template>

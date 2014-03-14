@@ -1,0 +1,19 @@
+<template name="wysiwygEditors">
+{{> wysiwygEditor }}
+
+<!-- WYSIWYG editor inside panel -->
+<div class="panel panel-default">
+    <div class="panel-heading"><h6 class="panel-title"><i class="icon-pencil"></i> Editor inside panel</h6></div>
+    <div class="panel-body">
+        {{> wysiwygEditor }}
+    </div>
+</div>
+<!-- /WYSIWYG editor inside panel -->
+
+<!-- WYSIWYG editor inside modal -->
+<div class="block">
+    <a data-toggle="modal" class="btn btn-danger btn-block" role="button" href="#editor-modal">Run modal with WYSIWYG editor</a>
+    {{> modal_wysiwygEditor }}
+</div>
+<!-- /WYSIWYG editor inside modal -->
+</template>

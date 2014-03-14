@@ -1,0 +1,811 @@
+<template name="navbars">
+    <!-- navbars -->
+    <!-- Page tabs -->
+    <div class="tabbable page-tabs">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#inverse" data-toggle="tab"><i class="icon-table2"></i> Inversed navbar</a></li>
+        <li><a href="#default" data-toggle="tab"><i class="icon-checkbox-partial"></i> Default navbar</a></li>
+    </ul>
+    <div class="tab-content">
+
+    <!-- First tab -->
+    <div class="tab-pane active fade in" id="inverse">
+
+    <!-- Template navbar inversed -->
+    <div class="block">
+        <h5>Template navbar</h5>
+        <p>This is a default navbar of Londinium template - only icons with labels, without text and left menu. Including toggle-sidebar button</p>
+        <div class="well">
+            <div class="navbar navbar-inverse" role="navigation" style="position: relative; z-index: 100;">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="http://localhost:3000/images/logo.png" alt="Londinium"></a>
+                    <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-icons1">
+                        <span class="sr-only">Toggle navbar</span>
+                        <i class="icon-grid3"></i>
+                    </button>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="icon-paragraph-justify2"></i>
+                    </button>
+                </div>
+
+                <ul class="nav navbar-nav navbar-icons navbar-right collapse" id="navbar-icons1">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-people"></i>
+                            <span class="label label-default">2</span>
+                        </a>
+                        <div class="popup dropdown-menu dropdown-menu-right">
+                            <div class="popup-header">
+                                <a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+                                <span>Activity</span>
+                                <a href="#" class="pull-right"><i class="icon-paragraph-justify"></i></a>
+                            </div>
+                            <ul class="activity">
+                                <li>
+                                    <i class="icon-cart-checkout text-success"></i>
+                                    <div>
+                                        <a href="#">Austin</a> ordered 2 copies of <a href="#">OEM license</a>
+                                        <span>14 minutes ago</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-heart text-danger"></i>
+                                    <div>
+                                        Your <a href="#">latest post</a> was liked by <a href="#">Audrey Mall</a>
+                                        <span>35 minutes ago</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-checkmark3 text-success"></i>
+                                    <div>
+                                        Mail server was updated. See <a href="#">changelog</a>
+                                        <span>About 2 hours ago</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-paragraph-justify2 text-warning"></i>
+                                    <div>
+                                        There are <a href="#">6 new tasks</a> waiting for you. Don't forget!
+                                        <span>About 3 hours ago</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-paragraph-justify2"></i>
+                            <span class="label label-default">2</span>
+                        </a>
+                        <div class="popup dropdown-menu dropdown-menu-right">
+                            <div class="popup-header">
+                                <a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+                                <span>Messages</span>
+                                <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                            </div>
+                            <ul class="popup-messages">
+                                <li class="unread">
+                                    <a href="#">
+                                        <img src="http://placehold.it/300" alt="" class="user-face">
+                                        <strong>Austin Rivas <i class="icon-attachment2"></i></strong>
+                                        <span>Aliquam interdum convallis massa...</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="http://placehold.it/300" alt="" class="user-face">
+                                        <strong>Jason Goldsmith <i class="icon-attachment2"></i></strong>
+                                        <span>Aliquam interdum convallis massa...</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="http://placehold.it/300" alt="" class="user-face">
+                                        <strong>Angel Novator</strong>
+                                        <span>Aliquam interdum convallis massa...</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="http://placehold.it/300" alt="" class="user-face">
+                                        <strong>Monica Bloomberg</strong>
+                                        <span>Aliquam interdum convallis massa...</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="http://placehold.it/300" alt="" class="user-face">
+                                        <strong>Patrick Winsleur</strong>
+                                        <span>Aliquam interdum convallis massa...</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle">
+                            <i class="icon-grid"></i>
+                            <span class="label label-default">3</span>
+                        </a>
+                        <div class="popup dropdown-menu dropdown-menu-right">
+                            <div class="popup-header">
+                                <a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+                                <span>Tasks list</span>
+                                <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                            </div>
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Category</th>
+                                    <th class="text-center">Priority</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><span class="status status-success item-before"></span> <a href="#">Frontpage fixes</a></td>
+                                    <td><span class="text-smaller text-semibold">Bugs</span></td>
+                                    <td class="text-center"><span class="label label-success">87%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="status status-danger item-before"></span> <a href="#">CSS compilation</a></td>
+                                    <td><span class="text-smaller text-semibold">Bugs</span></td>
+                                    <td class="text-center"><span class="label label-danger">18%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="status status-info item-before"></span> <a href="#">Responsive layout changes</a></td>
+                                    <td><span class="text-smaller text-semibold">Layout</span></td>
+                                    <td class="text-center"><span class="label label-info">52%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="status status-success item-before"></span> <a href="#">Add categories filter</a></td>
+                                    <td><span class="text-smaller text-semibold">Content</span></td>
+                                    <td class="text-center"><span class="label label-success">100%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="status status-success item-before"></span> <a href="#">Media grid padding issue</a></td>
+                                    <td><span class="text-smaller text-semibold">Bugs</span></td>
+                                    <td class="text-center"><span class="label label-success">100%</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+
+                    <li class="user dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="http://placehold.it/300" alt="">
+                            <span>Austin Rivas</span>
+                            <i class="caret"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right icons-right">
+                            <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="icon-bubble4"></i> Messages</a></li>
+                            <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                            <li><a href="#"><i class="icon-exit"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /template navbar inversed -->
+
+
+    <!-- Default inversed navbar -->
+    <div class="block">
+        <h5>Default navbar</h5>
+        <p>Default Bootstrap navbar with left/right menus, dropdowns, icons and labels. Add .navbar-fixed-top to make it sticked to top.</p>
+        <div class="well">
+            <div class="navbar navbar-inverse" role="navigation" style="position: relative; z-index: 99;">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="http://localhost:3000/images/logo.png" alt="Londinium"></a>
+                    <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu-left">
+                        <span class="sr-only">Toggle navbar</span>
+                        <i class="icon-grid3"></i>
+                    </button>
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-search">
+                        <span class="sr-only">Toggle navbar form</span>
+                        <i class="icon-search3"></i>
+                    </button>
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu-right">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="icon-paragraph-justify2"></i>
+                    </button>
+                </div>
+
+                <ul class="nav navbar-nav collapse" id="navbar-menu-left">
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-cogs"></i> This is</a></li>
+                            <li><a href="#"><i class="icon-grid3"></i> Dropdown</a></li>
+                            <li><a href="#"><i class="icon-spinner7"></i> With right</a></li>
+                            <li><a href="#"><i class="icon-link"></i> Aligned icons</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="navbar-form navbar-left collapse" role="search" id="navbar-search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right collapse" id="navbar-menu-right">
+                    <li><a href="#"><i class="icon-grid"></i> Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-paragraph-justify2"></i> Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-cogs"></i> This is</a></li>
+                            <li><a href="#"><i class="icon-grid3"></i> Dropdown</a></li>
+                            <li><a href="#"><i class="icon-spinner7"></i> With right</a></li>
+                            <li><a href="#"><i class="icon-link"></i> Aligned icons</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /default inversed navbar -->
+
+
+    <!-- Inversed navbar with form -->
+    <div class="block">
+        <h5>Navbar with form</h5>
+        <p>Place form content within .navbar-form for proper vertical alignment and collapsed behavior in narrow viewports. Use the alignment options to decide where it resides within the navbar content</p>
+        <div class="well">
+            <div class="navbar navbar-inverse" role="navigation" style="position: relative; z-index: 98;">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="http://localhost:3000/images/logo.png" alt="Londinium"></a>
+                    <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-search2">
+                        <span class="sr-only">Toggle navbar form</span>
+                        <i class="icon-search3"></i>
+                    </button>
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-user">
+                        <span class="sr-only">Toggle navbar user</span>
+                        <i class="icon-user"></i>
+                    </button>
+                </div>
+
+                <form class="navbar-form navbar-left collapse" role="search" id="navbar-search2">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right collapse" id="navbar-user">
+                    <li class="user dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="http://placehold.it/300" alt="">
+                            <span>Austin Rivas</span>
+                            <i class="caret"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right icons-right">
+                            <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="icon-bubble4"></i> Messages</a></li>
+                            <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                            <li><a href="#"><i class="icon-exit"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /inversed navbar with form -->
+
+
+    <!-- Inversed navbar with button -->
+    <div class="block">
+        <h5>Navbar with button</h5>
+        <p>Add the .navbar-btn class to elements not residing in a to vertically center them in the navbar.</p>
+        <div class="well">
+            <div class="navbar navbar-inverse" role="navigation" style="position: relative; z-index: 97;">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="http://localhost:3000/images/logo.png" alt="Londinium"></a>
+                    <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-user2">
+                        <span class="sr-only">Toggle navbar user</span>
+                        <i class="icon-user"></i>
+                    </button>
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-button">
+                        <span class="sr-only">Toggle navbar button</span>
+                        <i class="icon-insert-template"></i>
+                    </button>
+                </div>
+
+                <div class="nav navbar-nav navbar-left collapse" id="navbar-button">
+                    <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right collapse" id="navbar-user2">
+                    <li class="user dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="http://placehold.it/300" alt="">
+                            <span>Austin Rivas</span>
+                            <i class="caret"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right icons-right">
+                            <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="icon-bubble4"></i> Messages</a></li>
+                            <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                            <li><a href="#"><i class="icon-exit"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /inversed navbar with button -->
+
+
+    <!-- Inversed navbar with text -->
+    <div class="block">
+        <h5>Navbar with text</h5>
+        <p>For folks using standard links that are not within the regular navbar navigation component, use the .navbar-link class to add the proper colors for the default and inverse navbar options.</p>
+        <div class="well">
+            <div class="navbar navbar-inverse" role="navigation" style="position: relative; z-index: 96;">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="http://localhost:3000/images/logo.png" alt="Londinium"></a>
+                    <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-user3">
+                        <span class="sr-only">Toggle navbar user</span>
+                        <i class="icon-user"></i>
+                    </button>
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-text">
+                        <span class="sr-only">Toggle navbar user</span>
+                        <i class="icon-file"></i>
+                    </button>
+                </div>
+
+                <div class="nav navbar-nav navbar-left collapse" id="navbar-text">
+                    <p class="navbar-text"><i class="icon-user"></i> Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right collapse" id="navbar-user3">
+                    <li class="user dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="http://placehold.it/300" alt="">
+                            <span>Austin Rivas</span>
+                            <i class="caret"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right icons-right">
+                            <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="icon-bubble4"></i> Messages</a></li>
+                            <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                            <li><a href="#"><i class="icon-exit"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /inversed navbar with text -->
+
+    </div>
+    <!-- /first tab -->
+
+
+    <!-- Second tab -->
+    <div class="tab-pane fade" id="default">
+
+    <!-- Template navbar -->
+    <div class="block">
+        <h5>Template navbar</h5>
+        <p>This is a default navbar of Londinium template - only icons with labels, without text and left menu. Including toggle-sidebar button</p>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="navbar navbar-default" role="navigation" style="position: relative; z-index: 100; border: 1px solid #e5e5e5">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><img src="http://localhost:3000/images/logo.png" alt="Londinium"></a>
+                        <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-icons10">
+                            <span class="sr-only">Toggle navbar</span>
+                            <i class="icon-grid3"></i>
+                        </button>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="icon-paragraph-justify2"></i>
+                        </button>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-icons navbar-right collapse" id="navbar-icons10">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-people"></i>
+                                <span class="label label-default">2</span>
+                            </a>
+                            <div class="popup dropdown-menu dropdown-menu-right">
+                                <div class="popup-header">
+                                    <a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+                                    <span>Activity</span>
+                                    <a href="#" class="pull-right"><i class="icon-paragraph-justify"></i></a>
+                                </div>
+                                <ul class="activity">
+                                    <li>
+                                        <i class="icon-cart-checkout text-success"></i>
+                                        <div>
+                                            <a href="#">Austin</a> ordered 2 copies of <a href="#">OEM license</a>
+                                            <span>14 minutes ago</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="icon-heart text-danger"></i>
+                                        <div>
+                                            Your <a href="#">latest post</a> was liked by <a href="#">Audrey Mall</a>
+                                            <span>35 minutes ago</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="icon-checkmark3 text-success"></i>
+                                        <div>
+                                            Mail server was updated. See <a href="#">changelog</a>
+                                            <span>About 2 hours ago</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="icon-paragraph-justify2 text-warning"></i>
+                                        <div>
+                                            There are <a href="#">6 new tasks</a> waiting for you. Don't forget!
+                                            <span>About 3 hours ago</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-paragraph-justify2"></i>
+                                <span class="label label-default">2</span>
+                            </a>
+                            <div class="popup dropdown-menu dropdown-menu-right">
+                                <div class="popup-header">
+                                    <a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+                                    <span>Messages</span>
+                                    <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                                </div>
+                                <ul class="popup-messages">
+                                    <li class="unread">
+                                        <a href="#">
+                                            <img src="http://placehold.it/300" alt="" class="user-face">
+                                            <strong>Austin Rivas <i class="icon-attachment2"></i></strong>
+                                            <span>Aliquam interdum convallis massa...</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="http://placehold.it/300" alt="" class="user-face">
+                                            <strong>Jason Goldsmith <i class="icon-attachment2"></i></strong>
+                                            <span>Aliquam interdum convallis massa...</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="http://placehold.it/300" alt="" class="user-face">
+                                            <strong>Angel Novator</strong>
+                                            <span>Aliquam interdum convallis massa...</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="http://placehold.it/300" alt="" class="user-face">
+                                            <strong>Monica Bloomberg</strong>
+                                            <span>Aliquam interdum convallis massa...</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="http://placehold.it/300" alt="" class="user-face">
+                                            <strong>Patrick Winsleur</strong>
+                                            <span>Aliquam interdum convallis massa...</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle">
+                                <i class="icon-grid"></i>
+                                <span class="label label-default">3</span>
+                            </a>
+                            <div class="popup dropdown-menu dropdown-menu-right">
+                                <div class="popup-header">
+                                    <a href="#" class="pull-left"><i class="icon-spinner7"></i></a>
+                                    <span>Tasks list</span>
+                                    <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                                </div>
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Category</th>
+                                        <th class="text-center">Priority</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><span class="status status-success item-before"></span> <a href="#">Frontpage fixes</a></td>
+                                        <td><span class="text-smaller text-semibold">Bugs</span></td>
+                                        <td class="text-center"><span class="label label-success">87%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="status status-danger item-before"></span> <a href="#">CSS compilation</a></td>
+                                        <td><span class="text-smaller text-semibold">Bugs</span></td>
+                                        <td class="text-center"><span class="label label-danger">18%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="status status-info item-before"></span> <a href="#">Responsive layout changes</a></td>
+                                        <td><span class="text-smaller text-semibold">Layout</span></td>
+                                        <td class="text-center"><span class="label label-info">52%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="status status-success item-before"></span> <a href="#">Add categories filter</a></td>
+                                        <td><span class="text-smaller text-semibold">Content</span></td>
+                                        <td class="text-center"><span class="label label-success">100%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="status status-success item-before"></span> <a href="#">Media grid padding issue</a></td>
+                                        <td><span class="text-smaller text-semibold">Bugs</span></td>
+                                        <td class="text-center"><span class="label label-success">100%</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+
+                        <li class="user dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="http://placehold.it/300" alt="">
+                                <span>Austin Rivas</span>
+                                <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right icons-right">
+                                <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+                                <li><a href="#"><i class="icon-bubble4"></i> Messages</a></li>
+                                <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                                <li><a href="#"><i class="icon-exit"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /template navbar -->
+
+
+    <!-- Default navbar -->
+    <div class="block">
+        <h5>Default navbar</h5>
+        <p>Default Bootstrap navbar with left/right menus, dropdowns, icons and labels. Add .navbar-fixed-top to make it sticked to top.</p>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="navbar navbar-default" role="navigation" style="position: relative; z-index: 99; border: 1px solid #e5e5e5">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><img src="http://localhost:3000/images/logo.png" alt="Londinium"></a>
+                        <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu-left11">
+                            <span class="sr-only">Toggle navbar</span>
+                            <i class="icon-grid3"></i>
+                        </button>
+
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-search11">
+                            <span class="sr-only">Toggle navbar form</span>
+                            <i class="icon-search3"></i>
+                        </button>
+
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu-right11">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="icon-paragraph-justify2"></i>
+                        </button>
+                    </div>
+
+                    <ul class="nav navbar-nav collapse" id="navbar-menu-left11">
+                        <li class="active"><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-cogs"></i> This is</a></li>
+                                <li><a href="#"><i class="icon-grid3"></i> Dropdown</a></li>
+                                <li><a href="#"><i class="icon-spinner7"></i> With right</a></li>
+                                <li><a href="#"><i class="icon-link"></i> Aligned icons</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <form class="navbar-form navbar-left collapse" role="search" id="navbar-search11">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+
+                    <ul class="nav navbar-nav navbar-right collapse" id="navbar-menu-right11">
+                        <li><a href="#"><i class="icon-grid"></i> Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-paragraph-justify2"></i> Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-cogs"></i> This is</a></li>
+                                <li><a href="#"><i class="icon-grid3"></i> Dropdown</a></li>
+                                <li><a href="#"><i class="icon-spinner7"></i> With right</a></li>
+                                <li><a href="#"><i class="icon-link"></i> Aligned icons</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /default navbar -->
+
+
+    <!-- Navbar with form -->
+    <div class="block">
+        <h5>Navbar with form</h5>
+        <p>Place form content within .navbar-form for proper vertical alignment and collapsed behavior in narrow viewports. Use the alignment options to decide where it resides within the navbar content</p>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="navbar navbar-default" role="navigation" style="position: relative; z-index: 98; border: 1px solid #e5e5e5">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><img src="http://localhost:3000/images/logo.png" alt="Londinium"></a>
+                        <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-search12">
+                            <span class="sr-only">Toggle navbar form</span>
+                            <i class="icon-search3"></i>
+                        </button>
+
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-user12">
+                            <span class="sr-only">Toggle navbar user</span>
+                            <i class="icon-user"></i>
+                        </button>
+                    </div>
+
+                    <form class="navbar-form navbar-left collapse" role="search" id="navbar-search12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+
+                    <ul class="nav navbar-nav navbar-right collapse" id="navbar-user12">
+                        <li class="user dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="http://placehold.it/300" alt="">
+                                <span>Austin Rivas</span>
+                                <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right icons-right">
+                                <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+                                <li><a href="#"><i class="icon-bubble4"></i> Messages</a></li>
+                                <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                                <li><a href="#"><i class="icon-exit"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /navbar with form -->
+
+
+    <!-- Navbar with button -->
+    <div class="block">
+        <h5>Navbar with button</h5>
+        <p>Add the .navbar-btn class to elements not residing in a to vertically center them in the navbar.</p>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="navbar navbar-default" role="navigation" style="position: relative; z-index: 97; border: 1px solid #e5e5e5">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><img src="http://localhost:3000/images/logo.png" alt="Londinium"></a>
+                        <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-user13">
+                            <span class="sr-only">Toggle navbar user</span>
+                            <i class="icon-user"></i>
+                        </button>
+
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-button13">
+                            <span class="sr-only">Toggle navbar button</span>
+                            <i class="icon-insert-template"></i>
+                        </button>
+                    </div>
+
+                    <div class="nav navbar-nav navbar-left collapse" id="navbar-button13">
+                        <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-right collapse" id="navbar-user13">
+                        <li class="user dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="http://placehold.it/300" alt="">
+                                <span>Austin Rivas</span>
+                                <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right icons-right">
+                                <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+                                <li><a href="#"><i class="icon-bubble4"></i> Messages</a></li>
+                                <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                                <li><a href="#"><i class="icon-exit"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /navbar with button -->
+
+
+    <!-- Navbar with text -->
+    <div class="block">
+        <h5>Navbar with text</h5>
+        <p>For folks using standard links that are not within the regular navbar navigation component, use the .navbar-link class to add the proper colors for the default and inverse navbar options.</p>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="navbar navbar-default" role="navigation" style="position: relative; z-index: 96; border: 1px solid #e5e5e5">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><img src="http://localhost:3000/images/logo.png" alt="Londinium"></a>
+                        <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-user14">
+                            <span class="sr-only">Toggle navbar user</span>
+                            <i class="icon-user"></i>
+                        </button>
+
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-text14">
+                            <span class="sr-only">Toggle navbar user</span>
+                            <i class="icon-file"></i>
+                        </button>
+                    </div>
+
+                    <div class="nav navbar-nav navbar-left collapse" id="navbar-text14">
+                        <p class="navbar-text"><i class="icon-user"></i> Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-right collapse" id="navbar-user14">
+                        <li class="user dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="http://placehold.it/300" alt="">
+                                <span>Austin Rivas</span>
+                                <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right icons-right">
+                                <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+                                <li><a href="#"><i class="icon-bubble4"></i> Messages</a></li>
+                                <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                                <li><a href="#"><i class="icon-exit"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /navbar with text -->
+
+    </div>
+    <!-- /second tab -->
+
+    </div>
+    </div>
+    <!-- /page tabs -->
+
+    <!-- /navbars -->
+</template>

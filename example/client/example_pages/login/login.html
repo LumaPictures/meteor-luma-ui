@@ -1,0 +1,24 @@
+<template name="login">
+    <!-- login -->
+    <div class="login-wrapper">
+        <form action="#" role="form">
+            <div class="popup-header">
+                <a href="#" class="pull-left"><i class="icon-user-plus"></i></a>
+                <span class="text-semibold">Luma Pictures</span>
+                <div class="btn-group pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs"></i></a>
+                    <ul class="dropdown-menu icons-right dropdown-menu-right">
+                        <li><a href="#"><i class="icon-people"></i> Change user</a></li>
+                        <li><a href="#"><i class="icon-info"></i> Forgot password?</a></li>
+                        <li><a href="#"><i class="icon-support"></i> Contact admin</a></li>
+                        <li><a href="#"><i class="icon-wrench"></i> Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="well">
+                {{> loginForm }}
+            </div>
+        </form>
+    </div>
+    <!-- /login -->
+</template>

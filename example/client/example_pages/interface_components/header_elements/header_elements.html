@@ -1,0 +1,721 @@
+<template name="headerElements">
+    <!-- template -->
+    <!-- Page header with buttons -->
+    <div class="page-header">
+        <div class="page-title">
+            <h3>Components <small>Bootstrap and custom components</small></h3>
+        </div>
+
+        <div class="visible-xs header-element-toggle">
+            <a class="btn btn-primary btn-icon" data-toggle="collapse" data-target="#header-buttons"><i class="icon-insert-template"></i></a>
+        </div>
+
+        <div class="header-buttons">
+            <div class="collapse" id="header-buttons">
+                <div class="well">
+                    <div class="btn-group">
+                        <button class="btn btn-primary">Action</button>
+                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret caret-split"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right icons-right">
+                            <li><a href="#"><i class="icon-cogs"></i> This is</a></li>
+                            <li><a href="#"><i class="icon-grid3"></i> Dropdown</a></li>
+                            <li><a href="#"><i class="icon-spinner7"></i> With right</a></li>
+                            <li><a href="#"><i class="icon-link"></i> Aligned icons</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right icons-right">
+                            <li><a href="#"><i class="icon-cogs"></i> This is</a></li>
+                            <li><a href="#"><i class="icon-grid3"></i> Dropdown</a></li>
+                            <li><a href="#"><i class="icon-spinner7"></i> With right</a></li>
+                            <li><a href="#"><i class="icon-link"></i> Aligned icons</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-grid"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right icons-right">
+                            <li><a href="#"><i class="icon-cogs"></i> This is</a></li>
+                            <li><a href="#"><i class="icon-grid3"></i> Dropdown</a></li>
+                            <li><a href="#"><i class="icon-spinner7"></i> With right</a></li>
+                            <li><a href="#"><i class="icon-link"></i> Aligned icons</a></li>
+                        </ul>
+                    </div>
+
+                    <button type="button" class="btn btn-info">Save</button>
+
+                    <button type="button" class="btn btn-danger">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /page header with buttons -->
+
+
+    <!-- Breadcrumbs line -->
+    <div class="breadcrumb-line" style="margin: 0;">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li class="active">Calendar</li>
+        </ul>
+
+        <div class="visible-xs breadcrumb-toggle">
+            <a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target="#breadcrumb-buttons2"><i class="icon-menu2"></i></a>
+        </div>
+
+        <ul class="breadcrumb-buttons collapse" id="breadcrumb-buttons2">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search3"></i> <span>Search</span> <b class="caret"></b></a>
+                <div class="popup dropdown-menu dropdown-menu-right">
+                    <div class="popup-header">
+                        <a href="#" class="pull-left"><i class="icon-paragraph-justify"></i></a>
+                        <span>Quick search</span>
+                        <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                    </div>
+                    <form action="#" class="breadcrumb-search">
+                        <input type="text" placeholder="Type and hit enter..." name="search" class="form-control autocomplete">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled" checked="checked">
+                                    Everywhere
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Invoices
+                                </label>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Users
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Orders
+                                </label>
+                            </div>
+                        </div>
+
+                        <input type="submit" class="btn btn-block btn-success" value="Search">
+                    </form>
+                </div>
+            </li>
+
+            <li class="language dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/flags/german.png" alt=""> <span>German</span> <b class="caret"></b></a>
+                <ul class="dropdown-menu dropdown-menu-right icons-right">
+                    <li><a href="#"><img src="images/flags/ukrainian.png" alt=""> Ukrainian</a></li>
+                    <li class="active"><a href="#"><img src="images/flags/english.png" alt=""> English</a></li>
+                    <li><a href="#"><img src="images/flags/spanish.png" alt=""> Spanish</a></li>
+                    <li><a href="#"><img src="images/flags/german.png" alt=""> German</a></li>
+                    <li><a href="#"><img src="images/flags/hungarian.png" alt=""> Hungarian</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /breadcrumbs line -->
+
+
+    <!-- Page header with progress bar -->
+    <div class="page-header">
+        <div class="page-title">
+            <h3>Components <small>Bootstrap and custom components</small></h3>
+        </div>
+
+        <div class="visible-xs header-element-toggle">
+            <a class="btn btn-primary btn-icon" data-toggle="collapse" data-target="#header-progress"><i class="icon-settings"></i></a>
+        </div>
+
+        <div class="header-progress">
+            <div class="collapse" id="header-progress">
+                <div class="well">
+                    <span>Uploading files...</span>
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+                            <span class="sr-only">85% Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header with progress bar -->
+
+
+    <!-- Breadcrumbs line -->
+    <div class="breadcrumb-line" style="margin: 0;">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li class="active">Calendar</li>
+        </ul>
+
+        <div class="visible-xs breadcrumb-toggle">
+            <a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target="#breadcrumb-buttons3"><i class="icon-menu2"></i></a>
+        </div>
+
+        <ul class="breadcrumb-buttons collapse" id="breadcrumb-buttons3">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search3"></i> <span>Search</span> <b class="caret"></b></a>
+                <div class="popup dropdown-menu dropdown-menu-right">
+                    <div class="popup-header">
+                        <a href="#" class="pull-left"><i class="icon-paragraph-justify"></i></a>
+                        <span>Quick search</span>
+                        <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                    </div>
+                    <form action="#" class="breadcrumb-search">
+                        <input type="text" placeholder="Type and hit enter..." name="search" class="form-control autocomplete">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled" checked="checked">
+                                    Everywhere
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Invoices
+                                </label>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Users
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Orders
+                                </label>
+                            </div>
+                        </div>
+
+                        <input type="submit" class="btn btn-block btn-success" value="Search">
+                    </form>
+                </div>
+            </li>
+
+            <li class="language dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/flags/german.png" alt=""> <span>German</span> <b class="caret"></b></a>
+                <ul class="dropdown-menu dropdown-menu-right icons-right">
+                    <li><a href="#"><img src="images/flags/ukrainian.png" alt=""> Ukrainian</a></li>
+                    <li class="active"><a href="#"><img src="images/flags/english.png" alt=""> English</a></li>
+                    <li><a href="#"><img src="images/flags/spanish.png" alt=""> Spanish</a></li>
+                    <li><a href="#"><img src="images/flags/german.png" alt=""> German</a></li>
+                    <li><a href="#"><img src="images/flags/hungarian.png" alt=""> Hungarian</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /breadcrumbs line -->
+
+
+    <!-- Page header with stats blocks -->
+    <div class="page-header">
+        <div class="page-title">
+            <h3>Components <small>Bootstrap and custom components</small></h3>
+        </div>
+
+        <div class="visible-xs header-element-toggle">
+            <a class="btn btn-primary btn-icon" data-toggle="collapse" data-target="#header-statistics"><i class="icon-stats"></i></a>
+        </div>
+
+        <div class="header-statistics">
+            <div class="collapse" id="header-statistics">
+                <div class="well">
+                    <ul class="statistics">
+                        <li>
+                            <div class="statistics-info">
+                                <a href="#" title="" class="bg-warning"><i class="icon-point-up"></i></a>
+                                <strong>621,873</strong>
+                            </div>
+                            <div class="progress progress-micro">
+                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                    <span class="sr-only">20% Complete</span>
+                                </div>
+                            </div>
+                            <span>Total clicks</span>
+                        </li>
+
+                        <li>
+                            <div class="statistics-info">
+                                <a href="#" title="" class="bg-success"><i class="icon-user-plus"></i></a>
+                                <strong>12,476</strong>
+                            </div>
+                            <div class="progress progress-micro">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                    <span class="sr-only">60% Complete</span>
+                                </div>
+                            </div>
+                            <span>User registrations</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header with stats blocks -->
+
+
+    <!-- Breadcrumbs line -->
+    <div class="breadcrumb-line" style="margin: 0;">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li class="active">Calendar</li>
+        </ul>
+
+        <div class="visible-xs breadcrumb-toggle">
+            <a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target="#breadcrumb-buttons4"><i class="icon-menu2"></i></a>
+        </div>
+
+        <ul class="breadcrumb-buttons collapse" id="breadcrumb-buttons4">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search3"></i> <span>Search</span> <b class="caret"></b></a>
+                <div class="popup dropdown-menu dropdown-menu-right">
+                    <div class="popup-header">
+                        <a href="#" class="pull-left"><i class="icon-paragraph-justify"></i></a>
+                        <span>Quick search</span>
+                        <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                    </div>
+                    <form action="#" class="breadcrumb-search">
+                        <input type="text" placeholder="Type and hit enter..." name="search" class="form-control autocomplete">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled" checked="checked">
+                                    Everywhere
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Invoices
+                                </label>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Users
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Orders
+                                </label>
+                            </div>
+                        </div>
+
+                        <input type="submit" class="btn btn-block btn-success" value="Search">
+                    </form>
+                </div>
+            </li>
+
+            <li class="language dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/flags/german.png" alt=""> <span>German</span> <b class="caret"></b></a>
+                <ul class="dropdown-menu dropdown-menu-right icons-right">
+                    <li><a href="#"><img src="images/flags/ukrainian.png" alt=""> Ukrainian</a></li>
+                    <li class="active"><a href="#"><img src="images/flags/english.png" alt=""> English</a></li>
+                    <li><a href="#"><img src="images/flags/spanish.png" alt=""> Spanish</a></li>
+                    <li><a href="#"><img src="images/flags/german.png" alt=""> German</a></li>
+                    <li><a href="#"><img src="images/flags/hungarian.png" alt=""> Hungarian</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /breadcrumbs line -->
+
+
+    <!-- Page header with search input -->
+    <div class="page-header">
+        <div class="page-title">
+            <h3>Components <small>Bootstrap and custom components</small></h3>
+        </div>
+
+        <div class="visible-xs header-element-toggle">
+            <a class="btn btn-primary btn-icon" data-toggle="collapse" data-target="#header-search"><i class="icon-search3"></i></a>
+        </div>
+
+        <div class="header-search">
+            <div class="collapse" id="header-search">
+                <div class="well">
+                    <form action="#" role="form">
+                        <div class="input-group">
+                            <input type="text" class="form-control autocomplete" placeholder="Search...">
+									<span class="input-group-btn">
+										<button class="btn btn-primary btn-icon" type="button"><i class="icon-search3"></i></button>
+									</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header with search input -->
+
+
+    <!-- Breadcrumbs line -->
+    <div class="breadcrumb-line" style="margin: 0;">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li class="active">Calendar</li>
+        </ul>
+
+        <div class="visible-xs breadcrumb-toggle">
+            <a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target="#breadcrumb-buttons5"><i class="icon-menu2"></i></a>
+        </div>
+
+        <ul class="breadcrumb-buttons collapse" id="breadcrumb-buttons5">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search3"></i> <span>Search</span> <b class="caret"></b></a>
+                <div class="popup dropdown-menu dropdown-menu-right">
+                    <div class="popup-header">
+                        <a href="#" class="pull-left"><i class="icon-paragraph-justify"></i></a>
+                        <span>Quick search</span>
+                        <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                    </div>
+                    <form action="#" class="breadcrumb-search">
+                        <input type="text" placeholder="Type and hit enter..." name="search" class="form-control autocomplete">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled" checked="checked">
+                                    Everywhere
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Invoices
+                                </label>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Users
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Orders
+                                </label>
+                            </div>
+                        </div>
+
+                        <input type="submit" class="btn btn-block btn-success" value="Search">
+                    </form>
+                </div>
+            </li>
+
+            <li class="language dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/flags/german.png" alt=""> <span>German</span> <b class="caret"></b></a>
+                <ul class="dropdown-menu dropdown-menu-right icons-right">
+                    <li><a href="#"><img src="images/flags/ukrainian.png" alt=""> Ukrainian</a></li>
+                    <li class="active"><a href="#"><img src="images/flags/english.png" alt=""> English</a></li>
+                    <li><a href="#"><img src="images/flags/spanish.png" alt=""> Spanish</a></li>
+                    <li><a href="#"><img src="images/flags/german.png" alt=""> German</a></li>
+                    <li><a href="#"><img src="images/flags/hungarian.png" alt=""> Hungarian</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /breadcrumbs line -->
+
+
+    <!-- Page header with info buttons -->
+    <div class="page-header">
+        <div class="page-title">
+            <h3>Components <small>Bootstrap and custom components</small></h3>
+        </div>
+
+        <div class="visible-xs header-element-toggle">
+            <a class="btn btn-primary btn-icon" data-toggle="collapse" data-target="#header-info-buttons"><i class="icon-info"></i></a>
+        </div>
+
+        <div class="header-info-buttons">
+            <div class="collapse" id="header-info-buttons">
+                <div class="well">
+                    <ul class="info-buttons">
+                        <li><a href="#"><i class="icon-truck"></i> <span>Shipped items</span> <strong class="label label-primary">10</strong></a></li>
+                        <li><a href="#"><i class="icon-thumbs-up2"></i> <span>View rating</span> <strong class="label label-success">20</strong></a></li>
+                        <li><a href="#"><i class="icon-support"></i> <span>Support desk</span> <strong class="label label-danger">30</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header with info buttons -->
+
+
+    <!-- Breadcrumbs line -->
+    <div class="breadcrumb-line" style="margin: 0;">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li class="active">Calendar</li>
+        </ul>
+
+        <div class="visible-xs breadcrumb-toggle">
+            <a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target="#breadcrumb-buttons6"><i class="icon-menu2"></i></a>
+        </div>
+
+        <ul class="breadcrumb-buttons collapse" id="breadcrumb-buttons6">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search3"></i> <span>Search</span> <b class="caret"></b></a>
+                <div class="popup dropdown-menu dropdown-menu-right">
+                    <div class="popup-header">
+                        <a href="#" class="pull-left"><i class="icon-paragraph-justify"></i></a>
+                        <span>Quick search</span>
+                        <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                    </div>
+                    <form action="#" class="breadcrumb-search">
+                        <input type="text" placeholder="Type and hit enter..." name="search" class="form-control autocomplete">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled" checked="checked">
+                                    Everywhere
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Invoices
+                                </label>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Users
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Orders
+                                </label>
+                            </div>
+                        </div>
+
+                        <input type="submit" class="btn btn-block btn-success" value="Search">
+                    </form>
+                </div>
+            </li>
+
+            <li class="language dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/flags/german.png" alt=""> <span>German</span> <b class="caret"></b></a>
+                <ul class="dropdown-menu dropdown-menu-right icons-right">
+                    <li><a href="#"><img src="images/flags/ukrainian.png" alt=""> Ukrainian</a></li>
+                    <li class="active"><a href="#"><img src="images/flags/english.png" alt=""> English</a></li>
+                    <li><a href="#"><img src="images/flags/spanish.png" alt=""> Spanish</a></li>
+                    <li><a href="#"><img src="images/flags/german.png" alt=""> German</a></li>
+                    <li><a href="#"><img src="images/flags/hungarian.png" alt=""> Hungarian</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /breadcrumbs line -->
+
+
+    <!-- Page header with select -->
+    <div class="page-header">
+        <div class="page-title">
+            <h3>Components <small>Bootstrap and custom components</small></h3>
+        </div>
+
+        <div class="visible-xs header-element-toggle">
+            <a class="btn btn-primary btn-icon" data-toggle="collapse" data-target="#header-select"><i class="icon-menu3"></i></a>
+        </div>
+
+        <div class="header-select">
+            <div class="collapse" id="header-select">
+                <div class="well">
+                    <form action="#" role="form">
+                        <label class="control-label">Fixed select: </label>
+                        <select data-placeholder="Choose a Country..." class="select" tabindex="2">
+                            <option value=""></option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Cape Verde">Cape Verde</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header with select -->
+
+
+    <!-- Breadcrumbs line -->
+    <div class="breadcrumb-line" style="margin: 0;">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li class="active">Calendar</li>
+        </ul>
+
+        <div class="visible-xs breadcrumb-toggle">
+            <a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target="#breadcrumb-buttons7"><i class="icon-menu2"></i></a>
+        </div>
+
+        <ul class="breadcrumb-buttons collapse" id="breadcrumb-buttons7">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search3"></i> <span>Search</span> <b class="caret"></b></a>
+                <div class="popup dropdown-menu dropdown-menu-right">
+                    <div class="popup-header">
+                        <a href="#" class="pull-left"><i class="icon-paragraph-justify"></i></a>
+                        <span>Quick search</span>
+                        <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                    </div>
+                    <form action="#" class="breadcrumb-search">
+                        <input type="text" placeholder="Type and hit enter..." name="search" class="form-control autocomplete">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled" checked="checked">
+                                    Everywhere
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Invoices
+                                </label>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Users
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Orders
+                                </label>
+                            </div>
+                        </div>
+
+                        <input type="submit" class="btn btn-block btn-success" value="Search">
+                    </form>
+                </div>
+            </li>
+
+            <li class="language dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/flags/german.png" alt=""> <span>German</span> <b class="caret"></b></a>
+                <ul class="dropdown-menu dropdown-menu-right icons-right">
+                    <li><a href="#"><img src="images/flags/ukrainian.png" alt=""> Ukrainian</a></li>
+                    <li class="active"><a href="#"><img src="images/flags/english.png" alt=""> English</a></li>
+                    <li><a href="#"><img src="images/flags/spanish.png" alt=""> Spanish</a></li>
+                    <li><a href="#"><img src="images/flags/german.png" alt=""> German</a></li>
+                    <li><a href="#"><img src="images/flags/hungarian.png" alt=""> Hungarian</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /breadcrumbs line -->
+
+
+    <!-- Page header with bar stats -->
+    <div class="page-header">
+        <div class="page-title">
+            <h3>Components <small>Bootstrap and custom components</small></h3>
+        </div>
+
+        <div class="visible-xs header-element-toggle">
+            <a class="btn btn-primary btn-icon" data-toggle="collapse" data-target="#header-bar-stats"><i class="icon-stats2"></i></a>
+        </div>
+
+        <div class="header-bar-stats">
+            <div class="collapse" id="header-bar-stats">
+                <div class="well">
+                    <ul class="page-stats">
+                        <li>
+                            <div class="page-stats-showcase">
+                                <span>New visits</span>
+                                <h2>22.504</h2>
+                            </div>
+                            <div class="bar-info chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+                        </li>
+                        <li>
+                            <div class="page-stats-showcase">
+                                <span>My balance</span>
+                                <h2>$16.290</h2>
+                            </div>
+                            <div class="bar-danger chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page header with bar stats -->
+
+
+    <!-- Breadcrumbs line -->
+    <div class="breadcrumb-line">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li class="active">Calendar</li>
+        </ul>
+
+        <div class="visible-xs breadcrumb-toggle">
+            <a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target="#breadcrumb-buttons8"><i class="icon-menu2"></i></a>
+        </div>
+
+        <ul class="breadcrumb-buttons collapse" id="breadcrumb-buttons8">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search3"></i> <span>Search</span> <b class="caret"></b></a>
+                <div class="popup dropdown-menu dropdown-menu-right">
+                    <div class="popup-header">
+                        <a href="#" class="pull-left"><i class="icon-paragraph-justify"></i></a>
+                        <span>Quick search</span>
+                        <a href="#" class="pull-right"><i class="icon-new-tab"></i></a>
+                    </div>
+                    <form action="#" class="breadcrumb-search">
+                        <input type="text" placeholder="Type and hit enter..." name="search" class="form-control autocomplete">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled" checked="checked">
+                                    Everywhere
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Invoices
+                                </label>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Users
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="search-option" class="styled">
+                                    Orders
+                                </label>
+                            </div>
+                        </div>
+
+                        <input type="submit" class="btn btn-block btn-success" value="Search">
+                    </form>
+                </div>
+            </li>
+
+            <li class="language dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/flags/german.png" alt=""> <span>German</span> <b class="caret"></b></a>
+                <ul class="dropdown-menu dropdown-menu-right icons-right">
+                    <li><a href="#"><img src="images/flags/ukrainian.png" alt=""> Ukrainian</a></li>
+                    <li class="active"><a href="#"><img src="images/flags/english.png" alt=""> English</a></li>
+                    <li><a href="#"><img src="images/flags/spanish.png" alt=""> Spanish</a></li>
+                    <li><a href="#"><img src="images/flags/german.png" alt=""> German</a></li>
+                    <li><a href="#"><img src="images/flags/hungarian.png" alt=""> Hungarian</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /breadcrumbs line -->
+    <!-- /template -->
+</template>

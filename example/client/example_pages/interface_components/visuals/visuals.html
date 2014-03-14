@@ -1,0 +1,1372 @@
+<template name="visuals">
+    <!-- visuals -->
+    <!-- Modal options -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble4"></i> Modals</h6></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Advanced usage</li>
+                        <li><a data-toggle="modal" role="button" href="#default_modal">Default Dialog</a></li>
+                        <li><a data-toggle="modal" role="button" href="#iconified_modal">Iconified modal</a></li>
+                        <li><a data-toggle="modal" role="button" href="#form_modal">Modal with form</a></li>
+                        <li><a data-toggle="modal" role="button" href="#table_modal">Modal with table</a></li>
+                        <li><a data-toggle="modal" role="button" href="icons.html" data-target="#remote_modal">Loading remote path</a></li>
+                        <li><a data-toggle="modal" role="button" href="#tabs_modal">Modal with tabs</a></li>
+                        <li><a data-toggle="modal" role="button" href="#editor_modal">WYSIWYG editor inside modal</a></li>
+                        <li><a data-toggle="modal" role="button" href="#large_modal">Large modal</a></li>
+                        <li><a data-toggle="modal" role="button" href="#small_modal">Small modal</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <span class="subtitle"><i class="icon-droplet"></i> Default dialog style</span>
+                    <div class="well">
+                        <div class="modal modal-demo">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title">Modal title</h4>
+                                    </div>
+
+                                    <div class="modal-body with-padding">
+                                        <p>One fine body&hellip;</p>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal options -->
+
+
+    <!-- Default modal -->
+    <div id="default_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+
+                <div class="modal-body with-padding">
+                    <h5 class="text-error">Text in a modal</h5>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+                    <h5 class="text-error">Tooltips in a modal</h5>
+                    <p><a href="#" class="tip" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tip" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+                    <hr>
+
+                    <h5 class="text-error">Overflowing text to show optional scrollbar</h5>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /default modal -->
+
+
+    <!-- Iconified modal -->
+    <div id="iconified_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><i class="icon-accessibility"></i> Modal with icons</h4>
+                </div>
+
+                <div class="modal-body with-padding">
+                    <div class="alert alert-danger block-inner">
+                        <i class="icon-cogs"></i> Alert inside modal sample
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                    </div>
+
+                    <h5><i class="icon-text-height"></i> Sample heading with icon</h5>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+                    <hr>
+
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-warning" data-dismiss="modal"><i class="icon-cancel-circle"></i> Close</button>
+                    <button class="btn btn-primary"><i class="icon-checkmark-circle"></i> Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /iconified modal -->
+
+
+    <!-- Form modal -->
+    <div id="form_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><i class="icon-paragraph-justify2"></i> Modal with form</h4>
+                </div>
+
+                <!-- Form inside modal -->
+                <form action="#" role="form">
+
+                    <div class="modal-body with-padding">
+                        <div class="block-inner text-danger">
+                            <h6 class="heading-hr">Step 1: Your shipping information <small class="display-block">Please enter your shipping info</small></h6>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Country:</label>
+                            <select data-placeholder="Choose a Country..." class="select-full" tabindex="2">
+                                <option value=""></option>
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Cameroon">Cameroon</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Cape Verde">Cape Verde</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>First name</label>
+                                    <input type="text" placeholder="Eugene" class="form-control">
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label class="control-label">Last name</label>
+                                    <input type="text" placeholder="Kopyov" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>Address line 1</label>
+                                    <input type="text" placeholder="Ring street 12" class="form-control">
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label>Address line 2</label>
+                                    <input type="text" placeholder="building D, flat #67" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label>City</label>
+                                    <input type="text" placeholder="Munich" class="form-control">
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label>State/Province</label>
+                                    <input type="text" placeholder="Bayern" class="form-control">
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label>ZIP code</label>
+                                    <input type="text" placeholder="1031" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>Email</label>
+                                    <input type="text" placeholder="eugene@kopyov.com" class="form-control">
+                                    <span class="help-block">name@domain.com</span>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label>Phone #</label>
+                                    <input type="text" placeholder="+99-99-9999-9999" data-mask="+99-99-9999-9999" class="form-control">
+                                    <span class="help-block">+99-99-9999-9999</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit form</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /form modal -->
+
+
+    <!-- Modal with table -->
+    <div id="table_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><i class="icon-accessibility"></i> Modal with table</h4>
+                </div>
+
+                <div class="modal-body with-padding">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i> Table inside modal</h6></div>
+                        <table class="table table-bordered table-striped datatable-selectable">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-warning" data-dismiss="modal"><i class="icon-cancel-circle"></i> Close</button>
+                    <button class="btn btn-primary"><i class="icon-checkmark-circle"></i> Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal with table -->
+
+
+    <!-- Modal with remote path -->
+    <div id="remote_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><i class="icon-accessibility"></i> Loading remote path</h4>
+                </div>
+
+                <div class="modal-body with-padding">
+                    <p>One fine body&hellip;</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal with remote path -->
+
+
+    <!-- Modal with tabs -->
+    <div id="tabs_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><i class="icon-accessibility"></i> Modal with tabs</h4>
+                </div>
+
+                <div class="modal-body with-padding">
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1" data-toggle="tab"><i class="icon-download"></i> Section 1</a></li>
+                            <li><a href="#tab2" data-toggle="tab"><i class="icon-windows8"></i> Section 2</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="tab1">
+                                <table class="table table-bordered table-striped datatable">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Username</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane body fade" id="tab2">
+                                <form>
+                                    <textarea class="editor form-control" placeholder="Enter text ..."></textarea>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal with tabs -->
+
+
+    <!-- Modal with WYSIWYG editor -->
+    <div id="editor_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><i class="icon-accessibility"></i> WYSIWYG editor inside modal</h4>
+                </div>
+
+                <div class="modal-body with-padding">
+                    <textarea class="editor form-control" placeholder="Enter text ..."></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal with WYSIWYG editor -->
+
+
+    <!-- Large modal -->
+    <div id="large_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><i class="icon-accessibility"></i> Large modal</h4>
+                </div>
+
+                <div class="modal-body with-padding">
+                    <textarea class="editor form-control" placeholder="Enter text ..."></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /large modal -->
+
+
+    <!-- Small modal -->
+    <div id="small_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><i class="icon-accessibility"></i> Small modal</h4>
+                </div>
+
+                <div class="modal-body with-padding">
+                    <p>One fine body&hellip;</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /small modal -->
+
+
+    <!-- jGrowl notifications -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble-check"></i> Growl notifications</h6></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">jGrowl advanced usage</li>
+                        <li><a onclick="$.jGrowl('Hello world!');">Default notification</a></li>
+                        <li><a onclick="$.jGrowl('Stick this!', { sticky: true });">Sticky notification</a></li>
+                        <li><a onclick="$.jGrowl('A message with a header', { header: 'Important' });">Notification with header</a></li>
+                        <li><a onclick="$.jGrowl('A message that will live a little longer.', { life: 10000 });">Long live notification</a></li>
+                        <li><a onclick="$.jGrowl('Something went wrong here', { sticky: true, theme: 'growl-error', header: 'Error!' });">Error notification</a></li>
+                        <li><a onclick="$.jGrowl('Everything is fine here', { sticky: true, theme: 'growl-success', header: 'Success!' });">Success notification</a></li>
+                        <li><a onclick="$.jGrowl('Be sure you want to do it!', { sticky: true, theme: 'growl-warning', header: 'Attention all units!' });">Warning notification</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <span class="subtitle"><i class="icon-droplet"></i> Default Growl styling</span>
+                    <div class="well jgrowl-showcase">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="jGrowl">
+                                    <div class="jGrowl-notification">
+                                        <div class="jGrowl-close">×</div>
+                                        <div class="jGrowl-header">Some info!</div>
+                                        <div class="jGrowl-message">Info message text sample</div>
+                                    </div>
+                                </div>
+
+                                <div class="jGrowl">
+                                    <div class="jGrowl-notification growl-error">
+                                        <div class="jGrowl-close">×</div>
+                                        <div class="jGrowl-header">Error!</div>
+                                        <div class="jGrowl-message">Something went wrong here</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="jGrowl">
+                                    <div class="jGrowl-notification growl-warning">
+                                        <div class="jGrowl-close">×</div>
+                                        <div class="jGrowl-header">Warning!</div>
+                                        <div class="jGrowl-message">Be sure you want to do it!</div>
+                                    </div>
+                                </div>
+
+                                <div class="jGrowl">
+                                    <div class="jGrowl-notification growl-success">
+                                        <div class="jGrowl-close">×</div>
+                                        <div class="jGrowl-header">Success!</div>
+                                        <div class="jGrowl-message">Everything is fine here</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /jGrowl notifications -->
+
+
+    <hr>
+
+
+    <!-- Spinners -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h6 class="panel-title"><i class="icon-spinner7 spin"></i> Spinners</h6>
+            <i class="icon-spinner2 spin pull-right panel-icon"></i>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="icon-spinner2 spin block-inner"></i>
+                    <button class="btn btn-primary btn-block run-first">Run loading spinner</button>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="icon-spinner3 spin block-inner"></i>
+                    <button class="btn btn-primary btn-block run-second">Run loading spinner</button>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="icon-spinner7 spin block-inner"></i>
+                    <button class="btn btn-primary btn-block run-third">Run loading spinner</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /spinners -->
+
+
+    <!-- Progress bars -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-settings"></i> Progress bars</h6></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="subtitle"><i class="icon-droplet"></i> Progress bar colors</span>
+                    <div class="well block-inner">
+                        <div class="progress block-inner">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;">
+                                <span class="sr-only">15% Complete</span>
+                            </div>
+                        </div>
+
+                        <div class="progress block-inner">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+                                <span class="sr-only">35% Complete</span>
+                            </div>
+                        </div>
+
+                        <div class="progress block-inner">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
+                                <span class="sr-only">55% Complete</span>
+                            </div>
+                        </div>
+
+                        <div class="progress block-inner">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                <span class="sr-only">75% Complete</span>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                                <span class="sr-only">95% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <span class="subtitle"><i class="icon-cogs"></i> Progress bar options</span>
+                    <div class="well block-inner">
+                        <div class="progress progress-striped block-inner">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                <span class="sr-only">20% Complete</span>
+                            </div>
+                        </div>
+
+                        <div class="progress progress-striped active block-inner">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                <span class="sr-only">40% Complete</span>
+                            </div>
+                        </div>
+
+                        <div class="progress progress-micro block-inner">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                <span class="sr-only">60% Complete</span>
+                            </div>
+                        </div>
+
+                        <div class="progress progress-thin block-inner">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                <span class="sr-only">80% Complete</span>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" style="width: 35%">
+                                <span class="sr-only">35% Complete (success)</span>
+                            </div>
+                            <div class="progress-bar progress-bar-warning" style="width: 20%">
+                                <span class="sr-only">20% Complete (warning)</span>
+                            </div>
+                            <div class="progress-bar progress-bar-danger" style="width: 10%">
+                                <span class="sr-only">10% Complete (danger)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <span class="subtitle"><i class="icon-cogs"></i> Progress bar with title</span>
+            <div class="well">
+                <div class="progress block-inner">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;">
+                        15%
+                    </div>
+                </div>
+
+                <div class="progress block-inner">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+                        35%
+                    </div>
+                </div>
+
+                <div class="progress block-inner">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
+                        55%
+                    </div>
+                </div>
+
+                <div class="progress block-inner">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                        75%
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                        95%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /progress bars -->
+
+
+    <!-- Alerts -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble-plus"></i> Alerts</h6></div>
+        <div class="panel-body">
+            <div class="alert alert-danger fade in block-inner">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <i class="icon-cancel-circle"></i> Error alert
+            </div>
+
+            <div class="alert alert-success fade in block-inner">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <i class="icon-checkmark-circle"></i> Success alert
+            </div>
+
+            <div class="alert alert-warning fade in block-inner">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <i class="icon-warning"></i> Warning &amp; default alert
+            </div>
+
+            <div class="alert alert-info fade in">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <i class="icon-info"></i> Good to know! Info alert
+            </div>
+        </div>
+    </div>
+    <!-- /alerts -->
+
+
+    <!-- Contextual backgrounds -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-droplet"></i> Contextual backgrounds</h6></div>
+        <div class="panel-body">
+            <div class="bg-primary with-padding block-inner">Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+            <div class="bg-success with-padding block-inner">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</div>
+            <div class="bg-info with-padding block-inner">Maecenas sed diam eget risus varius blandit sit amet non magna.</div>
+            <div class="bg-warning with-padding block-inner">Etiam porta sem malesuada magna mollis euismod.</div>
+            <div class="bg-danger with-padding">Donec ullamcorper nulla non metus auctor fringilla.</div>
+        </div>
+    </div>
+    <!-- /contextual backgrounds -->
+
+
+    <!-- Alert blocks -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble-plus"></i> Alerts</h6></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="alert alert-block alert-danger fade in block-inner">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h6><i class="icon-command"></i> Oh snap! You got an error!</h6>
+                        <hr>
+                        <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        <div class="text-left">
+                            <a class="btn btn-primary" href="#"><i class="icon-link"></i> Take action</a>
+                            <a class="btn btn-success" href="#"><i class="icon-link2"></i> Or do this</a>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-block alert-success fade in">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h6><i class="icon-command"></i> Oh snap! You got an error!</h6>
+                        <hr>
+                        <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        <div class="text-left">
+                            <a class="btn btn-info" href="#"><i class="icon-link"></i> Take action</a>
+                            <a class="btn btn-warning" href="#"><i class="icon-link2"></i> Or do this</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="alert alert-block alert-info fade in block-inner">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h6><i class="icon-command"></i> Oh snap! You got an error!</h6>
+                        <hr>
+                        <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        <div class="text-left">
+                            <a class="btn btn-danger" href="#"><i class="icon-link"></i> Take action</a>
+                            <a class="btn btn-info" href="#"><i class="icon-link2"></i> Or do this</a>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-block alert-warning fade in">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h6><i class="icon-command"></i> Oh snap! You got an error!</h6>
+                        <hr>
+                        <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        <div class="text-left">
+                            <a class="btn btn-primary" href="#"><i class="icon-link"></i> Take action</a>
+                            <a class="btn btn-default" href="#"><i class="icon-link2"></i> Or do this</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /alert blocks -->
+
+
+    <!-- Tooltips -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble6"></i> Tooltips</h6></div>
+        <div class="panel-body">
+            <div class="text-center">
+                <a href="#" data-placement="top" title="Tooltip on top" class="btn btn-primary tip">Top</a>
+                <a href="#" data-placement="right" title="Tooltip on right" class="btn btn-primary tip">Right</a>
+                <a href="#" data-placement="bottom" title="Tooltip on bottom" class="btn btn-primary tip">Bottom</a>
+                <a href="#" data-placement="left" title="Tooltip on left" class="btn btn-primary tip">Left</a>
+            </div>
+        </div>
+    </div>
+    <!-- /tooltips -->
+
+
+    <!-- Popover -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble-dots"></i> Popovers</h6></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="popover top" style="position: relative; display: block; margin: 0 auto; width: 100%; z-index: 990">
+                        <div class="arrow"></div>
+                        <h3 class="popover-title">Popover top</h3>
+                        <div class="popover-content">
+                            Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="popover bottom" style="position: relative; display: block; margin: 0 auto; width: 100%; z-index: 990">
+                        <div class="arrow"></div>
+                        <h3 class="popover-title">Popover bottom</h3>
+                        <div class="popover-content">
+                            Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="popover right" style="position: relative; display: block; margin: 0 auto; width: 100%; z-index: 990">
+                        <div class="arrow"></div>
+                        <h3 class="popover-title">Popover right</h3>
+                        <div class="popover-content">
+                            Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="popover left" style="position: relative; display: block; margin: 0 auto; width: 100%; z-index: 990">
+                        <div class="arrow"></div>
+                        <h3 class="popover-title">Popover left</h3>
+                        <div class="popover-content">
+                            Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <button class="btn btn-info btn-block" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Top popover</button>
+                </div>
+
+                <div class="col-md-3">
+                    <button class="btn btn-success btn-block" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Bottom popover</button>
+                </div>
+
+                <div class="col-md-3">
+                    <button class="btn btn-warning btn-block" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Right popover</button>
+                </div>
+
+                <div class="col-md-3">
+                    <button class="btn btn-danger btn-block" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Left popover</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /popover -->
+
+
+    <!-- Datepicker -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble4"></i> Date picker</h6></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="subtitle"><i class="icon-cogs"></i> Date picker options</span>
+                    <div class="well">
+                        <form action="#" role="form">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Default date picker: </label>
+                                        <input type="text" class="datepicker form-control" placeholder="Default datepicker">
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <label>Multiple date picker: </label>
+                                        <input type="text" class="datepicker-multiple form-control" placeholder="Multiple months">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Date range: </label>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="from-date form-control" name="from" placeholder="From">
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <input type="text" class="to-date form-control" name="to" placeholder="To">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>Icon trigger: </label>
+                                    <input type="text" name="trigger" placeholder="Click on icon..." class="datepicker-trigger form-control">
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label>Restricted date: </label>
+                                    <input type="text" class="datepicker-restricted form-control" placeholder="Min date is Aug, 13">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <span class="subtitle"><i class="icon-droplet"></i> Default date picker style</span>
+                    <div class="well clearfix">
+                        <div class="datepicker-inline" style="margin: 0 auto; width: 20em;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /datepicker -->
+
+
+    <!-- Sliders -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-settings"></i> Sliders</h6></div>
+        <div class="panel-body form-horizontal form-bordered">
+            <div class="form-group">
+                <label class="col-md-2 control-label">Default slider:</label>
+                <div class="col-md-10">
+                    <div id="default-slider"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">Snap to increments:</label>
+                <div class="col-md-10">
+                    <div class="slider-controls">
+                        <label for="donation-amount">Donation amount ($50 increments):</label>
+                        <input type="text" id="donation-amount" />
+                    </div>
+                    <div id="increments-slider"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">Range slider:</label>
+                <div class="col-md-10">
+                    <div class="slider-controls">
+                        <label for="price-amount1">Price range:</label>
+                        <input type="text" id="price-amount1" />
+                    </div>
+                    <div id="range-slider1"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">Range with fixed minimum:</label>
+                <div class="col-md-10">
+                    <div class="slider-controls">
+                        <label for="min-amount1">Maximum price:</label>
+                        <input type="text" id="min-amount1" />
+                    </div>
+                    <div id="slider-range-min1"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">Range with fixed maximum:</label>
+                <div class="col-md-10">
+                    <div class="slider-controls">
+                        <label for="max-amount1">Minimum number of bedrooms:</label>
+                        <input type="text" id="max-amount1" />
+                    </div>
+                    <div id="slider-range-max1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /sliders -->
+
+
+    <!-- Color & time pickers -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h6 class="panel-title"><i class="icon-droplet2"></i> Color picker</h6></div>
+                <div class="panel-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">HEX format:</label>
+                            <div class="col-md-10">
+                                <input type="text" value="#8fff00" class="color-picker-hex form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">RGBa format:</label>
+                            <div class="col-md-10">
+                                <input type="text" value="rgb(0,194,255,0.78)" class="color-picker form-control" data-color-format="rgba">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">As component:</label>
+                            <div class="col-md-10">
+                                <div class="input-group color color-picker" data-color="rgb(255, 146, 180)" data-color-format="rgb">
+                                    <input type="text" class="form-control" readonly="readonly">
+                                    <span class="input-group-addon"><i style="background-color: rgb(255, 146, 180)"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Using events:</label>
+                            <div class="col-md-10">
+                                <a href="#" class="btn btn-success change-navbar-color" data-color-format="hex" data-color="rgb(255, 255, 255)">Change navbar color</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h6 class="panel-title"><i class="icon-droplet2"></i> Time picker</h6></div>
+                <div class="panel-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Default:</label>
+                            <div class="col-md-10">
+                                <input id="defaultValueExample" type="text" placeholder="Default time picker" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Duration:</label>
+                            <div class="col-md-10">
+                                <input id="durationExample" type="text" placeholder="Duration example" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Event:</label>
+                            <div class="col-md-10">
+                                <input id="onselectExample" type="text" placeholder="Using events" class="form-control">
+                                <span id="onselectTarget" class="help-inline"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Time formats:</label>
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input id="timeformatExample3" type="text" class="form-control" placeholder="24h format">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <input id="timeformatExample4" type="text" class="form-control" placeholder="12h format">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /color & time pickers -->
+
+
+    <!-- Labels and badges -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-new"></i> Labels</h6></div>
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Labels</th>
+                <th>Markup</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><span class="label label-default">Default</span></td>
+                <td><code>&lt;span class="label label-default"&gt;Default&lt;/span&gt;</code></td>
+            </tr>
+            <tr>
+                <td><span class="label label-primary">Primary</span></td>
+                <td><code>&lt;span class="label label-primary"&gt;Primary&lt;/span&gt;</code></td>
+            </tr>
+            <tr>
+                <td><span class="label label-success">Success</span></td>
+                <td><code>&lt;span class="label label-success"&gt;Success&lt;/span&gt;</code></td>
+            </tr>
+            <tr>
+                <td><span class="label label-warning">Warning</span></td>
+                <td><code>&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</code></td>
+            </tr>
+            <tr>
+                <td><span class="label label-danger">Danger</span></td>
+                <td><code>&lt;span class="label label-danger"&gt;Danger&lt;/span&gt;</code></td>
+            </tr>
+            <tr>
+                <td><span class="label label-info">Info</span></td>
+                <td><code>&lt;span class="label label-info"&gt;Info&lt;/span&gt;</code></td>
+            </tr>
+            <tr>
+                <td><span class="badge">142</span></td>
+                <td><code>&lt;span class="badge"&gt;Badge&lt;/span&gt;</code></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /label and badges -->
+
+
+    <hr>
+
+
+    <!-- Pagination -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-tab"></i> Pagination</h6></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="block">
+                        <span class="subtitle">Large pagination <code>.pagination-lg</code></span>
+                        <div class="well text-center">
+                            <ul class="pagination pagination-lg">
+                                <li><a href="#">&larr;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li class="disabled"><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&rarr;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <span class="subtitle">Default <code>.pagination</code></span>
+                        <div class="well text-center">
+                            <ul class="pagination">
+                                <li><a href="#">&larr;</a></li>
+                                <li><a href="#">1</a></li>
+                                <li class="active"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&rarr;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <span class="subtitle">Small <code>.pagination-sm</code></span>
+                        <div class="well text-center">
+                            <ul class="pagination pagination-sm">
+                                <li><a href="#">&larr;</a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li class="active"><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&rarr;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="block">
+                        <strong class="subtitle">Left aligned pagination (default)</strong>
+                        <div class="well">
+                            <ul class="pagination">
+                                <li class="disabled"><a href="#">&larr;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">&rarr;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <strong class="subtitle text-center">Centered pagination <code>.text-center</code></strong>
+                        <div class="well">
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    <li><a href="#">&larr;</a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li class="active"><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">&rarr;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <strong class="subtitle text-right">Right aligned pagination <code>.text-right</code></strong>
+                        <div class="well">
+                            <div class="text-right">
+                                <ul class="pagination">
+                                    <li><a href="#">&larr;</a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li class="active"><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">&rarr;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <strong class="subtitle">Double pagination <code>.pull-left, .pull-right</code></strong>
+                <div class="well clearfix">
+                    <ul class="pagination pagination-right pull-left">
+                        <li><a href="#">&larr;</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li class="active"><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">&rarr;</a></li>
+                    </ul>
+
+                    <ul class="pagination pagination-right pull-right">
+                        <li><a href="#">&larr;</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li class="active"><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">&rarr;</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /pagination -->
+
+
+    <!-- Pager -->
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-embed"></i> Pager</h6></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <strong class="subtitle">Default pager</strong>
+                    <div class="well">
+                        <ul class="pager">
+                            <li><a href="#">&larr; Previous</a></li>
+                            <li><a href="#">Next &rarr;</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <strong class="subtitle">Unboxed pager</strong>
+                    <div class="well">
+                        <ul class="pager">
+                            <li class="previous"><a href="#">&larr; Older</a></li>
+                            <li class="next"><a href="#">Newer &rarr;</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <strong class="subtitle">With disabled button</strong>
+                    <div class="well">
+                        <ul class="pager">
+                            <li class="previous disabled"><a href="#">&larr; Older</a></li>
+                            <li class="next"><a href="#">Newer &rarr;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /pager -->
+    <!-- /visuals -->
+</template>

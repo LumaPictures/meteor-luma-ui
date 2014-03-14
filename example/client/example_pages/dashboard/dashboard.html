@@ -1,0 +1,59 @@
+<template name="dashboard">
+<!-- Page tabs -->
+<div class="tabbable page-tabs">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#activity" data-toggle="tab"><i class="icon-file"></i> Activity</a></li>
+        <li><a href="#tasks" data-toggle="tab"><i class="icon-grid"></i> My tasks <span class="label label-primary">31</span></a></li>
+        <li><a href="#invoices" data-toggle="tab"><i class="icon-cart2"></i> My invoices <span class="label label-primary">9</span></a></li>
+
+        <li class="pull-right dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="icon-cog3"></i>Settings <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right icons-right">
+                <li><a href="#"><i class="icon-cogs"></i> This is</a></li>
+                <li><a href="#"><i class="icon-grid3"></i> Dropdown</a></li>
+                <li><a href="#"><i class="icon-spinner7"></i> With right</a></li>
+                <li><a href="#"><i class="icon-link"></i> Aligned icons</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="tab-content">
+
+        <!-- First tab -->
+        <div class="tab-pane active fade in" id="activity">
+            {{> alert }}
+            <!-- Questions and contact -->
+            <div class="row">
+                <div class="col-md-6">
+                    {{> questions }}
+                    {{> simpleContactForm }}
+                </div>
+                <div class="col-md-6">
+                    {{> contacts_list }}
+                </div>
+            </div>
+            <!-- /questions and contact -->
+            {{> contacts_newest_team_members }}
+
+            {{> alert }}
+            {{> user_recent_activity }}
+        </div>
+        <!-- /first tab -->
+
+        <!-- Third tab -->
+        <div class="tab-pane fade" id="tasks">
+            {{> tasksTable }}
+        </div>
+        <!-- /third tab -->
+
+        <!-- Fourth tab -->
+        <div class="tab-pane fade" id="invoices">
+            {{> invoiceListPanel }}
+        </div>
+        <!-- /fourth tab -->
+
+    </div>
+</div>
+<!-- /page tabs -->
+</template>

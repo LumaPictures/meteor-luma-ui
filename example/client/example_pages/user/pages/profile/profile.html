@@ -1,0 +1,64 @@
+<template name="profile">
+    <!-- Profile grid -->
+    <div class="row">
+        <div class="col-lg-2">
+            {{> user_profile_sidebar }}
+        </div>
+
+        <div class="col-lg-10">
+
+            <!-- Page tabs -->
+            <div class="tabbable page-tabs">
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active"><a href="#activity" data-toggle="tab"><i class="icon-paragraph-justify2"></i> Activity</a></li>
+                    <li><a href="#stats" data-toggle="tab"><i class="icon-stats2"></i> Reports <i class="icon-spinner7 spin pull-right"></i></a></li>
+                    <li><a href="#profile-messages" data-toggle="tab"><i class="icon-bubbles3"></i> Messages <span class="label label-danger">12</span></a></li>
+                    <li><a href="#tasks" data-toggle="tab"><i class="icon-settings"></i> Tasks <span class="label label-danger">7</span></a></li>
+                    <li><a href="#settings" data-toggle="tab"><i class="icon-cogs"></i> Settings</a></li>
+                </ul>
+                <div class="tab-content">
+                    <!-- First tab -->
+                    <div class="tab-pane active fade in" id="activity">
+                        {{> user_stats_blocks }}
+                        {{> search_line }}
+                        {{> wysiwygEditor }}
+                        {{> alert }}
+                        {{> user_recent_activity }}
+                    </div>
+                    <!-- /first tab -->
+
+                    <!-- Second tab -->
+                    <div class="tab-pane fade" id="stats">
+                        {{> user_stats_graphs }}
+                        {{> auto_updating_graph_filled }}
+                        {{> animated_graphs }}
+                    </div>
+                    <!-- /second tab -->
+
+                    <!-- Third tab -->
+                    <div class="tab-pane fade" id="profile-messages">
+                        {{> contacts_list }}
+                    </div>
+                    <!-- /third tab -->
+
+                    <!-- Fourth tab -->
+                    <div class="tab-pane fade" id="tasks">
+                        {{> tasksTable }}
+                    </div>
+                    <!-- /fourth tab -->
+
+
+                <!-- Fifth tab -->
+                <div class="tab-pane fade" id="settings">
+                    {{> user_profile_info_form }}
+                </div>
+                <!-- /fifth tab -->
+
+                </div>
+            </div>
+            <!-- /page tabs -->
+
+        </div>
+    </div>
+    <!-- /profile grid -->
+</template>

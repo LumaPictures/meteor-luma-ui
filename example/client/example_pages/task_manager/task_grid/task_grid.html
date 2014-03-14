@@ -1,0 +1,1079 @@
+<template name="taskGrid">
+    <!-- taskGrid -->
+    <!-- Page tabs -->
+    <div class="tabbable page-tabs">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#all-tasks" data-toggle="tab"><i class="icon-paragraph-justify2"></i> All tasks</a></li>
+        <li><a href="#active" data-toggle="tab"><i class="icon-stack"></i> Active</a></li>
+        <li><a href="#closed" data-toggle="tab"><i class="icon-bubbles3"></i> Closed <span class="label label-danger">12</span></a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cogs"></i> Settings <b class="caret"></b></a>
+            <ul class="dropdown-menu icons-right">
+                <li><a href="#"><i class="icon-cogs"></i> This is</a></li>
+                <li><a href="#"><i class="icon-grid3"></i> Dropdown</a></li>
+                <li><a href="#"><i class="icon-spinner7"></i> With right</a></li>
+                <li><a href="#"><i class="icon-link"></i> Aligned icons</a></li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <div class="tab-content">
+
+    <div class="tab-pane active fade in" id="all-tasks">
+
+    {{> top_option_bar_form }}
+
+
+    <!-- Tasks grid -->
+    <div class="row">
+    <div class="col-md-6">
+
+    <!-- Task -->
+    <div class="block task task-high">
+        <div class="row with-padding">
+            <div class="col-sm-9">
+                <div class="task-description">
+                    <a href="#">Vestibulum a leo eget arcu accumsan</a>
+                    <i>NoName app</i>
+                    <span>Maecenas mattis, magna vel fermentum ornare, mauris mi tempor quam, metus dolor non enim...</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="task-info">
+                    <span>October 12, 2013</span>
+                    <span>3 days | <span class="label label-danger">12%</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <span><i class="icon-clock"></i> 4 hours</span>
+            </div>
+            <div class="pull-right">
+                <ul class="footer-icons-group">
+                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#"><i class="icon-remove3"></i></a></li>
+                    <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                            <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                            <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                            <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /task -->
+
+    <!-- Task -->
+    <div class="block task task-low">
+        <div class="row with-padding">
+            <div class="col-sm-9">
+                <div class="task-description">
+                    <a href="#">Praesent adipiscing volutpat eros</a>
+                    <i>NoName app</i>
+                    <span>Aenean imperdiet nec purus ac rhoncus. Ut commodo elit et interdum convallis. Nulla nec lorem purus...</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="task-info">
+                    <span>October 6, 2013</span>
+                    <span>3 days | <span class="label label-info">53%</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <span><i class="icon-clock"></i> 60 hours</span>
+            </div>
+            <div class="pull-right">
+                <ul class="footer-icons-group">
+                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#"><i class="icon-remove3"></i></a></li>
+                    <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                            <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                            <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                            <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /task -->
+
+    <!-- Task -->
+    <div class="block task task-high">
+        <div class="row with-padding">
+            <div class="col-sm-9">
+                <div class="task-description">
+                    <a href="#">Nunc imperdiet pulvinar arcu in interdum</a>
+                    <i>NoName app</i>
+                    <span>Nam mauris diam, condimentum sed erat vitae, sagittis viverra purus. Vestibulum gravida faucibus enim...</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="task-info">
+                    <span>October 2, 2013</span>
+                    <span>6 days | <span class="label label-success">98%</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <span><i class="icon-clock"></i> 236 hours</span>
+            </div>
+            <div class="pull-right">
+                <ul class="footer-icons-group">
+                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#"><i class="icon-remove3"></i></a></li>
+                    <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                            <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                            <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                            <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /task -->
+
+    <!-- Task -->
+    <div class="block task task-normal">
+        <div class="row with-padding">
+            <div class="col-sm-9">
+                <div class="task-description">
+                    <a href="#">Duis vel aliquam enim, a tempor arcu</a>
+                    <i>NoName app</i>
+                    <span>Praesent hendrerit eros ut urna lobortis dictum. Vestibulum porttitor nulla sed diam vestibulum mollis...</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="task-info">
+                    <span>September 20, 2013</span>
+                    <span>33 days | <span class="label label-danger">21%</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <span><i class="icon-clock"></i> 32 hours</span>
+            </div>
+            <div class="pull-right">
+                <ul class="footer-icons-group">
+                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#"><i class="icon-remove3"></i></a></li>
+                    <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                            <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                            <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                            <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /task -->
+
+    <!-- Task -->
+    <div class="block task task-normal">
+        <div class="row with-padding">
+            <div class="col-sm-9">
+                <div class="task-description">
+                    <a href="#">libero justo ultrices turpis</a>
+                    <i>NoName app</i>
+                    <span>Aliquam feugiat vehicula risus. Pellentesque eget purus rutrum turpis consequat volutpat sit amet sit amet...</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="task-info">
+                    <span>September 18, 2013</span>
+                    <span>12 days | <span class="label label-info">62%</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <span><i class="icon-clock"></i> 113 hours</span>
+            </div>
+            <div class="pull-right">
+                <ul class="footer-icons-group">
+                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#"><i class="icon-remove3"></i></a></li>
+                    <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                            <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                            <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                            <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /task -->
+
+    <!-- Task -->
+    <div class="block task task-low">
+        <div class="row with-padding">
+            <div class="col-sm-9">
+                <div class="task-description">
+                    <a href="#">Morbi molestie augue in quam ultrices</a>
+                    <i>NoName app</i>
+                    <span>Suspendisse nulla est, malesuada id ligula in, vulputate dignissim tellus. Duis tempus...</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="task-info">
+                    <span>September 10, 2013</span>
+                    <span>9 days | <span class="label label-danger">14%</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <span><i class="icon-clock"></i> 78 hours</span>
+            </div>
+            <div class="pull-right">
+                <ul class="footer-icons-group">
+                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#"><i class="icon-remove3"></i></a></li>
+                    <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                            <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                            <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                            <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /task -->
+
+    </div>
+
+
+    <div class="col-md-6">
+
+    <!-- Task -->
+    <div class="block task task-low">
+        <div class="row with-padding">
+            <div class="col-sm-9">
+                <div class="task-description">
+                    <a href="#">Morbi arcu dolor, faucibus vitae sapien non</a>
+                    <i>NoName app</i>
+                    <span>Duis a suscipit magna Cum sociis natoque penatibus et magnis dis parturient montes, ridiculus mus...</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="task-info">
+                    <span>August 18, 2013</span>
+                    <span>2 days | <span class="label label-success">90%</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <span><i class="icon-clock"></i> 38 hours</span>
+            </div>
+            <div class="pull-right">
+                <ul class="footer-icons-group">
+                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#"><i class="icon-remove3"></i></a></li>
+                    <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                            <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                            <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                            <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /task -->
+
+    <!-- Task -->
+    <div class="block task task-low">
+        <div class="row with-padding">
+            <div class="col-sm-9">
+                <div class="task-description">
+                    <a href="#">Sed enim dui, accumsan ac egestas</a>
+                    <i>NoName app</i>
+                    <span>Ut eget magna sodales, vulputate magna ac, sollicitudin felis. Nulla condimentum nisl...</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="task-info">
+                    <span>September 2, 2013</span>
+                    <span>3 days | <span class="label label-info">53%</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <span><i class="icon-clock"></i> 30 hours</span>
+            </div>
+            <div class="pull-right">
+                <ul class="footer-icons-group">
+                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#"><i class="icon-remove3"></i></a></li>
+                    <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                            <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                            <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                            <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /task -->
+
+    <!-- Task -->
+    <div class="block task task-high">
+        <div class="row with-padding">
+            <div class="col-sm-9">
+                <div class="task-description">
+                    <a href="#">Mauris lacinia neque ut odio lobortis</a>
+                    <i>NoName app</i>
+                    <span>Ut feugiat nunc ut venenatis bibendum. Aenean id vestibulum nisi, ac consectetur urna. Duis sodales...</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="task-info">
+                    <span>August 12, 2013</span>
+                    <span>Complete | <span class="label label-success">100%</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <span><i class="icon-clock"></i> 209 hours</span>
+            </div>
+            <div class="pull-right">
+                <ul class="footer-icons-group">
+                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#"><i class="icon-remove3"></i></a></li>
+                    <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                            <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                            <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                            <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /task -->
+
+    <!-- Task -->
+    <div class="block task task-high">
+        <div class="row with-padding">
+            <div class="col-sm-9">
+                <div class="task-description">
+                    <a href="#">Proin interdum ullamcorper magna et sagitti</a>
+                    <i>NoName app</i>
+                    <span>Maecenas fringilla diam et nunc adipiscing venenatis. Vivamus interdum mattis et, elementum id purus...</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="task-info">
+                    <span>August 12, 2013</span>
+                    <span>6 days | <span class="label label-danger">17%</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <span><i class="icon-clock"></i> 42 hours</span>
+            </div>
+            <div class="pull-right">
+                <ul class="footer-icons-group">
+                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#"><i class="icon-remove3"></i></a></li>
+                    <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                            <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                            <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                            <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /task -->
+
+    <!-- Task -->
+    <div class="block task task-low">
+        <div class="row with-padding">
+            <div class="col-sm-9">
+                <div class="task-description">
+                    <a href="#">Cras sed metus sem. Maecenas semper</a>
+                    <i>NoName app</i>
+                    <span>Proin enim arcu, condimentum vitae vestibulum eget, pellentesque a erat. Vivamus eleifend dictum felis...</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="task-info">
+                    <span>August 18, 2013</span>
+                    <span>Complete | <span class="label label-success">100%</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <span><i class="icon-clock"></i> 23 hours</span>
+            </div>
+            <div class="pull-right">
+                <ul class="footer-icons-group">
+                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#"><i class="icon-remove3"></i></a></li>
+                    <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                            <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                            <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                            <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /task -->
+
+    <!-- Task -->
+    <div class="block task task-normal">
+        <div class="row with-padding">
+            <div class="col-sm-9">
+                <div class="task-description">
+                    <a href="#">Maecenas ullamcorper luctus semper</a>
+                    <i>NoName app</i>
+                    <span>Pellentesque enim tortor, dapibus quis quam vel, ultricesh. Curabitur egestas quis sapien nec interdum...</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="task-info">
+                    <span>August 3, 2013</span>
+                    <span>Complete | <span class="label label-success">100%</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="pull-left">
+                <span><i class="icon-clock"></i> 34 hours</span>
+            </div>
+            <div class="pull-right">
+                <ul class="footer-icons-group">
+                    <li><a href="#"><i class="icon-pencil"></i></a></li>
+                    <li><a href="#"><i class="icon-remove3"></i></a></li>
+                    <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                        <ul class="dropdown-menu icons-right dropdown-menu-right">
+                            <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                            <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                            <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                            <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /task -->
+
+    </div>
+    </div>
+    <!-- /tasks grid -->
+
+
+    <!-- Pagination -->
+    <div class="block text-center">
+        <ul class="pagination">
+            <li><a href="#">&larr;</a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&rarr;</a></li>
+        </ul>
+    </div>
+    <!-- /pagination -->
+
+    </div>
+
+
+    <div class="tab-pane fade" id="active">
+
+    {{> top_option_bar_form }}
+
+
+    <!-- Tasks grid -->
+    <div class="row">
+    <div class="col-md-6">
+
+        <!-- Task -->
+        <div class="block task task-normal">
+            <div class="row with-padding">
+                <div class="col-sm-9">
+                    <div class="task-description">
+                        <a href="#">Duis vel aliquam enim, a tempor arcu</a>
+                        <i>NoName app</i>
+                        <span>Praesent hendrerit eros ut urna lobortis dictum. Vestibulum porttitor nulla sed diam vestibulum mollis...</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="task-info">
+                        <span>September 20, 2013</span>
+                        <span>33 days | <span class="label label-danger">21%</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <span><i class="icon-clock"></i> 32 hours</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="footer-icons-group">
+                        <li><a href="#"><i class="icon-pencil"></i></a></li>
+                        <li><a href="#"><i class="icon-remove3"></i></a></li>
+                        <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                                <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                                <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                                <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /task -->
+
+
+        <!-- Task -->
+        <div class="block task task-normal">
+            <div class="row with-padding">
+                <div class="col-sm-9">
+                    <div class="task-description">
+                        <a href="#">libero justo ultrices turpis</a>
+                        <i>NoName app</i>
+                        <span>Aliquam feugiat vehicula risus. Pellentesque eget purus rutrum turpis consequat volutpat sit amet sit amet...</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="task-info">
+                        <span>September 18, 2013</span>
+                        <span>12 days | <span class="label label-info">62%</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <span><i class="icon-clock"></i> 113 hours</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="footer-icons-group">
+                        <li><a href="#"><i class="icon-pencil"></i></a></li>
+                        <li><a href="#"><i class="icon-remove3"></i></a></li>
+                        <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                                <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                                <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                                <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /task -->
+
+
+        <!-- Task -->
+        <div class="block task task-low">
+            <div class="row with-padding">
+                <div class="col-sm-9">
+                    <div class="task-description">
+                        <a href="#">Morbi molestie augue in quam ultrices</a>
+                        <i>NoName app</i>
+                        <span>Suspendisse nulla est, malesuada id ligula in, vulputate dignissim tellus. Duis tempus...</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="task-info">
+                        <span>September 10, 2013</span>
+                        <span>9 days | <span class="label label-danger">14%</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <span><i class="icon-clock"></i> 78 hours</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="footer-icons-group">
+                        <li><a href="#"><i class="icon-pencil"></i></a></li>
+                        <li><a href="#"><i class="icon-remove3"></i></a></li>
+                        <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                                <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                                <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                                <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /task -->
+
+    </div>
+
+
+    <div class="col-md-6">
+
+
+        <!-- Task -->
+        <div class="block task task-high">
+            <div class="row with-padding">
+                <div class="col-sm-9">
+                    <div class="task-description">
+                        <a href="#">Proin interdum ullamcorper magna et sagitti</a>
+                        <i>NoName app</i>
+                        <span>Maecenas fringilla diam et nunc adipiscing venenatis. Vivamus interdum mattis et, elementum id purus...</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="task-info">
+                        <span>August 12, 2013</span>
+                        <span>6 days | <span class="label label-danger">17%</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <span><i class="icon-clock"></i> 42 hours</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="footer-icons-group">
+                        <li><a href="#"><i class="icon-pencil"></i></a></li>
+                        <li><a href="#"><i class="icon-remove3"></i></a></li>
+                        <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                                <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                                <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                                <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /task -->
+
+
+        <!-- Task -->
+        <div class="block task task-low">
+            <div class="row with-padding">
+                <div class="col-sm-9">
+                    <div class="task-description">
+                        <a href="#">Cras sed metus sem. Maecenas semper</a>
+                        <i>NoName app</i>
+                        <span>Proin enim arcu, condimentum vitae vestibulum eget, pellentesque a erat. Vivamus eleifend dictum felis...</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="task-info">
+                        <span>August 18, 2013</span>
+                        <span>Complete | <span class="label label-success">100%</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <span><i class="icon-clock"></i> 23 hours</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="footer-icons-group">
+                        <li><a href="#"><i class="icon-pencil"></i></a></li>
+                        <li><a href="#"><i class="icon-remove3"></i></a></li>
+                        <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                                <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                                <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                                <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /task -->
+
+
+        <!-- Task -->
+        <div class="block task task-normal">
+            <div class="row with-padding">
+                <div class="col-sm-9">
+                    <div class="task-description">
+                        <a href="#">Maecenas ullamcorper luctus semper</a>
+                        <i>NoName app</i>
+                        <span>Pellentesque enim tortor, dapibus quis quam vel, ultricesh. Curabitur egestas quis sapien nec interdum...</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="task-info">
+                        <span>August 3, 2013</span>
+                        <span>Complete | <span class="label label-success">100%</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <span><i class="icon-clock"></i> 34 hours</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="footer-icons-group">
+                        <li><a href="#"><i class="icon-pencil"></i></a></li>
+                        <li><a href="#"><i class="icon-remove3"></i></a></li>
+                        <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                                <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                                <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                                <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /task -->
+
+    </div>
+    </div>
+    <!-- /tasks grid -->
+
+
+    <!-- Pagination -->
+    <div class="block text-center">
+        <ul class="pagination">
+            <li><a href="#">&larr;</a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&rarr;</a></li>
+        </ul>
+    </div>
+    <!-- /pagination -->
+
+    </div>
+
+
+    <div class="tab-pane fade" id="closed">
+
+    {{> top_option_bar_form }}
+
+
+    <!-- Tasks grid -->
+    <div class="row">
+    <div class="col-md-6">
+
+        <!-- Task -->
+        <div class="block task task-low">
+            <div class="row with-padding">
+                <div class="col-sm-9">
+                    <div class="task-description">
+                        <a href="#">Praesent adipiscing volutpat eros</a>
+                        <i>NoName app</i>
+                        <span>Aenean imperdiet nec purus ac rhoncus. Ut commodo elit et interdum convallis. Nulla nec lorem purus...</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="task-info">
+                        <span>October 6, 2013</span>
+                        <span>3 days | <span class="label label-info">53%</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <span><i class="icon-clock"></i> 60 hours</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="footer-icons-group">
+                        <li><a href="#"><i class="icon-pencil"></i></a></li>
+                        <li><a href="#"><i class="icon-remove3"></i></a></li>
+                        <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                                <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                                <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                                <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /task -->
+
+
+        <!-- Task -->
+        <div class="block task task-normal">
+            <div class="row with-padding">
+                <div class="col-sm-9">
+                    <div class="task-description">
+                        <a href="#">Duis vel aliquam enim, a tempor arcu</a>
+                        <i>NoName app</i>
+                        <span>Praesent hendrerit eros ut urna lobortis dictum. Vestibulum porttitor nulla sed diam vestibulum mollis...</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="task-info">
+                        <span>September 20, 2013</span>
+                        <span>33 days | <span class="label label-danger">21%</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <span><i class="icon-clock"></i> 32 hours</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="footer-icons-group">
+                        <li><a href="#"><i class="icon-pencil"></i></a></li>
+                        <li><a href="#"><i class="icon-remove3"></i></a></li>
+                        <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                                <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                                <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                                <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /task -->
+
+
+        <!-- Task -->
+        <div class="block task task-low">
+            <div class="row with-padding">
+                <div class="col-sm-9">
+                    <div class="task-description">
+                        <a href="#">Morbi molestie augue in quam ultrices</a>
+                        <i>NoName app</i>
+                        <span>Suspendisse nulla est, malesuada id ligula in, vulputate dignissim tellus. Duis tempus...</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="task-info">
+                        <span>September 10, 2013</span>
+                        <span>9 days | <span class="label label-danger">14%</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <span><i class="icon-clock"></i> 78 hours</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="footer-icons-group">
+                        <li><a href="#"><i class="icon-pencil"></i></a></li>
+                        <li><a href="#"><i class="icon-remove3"></i></a></li>
+                        <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                                <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                                <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                                <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /task -->
+
+    </div>
+
+
+    <div class="col-md-6">
+
+        <!-- Task -->
+        <div class="block task task-low">
+            <div class="row with-padding">
+                <div class="col-sm-9">
+                    <div class="task-description">
+                        <a href="#">Sed enim dui, accumsan ac egestas</a>
+                        <i>NoName app</i>
+                        <span>Ut eget magna sodales, vulputate magna ac, sollicitudin felis. Nulla condimentum nisl...</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="task-info">
+                        <span>September 2, 2013</span>
+                        <span>3 days | <span class="label label-info">53%</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <span><i class="icon-clock"></i> 30 hours</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="footer-icons-group">
+                        <li><a href="#"><i class="icon-pencil"></i></a></li>
+                        <li><a href="#"><i class="icon-remove3"></i></a></li>
+                        <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                                <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                                <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                                <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /task -->
+
+
+        <!-- Task -->
+        <div class="block task task-high">
+            <div class="row with-padding">
+                <div class="col-sm-9">
+                    <div class="task-description">
+                        <a href="#">Proin interdum ullamcorper magna et sagitti</a>
+                        <i>NoName app</i>
+                        <span>Maecenas fringilla diam et nunc adipiscing venenatis. Vivamus interdum mattis et, elementum id purus...</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="task-info">
+                        <span>August 12, 2013</span>
+                        <span>6 days | <span class="label label-danger">17%</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <span><i class="icon-clock"></i> 42 hours</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="footer-icons-group">
+                        <li><a href="#"><i class="icon-pencil"></i></a></li>
+                        <li><a href="#"><i class="icon-remove3"></i></a></li>
+                        <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                                <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                                <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                                <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /task -->
+
+
+        <!-- Task -->
+        <div class="block task task-normal">
+            <div class="row with-padding">
+                <div class="col-sm-9">
+                    <div class="task-description">
+                        <a href="#">Maecenas ullamcorper luctus semper</a>
+                        <i>NoName app</i>
+                        <span>Pellentesque enim tortor, dapibus quis quam vel, ultricesh. Curabitur egestas quis sapien nec interdum...</span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="task-info">
+                        <span>August 3, 2013</span>
+                        <span>Complete | <span class="label label-success">100%</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <span><i class="icon-clock"></i> 34 hours</span>
+                </div>
+                <div class="pull-right">
+                    <ul class="footer-icons-group">
+                        <li><a href="#"><i class="icon-pencil"></i></a></li>
+                        <li><a href="#"><i class="icon-remove3"></i></a></li>
+                        <li class="dropup"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i></a>
+                            <ul class="dropdown-menu icons-right dropdown-menu-right">
+                                <li><a href="#"><i class="icon-quill2"></i> Edit task</a></li>
+                                <li><a href="#"><i class="icon-share2"></i> Reassign</a></li>
+                                <li><a href="#"><i class="icon-checkmark3"></i> Complete</a></li>
+                                <li><a href="#"><i class="icon-stack"></i> Archive</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /task -->
+
+    </div>
+    </div>
+    <!-- /tasks grid -->
+
+
+    <!-- Pagination -->
+    <div class="block text-center">
+        <ul class="pagination">
+            <li><a href="#">&larr;</a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&rarr;</a></li>
+        </ul>
+    </div>
+    <!-- /pagination -->
+
+    </div>
+
+    </div>
+    </div>
+    <!-- /page tabs -->
+    <!-- /taskGrid -->
+</template>

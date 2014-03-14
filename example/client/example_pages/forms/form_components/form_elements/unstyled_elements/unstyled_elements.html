@@ -1,0 +1,151 @@
+<template name="unstyledElements">
+    <!-- Untyled form elements -->
+    <form class="form-horizontal" role="form" action="#">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h6 class="panel-title"><i class="icon-droplet2"></i> Unstyled form components</h6></div>
+            <div class="panel-body">
+
+                <div class="alert alert-success fade in block-inner">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    Native browser design of form components
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Stacked checkboxes/ radios: </label>
+
+                    <div class="col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">
+                                Option one is this and that—be sure to include why it's great
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="unstyled-radio-stacked" checked="checked">
+                                Option one is this and that—be sure to include why it's great
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="unstyled-radio-stacked">
+                                Option two can be something else and selecting it will deselect option one
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Inline checkboxes/ radios: </label>
+
+                    <div class="col-sm-10">
+                        <div class="block-inner">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" checked="checked">1
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox">2
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox">3
+                            </label>
+                        </div>
+
+                        <label class="radio-inline">
+                            <input type="radio" name="unstyled-radio-inline">1
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="unstyled-radio-inline" checked="checked">2
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="unstyled-radio-inline">3
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">File uploader: </label>
+
+                    <div class="col-sm-10">
+                        <input type="file" id="unstyled-file">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Single select: </label>
+
+                    <div class="col-sm-10">
+                        <select name="select" class="form-control input-lg">
+                            <option value="opt1">Usual select box</option>
+                            <option value="opt2">Option 2</option>
+                            <option value="opt3">Option 3</option>
+                            <option value="opt4">Option 4</option>
+                            <option value="opt5">Option 5</option>
+                            <option value="opt6">Option 6</option>
+                            <option value="opt7">Option 7</option>
+                            <option value="opt8">Option 8</option>
+                        </select>
+
+                        <select name="select" class="form-control">
+                            <option value="opt1">Usual select box</option>
+                            <option value="opt2">Option 2</option>
+                            <option value="opt3">Option 3</option>
+                            <option value="opt4">Option 4</option>
+                            <option value="opt5">Option 5</option>
+                            <option value="opt6">Option 6</option>
+                            <option value="opt7">Option 7</option>
+                            <option value="opt8">Option 8</option>
+                        </select>
+
+                        <select name="select" class="form-control input-sm">
+                            <option value="opt1">Usual select box</option>
+                            <option value="opt2">Option 2</option>
+                            <option value="opt3">Option 3</option>
+                            <option value="opt4">Option 4</option>
+                            <option value="opt5">Option 5</option>
+                            <option value="opt6">Option 6</option>
+                            <option value="opt7">Option 7</option>
+                            <option value="opt8">Option 8</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Multiple select: </label>
+
+                    <div class="col-sm-10">
+                        <select multiple="multiple" class="form-control" title="Click to Select a City">
+                            <option selected="selected">Amsterdam</option>
+                            <option selected="selected">Atlanta</option>
+                            <option>Baltimore</option>
+                            <option>Boston</option>
+                            <option>Buenos Aires</option>
+                            <option>Calgary</option>
+                            <option selected="selected">Chicago</option>
+                            <option>Denver</option>
+                            <option>Dubai</option>
+                            <option>Frankfurt</option>
+                            <option>Hong Kong</option>
+                            <option>Honolulu</option>
+                            <option>Houston</option>
+                            <option>Kuala Lumpur</option>
+                            <option>London</option>
+                            <option>Los Angeles</option>
+                            <option>Melbourne</option>
+                            <option>Mexico City</option>
+                            <option>Miami</option>
+                            <option>Minneapolis</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions text-right">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- /unstyled form elements -->
+</template>

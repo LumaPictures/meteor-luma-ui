@@ -1,0 +1,121 @@
+<template name="surveyForm">
+    <!-- Survey -->
+    <div class="row">
+        <div class="col-md-6">
+            <form action="#" role="form">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble4"></i> Survey</h6></div>
+                    <div class="panel-body">
+
+                        <h6 class="text-danger">Would you recommend our services?</h6>
+
+                        <div class="form-group">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="survey" class="styled" checked="checked">
+                                    Definitely yes!
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="survey" class="styled">
+                                    Yes, but with some notes
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="survey" class="styled">
+                                    Not decided yet
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="survey" class="styled">
+                                    Probably yes
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="survey" class="styled">
+                                    I wouldn't recommend you to anyone
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions text-center">
+                            <input type="reset" value="Results" class="btn btn-default">
+                            <input type="submit" value="Submit form" class="btn btn-success">
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h6 class="panel-title"><i class="icon-paragraph-justify"></i> Survey results</h6></div>
+                <div class="panel-body">
+
+                    <h6 class="text-danger">Would you recommend our services?</h6>
+
+                    <div class="form-group">
+                        <label>Definitely yes!</label>
+                        <div class="progress progress-striped progress-thin active">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100" style="width: 56%;">
+                                <span class="sr-only">56% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Yes, but with some notes</label>
+                        <div class="progress progress-striped progress-thin active">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%;">
+                                <span class="sr-only">88% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Not decided yet</label>
+                        <div class="progress progress-striped progress-thin active">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100" style="width: 84%;">
+                                <span class="sr-only">84% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Probably yes</label>
+                        <div class="progress progress-striped progress-thin active">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width: 32%;">
+                                <span class="sr-only">32% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>I wouldn't recommend you</label>
+                        <div class="progress progress-striped progress-thin active">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100" style="width: 18%;">
+                                <span class="sr-only">18% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions text-center">
+                        <input type="reset" value="Close" class="btn btn-danger">
+                        <input type="submit" value="Share results" class="btn btn-default">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /survey -->
+</template>

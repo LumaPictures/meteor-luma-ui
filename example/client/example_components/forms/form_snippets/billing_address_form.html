@@ -1,0 +1,97 @@
+<template name="billingAddressForm">
+    <!-- Billing address -->
+    <form action="#" role="form">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h6 class="panel-title"><i class="icon-home2"></i> Billing address</h6></div>
+            <div class="panel-body">
+
+                <div class="block-inner text-danger">
+                    <h6 class="heading-hr">Step 3: Billing address <small class="display-block">Uncheck if your billing info is different</small></h6>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox">
+                        <input type="checkbox" class="styled" checked="checked">
+                        The same as shipping address
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>Country:</label>
+                    <select data-placeholder="Choose a Country..." class="select-full" tabindex="2">
+                        <option value=""></option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Cameroon">Cameroon</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Cape Verde">Cape Verde</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>First name</label>
+                            <input type="text" placeholder="Eugene" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Last name</label>
+                            <input type="text" placeholder="Kopyov" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Address line 1</label>
+                            <input type="text" placeholder="Ring street 12" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Address line 2</label>
+                            <input type="text" placeholder="building D, flat #67" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>City</label>
+                            <input type="text" placeholder="Munich" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label>State/Province</label>
+                            <input type="text" placeholder="Bayern" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label>ZIP code</label>
+                            <input type="text" placeholder="1031" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Email</label>
+                            <input type="text" placeholder="eugene@kopyov.com" class="form-control">
+                            <span class="help-block">name@domain.com</span>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Phone #</label>
+                            <input type="text" placeholder="+99-99-9999-9999" data-mask="+99-99-9999-9999" class="form-control">
+                            <span class="help-block">+99-99-9999-9999</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions text-right">
+                    <input type="reset" value="Back" class="btn btn-primary">
+                    <input type="submit" value="Next step" class="btn btn-success">
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <!-- /billing address -->
+</template>

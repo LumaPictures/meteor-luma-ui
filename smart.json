@@ -6,7 +6,10 @@
   "version": "0.0.1",
   "git": "https://github.com/lumapictures/module-layout.git",
   "packages": {
-    "bootstrap3-less": {},
-  	"iron-router": {}
+  	"iron-router": {},
+    "bootstrap3-wysihtml5": {
+      "git": "https://github.com/austinrivas/meteor-bootstrap3-wysihtml5"
+    },
+    "jquery-ui": {}
   }
 }

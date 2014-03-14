@@ -1,0 +1,43 @@
+<template name="formsNav">
+<!-- formsNav -->
+<li>
+    <a href="{{pathFor 'forms'}}" class="expand"><span>Forms</span> <i class="icon-stack"></i></a>
+    <ul>
+        <li><a href="{{pathFor 'formSnippets'}}" class="expand">Form Snippets</a>
+            <ul>
+                <li><a href="{{pathFor 'bugReportForm'}}">Bug Report</a></li>
+                <li><a href="{{pathFor 'feedbackForm'}}">Feedback</a></li>
+                <li><a href="{{pathFor 'jobApplicationForm'}}">Job Application</a></li>
+                <li><a href="{{pathFor 'subscribeForm'}}">Subscribe</a></li>
+                <li><a href="{{pathFor 'simpleContactForm'}}">Simple Contact</a></li>
+                <li><a href="{{pathFor 'advancedContactForm'}}">Advanced Contact</a></li>
+                <li><a href="{{pathFor 'simpleRegistrationForm'}}">Simple Registration</a></li>
+                <li><a href="{{pathFor 'seperatedForm'}}">Seperated Form</a></li>
+                <li><a href="{{pathFor 'shippingInformationForm'}}">Shipping Information</a></li>
+                <li><a href="{{pathFor 'shippingMethodForm'}}">Shipping Method Form</a></li>
+                <li><a href="{{pathFor 'billingAddressForm'}}">Billing Address</a></li>
+                <li><a href="{{pathFor 'paymentInformationForm'}}">Payment Information</a></li>
+            </ul>
+        </li>
+        <li><a href="{{pathFor 'formComponents'}}" class="expand">Form Components</a>
+            <ul>
+                <li><a href="{{pathFor 'formElements'}}" class="expand">Form Elements</a>
+                    <ul>
+                        <li><a href="{{pathFor 'basicInputs'}}">Basic Inputs</a></li>
+                        <li><a href="{{pathFor 'styledElements'}}">Styled Elements</a></li>
+                        <li><a href="{{pathFor 'unstyledElements'}}">Unstyled Elements</a></li>
+                        <li><a href="{{pathFor 'spinners'}}">Spinners</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{pathFor 'wysiwygEditors'}}">WYSIWYG Editors</a></li>
+                <li><a href="{{pathFor 'selects'}}">Selects</a></li>
+                <li><a href="{{pathFor 'multiFileUploaders'}}">Multiple File Uploader</a></li>
+                <li><a href="{{pathFor 'inputGrids'}}">Input Grids</a></li>
+            </ul>
+        </li>
+        <li><a href="{{pathFor 'formLayouts'}}">Form Layouts</a></li>
+        <li><a href="{{pathFor 'formValidation'}}">Form Validation</a></li>
+    </ul>
+</li>
+<!-- /formsNav -->
+</template>

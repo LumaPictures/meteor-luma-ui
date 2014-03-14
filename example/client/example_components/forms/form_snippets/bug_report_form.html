@@ -1,0 +1,82 @@
+<template name="bugReportForm">
+    <!-- Bug report form -->
+    <form action="#" role="form">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h6 class="panel-title"><i class="icon-bug"></i> Bug report</h6></div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Username:</label>
+                            <input type="text" class="form-control" placeholder="John Doe">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Email:</label>
+                            <input type="text" class="form-control" placeholder="your@email.com">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Operating system:</label>
+                            <select data-placeholder="Choose your system..." class="select-full" tabindex="2">
+                                <option value=""></option>
+                                <option value="win7">Windows 7</option>
+                                <option value="win8">Windows 8</option>
+                                <option value="macos">Mac OS</option>
+                                <option value="chromeos">Chrome OS</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Browser:</label>
+                            <select data-placeholder="Choose your browser..." class="select-full" tabindex="2">
+                                <option value=""></option>
+                                <option value="chrome">Chrome</option>
+                                <option value="firefox">Firefox</option>
+                                <option value="opera">Opera</option>
+                                <option value="safari">Safari</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Upload screenshot:</label>
+                            <input type="file" class="styled form-control" id="report-screenshot">
+                            <span class="help-block">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Issue type:</label>
+                            <select data-placeholder="Choose issue type..." class="select-full" tabindex="2">
+                                <option value="functionality">Functionality</option>
+                                <option value="content">Content</option>
+                                <option value="errors">Generic errors</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Additional information:</label>
+                    <textarea rows="5" cols="5" placeholder="If you want to add any info, do it here." class="elastic form-control"></textarea>
+                </div>
+
+                <div class="form-actions text-right">
+                    <input type="reset" value="Cancel" class="btn btn-danger">
+                    <input type="submit" value="Submit report" class="btn btn-primary">
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <!-- /bug report form -->
+</template>

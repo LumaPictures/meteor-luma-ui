@@ -1,0 +1,51 @@
+<template name="simpleContactForm">
+<!-- Simple contact form -->
+<form action="#" class="block validate" role="form">
+    <h6 class="heading-hr"><i class="icon-support"></i> Contact support</h6>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-6">
+                <label>Your name: <span class="mandatory">*</span></label>
+                <input type="text" name="name" placeholder="Eugene" class="form-control required">
+            </div>
+
+            <div class="col-md-6">
+                <label>Email address: <span class="mandatory">*</span></label>
+                <input type="text" name="email_field" placeholder="your@email.com" class="form-control required">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-6">
+                <label>Attach file:</label>
+                <input type="file" class="styled" id="attach">
+            </div>
+
+            <div class="col-md-6">
+                <label>Choose department:</label>
+                <select data-placeholder="Select department" class="select-full" tabindex="2">
+                    <option value=""></option>
+                    <option value="Support">Support (online)</option>
+                    <option value="Sles">Sales department</option>
+                    <option value="Lawers">Lawers</option>
+                    <option value="Information">Information</option>
+                    <option value="Administration">Web administration</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Your message: <span class="mandatory">*</span></label>
+        <textarea rows="5" cols="5" name="message" placeholder="Your message..." class="elastic form-control required"></textarea>
+    </div>
+
+    <div class="text-right">
+        <input type="reset" value="Cancel" class="btn btn-danger">
+        <input type="submit" value="Send message" class="btn btn-primary">
+    </div>
+</form>
+<!-- /simple contact form -->
+</template>

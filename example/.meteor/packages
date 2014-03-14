@@ -9,6 +9,8 @@ insecure
 preserve-inputs
 less
 coffeescript
-module-layout
+jquery
 iron-router
-bootstrap3-less
+bootstrap3-wysihtml5
+jquery-ui
+module-layout

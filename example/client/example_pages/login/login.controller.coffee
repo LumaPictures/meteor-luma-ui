@@ -1,0 +1,1 @@
+class @LoginController extends FullPageController

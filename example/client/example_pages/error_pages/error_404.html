@@ -1,0 +1,33 @@
+<template name="error404">
+    <!-- error404 -->
+    <!-- Error wrapper -->
+    <div class="error-wrapper text-center">
+        <h1>Lost?</h1>
+        <h6>- Error 404 -</h6>
+
+        <!-- Error content -->
+        <div class="error-content">
+            <form class="block-inner" action="#">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search...">
+					<span class="input-group-btn">
+						<button class="btn btn-primary" type="button">Search</button>
+					</span>
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="{{pathFor 'dashboard'}}" class="btn btn-danger btn-block">Back to Dashboard</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="{{pathFor 'home'}}" class="btn btn-success btn-block">Back to Home</a>
+                </div>
+            </div>
+        </div>
+        <!-- /error content -->
+
+    </div>
+    <!-- /error wrapper -->
+    <!-- /error404 -->
+</template>
