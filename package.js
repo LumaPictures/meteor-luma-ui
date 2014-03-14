@@ -75,13 +75,19 @@ Package.on_use(function (api, where) {
     'plugins/forms/validate.min.js',
     'plugins/forms/uploader/plupload.full.min.js',
     'plugins/forms/uploader/plupload.queue.min.js',
-    'plugins/forms/wysihtml5/toolbar.js',
     // globalize
     // TODO: necessary?
     'plugins/globalize/globalize.js',
     'plugins/globalize/globalize.culture.de-DE.js',
     'plugins/globalize/globalize.culture.ja-JP.js'
-  ],['client']);
+  ], ['client']);
+
+  /* wysihtml5
+  api.add_files('plugins/wysihtml5/wysihtml5-0.3.0.js', 'client');
+  api.add_files('plugins/wysihtml5/bootstrap3-wysihtml5.js', 'client');
+  api.add_files('plugins/wysihtml5/toolbar.js','client');
+  api.export('wysihtml5','client');
+  */
 
   /* Components */
   api.add_files([

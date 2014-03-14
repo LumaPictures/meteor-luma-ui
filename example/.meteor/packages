@@ -11,6 +11,5 @@ less
 coffeescript
 jquery
 iron-router
-bootstrap3-wysihtml5
 jquery-ui
 module-layout

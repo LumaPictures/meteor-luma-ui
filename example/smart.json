@@ -2,7 +2,6 @@
   "packages": {
     "module-layout": {
       "path": ".."
-    },
-    "bootstrap3-wysihtml5": {}
+    }
   }
 }

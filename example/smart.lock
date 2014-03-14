@@ -4,22 +4,21 @@
     "basePackages": {
       "module-layout": {
         "path": ".."
-      },
-      "bootstrap3-wysihtml5": {}
+      }
     },
     "packages": {
       "module-layout": {
         "path": ".."
       },
-      "bootstrap3-wysihtml5": {
-        "git": "https://github.com/austinrivas/meteor-bootstrap3-wysihtml5",
-        "branch": "master",
-        "commit": "f082faee2cbde91959b15f2676ea12df1c27f3f4"
-      },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.6.4",
         "commit": "927bbaed1b87894fb6fb70807f74ff3a5bd89f29"
+      },
+      "bootstrap3-wysihtml5": {
+        "git": "https://github.com/austinrivas/meteor-bootstrap3-wysihtml5",
+        "branch": "master",
+        "commit": "f082faee2cbde91959b15f2676ea12df1c27f3f4"
       },
       "jquery-ui": {
         "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
