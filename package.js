@@ -18,15 +18,13 @@ Package.on_use(function (api, where) {
   /* Page Layout */
   api.add_files([
     'page/page.controller.coffee',
-    'page/page.layout.html',
-    'page/page.layout.coffee'
+    'page/page.layout.html'
   ], ['client']);
 
   /* Full Page Layout */
   api.add_files([
     'full_page/full_page.controller.coffee',
-    'full_page/full_page.layout.html',
-    'full_page/full_page.layout.coffee'
+    'full_page/full_page.layout.html'
   ],['client']);
 
   api.export([
