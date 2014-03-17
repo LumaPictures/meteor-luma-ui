@@ -1,2 +1,4 @@
 Router.map ->
-  @route "login", path: "/login"
+  @route "login",
+    path: "/login"
+    controller: "FullPageController"

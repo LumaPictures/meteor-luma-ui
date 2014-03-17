@@ -1,42 +1,42 @@
 <template name="formsNav">
 <!-- formsNav -->
 <li>
-    <a href="{{pathFor 'forms'}}" class="expand"><span>Forms</span> <i class="icon-stack"></i></a>
+    <a href="{{pathFor 'forms'}}" id="{{ isActivePath 'forms' 'first-level' }}" class="expand"><span>Forms</span> <i class="icon-stack"></i></a>
     <ul>
-        <li><a href="{{pathFor 'formSnippets'}}" class="expand">Form Snippets</a>
+        <li class="{{ isActive 'formSnippets' }}"><a href="{{pathFor 'formSnippets'}}" id="{{ isActivePath 'forms/form-snippets' 'second-level' }}" class="expand">Form Snippets</a>
             <ul>
-                <li><a href="{{pathFor 'bugReportForm'}}">Bug Report</a></li>
-                <li><a href="{{pathFor 'feedbackForm'}}">Feedback</a></li>
-                <li><a href="{{pathFor 'jobApplicationForm'}}">Job Application</a></li>
-                <li><a href="{{pathFor 'subscribeForm'}}">Subscribe</a></li>
-                <li><a href="{{pathFor 'simpleContactForm'}}">Simple Contact</a></li>
-                <li><a href="{{pathFor 'advancedContactForm'}}">Advanced Contact</a></li>
-                <li><a href="{{pathFor 'simpleRegistrationForm'}}">Simple Registration</a></li>
-                <li><a href="{{pathFor 'seperatedForm'}}">Seperated Form</a></li>
-                <li><a href="{{pathFor 'shippingInformationForm'}}">Shipping Information</a></li>
-                <li><a href="{{pathFor 'shippingMethodForm'}}">Shipping Method Form</a></li>
-                <li><a href="{{pathFor 'billingAddressForm'}}">Billing Address</a></li>
-                <li><a href="{{pathFor 'paymentInformationForm'}}">Payment Information</a></li>
+                <li class="{{ isActive 'bugReportForm' }}"><a href="{{pathFor 'bugReportForm'}}">Bug Report</a></li>
+                <li class="{{ isActive 'feedbackForm' }}"><a href="{{pathFor 'feedbackForm'}}">Feedback</a></li>
+                <li class="{{ isActive 'jobApplicationForm' }}"><a href="{{pathFor 'jobApplicationForm'}}">Job Application</a></li>
+                <li class="{{ isActive 'subscribeForm' }}"><a href="{{pathFor 'subscribeForm'}}">Subscribe</a></li>
+                <li class="{{ isActive 'simpleContactForm' }}"><a href="{{pathFor 'simpleContactForm'}}">Simple Contact</a></li>
+                <li class="{{ isActive 'advancedContactForm' }}"><a href="{{pathFor 'advancedContactForm'}}">Advanced Contact</a></li>
+                <li class="{{ isActive 'simpleRegistrationForm' }}"><a href="{{pathFor 'simpleRegistrationForm'}}">Simple Registration</a></li>
+                <li class="{{ isActive 'seperatedForm' }}"><a href="{{pathFor 'seperatedForm'}}">Seperated Form</a></li>
+                <li class="{{ isActive 'shippingInformationForm' }}"><a href="{{pathFor 'shippingInformationForm'}}">Shipping Information</a></li>
+                <li class="{{ isActive 'shippingMethodForm' }}"><a href="{{pathFor 'shippingMethodForm'}}">Shipping Method Form</a></li>
+                <li class="{{ isActive 'billingAddressForm' }}"><a href="{{pathFor 'billingAddressForm'}}">Billing Address</a></li>
+                <li class="{{ isActive 'paymentInformationForm' }}"><a href="{{pathFor 'paymentInformationForm'}}">Payment Information</a></li>
             </ul>
         </li>
-        <li><a href="{{pathFor 'formComponents'}}" class="expand">Form Components</a>
+        <li class="{{ isActive 'formComponents' }}"><a href="{{pathFor 'formComponents'}}" id="{{ isActivePath 'forms/form-components' 'second-level' }}" class="expand">Form Components</a>
             <ul>
-                <li><a href="{{pathFor 'formElements'}}" class="expand">Form Elements</a>
+                <li class="{{ isActive 'formElements' }}"><a href="{{pathFor 'formElements'}}" id="{{ isActivePath 'forms/form-snippets/form-elements' 'third-level' }}" class="expand">Form Elements</a>
                     <ul>
-                        <li><a href="{{pathFor 'basicInputs'}}">Basic Inputs</a></li>
-                        <li><a href="{{pathFor 'styledElements'}}">Styled Elements</a></li>
-                        <li><a href="{{pathFor 'unstyledElements'}}">Unstyled Elements</a></li>
-                        <li><a href="{{pathFor 'spinners'}}">Spinners</a></li>
+                        <li class="{{ isActive 'basicInputs' }}"><a href="{{pathFor 'basicInputs'}}">Basic Inputs</a></li>
+                        <li class="{{ isActive 'styledElements' }}"><a href="{{pathFor 'styledElements'}}">Styled Elements</a></li>
+                        <li class="{{ isActive 'unstyledElements' }}"><a href="{{pathFor 'unstyledElements'}}">Unstyled Elements</a></li>
+                        <li class="{{ isActive 'spinners' }}"><a href="{{pathFor 'spinners'}}">Spinners</a></li>
                     </ul>
                 </li>
-                <li><a href="{{pathFor 'wysiwygEditors'}}">WYSIWYG Editors</a></li>
-                <li><a href="{{pathFor 'selects'}}">Selects</a></li>
-                <li><a href="{{pathFor 'multiFileUploaders'}}">Multiple File Uploader</a></li>
-                <li><a href="{{pathFor 'inputGrids'}}">Input Grids</a></li>
+                <li class="{{ isActive 'wysiwygEditors' }}"><a href="{{pathFor 'wysiwygEditors'}}">WYSIWYG Editors</a></li>
+                <li class="{{ isActive 'selects' }}"><a href="{{pathFor 'selects'}}">Selects</a></li>
+                <li class="{{ isActive 'multiFileUploaders' }}"><a href="{{pathFor 'multiFileUploaders'}}">Multiple File Uploader</a></li>
+                <li class="{{ isActive 'inputGrids' }}"><a href="{{pathFor 'inputGrids'}}">Input Grids</a></li>
             </ul>
         </li>
-        <li><a href="{{pathFor 'formLayouts'}}">Form Layouts</a></li>
-        <li><a href="{{pathFor 'formValidation'}}">Form Validation</a></li>
+        <li class="{{ isActive 'formLayouts' }}"><a href="{{pathFor 'formLayouts'}}">Form Layouts</a></li>
+        <li class="{{ isActive 'formValidation' }}"><a href="{{pathFor 'formValidation'}}">Form Validation</a></li>
     </ul>
 </li>
 <!-- /formsNav -->

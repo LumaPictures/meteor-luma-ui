@@ -967,9 +967,12 @@ Template.page_layout.rendered = ->
   $.jGrowl.defaults.closer = false
   $.jGrowl.defaults.easing = "easeInOutCirc"
 
-  #===== Collapsible navigation =====//
+  #===== Collapsible navigation =====/
+  # https://github.com/juven14/Collapsible
+  # any elements with the default open ids will be open on render
+  # 
   $(".sidebar-wide li:not(.disabled) .expand, .sidebar-narrow .navigation > li ul .expand").collapsible
-    defaultOpen: "second-level,third-level"
+    defaultOpen: "first-level,second-level,third-level"
     cssOpen: "level-opened"
     cssClose: "level-closed"
     speed: 150

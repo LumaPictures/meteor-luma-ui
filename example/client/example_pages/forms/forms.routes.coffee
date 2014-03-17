@@ -1,30 +1,45 @@
 Router.map ->
-  @route "forms", path: "/forms"
-  @route "formLayouts", path: "/forms/form-layouts"
-  @route "formValidation", path: "/forms/form-validation"
-
-  @route "formComponents", path: "/forms/form-components"
-  @route "wysiwygEditors", path: "/forms/form-components/wysiwyg-editors"
-  @route "multiFileUploaders", path: "/forms/form-components/multi-file-uploaders"
-  @route "inputGrids", path: "/forms/form-components/input-grids"
-  @route "formElements", path: "/forms/form-components/form-elements"
-  @route "basicInputs", path: "/forms/form-components/form-elements/basic-inputs"
-  @route "styledElements", path: "/forms/form-components/form-elements/styled-elements"
-  @route "unstyledElements", path: "/forms/form-components/form-elements/unstyled-elements"
-  @route "spinners", path: "/forms/form-components/form-elements/spinners"
-  @route "selects", path: "/forms/form-components/form-elements/selects"
-
-  @route "formSnippets", path: "/forms/form-snippets"
-  @route "bugReportForm", path: "/forms/form-snippets/bug-report-form"
-  @route "jobApplicationForm", path: "/forms/form-snippets/job-application-form"
-  @route "simpleContactForm", path: "/forms/form-snippets/simple-contact-form"
-  @route "advancedContactForm", path: "/forms/form-snippets/advanced-contact-form"
-  @route "simpleRegistrationForm", path: "/forms/form-snippets/simple-registration-form"
-  @route "seperatedForm", path: "/forms/form-snippets/seperated-form"
-  @route "surveyForm", path: "/forms/form-snippets/survey-form"
-  @route "feedbackForm", path: "/forms/form-snippets/feedback-form"
-  @route "subscribeForm", path: "/forms/form-snippets/subscribe-form"
-  @route "shippingInformationForm", path: "/forms/form-snippets/shipping-information-form"
-  @route "shippingMethodForm", path: "/forms/form-snippets/shipping-method-form"
-  @route "billingAddressForm", path: "/forms/form-snippets/billing-address-form"
-  @route "paymentInformationForm", path: "/forms/form-snippets/payment-information-form"
+  @route "forms",
+    path: "/forms"
+    controller: "PageController"
+    data:
+      page:
+        title: 'Forms'
+        subtitle: 'A necessary evil'
+        breadcrumbs: []
+        callouts: [
+          cssClass: "callout-success"
+          title: "We All Hate Filling Out Forms"
+          message: "Time to change that."
+        ]
+  @route "formLayouts",
+    path: "/forms/form-layouts"
+    controller: "PageController"
+    data:
+      page:
+        title: "Form Layouts"
+        subtitle: "Getting Laid Out."
+        breadcrumbs: [
+          title: "Forms"
+          route: 'forms'
+        ]
+        callouts: [
+          cssClass: "callout-danger"
+          title: "Flexible Form Layouts"
+          message: "Organized Input = Organized Data."
+        ]
+  @route "formValidation",
+    path: "/forms/form-validation"
+    controller: "PageController"
+    page:
+      title: "Form Validation"
+      subtitle: "Everyone needs a little validation."
+      breadcrumbs: [
+        title: "Forms"
+        route: 'forms'
+      ]
+      callouts: [
+        cssClass: "callout-success"
+        title: "Client Side Validation"
+        message: "You shouldn't have to wait on the server to know that your data works."
+      ]
