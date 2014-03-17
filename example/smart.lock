@@ -15,11 +15,6 @@
         "tag": "v0.6.4",
         "commit": "927bbaed1b87894fb6fb70807f74ff3a5bd89f29"
       },
-      "iron-router-active": {
-        "git": "https://github.com/XpressiveCode/iron-router-active.git",
-        "tag": "v0.1.2",
-        "commit": "54ee348734172c550a4d424007f4cdd491c34715"
-      },
       "jquery-ui": {
         "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
         "tag": "v1.9.2",

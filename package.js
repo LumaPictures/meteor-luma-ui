@@ -5,6 +5,7 @@ Package.describe({
 Package.on_use(function (api, where) {
   api.use([
     'standard-app-packages',
+    'underscore',
     'iron-router',
     'coffeescript'
   ],['client', 'server']);
@@ -91,11 +92,33 @@ Package.on_use(function (api, where) {
 
   /* Components */
   api.add_files([
+    // navbar
     'components/navbar/default_navbar.html',
     'components/navbar/default_navbar_brand.html',
     'components/navbar/default_navbar_header.html',
-    'components/sidebar/default_sidebar.html'
+    // sidebar
+    'components/sidebar/default_sidebar.html',
+    // page header
+    'components/page_header/default_page_header.html',
+    'components/page_header/default_page_title.html',
+    'components/page_header/default_page_header_widget.html',
+    // breadcrumbs
+    'components/breadcrumbs/default_breadcrumbs_line.html',
+    'components/breadcrumbs/default_breadcrumbs.html',
+    // callouts
+    'components/callouts/default_callouts.html',
+    'components/callouts/default_callout.html',
+    'components/callouts/default_alert.html',
+    // widgets
+    'components/widgets/report_range.html',
+    // selectors
+    'components/selectors/language_selector.html',
+    // search
+    'components/search/search_dropdown.html',
+    'components/search/search_form.html',
+    'components/search/search_line.html'
   ],['client']);
+
 
   /* Page Layout */
   api.add_files([

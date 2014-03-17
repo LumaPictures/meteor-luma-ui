@@ -7,11 +7,13 @@ Router.map ->
   @route "home",
     path: '/'
     controller: "PageController"
-    data:
-      page:
+    data: ->
+      @data.page_title =
         title: "Home"
         subtitle: "This isn't really home, its work."
-        breadcrumbs: []
+      @data.breadcrumbs = []
+      @prepareData()
+
   @route "dashboard",
     path: "/dashboard"
     controller: "PageController"
