@@ -19,7 +19,47 @@ Package.on_use(function (api, where) {
 
   /* Styles */
   api.add_files([
-    'less/main.less'
+    'less/bootstrap.import.less',
+    'less/variables.import.less',
+    // theme
+    'less/theme/resets.import.less',
+    'less/theme/headings.import.less',
+    'less/theme/lists.import.less',
+    'less/theme/text_styles.import.less',
+    'less/theme/typography.import.less',
+    'less/theme/general_layout.import.less',
+    'less/theme/scrollbar.import.less',
+    'less/theme/navbar.import.less',
+    'less/theme/list_groups.import.less',
+    'less/theme/page_header.import.less',
+    'less/theme/labels.import.less',
+    'less/theme/dropdowns.import.less',
+    'less/theme/panels.import.less',
+    'less/theme/forms.import.less',
+    'less/theme/modals.import.less',
+    'less/theme/progress_bars.import.less',
+    'less/theme/alerts.import.less',
+    'less/theme/contextual_backgrounds.import.less',
+    'less/theme/tooltip.import.less',
+    'less/theme/pagination.import.less',
+    'less/theme/buttons.import.less',
+    'less/theme/tables.import.less',
+    'less/theme/thumbnail.import.less',
+    'less/theme/media_object.import.less',
+    'less/theme/headline.import.less',
+    'less/theme/flags.import.less',
+    // styles
+    'less/styles/general_styles.import.less',
+    'less/styles/graphs.import.less',
+    'less/styles/widgets.import.less',
+    'less/styles/page_layout.import.less',
+    'less/styles/plugins.import.less',
+    'less/styles/error_pages.import.less',
+    'less/styles/wysihtml5.import.less',
+    // icons
+    'less/icons.import.less',
+    // fonts
+    'less/fonts.import.less'
   ],['client']);
 
   /* Bootstrap JS */
@@ -100,6 +140,7 @@ Package.on_use(function (api, where) {
     // sidebar
     'components/sidebar/default_sidebar.html',
     'components/sidebar/default_sidebar_content.html',
+    'components/sidebar/default_sidebar_content.coffee',
     // page header
     'components/page_header/default_page_header.html',
     'components/page_header/default_page_title.html',

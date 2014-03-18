@@ -1,3 +1,40 @@
 <template name="default_sidebar_content">
-    <h1>default sidebar content</h1>
+    <ul class="navigation">
+        {{#each nav_items }}
+            {{> navItem }}
+        {{/each}}
+    </ul>
+</template>
+
+<template name="navItem">
+    <li class="{{ isActive route }}">
+        <a href="{{pathFor route}}"
+           class="{{#if nav.children}}expand{{/if}}"
+           id="{{#if nav.children}}{{ isActivePath path 'first-level' }}{{/if}}">
+            <span>{{page.title}}</span> <i class="{{nav.icon}}"></i>
+        </a>
+        {{#if nav.children }}
+        <ul>
+            {{#each nav.children}}
+                {{> childNavItem }}
+            {{/each}}
+        </ul>
+        {{/if}}
+    </li>
+</template>
+
+<template name="childNavItem">
+    <li class="{{ isActive route }}">
+        <a href="{{pathFor route}}"
+           class="{{#if children}}expand{{/if}}">
+            {{title}}
+        </a>
+        {{#if children}}
+        <ul>
+            {{#each children}}
+                {{> childNavItem }}
+            {{/each}}
+        </ul>
+        {{/if}}
+    </li>
 </template>

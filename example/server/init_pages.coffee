@@ -4,13 +4,22 @@ Meteor.startup ->
       route: 'home'
       path: '/'
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Home"
         subtitle: "This isn't really home, its work."
     },{
       route: 'errorPages'
       path: "/error-pages"
       controller: 'ExampleController'
+      nav:
+        priority: 0
+        icon: 'icon-warning'
+        children: [{
+          title: 'Not Found'
+          route: 'error404'
+        }]
+      page:
+        title: 'Error Pages'
     },{
       route: 'error404'
       path: "/error-pages/404"
@@ -19,7 +28,89 @@ Meteor.startup ->
       route: "forms"
       path: "/forms"
       controller: 'ExampleController'
-      page_title:
+      nav:
+        priority: 9
+        icon: 'icon-stack'
+        children: [{
+          title: 'Form Snippets'
+          route: 'formSnippets'
+          children: [{
+            title: 'Bug Report Form'
+            route: 'bugReportForm'
+          },{
+            title: 'Feedback Form'
+            route: 'feedbackForm'
+          },{
+            title: 'Job Application Form'
+            route: 'jobApplicationForm'
+          },{
+            title: 'Subscribe Form'
+            route: 'subscribeForm'
+          },{
+            title: 'Simple Contact Form'
+            route: 'simpleContactForm'
+          },{
+            title: 'Advanced Contact Form'
+            route: 'advancedContactForm'
+          },{
+            title: 'Simple Registration Form'
+            route: 'simpleRegistrationForm'
+          },{
+            title: 'Seperated Form'
+            route: 'seperatedForm'
+          },{
+            title: 'Shipping Information Form'
+            route: 'shippingInformationForm'
+          },{
+            title: 'Shipping Method Form'
+            route: 'shippingMethodForm'
+          },{
+            title: 'Billing Address Form'
+            route: 'billingAddressForm'
+          },{
+            title: 'Payment Information Form'
+            route: 'paymentInformationForm'
+          }]
+        },{
+          title: 'Form Components'
+          route: 'formComponents'
+          children: [{
+            title: 'Form Elements'
+            route: 'formElements'
+            children: [{
+              title: 'Basic Inputs'
+              route: 'basicInputs'
+            },{
+              title: 'Styled Elements'
+              route: 'styledElements'
+            },{
+              title: 'Unstyled Elements'
+              route: 'unstyledElements'
+            },{
+              title: 'Spinners'
+              route: 'spinners'
+            }]
+          },{
+            title: 'WYSIWYG Editors'
+            route: 'wysiwygEditors'
+          },{
+            title: 'Selects'
+            route: 'selects'
+          },{
+            title: 'Multi File Uploaders'
+            route: 'multiFileUploaders'
+          },{
+            title: 'Input Grids'
+            route: 'inputGrids'
+          }]
+        },{
+          title: 'Form Layouts'
+          route: 'formLayouts'
+        },{
+          title: 'Form Validation'
+          route: 'formValidation'
+        }]
+      page:
         title: 'Forms'
         subtitle: 'A necessary evil'
       callouts: [
@@ -31,7 +122,7 @@ Meteor.startup ->
       route: "formLayouts"
       path: "/forms/form-layouts"
       controller: 'ExampleController'
-      page_title:
+      page:
           title: "Form Layouts"
           subtitle: "Getting Laid Out."
       breadcrumbs: [
@@ -47,7 +138,7 @@ Meteor.startup ->
       route: "formValidation"
       path: "/forms/form-validation"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Form Validation"
         subtitle: "Everyone needs a little validation."
       breadcrumbs: [
@@ -63,7 +154,7 @@ Meteor.startup ->
       route: "formComponents"
       path: "/forms/form-components"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Form Components"
         subtitle: "Forms are badass."
       breadcrumbs: [
@@ -79,7 +170,7 @@ Meteor.startup ->
       route: "wysiwygEditors"
       path: "/forms/form-components/wysiwyg-editors"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "WYSIWYG"
         subtitle: "Awesome editors"
       breadcrumbs: [{
@@ -98,7 +189,7 @@ Meteor.startup ->
       route: "multiFileUploaders"
       path: "/forms/form-components/multi-file-uploaders"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: 'Multi File Uploaders'
         subtitle: "Two is better than one."
       breadcrumbs: [{
@@ -117,7 +208,7 @@ Meteor.startup ->
       route: "inputGrids"
       path: "/forms/form-components/input-grids"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: 'Input Grids'
         subtitle: "Welcome to the Grid."
       breadcrumbs: [{
@@ -136,7 +227,7 @@ Meteor.startup ->
       route: "selects"
       path: "/forms/form-components/selects"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Selects"
         subtitle: "You must choose wisely."
       breadcrumbs: [{
@@ -155,7 +246,7 @@ Meteor.startup ->
       route: "formElements"
       path: "/forms/form-components/form-elements"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: 'Form Elements'
         subtitle: "It's elementary my dear."
       breadcrumbs: [{
@@ -174,7 +265,7 @@ Meteor.startup ->
       route: "basicInputs"
       path: "/forms/form-components/form-elements/basic-inputs"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: 'Basic Inputs'
         subtitle: 'Sometimes old fashioned is best.'
       breadcrumbs: [{
@@ -196,7 +287,7 @@ Meteor.startup ->
       route: "styledElements"
       path: "/forms/form-components/form-elements/styled-elements"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: 'Styled Elements'
         subtitle: 'Form swag.'
       breadcrumbs: [{
@@ -218,7 +309,7 @@ Meteor.startup ->
       route: "unstyledElements"
       path: "/forms/form-components/form-elements/unstyled-elements"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: 'Unstyled Elements'
         subtitle: "Not ugly, just unstyled."
       breadcrumbs: [{
@@ -237,7 +328,7 @@ Meteor.startup ->
       route: "spinners"
       path: "/forms/form-components/form-elements/spinners"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: 'Spinners'
         subtitle: 'Right round baby.'
       breadcrumbs: [{
@@ -259,7 +350,7 @@ Meteor.startup ->
       route: "formSnippets"
       path: "/forms/form-snippets"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Form Snippets"
         subtitle: "Snip Snip."
       breadcrumbs: [
@@ -275,7 +366,7 @@ Meteor.startup ->
       route: "bugReportForm"
       path: "/forms/form-snippets/bug-report-form"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Bug Report Form"
         subtitle: "I hate bugs."
       breadcrumbs: [{
@@ -289,7 +380,7 @@ Meteor.startup ->
       route: "jobApplicationForm"
       path: "/forms/form-snippets/job-application-form"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Job Application Form"
         subtitle: "Work sucks, but being broke is worse."
       breadcrumbs: [{
@@ -303,7 +394,7 @@ Meteor.startup ->
       route: "simpleContactForm"
       path: "/forms/form-snippets/simple-contact-form"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Simple Contact Form"
         subtitle: "Let me get those digits."
       breadcrumbs: [{
@@ -317,7 +408,7 @@ Meteor.startup ->
       route: "advancedContactForm"
       path: "/forms/form-snippets/advanced-contact-form"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Advanced Contact Form"
         subtitle: "For that special kind of contact."
       breadcrumbs: [{
@@ -331,7 +422,7 @@ Meteor.startup ->
       route: "simpleRegistrationForm"
       path: "/forms/form-snippets/simple-registration-form"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Simple Registration Form"
         subtitle: "You're in the system, man."
       breadcrumbs: [{
@@ -345,7 +436,7 @@ Meteor.startup ->
       route: "seperatedForm"
       path: "/forms/form-snippets/seperated-form"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Seperated Form"
         subtitle: "You gotta keep 'em seperated."
       breadcrumbs: [{
@@ -359,7 +450,7 @@ Meteor.startup ->
       route: "surveyForm"
       path: "/forms/form-snippets/survey-form"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Survey Form"
         subtitle: "Everyone hates surveys, except these of course."
       breadcrumbs: [{
@@ -373,7 +464,7 @@ Meteor.startup ->
       route: "feedbackForm"
       path: "/forms/form-snippets/feedback-form"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Feedback Form"
         subtitle: "My foot gives great feedback."
       breadcrumbs: [{
@@ -387,7 +478,7 @@ Meteor.startup ->
       route: "subscribeForm"
       path: "/forms/form-snippets/subscribe-form"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Subscription Form"
         subtitle: "Want some magazines?"
       breadcrumbs: [{
@@ -401,7 +492,7 @@ Meteor.startup ->
       route: "shippingInformationForm"
       path: "/forms/form-snippets/shipping-information-form"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Shipping Information Form"
         subtitle: "Where are we sending your shit?"
       breadcrumbs: [{
@@ -429,7 +520,7 @@ Meteor.startup ->
       route: "billingAddressForm"
       path: "/forms/form-snippets/billing-address-form"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Billing Address Form"
         subtitle: "Whose paying for this shit?"
       breadcrumbs: [{
@@ -443,7 +534,7 @@ Meteor.startup ->
       route: "paymentInformationForm"
       path: "/forms/form-snippets/payment-information-form"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Payment Information Form"
         subtitle: "And now I have your credit card number..."
       breadcrumbs: [{
@@ -457,7 +548,47 @@ Meteor.startup ->
       route: "interfaceComponents"
       path: "/interface-components"
       controller: 'ExampleController'
-      page_title:
+      nav:
+        priority: 10
+        icon: 'icon-grid'
+        children: [{
+          title: 'Visuals'
+          route: 'visuals'
+        },{
+          title: 'Navs'
+          route: 'navs'
+        },{
+          title: 'Panel Options'
+          route: 'panelOptions'
+        },{
+          title: 'Navbars'
+          route: 'navbars'
+        },{
+          title: 'Info Blocks'
+          route: 'infoBlocks'
+        },{
+          title: 'Icons'
+          route: 'icons'
+        },{
+          title: 'Buttons'
+          route: 'buttons'
+        },{
+          title: 'Calendar'
+          route: 'calendar'
+        },{
+          title: 'Typography'
+          route: 'typography'
+        },{
+          title: 'Gallery'
+          route: 'gallery'
+        },{
+          title: 'Header Elements'
+          route: 'headerElements'
+        },{
+          title: 'Content Grid'
+          route: 'contentGrid'
+        }]
+      page:
         title: "Interface Components"
         subtitle: "Do stuff."
       breadcrumbs: []
@@ -470,7 +601,7 @@ Meteor.startup ->
       route: "visuals"
       path: "/interface-components/visuals"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Visuals & Notifications"
         subtitle: "Popups and shit."
       breadcrumbs: [
@@ -486,7 +617,7 @@ Meteor.startup ->
       route: "navs"
       path: "/interface-components/navs"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Navs"
         subtitle: "Drop it like its hot."
       breadcrumbs: [
@@ -502,7 +633,7 @@ Meteor.startup ->
       route: "panelOptions"
       path: "/interface-components/panel-options"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Panel Options"
         subtitle: "More options..."
       breadcrumbs: [
@@ -518,7 +649,7 @@ Meteor.startup ->
       route: "navbars"
       path: "/interface-components/navbars"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Navbars"
         subtitle: "Get where you need to be."
       breadcrumbs: [
@@ -534,7 +665,7 @@ Meteor.startup ->
       route: "infoBlocks"
       path: "/interface-components/info-blocks"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Info Blocks"
         subtitle: "Like Minecraft, but not."
       breadcrumbs: [
@@ -550,7 +681,7 @@ Meteor.startup ->
       route: "icons"
       path: "/interface-components/icons"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Icons"
         subtitle: "Like Minecraft, but not."
       breadcrumbs: [
@@ -566,7 +697,7 @@ Meteor.startup ->
       route: "buttons"
       path: "/interface-components/buttons"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Buttons"
         subtitle: "Don't touch anything."
       breadcrumbs: [
@@ -582,7 +713,7 @@ Meteor.startup ->
       route: "calendar"
       path: "/interface-components/calendar"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Calendar"
         subtitle: "Now you don't have an excuse for."
         breadcrumbs: [
@@ -598,7 +729,7 @@ Meteor.startup ->
       route: "typography"
       path: "/interface-components/typography"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Typography"
         subtitle: "Like caligraphy, but easier."
       breadcrumbs: [
@@ -614,7 +745,7 @@ Meteor.startup ->
       route: "gallery"
       path: "/interface-components/gallery"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Gallery"
         subtitle: "Image and Video gallery."
       breadcrumbs: [
@@ -630,7 +761,7 @@ Meteor.startup ->
       route: "headerElements"
       path: "/interface-components/header-elements"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Page Header Elements"
         subtitle: "Page header area custom elements."
       breadcrumbs: [
@@ -646,7 +777,7 @@ Meteor.startup ->
       route: "contentGrid"
       path: "/interface-components/content-grid"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Content Grid"
         subtitle: "Bootstrap responsive content grid."
       breadcrumbs: [
@@ -662,14 +793,24 @@ Meteor.startup ->
       route: "invoices"
       path: "/invoices"
       controller: 'ExampleController'
-      page_title:
+      nav:
+        priority: 4
+        icon: 'icon-coin'
+        children: [{
+          title: 'Invoice Template'
+          route: 'invoiceTemplate'
+        },{
+          title: 'Invoice List'
+          route: 'invoiceList'
+        }]
+      page:
         title: "Invoices"
         subtitle: "Gimme my money."
     },{
       route: "invoiceTemplate"
       path: "/invoices/template"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Invoice Template"
         subtitle: "Stop repeating yourself."
       breadcrumbs: [
@@ -680,7 +821,7 @@ Meteor.startup ->
       route: "invoiceList"
       path: "/invoices/list"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Invoice List"
         subtitle: "Time to break some kneecaps."
       breadcrumbs: [
@@ -691,25 +832,46 @@ Meteor.startup ->
       route: "login"
       path: "/login"
       controller: "FullPageController"
+      nav:
+        priority: 0
+        icon: 'icon-user-plus'
+      page:
+        title: 'Login'
     },{
       route: "search"
       path: "/search"
       controller: 'ExampleController'
-      page_title:
+      nav:
+        priority: 6
+        icon: 'icon-search3'
+      page:
         title: "Search"
         subtitle: "What was I looking for?"
     },{
       route: "support"
       path: "/support"
       controller: 'ExampleController'
-      page_title:
+      nav:
+        priority: 5
+        icon: 'icon-bubble6'
+        children: [{
+          title: 'FAQ'
+          route: 'faq'
+        },{
+          title: 'Chat With Tabs'
+          route: 'chatWithTabs'
+        },{
+          title: 'Chat With Contacts'
+          route: 'chatWithContacts'
+        }]
+      page:
         title: "Support"
         subtitle: "HALP!"
     },{
       route: "faq"
       path: "/support/faq"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "FAQ"
         subtitle: "Let me Google that for you."
       breadcrumbs: [
@@ -720,7 +882,7 @@ Meteor.startup ->
       route: "chatWithTabs"
       path: "/support/chat-with-tabs"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Chat With Tabs"
         subtitle: "Figure it out."
       breadcrumbs: [
@@ -731,7 +893,7 @@ Meteor.startup ->
       route: "chatWithContacts"
       path: "/support/chat-with-contacts"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Chat With Contacts"
         subtitle: "Figure it out."
       breadcrumbs: [
@@ -742,14 +904,24 @@ Meteor.startup ->
       route: "tables"
       path: "/tables"
       controller: 'ExampleController'
-      page_title:
+      nav:
+        priority: 8
+        icon: 'icon-table2'
+        children: [{
+          title: 'Static Tables'
+          route: 'staticTables'
+        },{
+          title: 'Datatables'
+          route: 'datatables'
+        }]
+      page:
         title: "Tables"
         subtitle: "Yo dawg, heard you like tables."
     },{
       route: "staticTables"
       path: "/tables/static"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Static Tables"
         subtitle: "So good it doesn't have to change."
       breadcrumbs: [
@@ -760,7 +932,7 @@ Meteor.startup ->
       route: "datatables"
       path: "/tables/datatables"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Datatables"
         subtitle: "Quick, responsive, and flexible."
       breadcrumbs: [
@@ -771,7 +943,20 @@ Meteor.startup ->
       route: "taskManager"
       path: "/task-manager"
       controller: 'ExampleController'
-      page_title:
+      nav:
+        priority: 2
+        icon: 'icon-numbered-list'
+        children: [{
+          title: 'Task Grid'
+          route: 'taskGrid'
+        },{
+          title: 'Task List'
+          route: 'taskList'
+        },{
+          title: 'Task Detail'
+          route: 'taskDetail'
+        }]
+      page:
         title: "Task Manager"
         subtitle: "Get stuff done."
       callouts: [
@@ -783,7 +968,7 @@ Meteor.startup ->
       route: "taskGrid"
       path: "/task-manager/task-grid"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Task Grid"
         subtitle: "Task grid with options bar"
       breadcrumbs: [
@@ -794,7 +979,7 @@ Meteor.startup ->
       route: "taskList"
       path: "/task-manager/task-list"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Task List"
         subtitle: "Task list inside data table"
       breadcrumbs: [
@@ -805,7 +990,7 @@ Meteor.startup ->
       route: "taskDetail"
       path: "/task-manager/task-detail"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Task Detail"
         subtitle: "Detailed task layout example"
       breadcrumbs: [
@@ -816,14 +1001,27 @@ Meteor.startup ->
       route: "user"
       path: "/user"
       controller: 'ExampleController'
-      page_title:
+      nav:
+        priority: 3
+        icon: 'icon-user'
+        children: [{
+          title: 'Team'
+          route: 'team'
+        },{
+          title: 'Contacts'
+          route: 'contactList'
+        },{
+          title: 'Profile'
+          route: 'profile'
+        }]
+      page:
         title: "User"
         subtitle: "Be all you can be."
     },{
       route: "team"
       path: "/user/team"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Team"
         subtitle: "Because you can't do everything yourself."
       breadcrumbs: [
@@ -834,7 +1032,7 @@ Meteor.startup ->
       route: "contactList"
       path: "/user/contacts"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Contacts"
         subtitle: "Now you don't have an excuse for forgetting their name."
       breadcrumbs: [
@@ -845,7 +1043,7 @@ Meteor.startup ->
       route: "profile"
       path: "/user/profile"
       controller: 'ExampleController'
-      page_title:
+      page:
         title: "Austin Rivas"
         subtitle: "Witty Tagline."
       breadcrumbs: [
@@ -856,14 +1054,20 @@ Meteor.startup ->
       route: 'dashboard'
       path: "/dashboard"
       controller: 'ExampleController'
-      page_title:
+      nav:
+        priority: 1
+        icon: 'icon-screen2'
+      page:
         title: "Dashboard"
         subtitle: "I missed you Austin, it's been 12 hours since your last visit."
     },{
       route: "charts"
       path: "/charts"
       controller: 'ExampleController'
-      page_title:
+      nav:
+        priority: 7
+        icon: 'icon-bars'
+      page:
         title: "Charts"
         subtitle: "Yo dawg, heard you like charts."
     }]

@@ -36,7 +36,7 @@ class @PageController extends RouteController
       sidebar: {}
       sidebar_content: {}
       page_header: {}
-      page_title: {
+      page: {
         title: "Default Title"
         subtitle: "Default Subtitle"
       }
