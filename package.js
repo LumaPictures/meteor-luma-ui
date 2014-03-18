@@ -111,6 +111,7 @@ Package.on_use(function (api, where) {
     'components/callouts/default_alert.html',
     // widgets
     'components/widgets/report_range.html',
+    'components/widgets/pagination.html',
     // selectors
     'components/selectors/language_selector.html',
     // search
