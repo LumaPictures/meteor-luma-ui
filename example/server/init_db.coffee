@@ -794,7 +794,7 @@ Meteor.startup ->
       route: "taskList"
       path: "/task-manager/task-list"
       controller: 'ExampleController'
-      page:
+      page_title:
         title: "Task List"
         subtitle: "Task list inside data table"
       breadcrumbs: [
