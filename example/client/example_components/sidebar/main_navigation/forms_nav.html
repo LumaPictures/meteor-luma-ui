@@ -1,7 +1,7 @@
 <template name="formsNav">
 <!-- formsNav -->
 <li>
-    <a href="{{pathFor 'forms'}}" id="{{ isActivePath 'forms' 'first-level' }}" class="expand"><span>Forms</span> <i class="icon-stack"></i></a>
+    <a href="{{pathFor 'forms'}}" id="{{ isActivePath '/forms' 'first-level' }}" class="expand"><span>Forms</span> <i class="icon-stack"></i></a>
     <ul>
         <li class="{{ isActive 'formSnippets' }}"><a href="{{pathFor 'formSnippets'}}" id="{{ isActivePath 'forms/form-snippets' 'second-level' }}" class="expand">Form Snippets</a>
             <ul>

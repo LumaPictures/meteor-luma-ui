@@ -96,8 +96,10 @@ Package.on_use(function (api, where) {
     'components/navbar/default_navbar.html',
     'components/navbar/default_navbar_brand.html',
     'components/navbar/default_navbar_header.html',
+    'components/navbar/default_navbar_right.html',
     // sidebar
     'components/sidebar/default_sidebar.html',
+    'components/sidebar/default_sidebar_content.html',
     // page header
     'components/page_header/default_page_header.html',
     'components/page_header/default_page_title.html',

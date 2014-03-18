@@ -3,14 +3,14 @@ Meteor.startup ->
     pageList = [{
       route: 'home'
       path: '/'
-      controller: 'PageController'
+      controller: 'ExampleController'
       page_title:
         title: "Home"
         subtitle: "This isn't really home, its work."
     },{
       route: 'errorPages'
       path: "/error-pages"
-      controller: 'PageController'
+      controller: 'ExampleController'
     },{
       route: 'error404'
       path: "/error-pages/404"
@@ -18,7 +18,7 @@ Meteor.startup ->
     },{
       route: "forms"
       path: "/forms"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: 'Forms'
         subtitle: 'A necessary evil'
@@ -30,7 +30,7 @@ Meteor.startup ->
     },{
       route: "formLayouts"
       path: "/forms/form-layouts"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
           title: "Form Layouts"
           subtitle: "Getting Laid Out."
@@ -46,7 +46,7 @@ Meteor.startup ->
     },{
       route: "formValidation"
       path: "/forms/form-validation"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Form Validation"
         subtitle: "Everyone needs a little validation."
@@ -62,7 +62,7 @@ Meteor.startup ->
     },{
       route: "formComponents"
       path: "/forms/form-components"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Form Components"
         subtitle: "Forms are badass."
@@ -78,7 +78,7 @@ Meteor.startup ->
     },{
       route: "wysiwygEditors"
       path: "/forms/form-components/wysiwyg-editors"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "WYSIWYG"
         subtitle: "Awesome editors"
@@ -97,7 +97,7 @@ Meteor.startup ->
     },{
       route: "multiFileUploaders"
       path: "/forms/form-components/multi-file-uploaders"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: 'Multi File Uploaders'
         subtitle: "Two is better than one."
@@ -116,7 +116,7 @@ Meteor.startup ->
     },{
       route: "inputGrids"
       path: "/forms/form-components/input-grids"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: 'Input Grids'
         subtitle: "Welcome to the Grid."
@@ -135,7 +135,7 @@ Meteor.startup ->
     },{
       route: "selects"
       path: "/forms/form-components/selects"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Selects"
         subtitle: "You must choose wisely."
@@ -154,7 +154,7 @@ Meteor.startup ->
     },{
       route: "formElements"
       path: "/forms/form-components/form-elements"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: 'Form Elements'
         subtitle: "It's elementary my dear."
@@ -173,7 +173,7 @@ Meteor.startup ->
     },{
       route: "basicInputs"
       path: "/forms/form-components/form-elements/basic-inputs"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: 'Basic Inputs'
         subtitle: 'Sometimes old fashioned is best.'
@@ -195,7 +195,7 @@ Meteor.startup ->
     },{
       route: "styledElements"
       path: "/forms/form-components/form-elements/styled-elements"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: 'Styled Elements'
         subtitle: 'Form swag.'
@@ -217,7 +217,7 @@ Meteor.startup ->
     },{
       route: "unstyledElements"
       path: "/forms/form-components/form-elements/unstyled-elements"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: 'Unstyled Elements'
         subtitle: "Not ugly, just unstyled."
@@ -236,7 +236,7 @@ Meteor.startup ->
     },{
       route: "spinners"
       path: "/forms/form-components/form-elements/spinners"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: 'Spinners'
         subtitle: 'Right round baby.'
@@ -258,7 +258,7 @@ Meteor.startup ->
     },{
       route: "formSnippets"
       path: "/forms/form-snippets"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Form Snippets"
         subtitle: "Snip Snip."
@@ -274,7 +274,7 @@ Meteor.startup ->
     },{
       route: "bugReportForm"
       path: "/forms/form-snippets/bug-report-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Bug Report Form"
         subtitle: "I hate bugs."
@@ -288,7 +288,7 @@ Meteor.startup ->
     },{
       route: "jobApplicationForm"
       path: "/forms/form-snippets/job-application-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Job Application Form"
         subtitle: "Work sucks, but being broke is worse."
@@ -302,7 +302,7 @@ Meteor.startup ->
     },{
       route: "simpleContactForm"
       path: "/forms/form-snippets/simple-contact-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Simple Contact Form"
         subtitle: "Let me get those digits."
@@ -316,7 +316,7 @@ Meteor.startup ->
     },{
       route: "advancedContactForm"
       path: "/forms/form-snippets/advanced-contact-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Advanced Contact Form"
         subtitle: "For that special kind of contact."
@@ -330,7 +330,7 @@ Meteor.startup ->
     },{
       route: "simpleRegistrationForm"
       path: "/forms/form-snippets/simple-registration-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Simple Registration Form"
         subtitle: "You're in the system, man."
@@ -344,7 +344,7 @@ Meteor.startup ->
     },{
       route: "seperatedForm"
       path: "/forms/form-snippets/seperated-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Seperated Form"
         subtitle: "You gotta keep 'em seperated."
@@ -358,7 +358,7 @@ Meteor.startup ->
     },{
       route: "surveyForm"
       path: "/forms/form-snippets/survey-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Survey Form"
         subtitle: "Everyone hates surveys, except these of course."
@@ -372,7 +372,7 @@ Meteor.startup ->
     },{
       route: "feedbackForm"
       path: "/forms/form-snippets/feedback-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Feedback Form"
         subtitle: "My foot gives great feedback."
@@ -386,7 +386,7 @@ Meteor.startup ->
     },{
       route: "subscribeForm"
       path: "/forms/form-snippets/subscribe-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Subscription Form"
         subtitle: "Want some magazines?"
@@ -400,7 +400,7 @@ Meteor.startup ->
     },{
       route: "shippingInformationForm"
       path: "/forms/form-snippets/shipping-information-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Shipping Information Form"
         subtitle: "Where are we sending your shit?"
@@ -414,7 +414,7 @@ Meteor.startup ->
     },{
       route: "shippingMethodForm"
       path: "/forms/form-snippets/shipping-method-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page:
         title: "Shipping Method Form"
         subtitle: "How do you want your shit wrapped?"
@@ -428,7 +428,7 @@ Meteor.startup ->
     },{
       route: "billingAddressForm"
       path: "/forms/form-snippets/billing-address-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Billing Address Form"
         subtitle: "Whose paying for this shit?"
@@ -442,7 +442,7 @@ Meteor.startup ->
     },{
       route: "paymentInformationForm"
       path: "/forms/form-snippets/payment-information-form"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Payment Information Form"
         subtitle: "And now I have your credit card number..."
@@ -456,7 +456,7 @@ Meteor.startup ->
     },{
       route: "interfaceComponents"
       path: "/interface-components"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Interface Components"
         subtitle: "Do stuff."
@@ -469,7 +469,7 @@ Meteor.startup ->
     },{
       route: "visuals"
       path: "/interface-components/visuals"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Visuals & Notifications"
         subtitle: "Popups and shit."
@@ -485,7 +485,7 @@ Meteor.startup ->
     },{
       route: "navs"
       path: "/interface-components/navs"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Navs"
         subtitle: "Drop it like its hot."
@@ -501,7 +501,7 @@ Meteor.startup ->
     },{
       route: "panelOptions"
       path: "/interface-components/panel-options"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Panel Options"
         subtitle: "More options..."
@@ -517,7 +517,7 @@ Meteor.startup ->
     },{
       route: "navbars"
       path: "/interface-components/navbars"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Navbars"
         subtitle: "Get where you need to be."
@@ -533,7 +533,7 @@ Meteor.startup ->
     },{
       route: "infoBlocks"
       path: "/interface-components/info-blocks"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Info Blocks"
         subtitle: "Like Minecraft, but not."
@@ -549,7 +549,7 @@ Meteor.startup ->
     },{
       route: "icons"
       path: "/interface-components/icons"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Icons"
         subtitle: "Like Minecraft, but not."
@@ -565,7 +565,7 @@ Meteor.startup ->
     },{
       route: "buttons"
       path: "/interface-components/buttons"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Buttons"
         subtitle: "Don't touch anything."
@@ -581,7 +581,7 @@ Meteor.startup ->
     },{
       route: "calendar"
       path: "/interface-components/calendar"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Calendar"
         subtitle: "Now you don't have an excuse for."
@@ -597,7 +597,7 @@ Meteor.startup ->
     },{
       route: "typography"
       path: "/interface-components/typography"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Typography"
         subtitle: "Like caligraphy, but easier."
@@ -613,7 +613,7 @@ Meteor.startup ->
     },{
       route: "gallery"
       path: "/interface-components/gallery"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Gallery"
         subtitle: "Image and Video gallery."
@@ -629,7 +629,7 @@ Meteor.startup ->
     },{
       route: "headerElements"
       path: "/interface-components/header-elements"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Page Header Elements"
         subtitle: "Page header area custom elements."
@@ -645,7 +645,7 @@ Meteor.startup ->
     },{
       route: "contentGrid"
       path: "/interface-components/content-grid"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Content Grid"
         subtitle: "Bootstrap responsive content grid."
@@ -661,14 +661,14 @@ Meteor.startup ->
     },{
       route: "invoices"
       path: "/invoices"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Invoices"
         subtitle: "Gimme my money."
     },{
       route: "invoiceTemplate"
       path: "/invoices/template"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Invoice Template"
         subtitle: "Stop repeating yourself."
@@ -679,7 +679,7 @@ Meteor.startup ->
     },{
       route: "invoiceList"
       path: "/invoices/list"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Invoice List"
         subtitle: "Time to break some kneecaps."
@@ -694,21 +694,21 @@ Meteor.startup ->
     },{
       route: "search"
       path: "/search"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Search"
         subtitle: "What was I looking for?"
     },{
       route: "support"
       path: "/support"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Support"
         subtitle: "HALP!"
     },{
       route: "faq"
       path: "/support/faq"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "FAQ"
         subtitle: "Let me Google that for you."
@@ -719,7 +719,7 @@ Meteor.startup ->
     },{
       route: "chatWithTabs"
       path: "/support/chat-with-tabs"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Chat With Tabs"
         subtitle: "Figure it out."
@@ -730,7 +730,7 @@ Meteor.startup ->
     },{
       route: "chatWithContacts"
       path: "/support/chat-with-contacts"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Chat With Contacts"
         subtitle: "Figure it out."
@@ -741,14 +741,14 @@ Meteor.startup ->
     },{
       route: "tables"
       path: "/tables"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Tables"
         subtitle: "Yo dawg, heard you like tables."
     },{
       route: "staticTables"
       path: "/tables/static"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Static Tables"
         subtitle: "So good it doesn't have to change."
@@ -759,7 +759,7 @@ Meteor.startup ->
     },{
       route: "datatables"
       path: "/tables/datatables"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Datatables"
         subtitle: "Quick, responsive, and flexible."
@@ -770,7 +770,7 @@ Meteor.startup ->
     },{
       route: "taskManager"
       path: "/task-manager"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Task Manager"
         subtitle: "Get stuff done."
@@ -782,7 +782,7 @@ Meteor.startup ->
     },{
       route: "taskGrid"
       path: "/task-manager/task-grid"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Task Grid"
         subtitle: "Task grid with options bar"
@@ -793,7 +793,7 @@ Meteor.startup ->
     },{
       route: "taskList"
       path: "/task-manager/task-list"
-      controller: "PageController"
+      controller: 'ExampleController'
       page:
         title: "Task List"
         subtitle: "Task list inside data table"
@@ -804,7 +804,7 @@ Meteor.startup ->
     },{
       route: "taskDetail"
       path: "/task-manager/task-detail"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Task Detail"
         subtitle: "Detailed task layout example"
@@ -815,14 +815,14 @@ Meteor.startup ->
     },{
       route: "user"
       path: "/user"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "User"
         subtitle: "Be all you can be."
     },{
       route: "team"
       path: "/user/team"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Team"
         subtitle: "Because you can't do everything yourself."
@@ -833,7 +833,7 @@ Meteor.startup ->
     },{
       route: "contactList"
       path: "/user/contacts"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Contacts"
         subtitle: "Now you don't have an excuse for forgetting their name."
@@ -844,7 +844,7 @@ Meteor.startup ->
     },{
       route: "profile"
       path: "/user/profile"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Austin Rivas"
         subtitle: "Witty Tagline."
@@ -855,19 +855,20 @@ Meteor.startup ->
     },{
       route: 'dashboard'
       path: "/dashboard"
-      controller: "PageController"
+      controller: 'ExampleController'
       page_title:
         title: "Dashboard"
         subtitle: "I missed you Austin, it's been 12 hours since your last visit."
     },{
       route: "charts"
       path: "/charts"
-      controller: 'PageController'
+      controller: 'ExampleController'
       page_title:
         title: "Charts"
         subtitle: "Yo dawg, heard you like charts."
     }]
+    count = 0
     _.each pageList, (page) ->
-      console.log "page inserted :"
-      console.log page
       Pages.insert page
+      count++
+    console.log( count + ' pages inserted')
