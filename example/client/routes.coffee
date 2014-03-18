@@ -2,6 +2,7 @@
 Session.setDefault 'routes_initialized', false
 
 Router.configure
+  autoStart: false
   notFoundTemplate: "error404"
   loadingTemplate: "loading"
   waitOn: -> Meteor.subscribe 'all_pages'
@@ -14,5 +15,4 @@ Meteor.subscribe 'all_pages', ->
         self.route page.route, page
     console.log Router
     Session.set 'routes_intialized', true
-    path = window.location.pathname + window.location.search + window.location.hash
-    Router.go path
+    Router.start()
