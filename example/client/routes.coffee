@@ -1,33 +1,18 @@
 # Define the base application layout, this can be modified per route using the `layoutTemplate` property
+Session.setDefault 'routes_initialized', false
+
 Router.configure
   notFoundTemplate: "error404"
+  loadingTemplate: "loading"
+  waitOn: -> Meteor.subscribe 'all_pages'
 
-Router.map ->
-  # The first param is the name of the route, this must be unique
-  @route "home",
-    path: '/'
-    controller: "PageController"
-    data: ->
-      @data.page_title =
-        title: "Home"
-        subtitle: "This isn't really home, its work."
-      @data.breadcrumbs = []
-      @prepareData()
-
-  @route "dashboard",
-    path: "/dashboard"
-    controller: "PageController"
-    data:
-      page:
-        title: "Dashboard"
-        subtitle: "I missed you Austin, it's been 12 hours since your last visit."
-        breadcrumbs: []
-  @route "charts",
-    path: "/charts"
-    controller: 'PageController'
-    data:
-      page:
-        title: "Charts"
-        subtitle: "Yo dawg, heard you like charts."
-        breadcrumbs: []
-        callouts: []
+Meteor.subscribe 'all_pages', ->
+  unless Session.get 'routes_initialized'
+    Router.map ->
+      self = @
+      Pages.find().forEach (page) ->
+        self.route page.route, page
+    console.log Router
+    Session.set 'routes_intialized', true
+    path = window.location.pathname + window.location.search + window.location.hash
+    Router.go path

@@ -134,6 +134,15 @@ Package.on_use(function (api, where) {
     'layouts/full_page/full_page.layout.coffee'
   ],['client']);
 
+  /* Models */
+  api.add_files([
+    'models/page.model.coffee'
+  ],['client','server']);
+
+  api.export([
+    'Pages'
+  ],['client','server']);
+
   api.export([
     'PageLayoutController',
     'FullPageLayoutController'

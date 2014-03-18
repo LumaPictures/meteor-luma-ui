@@ -25,7 +25,7 @@ class @PageController extends RouteController
       to: 'breadcrumbs'
     'example_footer':
       to: 'footer'
-  defaultContexts:
+  default_options:
     navbar: {}
     navbar_header: {}
     navbar_brand:
@@ -43,4 +43,8 @@ class @PageController extends RouteController
     callouts: []
     content: {}
     footer: {}
-  prepareData: -> _.defaults @data, @defaultContexts
+  data: ->
+    page = Pages.findOne()
+    @path = page.path
+    _.defaults @options, @default_options
+    @data = _.extend @options, @data
