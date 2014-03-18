@@ -117,7 +117,18 @@ Package.on_use(function (api, where) {
     // search
     'components/search/search_dropdown.html',
     'components/search/search_form.html',
-    'components/search/search_line.html'
+    'components/search/search_line.html',
+    // footer
+    'components/footer/default_footer.html'
+  ],['client']);
+
+  /* Routes */
+  api.add_files(['routes/routes.coffee'],['client']);
+
+  /* Error Pages */
+  api.add_files([
+    'error_pages/loading.html',
+    'error_pages/error_404.html'
   ],['client']);
 
 

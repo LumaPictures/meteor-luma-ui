@@ -23,7 +23,7 @@ class @PageController extends RouteController
       to: 'breadcrumbs_line'
     'default_breadcrumbs':
       to: 'breadcrumbs'
-    'example_footer':
+    'default_footer':
       to: 'footer'
   default_options:
     navbar: {}
@@ -42,7 +42,8 @@ class @PageController extends RouteController
     breadcrumbs: []
     callouts: []
     content: {}
-    footer: {}
+    footer:
+      message: 'Little Sister Admin Template v0.0.6 by Austin Rivas &copy; 2014.'
   data: ->
     page = Pages.findOne()
     @path = page.path
