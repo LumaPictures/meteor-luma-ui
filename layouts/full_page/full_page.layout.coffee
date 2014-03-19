@@ -1,3 +1,4 @@
 Template.full_page_layout.rendered = ->
+  console.log 'full-page layout rendered'
   # Body Layout
-  $("body").addClass("full-width").addClass("page-condensed")
+  $("body").attr 'class', 'full-width page-condensed'
