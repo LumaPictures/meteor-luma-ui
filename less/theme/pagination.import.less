@@ -1,0 +1,80 @@
+/* ===== Pagination ===== */
+.pagination {
+  margin: 0;
+  border-radius: 0;
+  font-size: 0;
+}
+.pagination > li {
+  display: inline-block;
+  margin-left: 1px;
+  font-size: 12px;
+}
+.pagination > li:first-child {
+  margin-left: 0;
+}
+.pagination > li > a,
+.pagination > li > span {
+  float: none;
+  margin-left: 0;
+  border: 0;
+  display: block;
+  color: white;
+  font-weight: 600;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  background-color: rgba(255,255,255, 0.1);
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span,
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span,
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span,
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+  border-radius: 2px;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  background-color: #65B688;
+  color: #fff;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #32434D;
+  cursor: default;
+}
+/* ===== Pager ===== */
+.pager {
+  margin: 0;
+}
+.pager li > a,
+.pager li > span {
+  border-radius: 2px;
+  font-weight: 600;
+  padding: 6px 14px 7px 14px;
+  color: #333;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+  background-color: #32434D;
+  border-color: #32434D;
+  color: #fff;
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+  border-color: rgba(255, 255, 255, 0.1);
+}

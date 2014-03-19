@@ -1,0 +1,368 @@
+<template name="charts">
+    <!-- charts -->
+    <!-- Page statistics -->
+    <ul class="page-stats list-justified">
+        <li class="bg-primary">
+            <div class="page-stats-showcase">
+                <span>New visits</span>
+                <h2>22.504</h2>
+            </div>
+            <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-danger">
+            <div class="page-stats-showcase">
+                <span>My balance</span>
+                <h2>$16.290</h2>
+            </div>
+            <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-success">
+            <div class="page-stats-showcase">
+                <span>New visits</span>
+                <h2>22.504</h2>
+            </div>
+            <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-info">
+            <div class="page-stats-showcase">
+                <span>My balance</span>
+                <h2>$16.290</h2>
+            </div>
+            <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-warning">
+            <div class="page-stats-showcase">
+                <span>My balance</span>
+                <h2>$16.290</h2>
+            </div>
+            <div class="bar-default chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+    </ul>
+    <!-- /page statistics -->
+
+
+    <!-- Page statistics -->
+    <ul class="page-stats list-justified block">
+        <li class="bg-default">
+            <div class="page-stats-showcase">
+                <span>New visits</span>
+                <h2>22.504</h2>
+            </div>
+            <div class="bar-warning chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-default">
+            <div class="page-stats-showcase">
+                <span>My balance</span>
+                <h2>$16.290</h2>
+            </div>
+            <div class="bar-primary chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-default">
+            <div class="page-stats-showcase">
+                <span>New visits</span>
+                <h2>22.504</h2>
+            </div>
+            <div class="bar-info chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-default">
+            <div class="page-stats-showcase">
+                <span>My balance</span>
+                <h2>$16.290</h2>
+            </div>
+            <div class="bar-danger chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+        <li class="bg-default">
+            <div class="page-stats-showcase">
+                <span>My balance</span>
+                <h2>$16.290</h2>
+            </div>
+            <div class="bar-success chart">10,14,8,45,23,41,22,31,19,12, 28, 21, 24, 20</div>
+        </li>
+    </ul>
+    <!-- /page statistics -->
+
+
+    <!-- Animated graphs -->
+    <div class="row">
+        <div class="col-md-4">
+
+            <!-- Animated graph 1 -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Animated graph 1</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="animated_1"></div>
+                </div>
+            </div>
+            <!-- /animated graph 1 -->
+
+        </div>
+
+        <div class="col-md-4">
+
+            <!-- Animated graph 2 -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Animated graph 2</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="animated_2"></div>
+                </div>
+            </div>
+            <!-- /animated graph 2 -->
+
+        </div>
+
+        <div class="col-md-4">
+
+            <!-- Animated graph 3 -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Animated graph 3</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="animated_3"></div>
+                </div>
+            </div>
+            <!-- /animated graph 3 -->
+
+        </div>
+    </div>
+    <!-- /animated graphs -->
+
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <!-- Vertical bars -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Vertical bars</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="vertical_bars"></div>
+                </div>
+            </div>
+            <!-- /vertical bars -->
+
+
+            <!-- Simple chart -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Simple chart</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="simple_graph"></div>
+                </div>
+            </div>
+            <!-- /simple chart -->
+
+
+            <!-- Auto updating graph (empty) -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Empty updating graph</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="auto_empty"></div>
+                </div>
+            </div>
+            <!-- /auto updating graph (empty) -->
+
+        </div>
+
+        <div class="col-md-6">
+
+            <!-- Horizontal bars -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Horizontal bars</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="horizontal_bars"></div>
+                </div>
+            </div>
+            <!-- /horizontal bars -->
+
+
+            <!-- Auto updating graph (empty) -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Multiple axes</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="multiple_axes"></div>
+                </div>
+            </div>
+            <!-- /auto updating graph (empty) -->
+
+
+            <!-- Auto updating graph (filled) -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Filled updating graph</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="auto_filled"></div>
+                </div>
+            </div>
+            <!-- /auto updating graph (filled) -->
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <!-- Donut -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Donut</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="donut"></div>
+                </div>
+            </div>
+            <!-- /donut -->
+
+
+            <!-- Filled green -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Filled green graph</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="filled_green"></div>
+                </div>
+            </div>
+            <!-- /filled green -->
+
+
+            <!-- Auto updating green -->
+            <div class="block">
+                <div class="bg-success realtime-stats">
+                    <div id="updating-widget-1" class="graph"></div>
+                </div>
+
+                <div class="section-details text-center container-fluid">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            13.5 M <span>total visits</span>
+                        </div>
+                        <div class="col-xs-4">
+                            12.245 <span>new visitors</span>
+                        </div>
+                        <div class="col-xs-4">
+                            $34.290 <span>current balance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /auto updating green -->
+
+        </div>
+
+        <div class="col-md-4">
+
+            <!-- Pie -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Pie</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="pie"></div>
+                </div>
+            </div>
+            <!-- /pie -->
+
+
+            <!-- Filled red -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Filled red graph</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="filled_red"></div>
+                </div>
+            </div>
+            <!-- /filled red -->
+
+
+            <!-- Auto updating blue -->
+            <div class="block">
+                <div class="bg-info realtime-stats">
+                    <div id="updating-widget-2" class="graph"></div>
+                </div>
+
+                <div class="section-details text-center container-fluid">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            431 <span>new orders</span>
+                        </div>
+                        <div class="col-xs-4">
+                            45.209 <span>total orders</span>
+                        </div>
+                        <div class="col-xs-4">
+                            $51.356 <span>total value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /auto updating blue -->
+
+        </div>
+
+        <div class="col-md-4">
+
+            <!-- Pie -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Pie full</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="pie_full"></div>
+                </div>
+            </div>
+            <!-- /pie -->
+
+
+            <!-- Filled blue -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><i class="icon-calendar2"></i> Filled blue graph</h6>
+                </div>
+                <div class="panel-body">
+                    <div class="graph-standard" id="filled_blue"></div>
+                </div>
+            </div>
+            <!-- /filled blue -->
+
+
+            <!-- Auto updating red -->
+            <div class="block">
+                <div class="bg-danger realtime-stats">
+                    <div id="updating-widget-3" class="graph"></div>
+                </div>
+
+                <div class="section-details text-center container-fluid">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            35.1 Gb <span>data uploaded</span>
+                        </div>
+                        <div class="col-xs-4">
+                            92.56 Gb <span>data downloaded</span>
+                        </div>
+                        <div class="col-xs-4">
+                            104.45 Gb <span>available space</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /auto updating red -->
+
+        </div>
+    </div>
+    <!-- /charts -->
+</template>

@@ -1,0 +1,55 @@
+<template name="contacts_list">
+    <!-- contacts list -->
+    <div class="block">
+        <div class="chat-member-heading clearfix">
+            <h6 class="pull-left"><i class="icon-bubbles3"></i> Online contacts</h6>
+            <div class="pull-right">
+                <a href="#" class="btn btn-success btn-icon btn-xs"><i class="icon-plus-circle"></i></a>
+            </div>
+        </div>
+        <ul class="message-list">
+            <li class="message-list-header">Buddies</li>
+            <li>
+                {{> contacts_chat_member }}
+            </li>
+            <li>
+                {{> contacts_chat_member }}
+            </li>
+            <li>
+                {{> contacts_chat_member }}
+            </li>
+            <li>
+                {{> contacts_chat_member }}
+            </li>
+
+            <li class="message-list-header">Remote team members</li>
+            <li>
+                {{> contacts_chat_member }}
+            </li>
+            <li>
+                {{> contacts_chat_member }}
+            </li>
+            <li>
+                {{> contacts_chat_member }}
+            </li>
+            <li>
+                {{> contacts_chat_member }}
+            </li>
+
+            <li class="message-list-header">Office team</li>
+            <li>
+                {{> contacts_chat_member }}
+            </li>
+            <li>
+                {{> contacts_chat_member }}
+            </li>
+            <li>
+                {{> contacts_chat_member }}
+            </li>
+            <li>
+                {{> contacts_chat_member }}
+            </li>
+        </ul>
+    </div>
+    <!-- contacts list -->
+</template>

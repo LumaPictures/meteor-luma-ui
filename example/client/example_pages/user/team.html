@@ -1,0 +1,41 @@
+<template name="team">
+    <!-- team -->
+    <!-- Page tabs -->
+    <div class="tabbable page-tabs">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#grid-unboxed" data-toggle="tab"><i class="icon-checkbox-unchecked"></i> Grid unboxed</a></li>
+            <li><a href="#grid-boxed" data-toggle="tab"><i class="icon-checkbox-partial"></i> Grid boxed</a></li>
+            <li><a href="#list-view" data-toggle="tab"><i class="icon-list2"></i> Table view</a></li>
+        </ul>
+        <div class="tab-content">
+
+            <!-- First tab -->
+            <div class="tab-pane active fade in" id="grid-unboxed">
+                {{> team_grid }}
+            </div>
+            <!-- /first tab -->
+
+            <!-- Second tab -->
+            <div class="tab-pane fade" id="grid-boxed">
+                {{> team_boxed_grid }}
+            </div>
+            <!-- /second tab -->
+
+            <!-- Third tab -->
+            <div class="tab-pane fade" id="list-view">
+                <!-- Table view -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title"><i class="icon-people"></i> Team members</h5>
+                        <span class="label label-danger pull-right">+289</span>
+                    </div>
+                    {{> team_table }}
+                </div>
+                <!-- /table view -->
+            </div>
+            <!-- /third tab -->
+        </div>
+    </div>
+    <!-- page tabs -->
+    <!-- /team -->
+</template>

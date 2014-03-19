@@ -1,0 +1,16 @@
+<template name="errorPagesNav">
+    <!-- errorPagesNav -->
+    <li class="{{ isActivePath 'error-pages' }}">
+        <a href="{{pathFor 'errorPages'}}" id="{{ isActivePath 'error-pages' 'first-level' }}" class="expand"><span>Error Pages</span> <i class="icon-warning"></i></a>
+        <ul>
+            <!--<li><a href="403.html">403 page</a></li>-->
+            <li class="{{ isActive 'error404' }}"><a href="{{pathFor 'error404'}}">404 Page</a></li>
+            <!--<li><a href="405.html">405 page</a></li>
+            <li><a href="500.html">500 page</a></li>
+            <li><a href="503.html">503 page</a></li>
+            <li><a href="offline.html">Offline page</a></li>
+            <li><a href="error_sidebar.html">Error page with sidebar</a></li>-->
+        </ul>
+    </li>
+    <!-- /errorPagesNav -->
+</template>

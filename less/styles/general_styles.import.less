@@ -1,0 +1,245 @@
+/* # General styles, can be removed.
+================================================== */
+
+/* Demo list */
+.demo-list {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.demo-list li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Demo grid */
+.demo-grid > div {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* Icons showcase */
+.icon-classes-showcase > span {
+  font-size: 12px;
+  display: inline-block;
+  width: 15em;
+  padding: 8px;
+  background: #fcfcfc;
+  border: 1px solid #ddd;
+  margin: .5em 1em .5em 0;
+}
+.icon-classes-showcase > span > i {
+  float: left;
+  margin: 1px 6px 0 0;
+}
+
+/* Glyphs showcase */
+.glyphs {
+  margin-top: -10px;
+}
+.glyphs > div {
+  font-size: 16px;
+  float: left;
+  text-align: center;
+  background: #fcfcfc;
+  border: 1px solid #ddd;
+  padding: 6px;
+  margin: 10px 20px 10px 0;
+  width: 100px;
+}
+.glyphs > div input {
+  width: 100%;
+  text-align: center;
+  padding: 3px;
+  background-color: #fff!important;
+}
+.glyphs > div > span {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+/* jGrowl showcase */
+.jgrowl-showcase .jGrowl {
+  position: static;
+}
+.jgrowl-showcase .jGrowl:first-child {
+  margin-bottom: 10px;
+}
+.jgrowl-showcase .jGrowl .jGrowl-notification {
+  border: none;
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+/* Modal showcase */
+.modal-demo {
+  position: static;
+  top: auto;
+  left: auto;
+  display: block;
+  margin: 0 auto;
+  z-index: 1;
+  width: 100%;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  overflow: hidden;
+}
+.modal-demo .modal-dialog {
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+
+
+
+/* # General styles
+================================================== */
+
+
+/* ===== Template animations =====*/
+
+@media (min-width: 768px) {
+  a,
+  .btn,
+  .caret,
+  .close,
+  .sidebar,
+  .navbar-toggle,
+  .navbar-header,
+  .sidebar-narrow .navigation > li,
+  .level-opened:after,
+  .sidebar-narrow .navigation-narrow > li > a > i,
+  .sidebar-narrow .navigation > li > ul,
+  .daterangepicker td,
+  .daterangepicker th,
+  .date-range > i,
+  .date-range:after,
+  .media-body .headline-info,
+  .ranges ul li,
+  .ranges ul li:before,
+  .ranges ul li:after,
+  .select2-arrow b,
+  .select2-highlighted,
+  .select2-choice abbr,
+  .popup-messages > li > a > strong,
+  .activity > li,
+  .fancybox-nav span,
+  .ui-slider-range,
+  .fc-button,
+  .dropdown-submenu > a:after,
+  .nav-pills > li > a:after,
+  .nav-pills .label,
+  .nav-tabs .label,
+  .dropdown-menu > li > a > i,
+  .dropdown-menu .label,
+  .dropdown-menu > li > a > img,
+  .page-content,
+  .thumb-zoom img,
+  .navigation li a i,
+  .thumb-options,
+  .ui-datepicker-trigger,
+  .checker span,
+  .checker span:after,
+  .choice span,
+  .choice span:after,
+  .table-hover > tbody > tr > td,
+  .content,
+  .ui-timepicker-list li,
+  .ui-timepicker-duration,
+  .navigation li a:after,
+  .has-switch > div > span,
+  .has-switch > div > label,
+  .has-switch > .switch-animate,
+  .panel-trigger > a:after,
+  .dropdown-menu > li:before,
+  .dropdown-menu > li:after,
+  .popup-header a i,
+  .jGrowl-close {
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+  }
+
+}
+
+
+/* ===== Clearfix =====*/
+
+.glyphs:after,
+ul.list-justified li:after,
+.statistics-info:after,
+.info-buttons:after,
+.headline-info:after,
+.message-controls:after,
+.slider-controls:after,
+.wysihtml5-toolbar::after,
+.footer-icons-group:after,
+.footer-links-group:after,
+.user-menu > a:after,
+.breadcrumb-line:after,
+.invoice-header:after,
+.breadcrumb-buttons:after,
+.popup-messages > li > a:after,
+.daterangepicker .range_inputs:after,
+.datatable-header:after,
+.chat-member:after,
+.datatable-footer:after,
+.table-footer:after,
+.search-control:after,
+.calendars:after,
+.chat .message:after,
+.colorpicker:after,
+.task:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* ===== Border radius =====*/
+
+.statistics-info > a,
+.daterangepicker td,
+.daterangepicker th,
+.info-blocks > li,
+.search-line,
+.jqstooltip,
+.plupload_button,
+.jGrowl .jGrowl-notification,
+.user-face,
+.fc-button,
+.ui-datepicker .ui-datepicker-current-day .ui-state-active,
+.ui-datepicker .ui-state-hover,
+.chart-tooltip,
+.jGrowl .jGrowl-closer,
+.popup-header a,
+.has-switch,
+.breadcrumb-line,
+.chat .message .message-body,
+.message-img img,
+.fancybox-title-float-wrap .child,
+#fancybox-loading,
+.chat-member img,
+.ranges,
+.daterangepicker.opensleft .calendar,
+.calendars,
+.daterangepicker,
+.editor,
+.paginate_disabled_previous,
+.paginate_enabled_previous,
+.paginate_disabled_next,
+.paginate_enabled_next,
+.paging_full_numbers a.paginate_button,
+.paging_full_numbers a.paginate_active,
+.DTTT_collection,
+label.error {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}

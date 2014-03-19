@@ -1,0 +1,80 @@
+<template name="simpleRegistrationForm">
+    <!-- Simple registration form -->
+    <form class="" action="#">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h6 class="panel-title"><i class="icon-pencil3"></i> Simple registration form</h6></div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Username:</label>
+                            <input type="text" placeholder="Your name" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Password:</label>
+                            <input type="text" placeholder="Your password" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Repeat password:</label>
+                            <input type="text" placeholder="Repeat password" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Are you a human?</label>
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <input type="text" placeholder="Enter result" class="form-control">
+                                </div>
+                                <div class="col-xs-3">
+                                    <span class="help-block">7 + 5 - 12 = ?</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Country:</label>
+                            <select data-placeholder="Choose a Country..." class="select-full" tabindex="2">
+                                <option value=""></option>
+                                <option value="USA">USA</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="...">...</option>
+                                <option value="Australia">Australia</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Gender:</label>
+
+                            <div>
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" class="styled" checked="checked">
+                                    Male
+                                </label>
+
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" class="styled">
+                                    Female
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>About yourself:</label>
+                            <textarea rows="6" cols="5" placeholder="Few words about yourself..." class="elastic form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions text-right">
+                    <input type="reset" value="Cancel" class="btn btn-danger">
+                    <input type="submit" value="Submit form" class="btn btn-primary">
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- /simple registration form -->
+</template>

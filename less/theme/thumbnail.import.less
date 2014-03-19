@@ -1,0 +1,108 @@
+/* ===== Thumbnail ===== */
+.thumbnail {
+  background: none;
+  position: relative;
+  border: 0;
+  padding: 0;
+  margin-bottom: 0;
+  text-align: center;
+  iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+    border: 0;
+  }
+  img, a img {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    border-radius: 2px;
+  }
+  .caption {
+    padding: 12px 0 0 0;
+    text-align: left;
+    color: white;
+    &.text-center {
+      text-align: center;
+    }
+    h6 {
+      small {
+        display: block;
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+.thumbnail-boxed {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  padding: 14px 5px 5px 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  .caption {
+    padding: 12px 12px;
+  }
+  .item-info {
+    margin-bottom: 12px;
+  }
+}
+.caption {
+  .caption-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+  }
+}
+
+.thumb {
+  position: relative;
+  display: inline-block;
+  &:hover {
+    .thumb-options {
+      opacity: 1;
+    }
+  }
+}
+
+/* Thumb options on hover */
+.thumb-zoom {
+  background: #32434d url('/static/images/interface/zoom.png') no-repeat 50%;
+  display: inline-block;
+  border-radius: 2px;
+  border: 0;
+  &:hover {
+    img {
+      opacity: 0.2;
+    }
+  }
+  img {
+    opacity: 1;
+  }
+}
+
+.thumb-options {
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(50, 67, 77, 0.8);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  span {
+    display: block;
+    top: 50%;
+    position: absolute;
+    margin-top: -17px;
+    width: 100%;
+    a + a {
+      margin-left: 5px;
+    }
+  }
+}

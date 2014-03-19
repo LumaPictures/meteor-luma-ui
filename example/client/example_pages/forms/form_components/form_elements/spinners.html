@@ -1,0 +1,95 @@
+<template name="spinners">
+    <!-- Spinner -->
+    <form class="form-horizontal" role="form" action="#">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-calculate"></i> Spinner</h6></div>
+        <div class="panel-body">
+
+            <div class="alert alert-success fade in block-inner">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                Jquery UI spinner with mousewheel addition and globalization
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Default spinner: </label>
+
+                <div class="col-sm-10">
+                    <input type="text" id="spinner-default" class="form-control" value="10">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Decimal: </label>
+
+                <div class="col-sm-10">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="spinner-decimal" name="spinner-decimal"
+                                   value="5.06">
+                        </div>
+
+                        <div class="col-sm-6">
+                            <select data-placeholder="Change format" id="culture" class="select">
+                                <option value=""></option>
+                                <option value="en-EN">English</option>
+                                <option value="de-DE">German</option>
+                                <option value="ja-JP">Japanese</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Currency: </label>
+
+                <div class="col-sm-10">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="spinner-currency" name="spinner-currency" value="5">
+                        </div>
+                        <div class="col-sm-6">
+                            <select data-placeholder="Currency" id="currency" name="currency" class="select">
+                                <option value=""></option>
+                                <option value="en-US">US $</option>
+                                <option value="de-DE">EUR €</option>
+                                <option value="ja-JP">YEN ¥</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Overflow: </label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="spinner-overflow" name="spinner-overflow" value="1">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Time: </label>
+
+                <div class="col-sm-10">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="spinner-time" name="spinner-time" value="08:30 PM">
+                        </div>
+                        <div class="col-sm-6">
+                            <select data-placeholder="Time format" id="culture-time" class="select">
+                                <option value=""></option>
+                                <option value="en-EN">English</option>
+                                <option value="de-DE">German</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </form>
+    <!-- /spinner -->
+</template>

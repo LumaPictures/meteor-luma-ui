@@ -1,0 +1,109 @@
+<template name="feedbackForm">
+    <!-- Feedback form -->
+    <form action="#" role="form">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble-check"></i> Feedback form</h6></div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>First name</label>
+                            <input type="text" placeholder="Eugene" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Last name</label>
+                            <input type="text" placeholder="Kopyov" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Email</label>
+                            <input type="text" placeholder="you@arecool.com" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How satisfied are you with:</label>
+                    <table class="table table-bordered table-feedback">
+                        <thead>
+                        <tr>
+                            <th>Service description</th>
+                            <th>Satisfied</th>
+                            <th>Neutral</th>
+                            <th>Unsatisfied</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Services quality</td>
+                            <td>
+                                <label class="radio">
+                                    <input type="radio" name="services-quality" class="styled" value="1" checked="checked">
+                                </label>
+                            </td>
+                            <td>
+                                <label class="radio">
+                                    <input type="radio" name="services-quality" class="styled" value="2">
+                                </label>
+                            </td>
+                            <td>
+                                <label class="radio">
+                                    <input type="radio" name="services-quality" class="styled" value="3">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Products quality</td>
+                            <td>
+                                <label class="radio">
+                                    <input type="radio" name="products-quality" class="styled" value="1">
+                                </label>
+                            </td>
+                            <td>
+                                <label class="radio">
+                                    <input type="radio" name="products-quality" class="styled" value="2" checked="checked">
+                                </label>
+                            </td>
+                            <td>
+                                <label class="radio">
+                                    <input type="radio" name="products-quality" class="styled" value="3">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Support quality</td>
+                            <td>
+                                <label class="radio">
+                                    <input type="radio" name="support-quality" class="styled" value="1">
+                                </label>
+                            </td>
+                            <td>
+                                <label class="radio">
+                                    <input type="radio" name="support-quality" class="styled" value="2">
+                                </label>
+                            </td>
+                            <td>
+                                <label class="radio">
+                                    <input type="radio" name="support-quality" class="styled" value="3" checked="checked">
+                                </label>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-group">
+                    <label>Your feedback</label>
+                    <textarea rows="5" cols="5" placeholder="Your message..." class="form-control"></textarea>
+                </div>
+
+                <div class="form-actions text-right">
+                    <input type="reset" value="Do it later" class="btn btn-default">
+                    <input type="submit" value="Send feedback" class="btn btn-primary">
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <!-- /feedback form -->
+</template>

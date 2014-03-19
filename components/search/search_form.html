@@ -1,0 +1,30 @@
+<template name="searchForm">
+<form action="#" class="breadcrumb-search">
+    <input type="text" placeholder="Type and hit enter..." name="search" class="form-control autocomplete">
+    <div class="row">
+        <div class="col-xs-6">
+            <label class="radio">
+                <input type="radio" name="search-option" class="styled" checked="checked">
+                Everywhere
+            </label>
+            <label class="radio">
+                <input type="radio" name="search-option" class="styled">
+                Invoices
+            </label>
+        </div>
+
+        <div class="col-xs-6">
+            <label class="radio">
+                <input type="radio" name="search-option" class="styled">
+                Users
+            </label>
+            <label class="radio">
+                <input type="radio" name="search-option" class="styled">
+                Orders
+            </label>
+        </div>
+    </div>
+
+    <input type="submit" class="btn btn-block btn-success" value="Search">
+</form>
+</template>

@@ -1,0 +1,26 @@
+<template name="loginForm">
+    <div class="form-group has-feedback">
+        <label>Username</label>
+        <input type="text" class="form-control" placeholder="Username">
+        <i class="icon-users form-control-feedback"></i>
+    </div>
+
+    <div class="form-group has-feedback">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password">
+        <i class="icon-lock form-control-feedback"></i>
+    </div>
+
+    <div class="row form-actions">
+        <div class="col-xs-6">
+            <label class="checkbox-inline checkbox-success">
+                <input type="checkbox" class="styled">
+                Remember
+            </label>
+        </div>
+
+        <div class="col-xs-6">
+            <button type="submit" class="btn btn-primary pull-right" onclick="Router.go('home');"><i class="icon-menu2"></i> Sign in</button>
+        </div>
+    </div>
+</template>

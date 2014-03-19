@@ -1,0 +1,17 @@
+<template name="userDropdown">
+    <!-- userDropdown -->
+    <li class="user dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            <img src="http://placehold.it/300" alt="">
+            <span>{{currentUser.profile.name}}</span>
+            <i class="caret"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right icons-right">
+            <li><a href="{{pathFor 'profile'}}"><i class="icon-user"></i> Profile</a></li>
+            <li><a href="#"><i class="icon-bubble4"></i> Messages</a></li>
+            <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+            <li><a href="{{pathFor 'logout'}}"><i class="icon-exit"></i> Logout</a></li>
+        </ul>
+    </li>
+    <!-- /userDropdown -->
+</template>

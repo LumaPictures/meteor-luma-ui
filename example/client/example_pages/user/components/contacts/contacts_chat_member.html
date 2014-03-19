@@ -1,0 +1,18 @@
+<template name="contacts_chat_member">
+    <div class="clearfix">
+        <div class="chat-member">
+            <a href="#"><img src="http://placehold.it/300" alt=""></a>
+            <h6>John Doe <span class="status status-success"></span> <small>&nbsp; /&nbsp; Wed developer</small></h6>
+        </div>
+        <div class="chat-actions">
+            <a class="btn btn-link btn-icon btn-xs" data-toggle="collapse" href="#john_doe"><i class="icon-bubble3"></i></a>
+            <a href="#" class="btn btn-link btn-icon btn-xs"><i class="icon-phone2"></i></a>
+            <a href="#" class="btn btn-link btn-icon btn-xs"><i class="icon-camera5"></i></a>
+        </div>
+    </div>
+
+    <div class="panel-collapse collapse" id="john_doe">
+        {{> contacts_chat }}
+        {{> contacts_chat_controls }}
+    </div>
+</template>

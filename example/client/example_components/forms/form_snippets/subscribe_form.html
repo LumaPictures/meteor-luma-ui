@@ -1,0 +1,61 @@
+<template name="subscribeForm">
+    <!-- Subscribe form -->
+    <form action="#" role="form">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h6 class="panel-title"><i class="icon-droplet2"></i> Subscribe form</h6></div>
+            <div class="panel-body">
+                <div class="block-inner text-danger">
+                    <h6 class="heading-hr">
+                        Subscribe to our newsletter <small class="display-block">To receive your updates, please fill the form below</small>
+                    </h6>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Your email:</label>
+                            <input type="text" placeholder="you@arecool.com" class="form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Subscribtion:</label>
+                            <select data-placeholder="Choose subscription..." class="select-full" tabindex="2">
+                                <option value="news">News and events</option>
+                                <option value="products">New products &amp; services</option>
+                                <option value="updates">Updates</option>
+                                <option value="promotions">Promotions</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How often you want to receive updates?</label>
+
+                    <div class="clearfix">
+                        <label class="radio-inline">
+                            <input type="radio" name="period" class="styled" checked>
+                            Daily
+                        </label>
+
+                        <label class="radio-inline">
+                            <input type="radio" name="period" class="styled">
+                            Weekly
+                        </label>
+
+                        <label class="radio-inline">
+                            <input type="radio" name="period" class="styled">
+                            Monthly
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions text-right">
+                    <input type="reset" value="Cancel" class="btn btn-danger">
+                    <input type="submit" value="Subscribe" class="btn btn-primary">
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- /subscribe form -->
+</template>

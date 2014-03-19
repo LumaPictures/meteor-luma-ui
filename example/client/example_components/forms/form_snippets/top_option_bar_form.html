@@ -1,0 +1,22 @@
+<template name="top_option_bar_form">
+    <!-- Top option bar -->
+    <div class="bar block clearfix">
+        <form class="bar-left" action="#">
+            <label>Search entries: </label>
+            <input type="text" class="form-control" placeholder="Gallery search...">
+            <button type="button" class="btn btn-primary btn-icon btn-loading" data-loading-text="<i class='icon-spinner7 spin'></i>"><i class="icon-search3"></i></button>
+        </form>
+
+        <div class="bar-right">
+            <label>Sorting: </label>
+            <select name="select2" class="select">
+                <option value="bydate">Sort by date</option>
+                <option value="bytime">Sort by time</option>
+                <option value="bycategory">Sort by category</option>
+                <option value="bysize">Sort by size</option>
+            </select>
+            <button type="button" class="btn btn-primary btn-icon btn-loading" data-loading-text="<i class='icon-spinner7 spin'></i>"><i class="icon-sort"></i></button>
+        </div>
+    </div>
+    <!-- /top option bar -->
+</template>

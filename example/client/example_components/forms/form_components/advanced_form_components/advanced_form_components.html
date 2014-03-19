@@ -1,0 +1,415 @@
+<template name="advancedFormComponents">
+<!-- Advanced form components -->
+<form class="form-horizontal" role="form" action="#">
+
+<!-- Switches -->
+<div class="panel panel-default">
+    <div class="panel-heading"><h6 class="panel-title"><i class="icon-point-up"></i> Switches</h6></div>
+    <div class="panel-body">
+
+        <div class="alert alert-success fade in block-inner">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            iOS like checkbox switches
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Inline checkboxes/ radios: </label>
+
+            <div class="col-sm-10">
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch switch-large" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch switch-small" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch switch-mini" checked="checked">
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Switch colors: </label>
+
+            <div class="col-sm-10">
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on="primary" data-off="info" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on="info" data-off="success" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on="success" data-off="warning" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on="danger" data-off="success" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on="warning" data-off="primary" checked="checked">
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Disabed switches: </label>
+
+            <div class="col-sm-10">
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on="primary" data-off="info" disabled="disabled"
+                           checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on="info" data-off="success" disabled="disabled"
+                           checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on="success" data-off="warning" disabled="disabled"
+                           checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on="danger" data-off="success" disabled="disabled"
+                           checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on="warning" data-off="primary" disabled="disabled"
+                           checked="checked">
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Text options: </label>
+
+            <div class="col-sm-10">
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on-label="Si" data-off-label="No" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on-label="Да" data-off-label="Нет" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on-label="Enabled" data-off-label="Disabled"
+                           checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on-label="Yes" data-off-label="No" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on-label="Yummy" data-off-label="Dummy"
+                           checked="checked">
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Switch sizes: </label>
+
+            <div class="col-sm-10">
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch switch-large" data-on-label="<i class='icon-checkmark3'></i>"
+                           data-offlabel="<i class='icon-remove'></i>" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch" data-on-label="<i class='icon-apple'></i>"
+                           data-off-label="<i class='icon-windows8'></i>" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch switch-small" data-on-label="<i class='icon-checkmark3'></i>"
+                           data-off-label="<i class='icon-cancel'></i>" checked="checked">
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" class="switch switch-mini" data-on-label="<i class='icon-checkmark3'></i>"
+                           data-off-label="<i class='icon-cancel'></i>" checked="checked">
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /switches -->
+
+
+<!-- Masked inputs -->
+<div class="panel panel-default">
+    <div class="panel-heading"><h6 class="panel-title"><i class="icon-insert-template"></i> Masked inputs</h6></div>
+    <div class="panel-body">
+
+        <div class="alert alert-success fade in block-inner">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            All masked fields are controlled by <strong>data-mask</strong> property, no JS code required.
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Date: </label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" data-mask="99/99/9999">
+                <span class="help-block">99/99/9999</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Phone: </label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" data-mask="(999) 999-9999">
+                <span class="help-block">(999) 999-9999</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Phone + Ext: </label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" data-mask="(999) 999-9999 / x99999">
+                <span class="help-block">(999) 999-9999 / x99999</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">International format: </label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" data-mask="+39 999 999 999">
+                <span class="help-block">+39 999 999 999</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Tax ID: </label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" data-mask="99-9999999">
+                <span class="help-block">99-9999999</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">SSN: </label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" data-mask="999-99-9999">
+                <span class="help-block">999-99-9999</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Product key: </label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" data-mask="a*-999-a999">
+                <span class="help-block">a*-999-a999</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Purchase order: </label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" data-mask="aaa-999-***">
+                <span class="help-block">aaa-999-***</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Percentage: </label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" data-mask="99%">
+                <span class="help-block">99%</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /masked inputs -->
+
+
+<!-- Dual selects -->
+<div class="panel panel-default">
+    <div class="panel-heading"><h6 class="panel-title"><i class="icon-arrow3"></i> Dual selects</h6></div>
+    <div class="panel-body">
+
+        <!-- Left box -->
+        <div class="left-box">
+            <input type="text" id="box1Filter" class="form-control" placeholder="Filter entries...">
+            <button type="button" id="box1Clear" class="filter">x</button>
+            <select id="box1View" multiple="multiple" class="form-control">
+                <option value="501649">2008-2009 "Mini" Baja</option>
+                <option value="501497" selected="selected">AAPA - Asian American Psychological Association</option>
+                <option value="501493">Agape</option>
+                <option value="501562" selected="selected">AGE-Alliance for Graduate Excellence</option>
+                <option value="500676">AICHE (American Inst of Chemical Engineers)</option>
+                <option value="501460">AIDS Sensitivity Awareness Project ASAP</option>
+                <option value="500004">Aikido Club</option>
+                <option value="500336">Akanke</option>
+            </select>
+            <span id="box1Counter" class="count-label"></span>
+            <select id="box1Storage"></select>
+        </div>
+        <!-- /left-box -->
+
+        <!-- Control buttons -->
+        <div class="dual-control">
+            <button id="to2" type="button" class="btn btn-default">&nbsp;&gt;&nbsp;</button>
+            <button id="allTo2" type="button" class="btn btn-default">&nbsp;&gt;&gt;&nbsp;</button>
+            <br/>
+            <button id="to1" type="button" class="btn btn-default">&nbsp;&lt;&nbsp;</button>
+            <button id="allTo1" type="button" class="btn btn-default">&nbsp;&lt;&lt;&nbsp;</button>
+        </div>
+        <!-- /control buttons -->
+
+        <!-- Right box -->
+        <div class="right-box">
+            <input type="text" id="box2Filter" class="form-control" placeholder="Filter entries...">
+            <button type="button" id="box2Clear" class="filter">x</button>
+            <select id="box2View" multiple="multiple" class="form-control">
+                <option value="501053">Academy of Film Geeks</option>
+                <option value="500001">Accounting Association</option>
+                <option value="501227" selected="selected">ACLU</option>
+                <option value="501610" selected="selected">Active Minds</option>
+                <option value="501514">Activism with A Reel Edge (A.W.A.R.E.)</option>
+                <option value="501656">Adopt a Grandparent Program</option>
+                <option value="501050">Africa Awareness Student Organization</option>
+                <option value="501075">African Diasporic Cultural RC Interns</option>
+            </select>
+            <span id="box2Counter" class="count-label"></span>
+            <select id="box2Storage"></select>
+        </div>
+        <!-- /right box -->
+
+    </div>
+</div>
+<!-- /dual selects -->
+
+
+<!-- HTML5 inputs -->
+<div class="panel panel-default">
+    <div class="panel-heading"><h6 class="panel-title"><i class="icon-html5"></i> Advanced inputs</h6></div>
+    <div class="panel-body">
+
+        <div class="alert alert-success fade in block-inner">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            These inputs are mostly for mobile devices. They open a necessary keyboard on iPhone/iPad. And in most cases
+            are useless on desktop pc's
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Datetime: </label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="datetime" name="datetime">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Datetime local: </label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="datetime-local" name="datetime-local">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Date: </label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="date" name="date">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Month: </label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="month" name="month">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Time: </label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="time" name="time">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Week: </label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="week" name="week">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Number: </label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="number" name="number">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Email: </label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="email" name="email">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">URL: </label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="url" name="url">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Search: </label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="search" name="search">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Tel: </label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="tel" name="tel">
+            </div>
+        </div>
+
+        <div class="form-actions text-right">
+            <input type="reset" value="Cancel" class="btn btn-danger">
+            <input type="submit" value="Submit form" class="btn btn-primary">
+        </div>
+
+    </div>
+</div>
+<!-- /HTML5 inputs -->
+
+</form>
+<!-- /advanced form components -->
+</template>

@@ -1,0 +1,140 @@
+<template name="seperatedForm">
+    <!-- Separated form -->
+    <div class="row">
+        <div class="col-md-6">
+
+            <!-- Separated form outside panel -->
+            <form class="form-horizontal form-separate" action="#" role="form">
+                <h6><i class="icon-page-break"></i> Separate form</h6>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Username:</label>
+                    <div class="col-md-10">
+                        <input type="text" placeholder="Username" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Password:</label>
+                    <div class="col-md-10">
+                        <input type="text" placeholder="Password" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Country:</label>
+                    <div class="col-md-10">
+                        <select data-placeholder="Choose a Country..." class="select-full" tabindex="2">
+                            <option value=""></option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Cape Verde">Cape Verde</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Gender:</label>
+                    <div class="col-md-10">
+                        <label class="radio-inline radio-green">
+                            <input type="radio" name="gender2" class="styled" checked="checked">
+                            Male
+                        </label>
+
+                        <label class="radio-inline radio-red">
+                            <input type="radio" name="gender2" class="styled">
+                            Female
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">About yourself:</label>
+                    <div class="col-md-10">
+                        <textarea rows="5" cols="5" placeholder="Your message..." class="elastic form-control"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions text-right">
+                    <input type="reset" value="Cancel" class="btn btn-danger">
+                    <input type="submit" value="Submit form" class="btn btn-primary">
+                </div>
+
+            </form>
+            <!-- /separated form outside panel -->
+
+        </div>
+
+
+        <div class="col-md-6">
+
+            <!-- Separated form inside panel -->
+            <form class="form-horizontal form-separate" action="#" role="form">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h6 class="panel-title"><i class="icon-page-break"></i> Separate form</h6></div>
+                    <div class="panel-body">
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Username:</label>
+                            <div class="col-md-10">
+                                <input type="text" placeholder="Username" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Password:</label>
+                            <div class="col-md-10">
+                                <input type="text" placeholder="Password" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Country:</label>
+                            <div class="col-md-10">
+                                <select data-placeholder="Choose a Country..." class="select-full" tabindex="2">
+                                    <option value=""></option>
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label text-left">Gender:</label>
+                            <div class="col-md-10">
+                                <label class="radio-inline radio-green">
+                                    <input type="radio" name="gender2" class="styled" checked="checked">
+                                    Male
+                                </label>
+
+                                <label class="radio-inline radio-red">
+                                    <input type="radio" name="gender2" class="styled">
+                                    Female
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">About yourself:</label>
+                            <div class="col-md-10">
+                                <textarea rows="5" cols="5" placeholder="Your message..." class="elastic form-control"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions text-right">
+                            <input type="reset" value="Cancel" class="btn btn-danger">
+                            <input type="submit" value="Submit form" class="btn btn-primary">
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+            <!-- /separated form inside panel -->
+
+        </div>
+    </div>
+    <!-- /separated form -->
+</template>

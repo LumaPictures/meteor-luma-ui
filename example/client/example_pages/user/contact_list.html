@@ -1,0 +1,25 @@
+<template name="contactList">
+    <!-- contactList -->
+    <!-- Page tabs -->
+    <div class="tabbable page-tabs">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#list_view" data-toggle="tab"><i class="icon-paragraph-justify2"></i> List of contacts</a></li>
+            <li><a href="#table_view" data-toggle="tab"><i class="icon-stack"></i> Table with contacts</a></li>
+        </ul>
+        <div class="tab-content">
+            <!-- First tab content -->
+            <div class="tab-pane active fade in" id="list_view">
+                {{> contacts_list }}
+            </div>
+            <!-- /first tab content -->
+
+            <!-- Second tab content -->
+            <div class="tab-pane fade" id="table_view">
+                {{> contacts_table }}
+            </div>
+            <!-- /second tab content -->
+        </div>
+    </div>
+    <!-- /page tabs -->
+    <!-- /contactList -->
+</template>

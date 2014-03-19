@@ -1,0 +1,10 @@
+<template name="default_navbar">
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        {{yield 'navbar_header' }}
+        <ul class="nav navbar-nav navbar-right collapse" id="navbar-icons">
+            {{yield 'navbar_right' }}
+        </ul>
+    </div>
+    <!-- /navbar -->
+</template>

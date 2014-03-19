@@ -1,0 +1,102 @@
+<template name="advancedContactForm">
+    <!-- Advanced contact form -->
+    <form class="validate" action="#" role="form">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h6 class="panel-title"><i class="icon-pencil"></i> Advanced contact form</h6></div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Your name: <span class="mandatory">*</span></label>
+                            <input type="text" name="contact_name" placeholder="Eugene" class="required form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Email address: <span class="mandatory">*</span></label>
+                            <input type="text" name="email_field" placeholder="your@email.com" class="required form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Country: <span class="mandatory">*</span></label>
+                            <select data-placeholder="Choose a Country..." class="required select-full" name="contact_country" tabindex="2">
+                                <option value=""></option>
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="...">...</option>
+                                <option value="Cape Verde">Cape Verde</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label>City:</label>
+                            <input type="text" placeholder="New York" class="form-control">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label>ZIP code:</label>
+                            <input type="text" placeholder="1121" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Address line 1: <span class="mandatory">*</span></label>
+                            <input type="text" name="contact_address" placeholder="101 avenue" class="required form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Address line 2:</label>
+                            <input type="text" placeholder="building 9023" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Company: <span class="mandatory">*</span></label>
+                            <input type="text" name="contact_company" placeholder="John Doe &amp; Son" class="required form-control">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Phone #:</label>
+                            <input type="text" placeholder="+99-99-9999-9999" data-mask="+99-99-9999-9999" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Department: <span class="mandatory">*</span></label>
+                    <select data-placeholder="Select department" class="required select-full" name="contact_department" tabindex="2">
+                        <option value=""></option>
+                        <option value="Support">Support (online)</option>
+                        <option value="Sles">Sales department</option>
+                        <option value="Lawers">Lawers</option>
+                        <option value="Accountant">Accountant</option>
+                        <option value="Information">Information</option>
+                        <option value="Administration">Web administration</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Your message: <span class="mandatory">*</span></label>
+                    <textarea rows="5" cols="5" placeholder="Your message..." name="contact_message" class="limited required form-control"></textarea>
+                    <span class="help-block" id="limit-text">Field limited to 100 characters.</span>
+                </div>
+
+                <div class="form-actions text-right">
+                    <input type="reset" value="Cancel" class="btn btn-danger">
+                    <input type="submit" value="Send message" class="btn btn-primary">
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <!-- /advanced contact form -->
+</template>

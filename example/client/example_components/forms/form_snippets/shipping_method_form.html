@@ -1,0 +1,48 @@
+<template name="shippingMethodForm">
+    <!-- Shipping method -->
+    <form action="#" role="form">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h6 class="panel-title"><i class="icon-truck"></i> Shipping method</h6></div>
+            <div class="panel-body">
+                <div class="block-inner text-danger">
+                    <h6 class="heading-hr">Step 2: Shipping method <small class="display-block">Please choose prefered shipping method</small></h6>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="radio radio-block">
+                                <input type="radio" name="shipping" class="styled" checked="checked">
+                                <strong class="text-success">$50.30</strong> - Fedex Express Expedited Delivery
+                            </label>
+
+                            <label class="radio radio-block">
+                                <input type="radio" name="shipping" class="styled">
+                                <strong class="text-danger">$24.40</strong> - UPS Ground Shipping
+                            </label>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="radio radio-block">
+                                <input type="radio" name="shipping" class="styled">
+                                <strong class="text-danger">$36.99</strong> - USPS Priority International
+                            </label>
+
+                            <label class="radio radio-block">
+                                <input type="radio" name="shipping" class="styled">
+                                <strong class="text-danger">$120.90</strong> - DHL Express International Delivery
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions text-right">
+                    <input type="reset" value="Back" class="btn btn-primary">
+                    <input type="submit" value="Next step" class="btn btn-success">
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <!-- /shipping method -->
+</template>

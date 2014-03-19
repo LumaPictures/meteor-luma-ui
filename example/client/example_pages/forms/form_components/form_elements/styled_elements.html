@@ -1,0 +1,23 @@
+<template name="styledElements">
+<!-- Styled form components -->
+<form class="form-horizontal" role="form" action="#">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h6 class="panel-title"><i class="icon-droplet"></i> Styled form components</h6></div>
+        <div class="panel-body">
+            <div class="alert alert-success fade in block-inner">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                Styled form components: checkboxes, radios, file inputs
+            </div>
+            {{> stackedCheckboxes }}
+            {{> inlineCheckboxes }}
+            {{> redCheckboxes }}
+            {{> greenCheckboxes }}
+            {{> darkCheckboxes }}
+            {{> blueCheckboxes }}
+            {{> styledFileInput }}
+            {{> submit }}
+        </div>
+    </div>
+</form>
+<!-- /styled form components -->
+</template>

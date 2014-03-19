@@ -1,0 +1,63 @@
+/* # General layout ================================================== */
+/*===== Containers =====*/
+.container-fluid,
+.container {
+  position: relative;
+}
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.container-fluid {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+/*===== Adding vertical spacing to responsive grid =====*/
+@media (max-width: 767px) {
+  [class*="col-sm-"] + [class*="col-sm-"] {
+    margin-top: 20px;
+  }
+  label[class*="col-sm-"] + [class*="col-sm-"] {
+    margin-top: 0;
+  }
+  [class*="col-sm-"] + [class*="col-xs-"],
+  [class*="col-sm-"] + [class*="col-md-"],
+  [class*="col-sm-"] + [class*="col-lg-"] {
+    margin-top: 0;
+  }
+  .form-horizontal label[class*="col-sm-"] {
+    padding-top: 0;
+  }
+}
+@media (max-width: 991px) {
+  [class*="col-md-"] + [class*="col-md-"] {
+    margin-top: 20px;
+  }
+  label[class*="col-md-"] + [class*="col-md-"] {
+    margin-top: 0;
+  }
+  [class*="col-md-"] + [class*="col-xs-"],
+  [class*="col-md-"] + [class*="col-sm-"],
+  [class*="col-md-"] + [class*="col-lg-"] {
+    margin-top: 0;
+  }
+  .form-horizontal label[class*="col-md-"] {
+    padding-top: 0;
+  }
+}
+@media (max-width: 1199px) {
+  [class*="col-lg-"] + [class*="col-lg-"] {
+    margin-top: 20px;
+  }
+  label[class*="col-lg-"] + [class*="col-lg-"] {
+    margin-top: 0;
+  }
+  [class*="col-lg-"] + [class*="col-xs-"],
+  [class*="col-lg-"] + [class*="col-sm-"],
+  [class*="col-lg-"] + [class*="col-md-"] {
+    margin-top: 0;
+  }
+  .form-horizontal label[class*="col-lg-"] {
+    padding-top: 0;
+  }
+}

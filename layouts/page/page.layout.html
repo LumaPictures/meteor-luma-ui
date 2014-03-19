@@ -1,0 +1,15 @@
+<template name="page_layout">
+    {{yield 'navbar' }}
+    <!-- Page container -->
+    <div class="page-container">
+        {{yield 'sidebar' }}
+        <!-- Page content -->
+        <div class="page-content">
+            {{yield 'page_header' }}
+            {{yield}}
+            {{yield 'footer' }}
+        </div>
+        <!-- /page content -->
+    </div>
+    <!-- /page container -->
+</template>
