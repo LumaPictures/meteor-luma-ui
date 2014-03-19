@@ -1,5 +1,6 @@
 # module-layout
 ## [Setup](SETUP.md)
+## [Live Example](http://module-layout.meteor.com)
 ## Contents
 * [Bootstrap](bootstrap/README.md)
 * [Components](components/README.md)
