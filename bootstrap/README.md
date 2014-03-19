@@ -3,14 +3,6 @@
 
 Bootstrap 3, with all LESS files for easy style customization.
 
-## How to install
-
-1. `npm install -g meteorite` (if not already installed)
-2. `mrt add less`
-3. `mrt add bootstrap3-less`
-4. Create a .less file anywhere in your project to be served to the client and add `@import "/packages/bootstrap3-less/bootstrap.import.less";`
-5. `cd public && ln -s ../packages/bootstrap3-less/lib/fonts ./`
-
 ## Costumized Usage
 
 You can copy the `bootstrap.import.less` file into your project and overwrite the variables like this:
