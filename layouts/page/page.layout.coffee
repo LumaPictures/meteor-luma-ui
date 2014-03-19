@@ -2,7 +2,7 @@ Template.page_layout.rendered = ->
   console.log "page_layout rendered"
 
   # # Body Layout
-  $("body").addClass("sidebar-wide").addClass("navbar-fixed")
+  $("body").removeClass().addClass("sidebar-wide").addClass("navbar-fixed")
 
   # # Data tables
   #     ==================================================
