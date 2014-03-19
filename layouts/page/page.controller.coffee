@@ -46,7 +46,9 @@ class @PageController extends RouteController
       footer:
         message: 'Little Sister Admin Template v0.0.6 by Austin Rivas &copy; 2014.'
 
-  before: -> @yieldTemplates = _.extend @defaults.yields, @yieldTemplates
+  before: ->
+    $('body').scrollTop 0
+    @yieldTemplates = _.extend @defaults.yields, @yieldTemplates
 
   data: ->
     page = Pages.findOne()
