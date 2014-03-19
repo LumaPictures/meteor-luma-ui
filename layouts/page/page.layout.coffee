@@ -1,3 +1,7 @@
+Template.page_layout.events
+  'click .page-content a': (event, template) ->
+    event.preventDefault()
+
 Template.page_layout.rendered = ->
   console.log "page_layout rendered"
 

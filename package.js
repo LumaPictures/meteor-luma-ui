@@ -145,6 +145,8 @@ Package.on_use(function (api, where) {
     'components/page_header/default_page_header.html',
     'components/page_header/default_page_title.html',
     'components/page_header/default_page_header_widget.html',
+    // datepickers
+    'components/datepickers/date_range/date_range.html',
     // breadcrumbs
     'components/breadcrumbs/default_breadcrumbs_line.html',
     'components/breadcrumbs/default_breadcrumbs.html',
