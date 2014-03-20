@@ -44,14 +44,12 @@ class @PageController extends RouteController
       callouts: []
       content: {}
       footer:
-        message: 'Little Sister Admin Template v0.0.6 by Austin Rivas &copy; 2014.'
+        message: 'Little Sister Admin Template v0.0.6 by Austin Rivas 2014.'
 
   onBeforeAction: ->
     $('body').scrollTop 0
     @yieldTemplates = _.extend @defaults.yields, @yieldTemplates
 
   data: ->
-    page = Pages.findOne()
-    @path = page.path
-    _.defaults @options, @defaults.options
-    @data = _.extend @options, @data
+    _.defaults @route.options, @defaults.options
+    _.defaults @data, @route.options
