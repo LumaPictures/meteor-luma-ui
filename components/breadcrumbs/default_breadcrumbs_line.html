@@ -1,7 +1,7 @@
 <template name="default_breadcrumbs_line">
     <!-- Breadcrumbs line -->
     <div class="breadcrumb-line">
-        {{yield 'breadcrumbs' }}
+        {{> yield region='breadcrumbs' }}
         <div class="visible-xs breadcrumb-toggle">
             <a class="btn btn-link btn-lg btn-icon" data-toggle="collapse" data-target=".breadcrumb-buttons"><i class="icon-menu2"></i></a>
         </div>
