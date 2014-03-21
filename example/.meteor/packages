@@ -15,3 +15,5 @@ module-layout
 iron-router-active
 spacebars
 blaze-layout
+templating
+ui

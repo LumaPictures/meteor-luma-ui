@@ -11,10 +11,14 @@ Package.on_use(function (api, where) {
   ],['client', 'server']);
 
   api.use([
+    'ui',
     'templating',
-    'handlebars',
+    'spacebars',
+    'blaze-layout',
     'jquery',
-    'less'
+    'jquery-ui',
+    'less',
+    'iron-router-active'
   ], ['client']);
 
   /* Styles */

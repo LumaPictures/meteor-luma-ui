@@ -43,13 +43,19 @@
 
         <!-- Third tab -->
         <div class="tab-pane fade" id="tasks">
-            {{> tasksTable }}
+            <div class="block">
+                <h6 class="heading-hr"><i class="icon-paragraph-justify2"></i> My tasks</h6>
+                {{> dataTable name="tasksTable" class="datatable-tasks" data=data }}
+            </div>
         </div>
         <!-- /third tab -->
 
         <!-- Fourth tab -->
         <div class="tab-pane fade" id="invoices">
-            {{> invoiceListPanel }}
+            <div class="block">
+                <h6 class="heading-hr"><i class="icon-stack"></i> Invoice list</h6>
+                {{> dataTable name="invoiceList" class="datatable-invoices" data=data }}
+            </div>
         </div>
         <!-- /fourth tab -->
 
