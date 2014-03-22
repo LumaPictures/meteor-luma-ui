@@ -6,7 +6,11 @@
   "version": "0.0.1",
   "git": "https://github.com/lumapictures/module-layout.git",
   "packages": {
-  	"iron-router": {},
+    "blaze-layout": {},
+  	"iron-router": {
+      "git": "https://github.com/eventedmind/iron-router",
+      "branch": "blaze-integration"
+    },
     "iron-router-active": {},
     "jquery-ui": {}
   }

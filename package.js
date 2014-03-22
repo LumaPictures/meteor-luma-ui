@@ -11,10 +11,14 @@ Package.on_use(function (api, where) {
   ],['client', 'server']);
 
   api.use([
+    'ui',
     'templating',
-    'handlebars',
+    'spacebars',
+    'blaze-layout',
     'jquery',
-    'less'
+    'jquery-ui',
+    'less',
+    'iron-router-active'
   ], ['client']);
 
   /* Styles */
@@ -84,7 +88,6 @@ Package.on_use(function (api, where) {
     //interface
     'plugins/interface/collapsible.min.js',
     'plugins/interface/colorpicker.js',
-    'plugins/interface/datatables.min.js',
     'plugins/interface/daterangepicker.js',
     'plugins/interface/fancybox.min.js',
     'plugins/interface/fullcalendar.min.js',
@@ -93,7 +96,6 @@ Package.on_use(function (api, where) {
     'plugins/interface/moment.js',
     'plugins/interface/mousewheel.js',
     'plugins/interface/prettify.js',
-    'plugins/interface/tabletools.min.js',
     'plugins/interface/timepicker.min.js',
     // charts
     'plugins/charts/flot.js',
@@ -157,6 +159,11 @@ Package.on_use(function (api, where) {
     // widgets
     'components/widgets/report_range.html',
     'components/widgets/pagination.html',
+    // dataTable
+    'components/dataTable/lib/datatables.min.js',
+    'components/dataTable/lib/tabletools.min.js',
+    'components/dataTable/dataTable.html',
+    'components/dataTable/dataTable.coffee',
     // selectors
     'components/selectors/language_selector.html',
     // search

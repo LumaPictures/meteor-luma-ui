@@ -1,6 +1,9 @@
 class @PageController extends RouteController
+  # this controller uses the page layout
   layoutTemplate: "page_layout"
+  # default values for all routes using this controller and controllers extending this
   defaults:
+    # default templates to yield if none is specified
     yields:
       'default_navbar':
         to: 'navbar'
@@ -26,6 +29,7 @@ class @PageController extends RouteController
         to: 'breadcrumbs'
       'default_footer':
         to: 'footer'
+    # default options and contexts to provide to the page
     options:
       navbar: {}
       navbar_header: {}
@@ -44,14 +48,19 @@ class @PageController extends RouteController
       callouts: []
       content: {}
       footer:
-        message: 'Little Sister Admin Template v0.0.6 by Austin Rivas &copy; 2014.'
+        message: 'Little Sister Admin Template v0.0.6 by Austin Rivas 2014.'
 
-  before: ->
+  onBeforeAction: ->
+    # rest page scroll position before each load
     $('body').scrollTop 0
+    # extend the defaults with the yieldTemplates and assign it to this
+    # TODO : why does this work and _.defaults @yieldTemplates, @defaults.yields does not?
     @yieldTemplates = _.extend @defaults.yields, @yieldTemplates
 
   data: ->
-    page = Pages.findOne()
-    @path = page.path
-    _.defaults @options, @defaults.options
-    @data = _.extend @options, @data
+    _.defaults @route.options, @defaults.options
+    _.defaults @data, @route.options
+
+  onAfterAction: ->
+
+  action: -> @render()
