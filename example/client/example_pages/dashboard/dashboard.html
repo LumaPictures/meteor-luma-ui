@@ -4,7 +4,6 @@
     <ul class="nav nav-tabs">
         <li class="active"><a href="#activity" data-toggle="tab"><i class="icon-file"></i> Activity</a></li>
         <li><a href="#tasks" data-toggle="tab"><i class="icon-grid"></i> My tasks <span class="label label-primary">31</span></a></li>
-        <li><a href="#invoices" data-toggle="tab"><i class="icon-cart2"></i> My invoices <span class="label label-primary">9</span></a></li>
 
         <li class="pull-right dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -45,19 +44,10 @@
         <div class="tab-pane fade" id="tasks">
             <div class="block">
                 <h6 class="heading-hr"><i class="icon-paragraph-justify2"></i> My tasks</h6>
-                {{> dataTable name="tasksTable" class="datatable-tasks" data=data }}
+                {{> dataTable selector="datatable-tasks" context=data }}
             </div>
         </div>
         <!-- /third tab -->
-
-        <!-- Fourth tab -->
-        <div class="tab-pane fade" id="invoices">
-            <div class="block">
-                <h6 class="heading-hr"><i class="icon-stack"></i> Invoice list</h6>
-                {{> dataTable name="invoiceList" class="datatable-invoices" data=data }}
-            </div>
-        </div>
-        <!-- /fourth tab -->
 
     </div>
 </div>
