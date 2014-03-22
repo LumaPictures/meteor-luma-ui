@@ -13,7 +13,7 @@ Template.dataTable.rendered = ->
   # * Sorting
   defaultOptions =
     bJQueryUI: false
-    bAutoWidth: false
+    bAutoWidth: true
     sPaginationType: "full_numbers"
     sDom: "<\"datatable-header\"fl><\"datatable-scroll\"t><\"datatable-footer\"ip>"
     oLanguage:
