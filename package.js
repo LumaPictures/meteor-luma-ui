@@ -43,12 +43,6 @@ Package.on_use(function (api, where) {
   /* ===== Routes ===== */
   api.add_files(['routes/routes.coffee'],['client']);
 
-  /* Error Pages */
-  api.add_files([
-    'error_pages/loading.html',
-    'error_pages/error_404.html'
-  ],['client']);
-
   /* ===== Controllers ===== */
 
   /* Page Layout */
@@ -69,22 +63,28 @@ Package.on_use(function (api, where) {
 
   /* Bootstrap JS */
   api.add_files([
-    'bootstrap/js/transition.js',
-    'bootstrap/js/alert.js',
-    'bootstrap/js/button.js',
-    'bootstrap/js/carousel.js',
-    'bootstrap/js/collapse.js',
-    'bootstrap/js/dropdown.js',
-    'bootstrap/js/modal.js',
-    'bootstrap/js/tooltip.js',
-    'bootstrap/js/popover.js',
-    'bootstrap/js/scrollspy.js',
-    'bootstrap/js/tab.js',
-    'bootstrap/js/affix.js'
+    'components/bootstrap/js/transition.js',
+    'components/bootstrap/js/alert.js',
+    'components/bootstrap/js/button.js',
+    'components/bootstrap/js/carousel.js',
+    'components/bootstrap/js/collapse.js',
+    'components/bootstrap/js/dropdown.js',
+    'components/bootstrap/js/modal.js',
+    'components/bootstrap/js/tooltip.js',
+    'components/bootstrap/js/popover.js',
+    'components/bootstrap/js/scrollspy.js',
+    'components/bootstrap/js/tab.js',
+    'components/bootstrap/js/affix.js'
   ], ['client']);
 
   /* Moment */
   api.add_files('components/moment/lib/moment.min.js', 'client');
+
+  /* Error Pages */
+  api.add_files([
+    'components/error_pages/loading.html',
+    'components/error_pages/error_404.html'
+  ],['client']);
 
   /* colorpicker */
   api.add_files('components/colorpicker/lib/colorpicker.js', 'client');

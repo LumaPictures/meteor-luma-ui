@@ -1,11 +1,10 @@
 # Components
-
 ## [Meteor Component Docs](https://github.com/meteor/meteor/wiki/Using-Blaze#new-pattern-for-defining-custom-block-helpers)
-
 ## Contents
 * [Animations](animations)
 * [AutoComplete](autocomplete)
 * [AutoSize](autosize)
+* [Bootstrap](bootstrap)
 * [Bootstrap Switches](bootstrap_switch)
 * [Breadcrumbs](breadcrumbs)
 * [Buttons](buttons)
