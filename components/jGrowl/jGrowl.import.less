@@ -1,0 +1,101 @@
+/* jGrowl Notifications */
+
+.jGrowl {
+  z-index: 9999;
+  color: #fff;
+}
+.jGrowl {
+  position: absolute;
+}
+body > .jGrowl {
+  position: fixed;
+}
+.jGrowl.top-left {
+  left: 0px;
+  top: 0px;
+}
+.jGrowl.top-right {
+  right: 25px;
+  top: 20px;
+}
+.jGrowl.bottom-left {
+  left: 0px;
+  bottom: 0px;
+}
+.jGrowl.bottom-right {
+  right: 25px;
+  bottom: 25px;
+}
+.jGrowl.center {
+  top: 68px;
+  width: 230px;
+  left: 50%;
+  margin-left: -115px;
+}
+.center .jGrowl-notification, .center .jGrowl-closer {
+  margin-left: auto;
+  margin-right: auto;
+}
+.jGrowl .jGrowl-notification {
+  border: none;
+  color: #fff;
+  opacity: .95;
+  filter: alpha(Opacity=95);
+  width: 230px;
+  padding: 12px 18px;
+  margin-top: 5px;
+  text-align: left;
+  display: none;
+  background-color: #32434d;
+}
+
+.jGrowl-notification.growl-error {
+  background-color: #D65C4F;
+}
+.jGrowl-notification.growl-success {
+  background-color: #65B688;
+}
+.jGrowl-notification.growl-warning {
+  background-color: #db765b;
+}
+
+.jGrowl .jGrowl-notification .jGrowl-header {
+  font-weight: 300;
+  font-size: 13px;
+  padding: 0 0 2px 0;
+}
+.jGrowl .jGrowl-notification .jGrowl-header:empty {
+  padding: 0;
+}
+
+.jGrowl  .jGrowl-notification  .jGrowl-close {
+  opacity: .6;
+  filter: alpha(Opacity=60);
+  z-index: 99;
+  float: right;
+  font-weight: 300;
+  font-size: 14px;
+  cursor: pointer;
+}
+.jGrowl  .jGrowl-notification  .jGrowl-close:hover {
+  opacity: .8;
+  filter: alpha(Opacity=80);
+}
+
+.jGrowl .jGrowl-closer {
+  padding: 5px 0;
+  cursor: pointer;
+  font-size: 11px;
+  margin-top: 5px;
+  font-weight: 600;
+  text-align: center;
+  background: #454545;
+  color: #ffffff;
+  width: 222px;
+}
+
+@media print {
+  .jGrowl {
+    display: none;
+  }
+}

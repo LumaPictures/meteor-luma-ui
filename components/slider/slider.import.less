@@ -1,0 +1,77 @@
+/* ===== UI Slider ===== */
+
+.ui-slider {
+  position: relative;
+  text-align: left;
+}
+.ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 21px;
+  height: 14px;
+  cursor: default;
+  background: url('/static/images/interface/slider_handle.png') no-repeat;
+  border: none;
+  cursor: pointer;
+}
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  height: 5px;
+  font-size: 11px;
+  display: block;
+  border: 1px solid #42BAD8;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background: #72D4EC;
+}
+.ui-slider .ui-state-hover {
+  opacity: 0.85;
+  filter: alpha(Opacity=85);
+}
+.ui-slider .ui-state-active {
+  opacity: 0.95;
+  filter: alpha(Opacity=95);
+}
+.ui-slider-horizontal {
+  height: 5px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  margin: 13px 0;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  top: -6px;
+  margin-left: -8px;
+  outline: 0;
+}
+.ui-slider-horizontal .ui-slider-range {
+  top: -1px;
+  height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+  left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+  right: 0;
+}
+
+/* Slider controls */
+
+.slider-controls > label {
+  margin-right: 10px;
+  margin-bottom: 0;
+  float: left;
+  display: block;
+  margin-top: 6px;
+}
+.slider-controls input[type=text] {
+  color: #D65C4F;
+  background: none;
+  border-color: transparent;
+  font-weight: 600;
+  margin-top: 3px;
+}

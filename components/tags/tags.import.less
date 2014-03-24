@@ -1,0 +1,60 @@
+/* Tags */
+.tagsinput {
+  border: none;
+  background: rgba(255,255,255, 0.1);
+  padding: 0 0 3px 0;
+  width: 100%;
+  overflow-y: auto;
+}
+.tagsinput span.tag {
+  display: block;
+  float: left;
+  position: relative;
+  padding: 7px 12px 8px 26px;
+  background: #65B688;
+  color: #fff;
+  margin: 3px 0 0 3px;
+}
+.tagsinput span.tag a {
+  display: block;
+  text-indent: -9999px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  outline: none;
+  background: url('/static/images/forms/clear_results.png') no-repeat 50%;
+}
+.tagsinput span.tag a:hover {
+  opacity: 0.6;
+  filter: alpha(Opacity=60);
+}
+.tagsinput input {
+  width: 120px;
+  border: none;
+  padding: 7px 12px 8px 12px;
+  background: transparent;
+  margin: 3px 0 0 0;
+}
+.tagsinput input:focus {
+  outline: 0;
+  color: white !important;
+}
+.tagsinput div {
+  display: block;
+  float: left;
+  position: relative;
+  margin-left: 3px;
+}
+.tags_clear {
+  clear: both;
+  height: 0px;
+}
+.not_valid {
+  background: #FBD8DB !important;
+  color: #90111A !important;
+}
+.tagsinput .ui-helper-hidden-accessible {
+  display: none;
+}

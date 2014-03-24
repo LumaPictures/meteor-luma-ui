@@ -1,0 +1,63 @@
+/* ===== Infinite rotation animation ===== */
+
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+.overlay .opacity {
+  background-color: #2C3A3F;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.spin {
+  display: inline-block;
+  -webkit-animation: rotation 2s linear infinite;
+  -moz-animation: rotation 1s ease infinite;
+  -ms-animation: rotation 1s ease infinite;
+  -o-animation: rotation 1s ease infinite;
+  animation: rotation 1s ease infinite;
+}
+.overlay .spin {
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+
+@-webkit-keyframes rotation {
+  0% {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(359deg);}
+}
+
+@-moz-keyframes indicator {
+  0% {-moz-transform: rotate(0deg);}
+  100% {-moz-transform: rotate(359deg);}
+}
+
+@-ms-keyframes indicator {
+  0% {-ms-transform: rotate(0deg);}
+  100% {-ms-transform: rotate(359deg);}
+}
+
+@-o-keyframes indicator {
+  0% {-o-transform: rotate(0deg);}
+  100% {-o-transform: rotate(359deg);}
+}
+
+@keyframes indicator {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(359deg);}
+}
