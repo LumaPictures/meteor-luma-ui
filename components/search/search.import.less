@@ -1,0 +1,59 @@
+/* ===== Search line ===== */
+
+.search-line {
+  padding: 15px;
+  background-color: transparent;
+  border: 5px solid rgba(255,255,255, 0.1);
+  border-radius: 5px;
+  &:focus {
+    border-color: green;
+  }
+}
+.search-line .form-control {
+  border: none;
+  background: rgba(255,255,255, 0.1) url('/static/images/interface/filter.png') no-repeat 12px;
+  padding: 8px 10px 9px 32px;
+  height: auto;
+}
+.search-line .input-group-btn .btn {
+  padding: 9px 18px 10px 18px;
+  margin-left: 0px;
+}
+
+.search-control {
+  position: relative;
+}
+.search-control .btn-group {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  z-index: 2;
+}
+.search-control .btn-group.open .dropdown-toggle {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  background-color: #fafafa;
+}
+.search-control .multiselect.btn-lg.btn-icon {
+  padding: 6px 10px 7px 10px;
+}
+
+.search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.search-results h6 {
+  font-weight: 400;
+  margin: 0;
+  line-height: 20px;
+}
+.search-results .result-url {
+  color: #239169;
+  margin: 2px 0;
+  display: inline-block;
+}
+.search-results > li {
+  margin-bottom: 30px;
+}

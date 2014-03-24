@@ -1,0 +1,19 @@
+/* Form Control */
+.form-control {
+  background-color: rgba(255,255,255, 0.1);
+  color: white;
+  border: 2px solid transparent;
+
+  &:focus {
+    border: 2px solid #65B688;
+    outline: 0;
+    box-shadow: none;
+    transition: none;
+  };
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  color: black;
+}

@@ -1,0 +1,478 @@
+/* ===== Components ===== */
+
+/* General Layout */
+@import "../packages/module-layout/components/general_layout/resets.import.less";
+@import "../packages/module-layout/components/general_layout/general_layout.import.less";
+@import "../packages/module-layout/components/general_layout/contextual_backgrounds.import.less";
+/* Headings */
+@import "../packages/module-layout/components/headings/headings.import.less";
+/* Lists */
+@import "../packages/module-layout/components/lists/lists.import.less";
+@import "../packages/module-layout/components/lists/list_groups.import.less";
+/* Typography */
+@import "../packages/module-layout/components/typography/text_styles.import.less";
+@import "../packages/module-layout/components/typography/typography.import.less";
+/* Scrollbar */
+@import "../packages/module-layout/components/scrollbar/scrollbar.import.less";
+/* Navbar */
+@import "../packages/module-layout/components/navbar/navbar.import.less";
+/* Page Header */
+@import "../packages/module-layout/components/page_header/page_header.import.less";
+/* Labels */
+@import "../packages/module-layout/components/labels/labels.import.less";
+/* Dropdowns */
+@import "../packages/module-layout/components/dropdowns/dropdowns.import.less";
+/* Panels */
+@import "../packages/module-layout/components/panels/panels.import.less";
+/* Callouts */
+@import "../packages/module-layout/components/callouts/callouts.import.less";
+/* Alerts */
+@import "../packages/module-layout/components/callouts/alerts.import.less";
+/* Form Control */
+@import "../packages/module-layout/components/form_control/form_control.import.less";
+/* Modals */
+@import "../packages/module-layout/components/modals/modals.import.less";
+/* Progress Bars */
+@import "../packages/module-layout/components/progress_bars/progress_bars.import.less";
+/* Tooltips */
+@import "../packages/module-layout/components/tooltip/tooltip.import.less";
+/* Pagination */
+@import "../packages/module-layout/components/pagination/pagination.import.less";
+/* Buttons */
+@import "../packages/module-layout/components/buttons/buttons.import.less";
+/* Table */
+@import "../packages/module-layout/components/table/table.import.less";
+/* Thumbnail */
+@import "../packages/module-layout/components/thumbnail/thumbnail.import.less";
+/* Media Object */
+@import "../packages/module-layout/components/media_object/media_object.import.less";
+/* Headline */
+@import "../packages/module-layout/components/headline/headline.import.less";
+/* Flags */
+@import "../packages/module-layout/components/flags/flags.import.less";
+
+@import "../packages/module-layout/less/styles/general_styles.import.less";
+
+
+/* # Custom widgets and layout elements
+================================================== */
+
+
+/*===== Media page option bar =====*/
+
+.bar label {
+  float: left;
+  font-size: 12px;
+  display: inline-block;
+  margin: 7px 12px 0 0;
+}
+
+.bar-left,
+.bar .select,
+.bar select,
+.bar .form-control {
+  float: left;
+}
+.bar-right {
+  float: right;
+}
+
+.bar .form-control {
+  width: auto;
+}
+.bar .btn {
+  margin-left: 2px;
+}
+.bar .pagination {
+  margin-top: 3px;
+}
+.file-info span {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .bar-left, .bar-right {
+    float: none;
+    width: 100%;
+  }
+  .bar-right {
+    margin-top: 20px;
+  }
+
+  .bar label {
+    margin: 0 0 4px 0;
+    display: block;
+  }
+  .bar .form-control {
+    width: 100%;
+  }
+  .bar .btn {
+    margin-top: 2px;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .bar .btn > i {
+    float: none;
+  }
+  .bar .select2-container {
+    width: 100%!important;
+  }
+}
+
+
+
+
+
+/*===== Send message widget with icon toolbar =====*/
+
+.upload-options {
+  float: left;
+  margin: 8px;
+}
+.upload-options a {
+  color: white;
+  opacity: 0.5;
+  filter: alpha(Opacity=50);
+  margin-right: 10px;
+}
+.upload-options a:hover {
+  opacity: 1;
+  filter: alpha(Opacity=100);
+}
+
+.message-controls {
+  margin-top: 16px;
+}
+.message-controls .pull-left {
+  color: #999;
+  font-size: 12px;
+  margin-top: 8px;
+  display: block;
+}
+.message-controls .pull-left i {
+  float: left;
+  margin: 0 6px 0 0;
+}
+
+@media (max-width: 479px) {
+  .message-controls {
+    text-align: center;
+  }
+  .message-controls .pull-left {
+    display: none;
+  }
+}
+
+
+
+
+
+/*===== Task grid =====*/
+
+.task {
+  background-color: rgba(255,255,255, 0.1);
+  font-size: 12px;
+  border: 0px solid transparent;
+  border-left-width: 10px;
+}
+
+.task-description a {
+  font-size: 14px;
+  font-weight: 600;
+}
+.task-description span {
+  display: block;
+  margin-top: 6px;
+}
+.task-description i {
+  font-style: normal;
+  font-size: 11px;
+  color: white;
+  margin-left: 8px;
+}
+
+.task-info {
+  text-align: right;
+}
+.task-info > span {
+  display: block;
+  color: white;
+  margin-top: 6px;
+}
+.task-info > span:first-child {
+  margin-top: 0;
+}
+.task-info > span i {
+  float: left;
+  margin: 2px 6px 0 0;
+}
+.task-info .label {
+  margin-left: 5px;
+}
+
+.task-high {
+  border-left-color: #D65C4F;
+}
+.task-normal {
+  border-left-color: #65B688;
+}
+.task-low {
+  border-left-color: #bbb;
+}
+
+.task-desc a {
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.task-desc span {
+  display: block;
+  color: #999;
+  font-size: 11px;
+  margin-top: -2px;
+}
+
+@media (max-width: 767px) {
+  .task-info {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+  }
+}
+
+
+
+
+
+/*===== Panel footer links and icons =====*/
+
+.footer-links-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-links-group > li {
+  float: left;
+  padding: 9px 12px 10px 12px;
+  border-right: 1px solid #eee;
+}
+.footer-links-group > li.has-label {
+  padding: 6px 12px;
+}
+
+.footer-icons-group {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.footer-icons-group > li {
+  float: left;
+  position: relative;
+}
+.footer-icons-group > li > a {
+  line-height: 1;
+  color: #999;
+  display: block;
+  padding: 9px 10px 10px 10px;
+  border-left: 1px solid #eee;
+}
+.footer-icons-group > li > a:hover,
+.footer-icons-group > li > a:focus {
+  color: #65B688;
+}
+
+@media (max-width: 479px) {
+  .footer-links-group > li {
+    border-right: 0;
+  }
+
+  .footer-icons-group > li > a {
+    border-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-links-group > li, .footer-icons-group > li {
+    float: none;
+  }
+
+  .footer-icons-group {
+    font-size: 0;
+  }
+  .footer-icons-group > li > a {
+    border: 0;
+  }
+  .footer-icons-group > li {
+    display: inline-block;
+  }
+
+  .panel-footer .pull-left i {
+    display: none;
+  }
+}
+
+
+
+
+
+/*===== Icons group =====*/
+
+.icons-group a {
+  color: #555;
+  margin-left: 4px;
+}
+.icons-group a:first-child {
+  margin-left: 0;
+}
+.icons-group a:hover, .icons-group a:focus {
+  color: #999;
+}
+
+.footer .icons-group a {
+  margin-left: 12px;
+  color: #999;
+  float: left;
+}
+.footer .icons-group a:hover, .footer .icons-group a:focus {
+  color: #555;
+}
+
+/* search */
+@import "../packages/module-layout/components/search/search.import.less";
+
+
+
+
+/*===== User status styles =====*/
+
+.status {
+  width: 6px;
+  height: 6px;
+  margin-left: 4px;
+  vertical-align: 1px;
+  display: inline-block;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+}
+
+.status-default {
+  background-color: #aaa;
+}
+
+.status-success {
+  background-color: #239169;
+}
+
+.status-info {
+  background-color: #3CA2BB;
+}
+
+.status-danger {
+  background-color: #D65C4F;
+}
+
+.status-warning {
+  background-color: #E7804F;
+}
+
+
+/* # Components ================================================== */
+
+/*===== Page content =====*/
+@import "../packages/module-layout/components/page_content/page_content.import.less";
+
+/* sidebar */
+@import "../packages/module-layout/components/sidebar/sidebar.import.less";
+
+/* breadcrumbs */
+@import "../packages/module-layout/components/breadcrumbs/breadcrumbs.import.less";
+
+/* footer */
+@import "../packages/module-layout/components/footer/footer.import.less";
+
+/* animations */
+@import "../packages/module-layout/components/animations/animations.import.less";
+
+/* ===== Task timer ===== */
+@import "../packages/module-layout/components/task_timer/task_timer.import.less";
+
+/*===== Date range picker ====*/
+@import "../packages/module-layout/components/date_range/date_range.import.less";
+
+/*===== jGrowl notifications ====*/
+@import "../packages/module-layout/components/jGrowl/jGrowl.import.less";
+
+/*===== Dual select boxes ====*/
+@import "../packages/module-layout/components/dual_select/dual_select.import.less";
+
+/*===== Uniform. Checkbox =====*/
+@import "../packages/module-layout/components/uniform/checkbox/uniform_checkbox.import.less";
+
+/*===== Uniform. Radio =====*/
+@import "../packages/module-layout/components/uniform/radio/uniform_radio.import.less";
+
+/*===== File uploader =====*/
+@import "../packages/module-layout/components/file_uploader/file_uploader.import.less";
+
+/*===== Multiselect =====*/
+@import "../packages/module-layout/components/multiselect/multiselect.import.less";
+
+/*===== Select2 plugin =====*/
+@import "../packages/module-layout/components/select2/select2.import.less";
+
+/*===== Tags Input plugin =====*/
+@import "../packages/module-layout/components/tags/tags.import.less";
+
+/* ===== jQuery UI spinner ===== */
+@import "../packages/module-layout/components/jquery-ui/spinner/spinner.import.less";
+
+/* ===== DataTable ===== */
+@import "../packages/module-layout/components/dataTable/dataTable.import.less";
+
+/*===== Datepicker =====*/
+@import "../packages/module-layout/components/date_picker/date_picker.import.less";
+
+/* ===== UI Slider ===== */
+@import "../packages/module-layout/components/slider/slider.import.less";
+
+/* ===== Color picker ===== */
+@import "../packages/module-layout/components/colorpicker/colorpicker.import.less";
+
+/* ===== Time picker ===== */
+@import "../packages/module-layout/components/time_picker/time_picker.import.less";
+
+/* ===== Code prettify ===== */
+@import "../packages/module-layout/components/code_prettify/code_prettify.import.less";
+
+/* ===== Full calendar ===== */
+@import "../packages/module-layout/components/full_calendar/full_calendar.import.less";
+
+/* ===== WYSIHTML5 editor plugin ===== */
+@import "../packages/module-layout/components/wysihtml5/wysihtml5.import.less";
+
+/* ===== Bootstrap switch ===== */
+@import "../packages/module-layout/components/bootstrap_switch/bootstrap_switch.import.less";
+
+/* ===== Multiple file uploader (Plupload) ===== */
+@import "../packages/module-layout/components/multi_file_upload/multi_file_upload.import.less";
+
+/* ===== Fancybox - lightbox plugin ===== */
+@import "../packages/module-layout/components/fancybox/fancybox.import.less";
+
+/* ===== UI autocomplete ===== */
+@import "../packages/module-layout/components/autocomplete/autocomplete.import.less";
+
+/* ===== Invoice template styles ===== */
+@import "../packages/module-layout/components/invoices/invoices.import.less";
+
+/* ===== Chat layout ===== */
+@import "../packages/module-layout/components/chat/chat.import.less";
+
+/* ===== Charts ===== */
+@import "../packages/module-layout/components/charts/charts.import.less";
+
+/* ===== Error Pages ===== */
+@import "../packages/module-layout/less/styles/error_pages.import.less";

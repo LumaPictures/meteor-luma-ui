@@ -1,0 +1,151 @@
+/* Uniform Checkbox */
+.checker, .checker span, .checker input {
+  width: 18px;
+  height: 18px;
+}
+.checker {
+  position: relative;
+  margin-right: 6px;
+  margin-top: -3px;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.checker span {
+  border: 1px solid #c5c5c5;
+  background-color: #fff;
+  display: -moz-inline-box;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.checker span:after {
+  content: "";
+  background: url('/static/images/forms/check.png') no-repeat 50%;
+  opacity: 0;
+  filter: alpha(Opacity=0);
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.checker span.checked:after {
+  content: "";
+  opacity: 1;
+  filter: alpha(Opacity=100);
+}
+.checker.focus span.checked:after {
+  opacity: 1;
+  filter: alpha(Opacity=100);
+}
+
+.checkbox-danger .checker span:after {
+  content: "";
+  background-image: url('/static/images/forms/check_white.png');
+}
+.checkbox-danger .checker span:hover {
+  border-color: #D65C4F;
+}
+.checkbox-danger .checker:active span,
+.checkbox-danger .checker.active span,
+.checkbox-danger .checker span.checked {
+  border-color: #D65C4F;
+  background-color: #D65C4F;
+}
+
+.checkbox-success .checker span:after {
+  content: "";
+  background-image: url('/static/images/forms/check_white.png');
+}
+.checkbox-success .checker span:hover {
+  border-color: #65B688;
+}
+.checkbox-success .checker:active span,
+.checkbox-success .checker.active span,
+.checkbox-success .checker span.checked {
+  border-color: #65B688;
+  background-color: #65B688;
+}
+
+.checkbox-primary .checker span:after {
+  content: "";
+  background-image: url('/static/images/forms/check_white.png');
+}
+.checkbox-primary .checker span:hover {
+  border-color: #455763;
+}
+.checkbox-primary .checker:active span,
+.checkbox-primary .checker.active span,
+.checkbox-primary .checker span.checked {
+  border-color: #455763;
+  background-color: #455763;
+}
+
+.checkbox-info .checker span:after {
+  content: "";
+  background-image: url('/static/images/forms/check_white.png');
+}
+.checkbox-info .checker span:hover {
+  border-color: #3CA2BB;
+}
+.checkbox-info .checker:active span,
+.checkbox-info .checker.active span,
+.checkbox-info .checker span.checked {
+  border-color: #3CA2BB;
+  background-color: #3CA2BB;
+}
+
+.checker input[type=checkbox] {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  border: none;
+  background: none;
+  display: -moz-inline-box;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin: 0;
+  vertical-align: top;
+  cursor: pointer;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: 2;
+}
+
+.checker:active span, .checker.active span {
+  background-color: #f8f8f8;
+  border-color: #d5d5d5;
+}
+.checker.focus span, .checker:hover span {
+  background-color: #fafafa;
+}
+.checker.focus:active span.checked:after,
+.checker:hover:active span.checked:after,
+.checker.active:hover span.checked:after,
+.checker.active.focus span.checked:after {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.checker.disabled span,
+.checker.disabled:active span,
+.checker.disabled.active span {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.checker.disabled span.checked,
+.checker.disabled:active span.checked,
+.checker.disabled.active span.checked {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.checker.disabled span.checked:after,
+.checker.disabled:active span.checked:after,
+.checker.disabled.active span.checked:after {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}

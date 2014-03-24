@@ -9,7 +9,6 @@
 * [Layouts](layouts/)
 * [Less](less/)
 * [Models](models/)
-* [Plugins](plugins/)
 * [Routes](routes/)
 * [Static](static/)
 * [Exports](package.js)
