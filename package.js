@@ -232,5 +232,12 @@ Package.on_use(function (api, where) {
 });
 
 Package.on_test(function (api) {
-  api.use('module-layout');
+  api.use([
+    'coffeescript',
+    'tinytest',
+    'test-helpers',
+    'module-layout'
+  ], ['client', 'server']);
+
+  api.add_files(['tests/module-layout.test.coffee'],['client', 'server']);
 });

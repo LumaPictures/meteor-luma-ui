@@ -1,0 +1,15 @@
+{
+  "glob": [
+    "./**/*.md",
+    "package.js",
+    "smart.json",
+    "components/**/*.coffee",
+    "less/**/*.less",
+    "models/**/*.coffee",
+    "routes/**/*.coffee",
+    "tests/**/*.coffee",
+    "example/client/**/*.coffee",
+    "example/server/**/*.coffee"
+  ],
+  "github": true
+}
