@@ -1,10 +1,10 @@
 {
   "glob": [
-    "./**/*.md",
+    "README.md",
+    "SETUP.md",
     "package.js",
     "smart.json",
     "components/**/*.coffee",
-    "less/**/*.less",
     "models/**/*.coffee",
     "routes/**/*.coffee",
     "tests/**/*.coffee",
