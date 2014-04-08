@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="en"><head><title>example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/iron-router/README</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../"><meta name="groc-document-path" content="example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/iron-router/README"><meta name="groc-project-path" content="example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/iron-router/README.md"><meta name="groc-github-url" content="https://github.com/LumaPictures/module-layout"><link rel="stylesheet" type="text/css" media="all" href="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../assets/style.css"><script type="text/javascript" src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/LumaPictures/module-layout/blob/master/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/iron-router/README.md">example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/iron-router/README.md</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="iron-router">Iron Router</h1>
+
+<p>A client and server side router designed specifically for Meteor.</p>
+
+<h2 id="history">History</h2>
+
+<p><strong>Latest Version:</strong> 0.7.0</p>
+
+<p>See the <a href="History.md">History.md</a> file for changes (including breaking changes) across
+versions.</p>
+
+<h2 id="about">About</h2>
+
+<p>Iron Router is a <em>routing</em> package for Meteor. It makes single page apps.</p>
+
+<p>IR takes control of your <code>&lt;body&gt;</code> tag, rendering templates based on the user's current URL. It also helps you set up subscriptions per-route and much more.</p>
+
+<p>Iron Router works with Meteor 0.8.0 and above. To use an earlier version, use a version of IR less than 0.7.0.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Iron Router can be installed with <a href="https://github.com/oortcloud/meteorite/">Meteorite</a>. From inside a Meteorite-managed app:</p>
+
+<pre><code class=" sh">$ mrt add iron-router
+</code></pre>
+
+<h2 id="api">API</h2>
+
+<p>More detailed documentation can be found <a href="DOCS.md">here</a>.</p>
+
+<h3 id="basics">Basics</h3>
+
+<h4 id="declaring-a-route">Declaring a route</h4>
+
+<p>You place your route declarations in a <code>Router.map</code> block: </p>
+
+<pre><code>Router.map(function() {
+  this.route('home', {path: '/'})
+  this.route('about');
+});
+</code></pre>
+
+<p>The first route is named <code>home</code>, and will render a template named <code>home</code> at the path <code>/</code>. The second is named <code>about</code>, and will render a template named <code>about</code> at the path <code>/about</code>.</p>
+
+<p>You should define your routes in a file common to the client and server so both contexts can use them.</p>
+
+<h4 id="using-routes">Using routes</h4>
+
+<p>To use a route in your app, you can use the <code>{{pathFor}}</code> handlebars helper:</p>
+
+<pre><code>&lt;a href="{{pathFor 'home'}}"&gt;Go home!&lt;/a&gt;
+</code></pre>
+
+<p>Or, call <code>Router.path('home')</code> to get it as a string.</p>
+
+<p>The router will pick up internal clicks on links to routes. 
+Alternatively, you can directly call <code>Router.go()</code> in a event handler:</p>
+
+<pre><code>Template.foo.events({
+ 'click .homeLink': function() {
+    Router.go('home');
+  }
+});
+</code></pre>
+
+<h4 id="parameterized-routes-and-data">Parameterized routes and data</h4>
+
+<p>As your application starts dealing with data, you'll probably want to write more than a few static routes.</p>
+
+<p>A standard pattern is a route per object in a collection. You can achieve this with a parameterized route:</p>
+
+<pre><code>this.route('postsShow', { 
+  path: '/posts/:_id',
+  data: function() { return Posts.findOne(this.params._id); }
+});
+</code></pre>
+
+<p>This route will match <em>any</em> URL of the form <code>'/posts/X'</code>, making the value of <code>X</code> available on the <code>this.params._id</code> property of the matching <em>controller</em>.</p>
+
+<p><code>this</code> is an instance of a <code>RouteController</code> in the data function above. The value returned from the data function can be used in our templates.</p>
+
+<p>So our template might look like (if posts have a <code>title</code> field):</p>
+
+<pre><code>&lt;template name="postsShow"&gt;
+  &lt;h1&gt;{{title}}&lt;/h1&gt;
+&lt;/template&gt;
+</code></pre>
+
+<h4 id="controlling-subscriptions">Controlling subscriptions</h4>
+
+<p>The example above assumes that you've already loaded the relevant post into your application, but usually you want to load data on demand as you hit a route. To do this, we can expand the example to use <code>waitOn</code>:</p>
+
+<pre><code>this.route('postsShow', { 
+  path: '/posts/:_id',
+  waitOn: function() { return Meteor.subscribe('post', this.params._id)},
+  data: function() { return Posts.findOne(this.params._id); }
+});
+</code></pre>
+
+<p>Returning a subscription handle, or anything with a <code>ready</code> method from the <code>waitOn</code> function will add the handle to a wait list. When you call <code>this.ready()</code> in any of your other route functions, the result is true if all items in the wait list are ready. This lets us do things like show a loading indicator while waiting for data. You can implement a loading indicator in your route like this:</p>
+
+<pre><code>this.route('postsShow', {
+  waitOn: function () {
+    return Meteor.subscribe('post', this.params._id);
+  },
+
+  action: function () {
+    if (this.ready())
+      this.render();
+    else
+      this.render('loading');
+  }
+});
+</code></pre>
+
+<p>But instead of writing this code yourself, you can use the 'loading' hook that comes with Iron Router like this:</p>
+
+<pre><code>Router.onBeforeAction('loading');
+</code></pre>
+
+<h3 id="advanced">Advanced</h3>
+
+<h4 id="layouts--rendering">Layouts + rendering</h4>
+
+<p>By default, the router renders the current template directly into the body. If you'd like to share common HTML between routes, you can create your own layout:</p>
+
+<pre><code>&lt;template name="masterLayout"&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+  &lt;div id="content"&gt;
+    {{&gt; yield}}
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+
+<p>You can set the layout via the <code>layoutTemplate</code> option to a route or in <code>Router.configure({...})</code>.</p>
+
+<p>Layouts are very flexible. You can read more about them <a href="DOCS.md#using-a-layout-with-yields">in the docs</a>.</p>
+
+<h4 id="route-options">Route options</h4>
+
+<p>There are some extra routing options of interest:</p>
+
+<ul>
+<li><code>template</code> - the template to render. We've seen that by default this is just the name of the route.
+<ul><li><code>layoutTemplate</code> - the layout template to render.</li></ul></li>
+<li><code>loadingTemplate</code> - the template used by the <code>loading</code> hook.</li>
+<li><code>notFoundTemplate</code> - the template used by the <code>dataNotFound</code> hook -- renders if the <code>data()</code> function returns something falsey.</li>
+<li><code>where</code> - whether this route runs on the client or the server</li>
+</ul>
+
+<p>Where it makes sense, options can be set globally via <code>Router.configure()</code>.</p>
+
+<h4 id="custom-actions-and-hooks">Custom actions and hooks</h4>
+
+<p>You can hook into the route run cycle via the following hooks:</p>
+
+<ul>
+<li><p><code>onRun</code> - this happens <em>once only</em> when the route is loaded. </p>
+
+<p>NOTE: if the page hot code reloads, the onRun hook <em>will not re-run</em>. This makes it appropriate for things like analytics, or setting session variables and not for on-page setup.</p></li>
+<li><code>onData</code> - runs reactively whenever the data changes.</li>
+<li><code>onBeforeAction</code> - runs reactively before the action.</li>
+<li><code>onAfterAction</code> - likewise, after the action.</li>
+<li><code>onStop</code> - runs once when the controller is stopped, like just before a user routes away.</li>
+</ul>
+
+<p>You can also change the action of a route via the <code>action</code> option. By default, the controller calls <code>this.render()</code>, which renders the relevant templates to the layout. You can call it yourself in an action function -- but if you are doing that you are probably better served using a <code>onBeforeAction</code> or <code>onAfterAction</code> hook.</p>
+
+<p>All hooks (and <code>waitOn</code>) can be set globally to the router via (for example):</p>
+
+<pre><code>Router.onRun(function() {
+  console.log('Reached non-home page!');
+}, {except: 'home'});
+</code></pre>
+
+<p>The second argument can be <code>except</code> -- a list of routes to not apply to, or <code>only</code> -- a limited set of routes to match.</p>
+
+<h4 id="server-routing">Server routing</h4>
+
+<p>Most of the above only applies to client routes (we can't render templates on the server right now). </p>
+
+<p>When you define a server route (via <code>where: 'server'</code>), you need to define the <code>action</code> function, and use in a fairly simplistic way, much like <a href="http://expressjs.com">express</a>:</p>
+
+<pre><code>this.route('serverRoute', {
+  where: 'server',
+  action: function() {
+    this.response.end("THIS IS A SERVER ROUTE..");
+  }
+})
+</code></pre>
+
+<p><a href="DOCS.md#server-side-routing">Read more about server routes</a>.</p>
+
+<h4 id="route-controllers">Route Controllers</h4>
+
+<p>We've mentioned that <code>this</code> in route callbacks is a <em>Route Controller</em>. Explicitly defining controllers allows you to use inheritance:</p>
+
+<pre><code>AdminController = RouteController.extend({
+  before: // a user filter to control access?
+});
+
+PostsEditController = AdminController.extend({
+  waitOn: function() { return Meteor.subscribe('adminPost', ...); }
+});
+
+Router.map(function() {
+  // this will automatically match the `PostsEditController` thanks to the name.
+  this.route(postsEdit, {path: '/posts/:_id/edit'});
+});
+</code></pre>
+
+<p><a href="DOCS.md#route-controllers">Read more about route controllers</a>.</p>
+
+<h3 id="more">More</h3>
+
+<p>For full details see the <a href="DOCS.md">Docs</a></p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Contributors are very welcome. There are many things you can help with,
+including finding and fixing bugs, creating examples for the examples folder,
+contributing to improved design or adding features. Some guidelines below:</p>
+
+<ul>
+<li><p><strong>Questions</strong>: Please post to Stack Overflow and tag with <code>iron-router</code> : http://stackoverflow.com/questions/tagged/iron-router.</p></li>
+<li><p><strong>New Features</strong>: If you'd like to work on a feature for the iron-router,
+start by creating a 'Feature Design: Title' issue. This will let people bat it
+around a bit before you send a full blown pull request. Also, you can create
+an issue to discuss a design even if you won't be working on it. Any
+collaboration is good! But please be patient :-).</p></li>
+<li><p><strong>Bugs</strong>: If you find a bug and it's non-obvious what's causing it (almost
+always) please provide a reproduction Github project and give some context
+around the bug. Pasting in a snippet of JavaScript probably won't be enough.</p></li>
+<li><p><strong>Answer Questions!</strong>: If you can help another user please do!</p></li>
+</ul>
+
+<h4 id="local-installation">Local installation</h4>
+
+<p>This is useful if you're working off of the dev branch or contributing.</p>
+
+<ol>
+<li>Set up a local packages folder</li>
+<li>Add the PACKAGE_DIRS environment variable to your .bashrc file
+<ul><li>Example: <code>export PACKAGE_DIRS="/Users/cmather/code/packages"</code></li>
+<li>Screencast: https://www.eventedmind.com/posts/meteor-versioning-and-packages</li></ul></li>
+<li>Clone the repository into your local packages directory</li>
+<li><p>Add iron-router just like any other meteor core package like this: <code>meteor
+ add iron-router</code></p>
+
+<p><code>sh
+$ git clone https://github.com/EventedMind/iron-router.git /Users/cmather/code/packages
+$ cd my-project
+$ meteor add iron-router
+</code></p></li>
+</ol>
+
+<h2 id="license">License</h2>
+
+<p>MIT</p></div></div></div></div></body></html>

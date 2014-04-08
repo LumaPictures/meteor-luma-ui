@@ -1,0 +1,1223 @@
+<!DOCTYPE html><html lang="en"><head><title>example/server/init_pages</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../"><meta name="groc-document-path" content="example/server/init_pages"><meta name="groc-project-path" content="example/server/init_pages.coffee"><meta name="groc-github-url" content="https://github.com/LumaPictures/module-layout"><link rel="stylesheet" type="text/css" media="all" href="../../assets/style.css"><script type="text/javascript" src="../../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/LumaPictures/module-layout/blob/master/example/server/init_pages.coffee">example/server/init_pages.coffee</a></div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="nx">Meteor</span><span class="p">.</span><span class="nx">startup</span> <span class="nf">-&gt;</span>
+  <span class="k">if</span> <span class="nx">Pages</span><span class="p">.</span><span class="nx">find</span><span class="p">().</span><span class="nx">count</span><span class="p">()</span> <span class="o">is</span> <span class="mi">0</span>
+    <span class="nv">pageList = </span><span class="p">[{</span>
+      <span class="nv">route: </span><span class="s">&#39;home&#39;</span>
+      <span class="nv">path: </span><span class="s">&#39;/&#39;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Home&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;This isn&#39;t really home, its work.&quot;</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&#39;errorPages&#39;</span>
+      <span class="nv">path: </span><span class="s">&quot;/error-pages&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">nav:</span>
+        <span class="nv">priority: </span><span class="mi">0</span>
+        <span class="nv">icon: </span><span class="s">&#39;icon-warning&#39;</span>
+        <span class="nv">children: </span><span class="p">[{</span>
+          <span class="nv">title: </span><span class="s">&#39;Not Found&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;error404&#39;</span>
+        <span class="p">}]</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&#39;Error Pages&#39;</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&#39;error404&#39;</span>
+      <span class="nv">path: </span><span class="s">&quot;/error-pages/404&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;FullPageController&#39;</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;forms&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">nav:</span>
+        <span class="nv">priority: </span><span class="mi">9</span>
+        <span class="nv">icon: </span><span class="s">&#39;icon-stack&#39;</span>
+        <span class="nv">children: </span><span class="p">[{</span>
+          <span class="nv">title: </span><span class="s">&#39;Form Snippets&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+          <span class="nv">children: </span><span class="p">[{</span>
+            <span class="nv">title: </span><span class="s">&#39;Bug Report Form&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;bugReportForm&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Feedback Form&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;feedbackForm&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Job Application Form&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;jobApplicationForm&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Subscribe Form&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;subscribeForm&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Simple Contact Form&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;simpleContactForm&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Advanced Contact Form&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;advancedContactForm&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Simple Registration Form&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;simpleRegistrationForm&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Seperated Form&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;seperatedForm&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Shipping Information Form&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;shippingInformationForm&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Shipping Method Form&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;shippingMethodForm&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Billing Address Form&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;billingAddressForm&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Payment Information Form&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;paymentInformationForm&#39;</span>
+          <span class="p">}]</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Form Components&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;formComponents&#39;</span>
+          <span class="nv">children: </span><span class="p">[{</span>
+            <span class="nv">title: </span><span class="s">&#39;Form Elements&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;formElements&#39;</span>
+            <span class="nv">children: </span><span class="p">[{</span>
+              <span class="nv">title: </span><span class="s">&#39;Basic Inputs&#39;</span>
+              <span class="nv">route: </span><span class="s">&#39;basicInputs&#39;</span>
+            <span class="p">},{</span>
+              <span class="nv">title: </span><span class="s">&#39;Styled Elements&#39;</span>
+              <span class="nv">route: </span><span class="s">&#39;styledElements&#39;</span>
+            <span class="p">},{</span>
+              <span class="nv">title: </span><span class="s">&#39;Unstyled Elements&#39;</span>
+              <span class="nv">route: </span><span class="s">&#39;unstyledElements&#39;</span>
+            <span class="p">},{</span>
+              <span class="nv">title: </span><span class="s">&#39;Spinners&#39;</span>
+              <span class="nv">route: </span><span class="s">&#39;spinners&#39;</span>
+            <span class="p">}]</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;WYSIWYG Editors&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;wysiwygEditors&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Selects&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;selects&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Multi File Uploaders&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;multiFileUploaders&#39;</span>
+          <span class="p">},{</span>
+            <span class="nv">title: </span><span class="s">&#39;Input Grids&#39;</span>
+            <span class="nv">route: </span><span class="s">&#39;inputGrids&#39;</span>
+          <span class="p">}]</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Form Layouts&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;formLayouts&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Form Validation&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;formValidation&#39;</span>
+        <span class="p">}]</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&#39;Forms&#39;</span>
+        <span class="nv">subtitle: </span><span class="s">&#39;A necessary evil&#39;</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-success&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;We All Hate Filling Out Forms&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Time to change that.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;formLayouts&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-layouts&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+          <span class="nv">title: </span><span class="s">&quot;Form Layouts&quot;</span>
+          <span class="nv">subtitle: </span><span class="s">&quot;Getting Laid Out.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-danger&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Flexible Form Layouts&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Organized Input = Organized Data.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;formValidation&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-validation&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Validation&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Everyone needs a little validation.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-success&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Client Side Validation&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;You shouldn&#39;t have to wait on the server to know that your data works.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;formComponents&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-components&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Components&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Forms are badass.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-danger&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Reusable Form Components&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;All of these components are abstract enough to be used with any data.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;wysiwygEditors&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-components/wysiwyg-editors&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;WYSIWYG&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Awesome editors&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&quot;forms&quot;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Components&quot;</span>
+        <span class="nv">route: </span><span class="s">&quot;formComponents&quot;</span>
+      <span class="p">}]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-danger&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;WYSIWYG editors&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Content editors are based on awesome WYSIHTML5 plugin. Default examples of editor - inside and outside panel, in modal dialog.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;multiFileUploaders&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-components/multi-file-uploaders&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&#39;Multi File Uploaders&#39;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Two is better than one.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&#39;Forms&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&#39;Form Components&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;formComponents&#39;</span>
+      <span class="p">}]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-success&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Doing the same thing over and over sucks&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Now you can do it all in one shot.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;inputGrids&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-components/input-grids&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&#39;Input Grids&#39;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Welcome to the Grid.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&#39;Forms&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&#39;Form Components&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;formComponents&#39;</span>
+      <span class="p">}]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-info&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Rigid Structure for Dynamic Data&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;A flexible grids lets you build a flexible app.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;selects&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-components/selects&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Selects&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;You must choose wisely.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&#39;Forms&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&#39;Form Components&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;formComponents&#39;</span>
+      <span class="p">}]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-success&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Lots of options for selecting lots of options&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Now you can do it all in one shot.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;formElements&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-components/form-elements&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&#39;Form Elements&#39;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;It&#39;s elementary my dear.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&#39;Forms&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&#39;Form Components&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;formComponents&#39;</span>
+      <span class="p">}]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-warning&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms Aren&#39;t Sexy&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;But that doesn&#39;t mean they can just wear sweatpants.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;basicInputs&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-components/form-elements/basic-inputs&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&#39;Basic Inputs&#39;</span>
+        <span class="nv">subtitle: </span><span class="s">&#39;Sometimes old fashioned is best.&#39;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&#39;Forms&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&#39;Form Components&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;formComponents&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&#39;Form Elements&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;formElements&#39;</span>
+      <span class="p">}]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-success&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Basic Doesn&#39;t Mean Stupid&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;These input elements are all reactive and will display dynamic data.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;styledElements&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-components/form-elements/styled-elements&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&#39;Styled Elements&#39;</span>
+        <span class="nv">subtitle: </span><span class="s">&#39;Form swag.&#39;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&#39;Forms&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&#39;Form Components&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;formComponents&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&#39;Form Elements&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;formElements&#39;</span>
+      <span class="p">}]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-info&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms, So Hot Right Now&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Who wants to look at something ugly all day?&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;unstyledElements&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-components/form-elements/unstyled-elements&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&#39;Unstyled Elements&#39;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Not ugly, just unstyled.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&#39;Forms&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&#39;Form Components&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;formComponents&#39;</span>
+      <span class="p">}]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-warning&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Plain Ole Checkboxes&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Cause why not.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;spinners&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-components/form-elements/spinners&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&#39;Spinners&#39;</span>
+        <span class="nv">subtitle: </span><span class="s">&#39;Right round baby.&#39;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&#39;Forms&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&#39;Form Components&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;formComponents&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&#39;Form Elements&#39;</span>
+        <span class="nv">route: </span><span class="s">&#39;formElements&#39;</span>
+      <span class="p">}]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-info&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;I&#39;m actually hypnotizing you&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;When I snap my figures you&#39;re going to wake up.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;formSnippets&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Snip Snip.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-warning&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Just Getting the Standards Out of the Way&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;A couple of ready-to-use form snippets - reports, contact forms, CV, shipping, payment, job listings etc.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;bugReportForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/bug-report-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Bug Report Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;I hate bugs.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;jobApplicationForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/job-application-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Job Application Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Work sucks, but being broke is worse.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;simpleContactForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/simple-contact-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Simple Contact Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Let me get those digits.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;advancedContactForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/advanced-contact-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Advanced Contact Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;For that special kind of contact.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;simpleRegistrationForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/simple-registration-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Simple Registration Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;You&#39;re in the system, man.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;seperatedForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/seperated-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Seperated Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;You gotta keep &#39;em seperated.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;surveyForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/survey-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Survey Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Everyone hates surveys, except these of course.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;feedbackForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/feedback-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Feedback Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;My foot gives great feedback.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;subscribeForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/subscribe-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Subscription Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Want some magazines?&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;shippingInformationForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/shipping-information-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Shipping Information Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Where are we sending your shit?&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;shippingMethodForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/shipping-method-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Shipping Method Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;How do you want your shit wrapped?&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;billingAddressForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/billing-address-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Billing Address Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Whose paying for this shit?&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;paymentInformationForm&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/forms/form-snippets/payment-information-form&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Payment Information Form&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;And now I have your credit card number...&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[{</span>
+        <span class="nv">title: </span><span class="s">&quot;Forms&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;forms&#39;</span>
+      <span class="p">},{</span>
+        <span class="nv">title: </span><span class="s">&quot;Form Snippets&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;formSnippets&#39;</span>
+      <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;interfaceComponents&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">nav:</span>
+        <span class="nv">priority: </span><span class="mi">10</span>
+        <span class="nv">icon: </span><span class="s">&#39;icon-grid&#39;</span>
+        <span class="nv">children: </span><span class="p">[{</span>
+          <span class="nv">title: </span><span class="s">&#39;Visuals&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;visuals&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Navs&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;navs&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Panel Options&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;panelOptions&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Navbars&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;navbars&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Info Blocks&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;infoBlocks&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Icons&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;icons&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Buttons&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;buttons&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Calendar&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;calendar&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Typography&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;typography&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Gallery&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;gallery&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Header Elements&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;headerElements&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Content Grid&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;contentGrid&#39;</span>
+        <span class="p">}]</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Do stuff.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-danger&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;User interface components&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Page contains default Bootstrap/jQuery UI and custom visual components and notifications.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;visuals&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components/visuals&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Visuals &amp; Notifications&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Popups and shit.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;interfaceComponents&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-danger&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;User interface components&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Page contains default Bootstrap/jQuery UI and custom visual components and notifications.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;navs&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components/navs&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Navs&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Drop it like its hot.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;interfaceComponents&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-info&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Bootstrap navs&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Bootstrap tabs, pills, dropdown with options, media objects and lists, justified components, nav lists, toggles and accordions.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;panelOptions&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components/panel-options&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Panel Options&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;More options...&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;interfaceComponents&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-success&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Panel options&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Page contains examples of elements, which can be used in panel headings - labels, badges, buttons, button groups, icons, progress bars etc. Including combinations of panel and inner components.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;navbars&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components/navbars&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Navbars&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Get where you need to be.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;interfaceComponents&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-info&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Navbar options&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Top navigation bar examples - custom template navbar, navigation links and items, text, form, buttons etc.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;infoBlocks&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components/info-blocks&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Info Blocks&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Like Minecraft, but not.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;interfaceComponents&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-info&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Sparklines &amp; Flots&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Custom info elements with charts and other statistics, based on Sparklines and Flot sharts.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;icons&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components/icons&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Icons&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Like Minecraft, but not.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;interfaceComponents&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-warning&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Icons&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Template includes awesome set of 850 IcoMoon icons.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;buttons&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components/buttons&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Buttons&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Don&#39;t touch anything.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;interfaceComponents&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-error&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Buttons&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Bootstrap button examples - default, disabled, button groups, with dropups/dropdowns, dropdowns on hover and on click, button toolbars etc.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;calendar&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components/calendar&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Calendar&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Now you don&#39;t have an excuse for.&quot;</span>
+        <span class="nv">breadcrumbs: </span><span class="p">[</span>
+          <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+          <span class="nv">route: </span><span class="s">&#39;interfaceComponents&#39;</span>
+        <span class="p">]</span>
+        <span class="nv">callouts: </span><span class="p">[</span>
+          <span class="nv">cssClass: </span><span class="s">&quot;callout-warning&quot;</span>
+          <span class="nv">title: </span><span class="s">&quot;Fullcalendar plugin integrated&quot;</span>
+          <span class="nv">message: </span><span class="s">&quot;Page with integrated Fullcalendar jquery plugin. Including 2 options - inside and outside panels.&quot;</span>
+        <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;typography&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components/typography&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Typography&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Like caligraphy, but easier.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;interfaceComponents&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-success&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Template typography&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Template typography - styled/unstyled headings, lists, description lists, code/pre, blockquotes, text styles etc.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;gallery&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components/gallery&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Gallery&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Image and Video gallery.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;interfaceComponents&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-warning&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Image and Video Gallery&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Media gallery page example with custom toolbar. Includes layout - with/without backgrounds, with title, without title, gallery style and table view.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;headerElements&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components/header-elements&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Page Header Elements&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Page header area custom elements.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;interfaceComponents&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-warning&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Page Headers&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;2 breadcrumb positions - on top and after page title. Also custom set of different elements which can be used on the right side of page title area - buttons, progress bars, graphs, info&#39;s etc.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;contentGrid&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/interface-components/content-grid&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Content Grid&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Bootstrap responsive content grid.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Interface Components&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;interfaceComponents&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-warning&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Bootstrap Content Grid&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;Bootstrap mobile first 12 columns grid with examples.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;invoices&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/invoices&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">nav:</span>
+        <span class="nv">priority: </span><span class="mi">4</span>
+        <span class="nv">icon: </span><span class="s">&#39;icon-coin&#39;</span>
+        <span class="nv">children: </span><span class="p">[{</span>
+          <span class="nv">title: </span><span class="s">&#39;Invoice Template&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;invoiceTemplate&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Invoice List&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;invoiceList&#39;</span>
+        <span class="p">}]</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Invoices&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Gimme my money.&quot;</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;invoiceTemplate&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/invoices/template&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Invoice Template&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Stop repeating yourself.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Invoices&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;invoices&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;invoiceList&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/invoices/list&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Invoice List&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Time to break some kneecaps.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Invoices&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;invoices&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;login&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/login&quot;</span>
+      <span class="nv">controller: </span><span class="s">&quot;FullPageController&quot;</span>
+      <span class="nv">nav:</span>
+        <span class="nv">priority: </span><span class="mi">0</span>
+        <span class="nv">icon: </span><span class="s">&#39;icon-user-plus&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&#39;Login&#39;</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;search&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/search&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">nav:</span>
+        <span class="nv">priority: </span><span class="mi">6</span>
+        <span class="nv">icon: </span><span class="s">&#39;icon-search3&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Search&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;What was I looking for?&quot;</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;support&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/support&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">nav:</span>
+        <span class="nv">priority: </span><span class="mi">5</span>
+        <span class="nv">icon: </span><span class="s">&#39;icon-bubble6&#39;</span>
+        <span class="nv">children: </span><span class="p">[{</span>
+          <span class="nv">title: </span><span class="s">&#39;FAQ&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;faq&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Chat With Tabs&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;chatWithTabs&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Chat With Contacts&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;chatWithContacts&#39;</span>
+        <span class="p">}]</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Support&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;HALP!&quot;</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;faq&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/support/faq&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;FAQ&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Let me Google that for you.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Support&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;support&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;chatWithTabs&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/support/chat-with-tabs&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Chat With Tabs&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Figure it out.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Support&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;support&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;chatWithContacts&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/support/chat-with-contacts&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Chat With Contacts&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Figure it out.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Support&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;support&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;tables&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/tables&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">nav:</span>
+        <span class="nv">priority: </span><span class="mi">8</span>
+        <span class="nv">icon: </span><span class="s">&#39;icon-table2&#39;</span>
+        <span class="nv">children: </span><span class="p">[{</span>
+          <span class="nv">title: </span><span class="s">&#39;Static Tables&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;staticTables&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Datatables&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;datatables&#39;</span>
+        <span class="p">}]</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Tables&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Yo dawg, heard you like tables.&quot;</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;staticTables&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/tables/static&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Static Tables&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;So good it doesn&#39;t have to change.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Tables&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;tables&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;datatables&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/tables/datatables&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Datatables&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Quick, responsive, and flexible.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Tables&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;tables&#39;</span>
+      <span class="p">]</span>
+      <span class="nv">defaultTable:</span>
+        <span class="nv">columns: </span><span class="p">[</span>
+          <span class="p">{</span>
+            <span class="nv">sTitle: </span><span class="s">&quot;Engine&quot;</span>
+          <span class="p">}</span>
+          <span class="p">{</span>
+            <span class="nv">sTitle: </span><span class="s">&quot;Browser&quot;</span>
+          <span class="p">}</span>
+          <span class="p">{</span>
+            <span class="nv">sTitle: </span><span class="s">&quot;Platform&quot;</span>
+          <span class="p">}</span>
+          <span class="p">{</span>
+            <span class="nv">sTitle: </span><span class="s">&quot;Version&quot;</span>
+            <span class="nv">sClass: </span><span class="s">&quot;center&quot;</span>
+          <span class="p">}</span>
+          <span class="p">{</span>
+            <span class="nv">sTitle: </span><span class="s">&quot;Grade&quot;</span>
+            <span class="nv">sClass: </span><span class="s">&quot;center&quot;</span>
+            <span class="nv">fnRender: </span><span class="nf">(obj) -&gt;</span>
+              <span class="nv">sReturn = </span><span class="nx">obj</span><span class="p">.</span><span class="nx">aData</span><span class="p">[</span><span class="nx">obj</span><span class="p">.</span><span class="nx">iDataColumn</span><span class="p">]</span>
+              <span class="nv">sReturn = </span><span class="s">&quot;&lt;b&gt;A&lt;/b&gt;&quot;</span>  <span class="k">if</span> <span class="nx">sReturn</span> <span class="o">is</span> <span class="s">&quot;A&quot;</span>
+              <span class="nx">sReturn</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+        <span class="nv">rows: </span><span class="p">[</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Reduced data set</p></div></div><div class="code"><div class="wrapper">          <span class="p">[</span>
+            <span class="s">&quot;Trident&quot;</span>
+            <span class="s">&quot;Internet Explorer 4.0&quot;</span>
+            <span class="s">&quot;Win 95+&quot;</span>
+            <span class="mi">4</span>
+            <span class="s">&quot;X&quot;</span>
+          <span class="p">]</span>
+          <span class="p">[</span>
+            <span class="s">&quot;Trident&quot;</span>
+            <span class="s">&quot;Internet Explorer 5.0&quot;</span>
+            <span class="s">&quot;Win 95+&quot;</span>
+            <span class="mi">5</span>
+            <span class="s">&quot;C&quot;</span>
+          <span class="p">]</span>
+          <span class="p">[</span>
+            <span class="s">&quot;Trident&quot;</span>
+            <span class="s">&quot;Internet Explorer 5.5&quot;</span>
+            <span class="s">&quot;Win 95+&quot;</span>
+            <span class="mf">5.5</span>
+            <span class="s">&quot;A&quot;</span>
+          <span class="p">]</span>
+          <span class="p">[</span>
+            <span class="s">&quot;Trident&quot;</span>
+            <span class="s">&quot;Internet Explorer 6.0&quot;</span>
+            <span class="s">&quot;Win 98+&quot;</span>
+            <span class="mi">6</span>
+            <span class="s">&quot;A&quot;</span>
+          <span class="p">]</span>
+          <span class="p">[</span>
+            <span class="s">&quot;Trident&quot;</span>
+            <span class="s">&quot;Internet Explorer 7.0&quot;</span>
+            <span class="s">&quot;Win XP SP2+&quot;</span>
+            <span class="mi">7</span>
+            <span class="s">&quot;A&quot;</span>
+          <span class="p">]</span>
+          <span class="p">[</span>
+            <span class="s">&quot;Gecko&quot;</span>
+            <span class="s">&quot;Firefox 1.5&quot;</span>
+            <span class="s">&quot;Win 98+ / OSX.2+&quot;</span>
+            <span class="mf">1.8</span>
+            <span class="s">&quot;A&quot;</span>
+          <span class="p">]</span>
+          <span class="p">[</span>
+            <span class="s">&quot;Gecko&quot;</span>
+            <span class="s">&quot;Firefox 2&quot;</span>
+            <span class="s">&quot;Win 98+ / OSX.2+&quot;</span>
+            <span class="mf">1.8</span>
+            <span class="s">&quot;A&quot;</span>
+          <span class="p">]</span>
+          <span class="p">[</span>
+            <span class="s">&quot;Gecko&quot;</span>
+            <span class="s">&quot;Firefox 3&quot;</span>
+            <span class="s">&quot;Win 2k+ / OSX.3+&quot;</span>
+            <span class="mf">1.9</span>
+            <span class="s">&quot;A&quot;</span>
+          <span class="p">]</span>
+          <span class="p">[</span>
+            <span class="s">&quot;Webkit&quot;</span>
+            <span class="s">&quot;Safari 1.2&quot;</span>
+            <span class="s">&quot;OSX.3&quot;</span>
+            <span class="mf">125.5</span>
+            <span class="s">&quot;A&quot;</span>
+          <span class="p">]</span>
+          <span class="p">[</span>
+            <span class="s">&quot;Webkit&quot;</span>
+            <span class="s">&quot;Safari 1.3&quot;</span>
+            <span class="s">&quot;OSX.3&quot;</span>
+            <span class="mf">312.8</span>
+            <span class="s">&quot;A&quot;</span>
+          <span class="p">]</span>
+          <span class="p">[</span>
+            <span class="s">&quot;Webkit&quot;</span>
+            <span class="s">&quot;Safari 2.0&quot;</span>
+            <span class="s">&quot;OSX.4+&quot;</span>
+            <span class="mf">419.3</span>
+            <span class="s">&quot;A&quot;</span>
+          <span class="p">]</span>
+          <span class="p">[</span>
+            <span class="s">&quot;Webkit&quot;</span>
+            <span class="s">&quot;Safari 3.0&quot;</span>
+            <span class="s">&quot;OSX.4+&quot;</span>
+            <span class="mf">522.1</span>
+            <span class="s">&quot;A&quot;</span>
+          <span class="p">]</span>
+        <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;taskManager&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/task-manager&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">nav:</span>
+        <span class="nv">priority: </span><span class="mi">2</span>
+        <span class="nv">icon: </span><span class="s">&#39;icon-numbered-list&#39;</span>
+        <span class="nv">children: </span><span class="p">[{</span>
+          <span class="nv">title: </span><span class="s">&#39;Task Grid&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;taskGrid&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Task List&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;taskList&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Task Detail&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;taskDetail&#39;</span>
+        <span class="p">}]</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Task Manager&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Get stuff done.&quot;</span>
+      <span class="nv">callouts: </span><span class="p">[</span>
+        <span class="nv">cssClass: </span><span class="s">&quot;callout-info&quot;</span>
+        <span class="nv">title: </span><span class="s">&quot;Comprehensize task manager that can be easily extended.&quot;</span>
+        <span class="nv">message: </span><span class="s">&quot;The tasks pattern can adapt to any pipeline.&quot;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;taskGrid&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/task-manager/task-grid&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Task Grid&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Task grid with options bar&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Task Manager&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;taskManager&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;taskList&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/task-manager/task-list&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Task List&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Task list inside data table&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Task Manager&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;taskManager&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;taskDetail&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/task-manager/task-detail&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Task Detail&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Detailed task layout example&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;Task Manager&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;taskManager&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;user&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/user&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">nav:</span>
+        <span class="nv">priority: </span><span class="mi">3</span>
+        <span class="nv">icon: </span><span class="s">&#39;icon-user&#39;</span>
+        <span class="nv">children: </span><span class="p">[{</span>
+          <span class="nv">title: </span><span class="s">&#39;Team&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;team&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Contacts&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;contactList&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">title: </span><span class="s">&#39;Profile&#39;</span>
+          <span class="nv">route: </span><span class="s">&#39;profile&#39;</span>
+        <span class="p">}]</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;User&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Be all you can be.&quot;</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;team&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/user/team&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Team&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Because you can&#39;t do everything yourself.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;User&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;user&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;contactList&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/user/contacts&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Contacts&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Now you don&#39;t have an excuse for forgetting their name.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;User&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;user&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;profile&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/user/profile&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Austin Rivas&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Witty Tagline.&quot;</span>
+      <span class="nv">breadcrumbs: </span><span class="p">[</span>
+        <span class="nv">title: </span><span class="s">&quot;User&quot;</span>
+        <span class="nv">route: </span><span class="s">&#39;user&#39;</span>
+      <span class="p">]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&#39;dashboard&#39;</span>
+      <span class="nv">path: </span><span class="s">&quot;/dashboard&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">nav:</span>
+        <span class="nv">priority: </span><span class="mi">1</span>
+        <span class="nv">icon: </span><span class="s">&#39;icon-screen2&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Dashboard&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;I missed you Austin, it&#39;s been 12 hours since your last visit.&quot;</span>
+      <span class="nv">tasksTable:</span>
+        <span class="nv">columns: </span><span class="p">[{</span>
+          <span class="nv">sTitle: </span><span class="s">&quot;Task Description&quot;</span>
+        <span class="p">},{</span>
+          <span class="nv">sTitle: </span><span class="s">&quot;Priority&quot;</span>
+          <span class="nv">sClass: </span><span class="s">&#39;task-priority&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">sTitle: </span><span class="s">&quot;Date Added&quot;</span>
+          <span class="nv">sClass: </span><span class="s">&#39;task-date-added&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">sTitle: </span><span class="s">&quot;Progress&quot;</span>
+          <span class="nv">sClass: </span><span class="s">&#39;task-progress&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">sTitle: </span><span class="s">&quot;Deadline&quot;</span>
+          <span class="nv">sClass: </span><span class="s">&#39;task-deadline&#39;</span>
+        <span class="p">},{</span>
+          <span class="nv">sTitle: </span><span class="s">&#39;&#39;</span>
+          <span class="nv">sClass: </span><span class="s">&#39;task-tools text-center&#39;</span>
+        <span class="p">}]</span>
+        <span class="nv">rows: </span><span class="p">[{</span>
+          <span class="nv">_id: </span><span class="s">&#39;example&#39;</span>
+          <span class="nv">description: </span><span class="s">&#39;This is a description for a task.&#39;</span>
+          <span class="nv">subtitle: </span><span class="s">&#39;I am a subtitle!&#39;</span>
+          <span class="nv">priority: </span><span class="s">&#39;High&#39;</span>
+          <span class="nv">date_added: </span><span class="s">&#39;September 20, 2013&#39;</span>
+          <span class="nv">progress: </span><span class="mi">90</span>
+          <span class="nv">deadline: </span><span class="mi">14</span>
+        <span class="p">},{</span>
+          <span class="nv">_id: </span><span class="s">&#39;2&#39;</span>
+          <span class="nv">description: </span><span class="s">&#39;This is a description for a task.&#39;</span>
+          <span class="nv">subtitle: </span><span class="s">&#39;I am a subtitle!&#39;</span>
+          <span class="nv">priority: </span><span class="s">&#39;High&#39;</span>
+          <span class="nv">date_added: </span><span class="s">&#39;September 20, 2013&#39;</span>
+          <span class="nv">progress: </span><span class="mi">90</span>
+          <span class="nv">deadline: </span><span class="mi">14</span>
+        <span class="p">}]</span>
+    <span class="p">},{</span>
+      <span class="nv">route: </span><span class="s">&quot;charts&quot;</span>
+      <span class="nv">path: </span><span class="s">&quot;/charts&quot;</span>
+      <span class="nv">controller: </span><span class="s">&#39;ExampleController&#39;</span>
+      <span class="nv">nav:</span>
+        <span class="nv">priority: </span><span class="mi">7</span>
+        <span class="nv">icon: </span><span class="s">&#39;icon-bars&#39;</span>
+      <span class="nv">page:</span>
+        <span class="nv">title: </span><span class="s">&quot;Charts&quot;</span>
+        <span class="nv">subtitle: </span><span class="s">&quot;Yo dawg, heard you like charts.&quot;</span>
+    <span class="p">}]</span>
+    <span class="nv">count = </span><span class="mi">0</span>
+    <span class="nx">_</span><span class="p">.</span><span class="nx">each</span> <span class="nx">pageList</span><span class="p">,</span> <span class="nf">(page) -&gt;</span>
+      <span class="nx">Pages</span><span class="p">.</span><span class="nx">insert</span> <span class="nx">page</span>
+      <span class="nx">count</span><span class="o">++</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">count</span> <span class="o">+</span> <span class="s">&#39; pages inserted&#39;</span><span class="p">)</span></div></div></div></div></body></html>

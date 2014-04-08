@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><title>controllers/README</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="controllers/README"><meta name="groc-project-path" content="controllers/README.md"><meta name="groc-github-url" content="https://github.com/LumaPictures/module-layout"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/LumaPictures/module-layout/blob/master/controllers/README.md">controllers/README.md</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="layouts">Layouts</h1>
+
+<p>Each of these layouts is an <a href="https://github.com/EventedMind/iron-router#using-a-layout-with-yields">Iron Router Layout</a>.</p>
+
+<p>A layout may contain serveral <code>yields</code> which are meant to be placeholders for dynamic content specified by the layout or page controller.</p>
+
+<p>A layout is composed of :
+* <a href="page/page.layout.html">layout template</a>
+* <a href="page/page.controller.coffee">layout controller</a>
+* <a href="page/page.layout.coffee">layout view</a></p>
+
+<h2 id="layout-template">Layout Template</h2>
+
+<p>The layout template is responsible for basic markup, specifying yields, and extremely basic template logic.</p>
+
+<p>The layout template should strive to remain as basic as possible in order for it to remain useful to a wide variety of pages.</p>
+
+<h2 id="layout-controller">Layout Controller</h2>
+
+<p>The layout controller is the brains of the application and is responsible for generating the data contexts for each layout yield.</p>
+
+<h2 id="layout-view">Layout View</h2>
+
+<p>The layout view is just a coffeescript file that handles event binding and any helpers that the layout may require</p></div></div></div></div></body></html>

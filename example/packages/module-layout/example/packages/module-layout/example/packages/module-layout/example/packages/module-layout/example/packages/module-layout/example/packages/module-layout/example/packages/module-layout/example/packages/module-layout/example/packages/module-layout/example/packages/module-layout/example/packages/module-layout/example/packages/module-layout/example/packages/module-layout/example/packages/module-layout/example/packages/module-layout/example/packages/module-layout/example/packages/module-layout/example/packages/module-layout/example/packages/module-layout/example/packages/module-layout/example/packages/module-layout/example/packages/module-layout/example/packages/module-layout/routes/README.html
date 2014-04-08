@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head><title>example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/routes/README</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../"><meta name="groc-document-path" content="example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/routes/README"><meta name="groc-project-path" content="example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/routes/README.md"><meta name="groc-github-url" content="https://github.com/LumaPictures/module-layout"><link rel="stylesheet" type="text/css" media="all" href="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../assets/style.css"><script type="text/javascript" src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/LumaPictures/module-layout/blob/master/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/routes/README.md">example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/routes/README.md</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="routes">Routes</h1>
+
+<p><code>module-layout</code> uses db driven routes to enable simple management of routes from an administrative backend.</p>
+
+<p><a href="../example/server/init_pages.coffee">An example route db collection can be seen here</a></p>
+
+<p>A simple route object :</p>
+
+<pre><code class="coffeescript">{
+  route: 'home'
+  path: '/'
+  controller: 'ExampleController'
+  page:
+    title: "Home"
+    subtitle: "This isn't really home, its work."
+}
+</code></pre>
+
+<p>Note that the controller is specified on the route, and that <code>page</code> is a context that will be used, most likely in the page header.</p>
+
+<p>A more complex route :</p>
+
+<pre><code class="coffeescript">{
+  route: "forms"
+  path: "/forms"
+  controller: 'ExampleController'
+  nav:
+    priority: 9
+    icon: 'icon-stack'
+    children: [{
+      title: 'Form Snippets'
+      route: 'formSnippets'
+      children: [{
+        title: 'Bug Report Form'
+        route: 'bugReportForm'
+      }]
+    },{
+      title: 'Form Components'
+      route: 'formComponents'
+      children: [{
+        title: 'Form Elements'
+        route: 'formElements'
+        children: [{
+          title: 'Basic Inputs'
+          route: 'basicInputs'
+        }]
+      },{
+        title: 'WYSIWYG Editors'
+        route: 'wysiwygEditors'
+      }]
+    }]
+  page:
+    title: 'Forms'
+    subtitle: 'A necessary evil'
+  callouts: [
+    cssClass: "callout-success"
+    title: "We All Hate Filling Out Forms"
+    message: "Time to change that."
+  ]
+}
+</code></pre>
+
+<p>Here the route also has a <code>nav</code> context, which is used in the example by the <code>sidebar_content</code> yield.</p>
+
+<p>To see how the yield parses the context see the <a href="../components/sidebar/default_sidebar_content.html">default<em>sidebar</em>content component</a></p></div></div></div></div></body></html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en"><head><title>example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/iron-router/History</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../"><meta name="groc-document-path" content="example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/iron-router/History"><meta name="groc-project-path" content="example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/iron-router/History.md"><meta name="groc-github-url" content="https://github.com/LumaPictures/module-layout"><link rel="stylesheet" type="text/css" media="all" href="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../assets/style.css"><script type="text/javascript" src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/LumaPictures/module-layout/blob/master/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/iron-router/History.md">example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/iron-router/History.md</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h2 id="v070">v0.7.0</h2>
+
+<ul>
+<li>Blaze rendering with the <a href="https://github.com/eventedmind/blaze-layout">blaze-layout</a> package.
+<ul><li>Layouts are only taken off the DOM (re-rendered) if the layout changes.</li>
+<li>Templates are only taken off the DOM (re-rendered) if the template changes.</li>
+<li>Data contexts change independently from rendering.</li>
+<li>{{yield}} is now {{> yield}} and {{yield 'footer'}} is now {{> yield region='footer'}}</li>
+<li>{{#contentFor region='footer'}}footer content goes here{{/contentFor}} is supported again!</li>
+<li>Router supports a uiManager api that can be used to plug in other ui managers (in addition to blaze-layout)</li></ul></li>
+<li><p>RouteController API cleanup</p>
+
+<ul><li>Hook name changes (legacy supported until 1.0)</li>
+<li>before -> onBeforeAction</li>
+<li>after -> onAfterAction</li>
+<li>load -> onRun</li>
+<li>unload -> onStop</li>
+<li>No more getData and setData methods on RouteController instances. Just use <code>this.data()</code> to call the controller's wrapped data function.</li>
+<li>run method changes</li>
+<li>Changed run to _run to indicate privacy</li>
+<li>A RouteController is in a running state or a stopped state. You cannot run a controller that is already running.</li>
+<li>You cannot call <code>stop()</code> inside of a run. Use <code>pause()</code> for hooks now instead. see below.</li>
+<li>Order of operations:
+<ol><li>Clear the waitlist</li>
+<li>Set the layout</li>
+<li>Run the onRun hooks in a computation</li>
+<li>Run the waitOn function in a computation, populating the waitlist</li>
+<li>Set the global data context using the controller's wrapped data function</li>
+<li>Run the action in a computation in this order: onBeforeAction, action, onAfterAction</li></ol></li>
+<li>Hook api changes</li>
+<li>You can no longer call <code>this.stop()</code> in a hook. Use <code>pause()</code> instead which is the first parameter passed to the hook function. This stops downstream hooks from running. For example the loading hook uses pause() to stop the action function from rendering the main template.</li>
+<li>No hooks are included in your controllers by default. If you want to add them you can do it like this:
+<ul><li><code>Router.onBeforeAction('loading')</code></li>
+<li><code>Router.onBeforeAction('dataNotFound')</code></li></ul></li>
+<li>Package authors can include their own hooks in the lookup chain by adding them to the <code>Router.hooks</code> namespace. Then users can add them by name like this: <code>Router.onBeforeAction('customhook');</code></li>
+<li>See lib/client/hooks.js for example.</li>
+<li>Hooks are now called in a different order by popular demand:
+<ol><li>controller options</li>
+<li>controller prototype</li>
+<li>controller object</li>
+<li>route option hooks</li>
+<li>router global</li></ol></li></ul></li>
+<li><p>Helpers cleanup</p>
+
+<ul><li><code>{{link}}</code> helper is no longer included by default. These types of helpers can be implemented in separate packages.</li>
+<li><code>{{renderRouter}}</code> is gone for now.</li>
+<li><code>{{pathFor}}</code> and <code>{{urlFor}}</code> still work with some api changes:</li>
+<li>{{pathFor 'routeName' params=this query="key=value&amp;key2=value2" hash="somehash" anotherparam="anothervalue"}}</li>
+<li>same for {{urlFor}}</li></ul></li>
+<li><p>IronLocation changes</p>
+
+<ul><li>The router now sets up the link handler for much more consistency between <code>Router.go</code> and clicks on links.</li>
+<li>The location URL changes in between stopping the old route and starting the new one, so <code>onStop</code> and <code>onRun</code> behave as you'd expect.</li>
+<li><code>location</code> is now an option to configure so you can use a custom location manager (apart from IronLocation).</li></ul></li>
+</ul>
+
+<h2 id="v062">v0.6.2</h2>
+
+<ul>
+<li>Bug fix: couldn't go back after page reload. Thanks @apendua!</li>
+<li>Added ability to customize IronLocation link selector. Thanks @nathan-muir</li>
+<li>Fixed a problem with child hooks running multiple times. Thanks @jagi!</li>
+<li>Fixed a problem with stopping the process when redirecting</li>
+<li>Fixed issues with optional paths, thanks @mitar</li>
+<li>Fixed problem on Android 2.3</li>
+</ul>
+
+<h2 id="v061">v0.6.1</h2>
+
+<ul>
+<li>Bug fix: notFound template rendered with layout</li>
+<li>Bug fix: loading and notFound render yeilds again</li>
+<li>Bug fix: IE8 issue with 'class' property name on link handlebars helper</li>
+<li>Bug fix: Global hook regression</li>
+<li>Readme fixes</li>
+</ul>
+
+<h2 id="v060">v0.6.0</h2>
+
+<ul>
+<li><p><strong>WARNING:</strong> Breaking Changes</p>
+
+<ul><li>The <code>layout</code> option is now called <code>layoutTemplate</code></li>
+<li>The <code>renderTemplates</code> option is now called <code>yieldTemplates</code></li>
+<li>RouteController <code>onBefore..</code> and <code>onAfter..</code> methods removed (now just use
+<code>before</code> and <code>after</code>)</li>
+<li><code>Router.current()</code> now returns a <code>RouteController</code> instance</li>
+<li>data option now applies only to the Route or RouteController, not to the render method</li>
+<li>pathFor and urlFor semantics have changed slightly (hash and query params can now be the key value pairs of the Handlebars expression)</li>
+<li><code>{{pathFor contextObject queryKey=queryValue hash=anchorTag}}</code>
+or</li>
+<li><code>
+{{#with contextObject}} 
+  {{pathFor queryKey=queryValue hash=anchorTag}}
+{{/with}}
+</code></li></ul></li>
+<li><p>Route and RouteController level layouts</p></li>
+<li>Support for url hash fragments</li>
+<li>Better support for query string parameters</li>
+<li>PageManager class for handling layout and template rendering and storing a global data context
+<ul><li>Layouts and templates now only re-render if the actual template has changed (allows for maintaining a layout/template across routes with no flicker)</li>
+<li>Data context is set/get globally on/from the Router</li>
+<li>See the lib/client/page_controller.js file for details</li></ul></li>
+<li>No more silly RouteContext; all this stuff is in the RouteController instance</li>
+<li>Partial support for IE8-9. Pages make a server request if pushState is not supported by the browser. This is a performance penalty, but it works</li>
+<li>Cleaned up API signatures and passing of options from Router->Route->RouteController</li>
+<li>Fix onclick handler and moved into lib/client/location.js</li>
+<li>Client and Server Router now inherit from IronRouter</li>
+<li>Client and Server RouteController now inherit from IronRouterController</li>
+<li>Removed unnecessary global symbol exports (still accessible through Package['iron-router'] namespace)</li>
+<li>Global <code>notFoundTemplate</code> will render if a route is not found.</li>
+<li>Added <code>load</code> hook which fires exactly once per route load (and respects hot-code-reload!)</li>
+<li>Added <code>Router.before()</code> and friends which let you add global hooks with a bit more subtlety.</li>
+</ul>
+
+<h2 id="v054">v0.5.4</h2></div></div></div></div></body></html>

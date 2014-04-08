@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en"><head><title>less/bootstrap.import</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="less/bootstrap.import"><meta name="groc-project-path" content="less/bootstrap.import.less"><meta name="groc-github-url" content="https://github.com/LumaPictures/module-layout"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/LumaPictures/module-layout/blob/master/less/bootstrap.import.less">less/bootstrap.import.less</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><p>defines where the package is</p></div></div><div class="code"><div class="wrapper"><span class="k">@bootstrap3-root</span><span class="nd">:</span> <span class="s2">&quot;../components/bootstrap&quot;</span><span class="o">;</span>
+<span class="k">@bootstrap3-less-root</span><span class="nd">:</span> <span class="s2">&quot;@{bootstrap3-root}/less&quot;</span><span class="o">;</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h2 id="import-bootstrap-config-defaults">Import Bootstrap Config Defaults</h2>
+
+<p>(you need these first, to get the default setup for bootstrap)</p></div></div><div class="code"><div class="wrapper"><span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/variables.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/mixins.import.less&quot;;</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h2 id="application-overrides-config">Application Overrides (config)</h2>
+
+<p>(Here you can override any variables defined in the default set above)</p></div></div><div class="code"><div class="wrapper"><span class="k">@icon-font-path</span><span class="nd">:</span> <span class="s2">&quot;static/fonts/&quot;</span><span class="o">;</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><h2 id="import-bootstrap">Import Bootstrap</h2>
+
+<p>(This is the full set of package files, include only what you need)</p></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Reset</p></div></div><div class="code"><div class="wrapper"><span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/normalize.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/print.import.less&quot;;</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Core CSS</p></div></div><div class="code"><div class="wrapper"><span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/scaffolding.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/type.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/code.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/grid.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/tables.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/forms.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/buttons.import.less&quot;;</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Components</p></div></div><div class="code"><div class="wrapper"><span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/component-animations.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/glyphicons.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/dropdowns.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/button-groups.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/input-groups.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/navs.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/navbar.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/breadcrumbs.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/pagination.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/pager.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/labels.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/badges.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/jumbotron.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/thumbnails.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/alerts.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/progress-bars.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/media.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/list-group.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/panels.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/wells.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/close.import.less&quot;;</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Components w/ JavaScript</p></div></div><div class="code"><div class="wrapper"><span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/modals.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/tooltip.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/popovers.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/carousel.import.less&quot;;</span></div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>Utility classes</p></div></div><div class="code"><div class="wrapper"><span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/utilities.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;@{bootstrap3-less-root}/responsive-utilities.import.less&quot;;</span></div></div></div></div></body></html>

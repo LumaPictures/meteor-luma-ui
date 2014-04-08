@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"><head><title>example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/blaze-layout/README</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../"><meta name="groc-document-path" content="example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/blaze-layout/README"><meta name="groc-project-path" content="example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/blaze-layout/README.md"><meta name="groc-github-url" content="https://github.com/LumaPictures/module-layout"><link rel="stylesheet" type="text/css" media="all" href="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../assets/style.css"><script type="text/javascript" src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/LumaPictures/module-layout/blob/master/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/blaze-layout/README.md">example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/blaze-layout/README.md</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><p>A Meteor Blaze powered Layout component for dynamic rendering and data. Its major features are:</p>
+
+<ol>
+<li>Dynamically set the layout template and data context.</li>
+<li>Define yield regions to dynamically render templates into.</li>
+<li>Never re-render templates unless they change</li>
+</ol>
+
+<h3 id="usage-in-templates">Usage in Templates</h3>
+
+<pre><code class="html">&lt;body&gt;
+  {{#Layout template="MyLayout"}}
+    This content will go into the main yield region.
+
+    {{#contentFor region="footer"}}
+      This is some footer content
+    {{/contentFor}}
+  {{/Layout}}
+&lt;/body&gt;
+
+&lt;template name="MyLayout"&gt;
+  &lt;h1&gt;My Layout&lt;/h1&gt;
+
+  &lt;div&gt;
+    {{&gt; yield}}
+  &lt;/div&gt;
+
+  &lt;footer&gt;
+    {{&gt; yield region="footer"}}
+  &lt;/footer&gt;
+&lt;/template&gt;
+</code></pre>
+
+<h3 id="usage-as-a-component">Usage as a Component</h3>
+
+<pre><code class="javascript">var layout = UI.render(Layout.extend({template: 'MyLayout'});
+UI.DomRange.insert(layout.dom, document.body);
+
+// set the layout template
+layout.template('AnotherLayoutTemplate');
+
+// set the layout data context
+layout.setData({title: 'Some data context'});
+
+// render a template into the main region {{&gt; yield}}
+layout.setRegion('SomeTemplateName');
+
+// render a template into a named region
+layout.setRegion('footer', 'SomeFooterTemplate');
+</code></pre>
+
+<h3 id="integration-with-ironrouter">Integration with IronRouter</h3>
+
+<p>This package is automatically included with Iron Router.</p></div></div></div></div></body></html>

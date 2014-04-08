@@ -1,0 +1,478 @@
+<!DOCTYPE html><html lang="en"><head><title>less/components.import</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="less/components.import"><meta name="groc-project-path" content="less/components.import.less"><meta name="groc-github-url" content="https://github.com/LumaPictures/module-layout"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/LumaPictures/module-layout/blob/master/less/components.import.less">less/components.import.less</a></div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="cm">/* ===== Components ===== */</span>
+
+<span class="cm">/* General Layout */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/general_layout/resets.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/general_layout/general_layout.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/general_layout/contextual_backgrounds.import.less&quot;;</span>
+<span class="cm">/* Headings */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/headings/headings.import.less&quot;;</span>
+<span class="cm">/* Lists */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/lists/lists.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/lists/list_groups.import.less&quot;;</span>
+<span class="cm">/* Typography */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/typography/text_styles.import.less&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/typography/typography.import.less&quot;;</span>
+<span class="cm">/* Scrollbar */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/scrollbar/scrollbar.import.less&quot;;</span>
+<span class="cm">/* Navbar */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/navbar/navbar.import.less&quot;;</span>
+<span class="cm">/* Page Header */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/page_header/page_header.import.less&quot;;</span>
+<span class="cm">/* Labels */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/labels/labels.import.less&quot;;</span>
+<span class="cm">/* Dropdowns */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/dropdowns/dropdowns.import.less&quot;;</span>
+<span class="cm">/* Panels */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/panels/panels.import.less&quot;;</span>
+<span class="cm">/* Callouts */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/callouts/callouts.import.less&quot;;</span>
+<span class="cm">/* Alerts */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/callouts/alerts.import.less&quot;;</span>
+<span class="cm">/* Form Control */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/form_control/form_control.import.less&quot;;</span>
+<span class="cm">/* Modals */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/modals/modals.import.less&quot;;</span>
+<span class="cm">/* Progress Bars */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/progress_bars/progress_bars.import.less&quot;;</span>
+<span class="cm">/* Tooltips */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/tooltip/tooltip.import.less&quot;;</span>
+<span class="cm">/* Pagination */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/pagination/pagination.import.less&quot;;</span>
+<span class="cm">/* Buttons */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/buttons/buttons.import.less&quot;;</span>
+<span class="cm">/* Table */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/table/table.import.less&quot;;</span>
+<span class="cm">/* Thumbnail */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/thumbnail/thumbnail.import.less&quot;;</span>
+<span class="cm">/* Media Object */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/media_object/media_object.import.less&quot;;</span>
+<span class="cm">/* Headline */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/headline/headline.import.less&quot;;</span>
+<span class="cm">/* Flags */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/flags/flags.import.less&quot;;</span>
+
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/general_layout/general_styles.import.less&quot;;</span>
+
+
+<span class="cm">/* # Custom widgets and layout elements</span>
+<span class="o">==================================================</span> <span class="o">*/</span>
+
+
+<span class="cm">/*===== Media page option bar =====*/</span>
+
+<span class="nc">.bar</span> <span class="nt">label</span> <span class="err">{</span>
+  <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="err">;</span>
+  <span class="na">font-size</span><span class="o">:</span> <span class="mi">12</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">display</span><span class="o">:</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="err">;</span>
+  <span class="na">margin</span><span class="o">:</span> <span class="mi">7</span><span class="kt">px</span> <span class="mi">12</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.bar-left</span><span class="o">,</span>
+<span class="nc">.bar</span> <span class="nc">.select</span><span class="o">,</span>
+<span class="nc">.bar</span> <span class="nt">select</span><span class="o">,</span>
+<span class="nc">.bar</span> <span class="nc">.form-control</span> <span class="err">{</span>
+  <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.bar-right</span> <span class="err">{</span>
+  <span class="na">float</span><span class="o">:</span> <span class="no">right</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.bar</span> <span class="nc">.form-control</span> <span class="err">{</span>
+  <span class="na">width</span><span class="o">:</span> <span class="no">auto</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.bar</span> <span class="nc">.btn</span> <span class="err">{</span>
+  <span class="na">margin-left</span><span class="o">:</span> <span class="mi">2</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.bar</span> <span class="nc">.pagination</span> <span class="err">{</span>
+  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">3</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.file-info</span> <span class="nt">span</span> <span class="err">{</span>
+  <span class="na">display</span><span class="o">:</span> <span class="no">block</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="k">@media</span> <span class="o">(</span><span class="nt">max-width</span><span class="nd">:</span> <span class="nt">767px</span><span class="o">)</span> <span class="err">{</span>
+  <span class="nc">.bar-left</span><span class="o">,</span> <span class="nc">.bar-right</span> <span class="err">{</span>
+    <span class="na">float</span><span class="o">:</span> <span class="no">none</span><span class="err">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="err">;</span>
+  <span class="err">}</span>
+  <span class="nc">.bar-right</span> <span class="err">{</span>
+    <span class="na">margin-top</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="err">;</span>
+  <span class="err">}</span>
+
+  <span class="nc">.bar</span> <span class="nt">label</span> <span class="err">{</span>
+    <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">0</span><span class="err">;</span>
+    <span class="na">display</span><span class="o">:</span> <span class="no">block</span><span class="err">;</span>
+  <span class="err">}</span>
+  <span class="nc">.bar</span> <span class="nc">.form-control</span> <span class="err">{</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="err">;</span>
+  <span class="err">}</span>
+  <span class="nc">.bar</span> <span class="nc">.btn</span> <span class="err">{</span>
+    <span class="na">margin-top</span><span class="o">:</span> <span class="mi">2</span><span class="kt">px</span><span class="err">;</span>
+    <span class="na">margin-left</span><span class="o">:</span> <span class="mi">0</span><span class="err">;</span>
+    <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span><span class="err">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="err">;</span>
+  <span class="err">}</span>
+  <span class="nc">.bar</span> <span class="nc">.btn</span> <span class="o">&gt;</span> <span class="nt">i</span> <span class="err">{</span>
+    <span class="na">float</span><span class="o">:</span> <span class="no">none</span><span class="err">;</span>
+  <span class="err">}</span>
+  <span class="nc">.bar</span> <span class="nc">.select2-container</span> <span class="err">{</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="nv">!important</span><span class="err">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+
+
+
+
+
+<span class="cm">/*===== Send message widget with icon toolbar =====*/</span>
+
+<span class="nc">.upload-options</span> <span class="err">{</span>
+  <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="err">;</span>
+  <span class="na">margin</span><span class="o">:</span> <span class="mi">8</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.upload-options</span> <span class="nt">a</span> <span class="err">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nb">white</span><span class="err">;</span>
+  <span class="na">opacity</span><span class="o">:</span> <span class="mi">0</span><span class="mf">.5</span><span class="err">;</span>
+  <span class="na">filter</span><span class="o">:</span> <span class="nf">alpha</span><span class="p">(</span><span class="no">Opacity</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span><span class="err">;</span>
+  <span class="na">margin-right</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.upload-options</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="err">{</span>
+  <span class="na">opacity</span><span class="o">:</span> <span class="mi">1</span><span class="err">;</span>
+  <span class="na">filter</span><span class="o">:</span> <span class="nf">alpha</span><span class="p">(</span><span class="no">Opacity</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.message-controls</span> <span class="err">{</span>
+  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">16</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.message-controls</span> <span class="nc">.pull-left</span> <span class="err">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="mh">#999</span><span class="err">;</span>
+  <span class="na">font-size</span><span class="o">:</span> <span class="mi">12</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">8</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">display</span><span class="o">:</span> <span class="no">block</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.message-controls</span> <span class="nc">.pull-left</span> <span class="nt">i</span> <span class="err">{</span>
+  <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="err">;</span>
+  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="k">@media</span> <span class="o">(</span><span class="nt">max-width</span><span class="nd">:</span> <span class="nt">479px</span><span class="o">)</span> <span class="err">{</span>
+  <span class="nc">.message-controls</span> <span class="err">{</span>
+    <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span><span class="err">;</span>
+  <span class="err">}</span>
+  <span class="nc">.message-controls</span> <span class="nc">.pull-left</span> <span class="err">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="no">none</span><span class="err">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+
+
+
+
+
+<span class="cm">/*===== Task grid =====*/</span>
+
+<span class="nc">.task</span> <span class="err">{</span>
+  <span class="na">background-color</span><span class="o">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">255</span><span class="o">,</span><span class="mi">255</span><span class="o">,</span><span class="mi">255</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.1</span><span class="p">)</span><span class="err">;</span>
+  <span class="na">font-size</span><span class="o">:</span> <span class="mi">12</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">border</span><span class="o">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="no">solid</span> <span class="no">transparent</span><span class="err">;</span>
+  <span class="na">border-left-width</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.task-description</span> <span class="nt">a</span> <span class="err">{</span>
+  <span class="na">font-size</span><span class="o">:</span> <span class="mi">14</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">font-weight</span><span class="o">:</span> <span class="mi">600</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.task-description</span> <span class="nt">span</span> <span class="err">{</span>
+  <span class="na">display</span><span class="o">:</span> <span class="no">block</span><span class="err">;</span>
+  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">6</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.task-description</span> <span class="nt">i</span> <span class="err">{</span>
+  <span class="na">font-style</span><span class="o">:</span> <span class="no">normal</span><span class="err">;</span>
+  <span class="na">font-size</span><span class="o">:</span> <span class="mi">11</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nb">white</span><span class="err">;</span>
+  <span class="na">margin-left</span><span class="o">:</span> <span class="mi">8</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.task-info</span> <span class="err">{</span>
+  <span class="na">text-align</span><span class="o">:</span> <span class="no">right</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.task-info</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="err">{</span>
+  <span class="na">display</span><span class="o">:</span> <span class="no">block</span><span class="err">;</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nb">white</span><span class="err">;</span>
+  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">6</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.task-info</span> <span class="o">&gt;</span> <span class="nt">span</span><span class="nd">:first-child</span> <span class="err">{</span>
+  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">0</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.task-info</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="nt">i</span> <span class="err">{</span>
+  <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="err">;</span>
+  <span class="na">margin</span><span class="o">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.task-info</span> <span class="nc">.label</span> <span class="err">{</span>
+  <span class="na">margin-left</span><span class="o">:</span> <span class="mi">5</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.task-high</span> <span class="err">{</span>
+  <span class="na">border-left-color</span><span class="o">:</span> <span class="mh">#D65C4F</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.task-normal</span> <span class="err">{</span>
+  <span class="na">border-left-color</span><span class="o">:</span> <span class="mh">#65B688</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.task-low</span> <span class="err">{</span>
+  <span class="na">border-left-color</span><span class="o">:</span> <span class="mh">#bbb</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.task-desc</span> <span class="nt">a</span> <span class="err">{</span>
+  <span class="na">font-weight</span><span class="o">:</span> <span class="mi">600</span><span class="err">;</span>
+  <span class="na">display</span><span class="o">:</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="err">;</span>
+  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">3</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">3</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.task-desc</span> <span class="nt">span</span> <span class="err">{</span>
+  <span class="na">display</span><span class="o">:</span> <span class="no">block</span><span class="err">;</span>
+  <span class="na">color</span><span class="o">:</span> <span class="mh">#999</span><span class="err">;</span>
+  <span class="na">font-size</span><span class="o">:</span> <span class="mi">11</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">-2</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="k">@media</span> <span class="o">(</span><span class="nt">max-width</span><span class="nd">:</span> <span class="nt">767px</span><span class="o">)</span> <span class="err">{</span>
+  <span class="nc">.task-info</span> <span class="err">{</span>
+    <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span><span class="err">;</span>
+    <span class="na">border-top</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="mh">#eee</span><span class="err">;</span>
+    <span class="na">padding-top</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="err">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+
+
+
+
+
+<span class="cm">/*===== Panel footer links and icons =====*/</span>
+
+<span class="nc">.footer-links-group</span> <span class="err">{</span>
+  <span class="na">list-style</span><span class="o">:</span> <span class="no">none</span><span class="err">;</span>
+  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span><span class="err">;</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.footer-links-group</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="err">{</span>
+  <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="err">;</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">12</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">12</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">border-right</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="mh">#eee</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.footer-links-group</span> <span class="o">&gt;</span> <span class="nt">li</span><span class="nc">.has-label</span> <span class="err">{</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">12</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.footer-icons-group</span> <span class="err">{</span>
+  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span><span class="err">;</span>
+  <span class="na">list-style</span><span class="o">:</span> <span class="no">none</span><span class="err">;</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.footer-icons-group</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="err">{</span>
+  <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="err">;</span>
+  <span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.footer-icons-group</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="o">&gt;</span> <span class="nt">a</span> <span class="err">{</span>
+  <span class="na">line-height</span><span class="o">:</span> <span class="mi">1</span><span class="err">;</span>
+  <span class="na">color</span><span class="o">:</span> <span class="mh">#999</span><span class="err">;</span>
+  <span class="na">display</span><span class="o">:</span> <span class="no">block</span><span class="err">;</span>
+  <span class="na">padding</span><span class="o">:</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">border-left</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="mh">#eee</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.footer-icons-group</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="nd">:hover</span><span class="o">,</span>
+<span class="nc">.footer-icons-group</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="o">&gt;</span> <span class="nt">a</span><span class="nd">:focus</span> <span class="err">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="mh">#65B688</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="k">@media</span> <span class="o">(</span><span class="nt">max-width</span><span class="nd">:</span> <span class="nt">479px</span><span class="o">)</span> <span class="err">{</span>
+  <span class="nc">.footer-links-group</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="err">{</span>
+    <span class="na">border-right</span><span class="o">:</span> <span class="mi">0</span><span class="err">;</span>
+  <span class="err">}</span>
+
+  <span class="nc">.footer-icons-group</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="o">&gt;</span> <span class="nt">a</span> <span class="err">{</span>
+    <span class="na">border-left</span><span class="o">:</span> <span class="mi">0</span><span class="err">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+
+<span class="k">@media</span> <span class="o">(</span><span class="nt">max-width</span><span class="nd">:</span> <span class="nt">767px</span><span class="o">)</span> <span class="err">{</span>
+  <span class="nc">.footer-links-group</span> <span class="o">&gt;</span> <span class="nt">li</span><span class="o">,</span> <span class="nc">.footer-icons-group</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="err">{</span>
+    <span class="na">float</span><span class="o">:</span> <span class="no">none</span><span class="err">;</span>
+  <span class="err">}</span>
+
+  <span class="nc">.footer-icons-group</span> <span class="err">{</span>
+    <span class="na">font-size</span><span class="o">:</span> <span class="mi">0</span><span class="err">;</span>
+  <span class="err">}</span>
+  <span class="nc">.footer-icons-group</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="o">&gt;</span> <span class="nt">a</span> <span class="err">{</span>
+    <span class="na">border</span><span class="o">:</span> <span class="mi">0</span><span class="err">;</span>
+  <span class="err">}</span>
+  <span class="nc">.footer-icons-group</span> <span class="o">&gt;</span> <span class="nt">li</span> <span class="err">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="err">;</span>
+  <span class="err">}</span>
+
+  <span class="nc">.panel-footer</span> <span class="nc">.pull-left</span> <span class="nt">i</span> <span class="err">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="no">none</span><span class="err">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+
+
+
+
+
+<span class="cm">/*===== Icons group =====*/</span>
+
+<span class="nc">.icons-group</span> <span class="nt">a</span> <span class="err">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="mh">#555</span><span class="err">;</span>
+  <span class="na">margin-left</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.icons-group</span> <span class="nt">a</span><span class="nd">:first-child</span> <span class="err">{</span>
+  <span class="na">margin-left</span><span class="o">:</span> <span class="mi">0</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.icons-group</span> <span class="nt">a</span><span class="nd">:hover</span><span class="o">,</span> <span class="nc">.icons-group</span> <span class="nt">a</span><span class="nd">:focus</span> <span class="err">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="mh">#999</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.footer</span> <span class="nc">.icons-group</span> <span class="nt">a</span> <span class="err">{</span>
+  <span class="na">margin-left</span><span class="o">:</span> <span class="mi">12</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">color</span><span class="o">:</span> <span class="mh">#999</span><span class="err">;</span>
+  <span class="na">float</span><span class="o">:</span> <span class="no">left</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.footer</span> <span class="nc">.icons-group</span> <span class="nt">a</span><span class="nd">:hover</span><span class="o">,</span> <span class="nc">.footer</span> <span class="nc">.icons-group</span> <span class="nt">a</span><span class="nd">:focus</span> <span class="err">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="mh">#555</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="cm">/* search */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/search/search.import.less&quot;;</span>
+
+
+
+
+<span class="cm">/*===== User status styles =====*/</span>
+
+<span class="nc">.status</span> <span class="err">{</span>
+  <span class="na">width</span><span class="o">:</span> <span class="mi">6</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">height</span><span class="o">:</span> <span class="mi">6</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">margin-left</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">vertical-align</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">display</span><span class="o">:</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span><span class="err">;</span>
+  <span class="na">border-radius</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">-webkit-border-radius</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="err">;</span>
+  <span class="na">-moz-border-radius</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.status-default</span> <span class="err">{</span>
+  <span class="na">background-color</span><span class="o">:</span> <span class="mh">#aaa</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.status-success</span> <span class="err">{</span>
+  <span class="na">background-color</span><span class="o">:</span> <span class="mh">#239169</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.status-info</span> <span class="err">{</span>
+  <span class="na">background-color</span><span class="o">:</span> <span class="mh">#3CA2BB</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.status-danger</span> <span class="err">{</span>
+  <span class="na">background-color</span><span class="o">:</span> <span class="mh">#D65C4F</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.status-warning</span> <span class="err">{</span>
+  <span class="na">background-color</span><span class="o">:</span> <span class="mh">#E7804F</span><span class="err">;</span>
+<span class="err">}</span>
+
+
+<span class="cm">/* # Components ================================================== */</span>
+
+<span class="cm">/*===== Page content =====*/</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/page_content/page_content.import.less&quot;;</span>
+
+<span class="cm">/* sidebar */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/sidebar/sidebar.import.less&quot;;</span>
+
+<span class="cm">/* breadcrumbs */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/breadcrumbs/breadcrumbs.import.less&quot;;</span>
+
+<span class="cm">/* footer */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/footer/footer.import.less&quot;;</span>
+
+<span class="cm">/* animations */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/animations/animations.import.less&quot;;</span>
+
+<span class="cm">/* ===== Task timer ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/task_timer/task_timer.import.less&quot;;</span>
+
+<span class="cm">/*===== Date range picker ====*/</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/date_range/date_range.import.less&quot;;</span>
+
+<span class="cm">/*===== jGrowl notifications ====*/</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/jGrowl/jGrowl.import.less&quot;;</span>
+
+<span class="cm">/*===== Dual select boxes ====*/</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/dual_select/dual_select.import.less&quot;;</span>
+
+<span class="cm">/*===== Uniform. Checkbox =====*/</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/uniform/checkbox/uniform_checkbox.import.less&quot;;</span>
+
+<span class="cm">/*===== Uniform. Radio =====*/</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/uniform/radio/uniform_radio.import.less&quot;;</span>
+
+<span class="cm">/*===== File uploader =====*/</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/file_uploader/file_uploader.import.less&quot;;</span>
+
+<span class="cm">/*===== Multiselect =====*/</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/multiselect/multiselect.import.less&quot;;</span>
+
+<span class="cm">/*===== Select2 plugin =====*/</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/select2/select2.import.less&quot;;</span>
+
+<span class="cm">/*===== Tags Input plugin =====*/</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/tags/tags.import.less&quot;;</span>
+
+<span class="cm">/* ===== jQuery UI spinner ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/jquery-ui/spinner/spinner.import.less&quot;;</span>
+
+<span class="cm">/* ===== DataTable ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/component-dataTable/lib/component-dataTable.import.less&quot;;</span>
+
+<span class="cm">/*===== Datepicker =====*/</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/date_picker/date_picker.import.less&quot;;</span>
+
+<span class="cm">/* ===== UI Slider ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/slider/slider.import.less&quot;;</span>
+
+<span class="cm">/* ===== Color picker ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/colorpicker/colorpicker.import.less&quot;;</span>
+
+<span class="cm">/* ===== Time picker ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/time_picker/time_picker.import.less&quot;;</span>
+
+<span class="cm">/* ===== Code prettify ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/code_prettify/code_prettify.import.less&quot;;</span>
+
+<span class="cm">/* ===== Full calendar ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/full_calendar/full_calendar.import.less&quot;;</span>
+
+<span class="cm">/* ===== WYSIHTML5 editor plugin ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/wysihtml5/wysihtml5.import.less&quot;;</span>
+
+<span class="cm">/* ===== Bootstrap switch ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/bootstrap_switch/bootstrap_switch.import.less&quot;;</span>
+
+<span class="cm">/* ===== Multiple file uploader (Plupload) ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/multi_file_upload/multi_file_upload.import.less&quot;;</span>
+
+<span class="cm">/* ===== Fancybox - lightbox plugin ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/fancybox/fancybox.import.less&quot;;</span>
+
+<span class="cm">/* ===== UI autocomplete ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/autocomplete/autocomplete.import.less&quot;;</span>
+
+<span class="cm">/* ===== Invoice template styles ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/invoices/invoices.import.less&quot;;</span>
+
+<span class="cm">/* ===== Chat layout ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/chat/chat.import.less&quot;;</span>
+
+<span class="cm">/* ===== Charts ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/charts/charts.import.less&quot;;</span>
+
+<span class="cm">/* ===== Error Pages ===== */</span>
+<span class="k">@import</span> <span class="s">&quot;../packages/module-layout/components/error_pages/error_pages.import.less&quot;;</span></div></div></div></div></body></html>

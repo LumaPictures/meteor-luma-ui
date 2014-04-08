@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><title>example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/component-dataTable/README</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../"><meta name="groc-document-path" content="example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/component-dataTable/README"><meta name="groc-project-path" content="example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/component-dataTable/README.md"><meta name="groc-github-url" content="https://github.com/LumaPictures/module-layout"><link rel="stylesheet" type="text/css" media="all" href="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../assets/style.css"><script type="text/javascript" src="../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/LumaPictures/module-layout/blob/master/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/component-dataTable/README.md">example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/module-layout/example/packages/component-dataTable/README.md</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="datatable-component">DataTable Component</h1>
+
+<h2 id="liveexamplehttpcomponentdatatablemeteorcom"><a href="http://component-dataTable.meteor.com">Live Example</a></h2>
+
+<h2 id="datatablesdocshttpsdatatablesnetusage"><a href="https://datatables.net/usage/">DataTables Docs</a></h2>
+
+<h2 id="tabletoolsdocshttpsdatatablesnetextrastabletools"><a href="https://datatables.net/extras/tabletools/">TableTools Docs</a></h2>
+
+<h2 id="installation">Installation</h2>
+
+<p>Add to <code>smart.json</code> <code>packages</code> object :</p>
+
+<pre><code class="javascript">"component-dataTable": {
+    "git": "https://github.com/lumapictures/component-dataTable"
+}
+</code></pre>
+
+<p>Then <code>$ mrt add component-dataTable</code> in your app</p>
+
+<h2 id="options">Options</h2>
+
+<ul>
+<li><code>selector</code> [string] [required]
+<ul><li>The table selector for the dataTable instance you are creating.</li>
+<li>Needs to be unique in the page scope or you will get datatable mulit-render error</li></ul></li>
+<li><code>context</code> [array] [required]
+<ul><li>The data context for the dataTable instance you are creating.</li>
+<li>Can be an empty array, but cannot be null</li></ul></li>
+<li><code>table_template</code> [string]
+<ul><li>The name of table layout template that you want to render.</li>
+<li>default is <code>default_table_template</code></li></ul></li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<h4 id="defaults">Defaults</h4>
+
+<pre><code class="html">{{&gt; dataTable selector="datatable-tasks" context=data.tasks }}
+</code></pre>
+
+<h4 id="custom">Custom</h4>
+
+<pre><code class="html">{{&gt; dataTable selector="datatable-tasks" context=data.tasks table_template="tasks_table" }}
+</code></pre>
+
+<h2 id="development">Development</h2>
+
+<p>To develop this package locally just :</p>
+
+<ol>
+<li><code>$ git clone https://github.com/lumapictures/component-dataTable</code></li>
+<li><code>$ cd component-dataTable/example</code></li>
+<li><code>$ mrt --force</code></li>
+<li><code>$ meteor</code></li>
+</ol></div></div></div></div></body></html>
