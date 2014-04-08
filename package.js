@@ -21,7 +21,8 @@ Package.on_use(function (api, where) {
     'jquery',
     'jquery-ui',
     'less',
-    'iron-router-active'
+    'iron-router-active',
+    'component-dataTable'
   ], ['client']);
 
   /* ===== Exports ===== */
@@ -164,14 +165,6 @@ Package.on_use(function (api, where) {
 
   /* select2 */
   api.add_files('components/select2/lib/select2.min.js', 'client');
-
-  /* dataTable */
-  api.add_files([
-    'components/dataTable/lib/datatables.min.js',
-    'components/dataTable/lib/tabletools.min.js',
-    'components/dataTable/dataTable.html',
-    'components/dataTable/dataTable.coffee'
-  ], 'client' );
 
   /* navbar */
   api.add_files([

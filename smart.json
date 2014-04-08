@@ -12,6 +12,9 @@
       "branch": "blaze-integration"
     },
     "iron-router-active": {},
-    "jquery-ui": {}
+    "jquery-ui": {},
+    "component-dataTable": {
+      "git": "https://github.com/lumapictures/component-dataTable"
+    }
   }
 }
