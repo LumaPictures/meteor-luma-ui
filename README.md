@@ -1,4 +1,5 @@
-# module-layout
+# module-layout [![Build Status](https://travis-ci.org/LumaPictures/module-layout.svg?branch=dev)](https://travis-ci.org/LumaPictures/module-layout)
+## [Annotated Source](http://lumapictures.github.io/module-layout)
 ## [Setup](SETUP.md)
 ## [Live Example](http://module-layout.meteor.com)
 ## Contents
