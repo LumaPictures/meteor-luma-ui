@@ -12,13 +12,13 @@
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "branch": "master",
+        "tag": "v0.2.4",
         "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       },
       "iron-router": {
-        "git": "https://github.com/eventedmind/iron-router",
-        "branch": "blaze-integration",
-        "commit": "947991731df164e56b53cfdae8ef23802d989142"
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.7.0",
+        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
       },
       "iron-router-active": {
         "git": "https://github.com/XpressiveCode/iron-router-active.git",
