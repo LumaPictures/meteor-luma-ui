@@ -1,6 +1,6 @@
 # Routes
 
-`module-layout` uses db driven routes to enable simple management of routes from an administrative backend.
+`module-ui` uses db driven routes to enable simple management of routes from an administrative backend.
 
 [An example route db collection can be seen here](../example/server/init_pages.coffee)
 

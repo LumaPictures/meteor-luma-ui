@@ -1,6 +1,6 @@
 # Less
 
-All of the styles for `module-layout` can be found here.
+All of the styles for `module-ui` can be found here.
 
 The goal of this package is to wrap the bootstrap styles in class identifiers that maintain semantic markup.
 

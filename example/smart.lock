@@ -2,12 +2,12 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "module-layout": {
+      "module-ui": {
         "path": ".."
       }
     },
     "packages": {
-      "module-layout": {
+      "module-ui": {
         "path": ".."
       },
       "blaze-layout": {

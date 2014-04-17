@@ -235,8 +235,8 @@ Package.on_test(function (api) {
     'coffeescript',
     'tinytest',
     'test-helpers',
-    'module-layout'
+    'module-ui'
   ], ['client', 'server']);
 
-  api.add_files(['tests/module-layout.test.coffee'],['client', 'server']);
+  api.add_files(['tests/module-ui.test.coffee'],['client', 'server']);
 });

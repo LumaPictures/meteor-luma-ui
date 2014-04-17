@@ -1,7 +1,7 @@
-# module-layout [![Build Status](https://travis-ci.org/LumaPictures/module-layout.svg?branch=dev)](https://travis-ci.org/LumaPictures/module-layout)
-## [Annotated Source](http://lumapictures.github.io/module-layout)
+# module-ui [![Build Status](https://travis-ci.org/LumaPictures/module-ui.svg?branch=dev)](https://travis-ci.org/LumaPictures/module-ui)
+## [Annotated Source](http://lumapictures.github.io/module-ui)
 ## [Setup](SETUP.md)
-## [Live Example](http://module-layout.meteor.com)
+## [Live Example](http://module-ui.meteor.com)
 ## Contents
 * [Components](components)
 * [Controllers](controllers)

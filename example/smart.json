@@ -1,6 +1,6 @@
 {
   "packages": {
-    "module-layout": {
+    "module-ui": {
       "path": ".."
     }
   }

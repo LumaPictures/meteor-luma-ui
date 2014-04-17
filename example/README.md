@@ -1,6 +1,6 @@
-# module-layout example app
+# module-ui example app
 
-This application showcases the basic features of module-layout :
+This application showcases the basic features of module-ui :
 * [routing](../routes/README.md)
 * [styles](../less/README.md)
 * [plugin support](../plugins/README.md)
@@ -14,6 +14,6 @@ Simply run this example as you would any meteorite application `mrt`
 
 ## Dependencies
 
-The only dep for this application is the `module-layout` package
+The only dep for this application is the `module-ui` package
 
-## [Live Example](http://module-layout.meteor.com)
+## [Live Example](http://module-ui.meteor.com)
