@@ -1,7 +1,7 @@
-# module-ui [![Build Status](https://travis-ci.org/LumaPictures/module-ui.svg?branch=dev)](https://travis-ci.org/LumaPictures/module-ui)
-## [Annotated Source](http://lumapictures.github.io/module-ui)
+# Luma Pictures User Interface [![Build Status](https://travis-ci.org/LumaPictures/luma-ui.svg?branch=dev)](https://travis-ci.org/LumaPictures/luma-ui)
+## [Annotated Source](http://lumapictures.github.io/luma-ui)
 ## [Setup](SETUP.md)
-## [Live Example](http://module-ui.meteor.com)
+## [Live Example](http://luma-ui.meteor.com)
 ## Contents
 * [Components](components)
 * [Controllers](controllers)

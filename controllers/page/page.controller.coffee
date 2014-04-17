@@ -34,7 +34,7 @@ class @PageController extends RouteController
       navbar: {}
       navbar_header: {}
       navbar_brand:
-        name: 'module-ui'
+        name: 'luma-ui'
         logo: '/static/images/logo.png'
       navbar_right: {}
       sidebar: {}

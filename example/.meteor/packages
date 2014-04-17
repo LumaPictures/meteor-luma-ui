@@ -15,4 +15,4 @@ templating
 blaze-layout
 iron-router
 iron-router-active
-module-ui
+luma-ui

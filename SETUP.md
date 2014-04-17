@@ -4,8 +4,8 @@ To include this package in your application simply add the following to your `sm
 
 ```javascript
 packages: {
-    "module-ui": {
-        "git": "https://github.com/lumapictures/module-ui.git"
+    "luma-ui": {
+        "git": "https://github.com/lumapictures/luma-ui.git"
     }
 }
 ```
@@ -13,7 +13,7 @@ packages: {
 And run :
 
 ```shell
-$ mrt add module-ui
+$ mrt add luma-ui
 ```
 
 [Don't forget to symlink your static assets if you plan on using the default assets.](static/README.md)

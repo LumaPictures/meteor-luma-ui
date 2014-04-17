@@ -1,5 +1,5 @@
 Package.describe({
-  summary: "Basic layout module for little sister"
+  summary: "Luma Pictures user interface"
 });
 
 Package.on_use(function (api, where) {
@@ -235,8 +235,8 @@ Package.on_test(function (api) {
     'coffeescript',
     'tinytest',
     'test-helpers',
-    'module-ui'
+    'luma-ui'
   ], ['client', 'server']);
 
-  api.add_files(['tests/module-ui.test.coffee'],['client', 'server']);
+  api.add_files(['tests/luma-ui.test.coffee'],['client', 'server']);
 });

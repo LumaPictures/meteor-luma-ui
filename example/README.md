@@ -1,6 +1,6 @@
-# module-ui example app
+# luma-ui example app
 
-This application showcases the basic features of module-ui :
+This application showcases the basic features of luma-ui :
 * [routing](../routes/README.md)
 * [styles](../less/README.md)
 * [plugin support](../plugins/README.md)
@@ -14,6 +14,6 @@ Simply run this example as you would any meteorite application `mrt`
 
 ## Dependencies
 
-The only dep for this application is the `module-ui` package
+The only dep for this application is the `luma-ui` package
 
-## [Live Example](http://module-ui.meteor.com)
+## [Live Example](http://luma-ui.meteor.com)
