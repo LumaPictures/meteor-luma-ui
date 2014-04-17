@@ -8,11 +8,11 @@ insecure
 less
 coffeescript
 jquery
-iron-router
 jquery-ui
-module-layout
-iron-router-active
-spacebars
-blaze-layout
-templating
 ui
+spacebars
+templating
+blaze-layout
+iron-router
+iron-router-active
+module-layout

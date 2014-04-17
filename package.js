@@ -21,8 +21,7 @@ Package.on_use(function (api, where) {
     'jquery',
     'jquery-ui',
     'less',
-    'iron-router-active',
-    'component-dataTable'
+    'iron-router-active'
   ], ['client']);
 
   /* ===== Exports ===== */
