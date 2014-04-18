@@ -33,7 +33,7 @@ Package.on_use(function (api, where) {
   api.export([
     'PageLayoutController',
     'FullPageLayoutController',
-    'ExampleLayoutController'
+    'PackageLayoutController'
   ],['client']);
 
   /* ===== Models ===== */
@@ -64,7 +64,7 @@ Package.on_use(function (api, where) {
 
   /* Example Page Layout */
   api.add_files([
-    'router/example/example.controller.coffee'
+    'router/package/package.controller.coffee'
   ],['client']);
 
   /* ===== Components ===== */
@@ -236,6 +236,14 @@ Package.on_use(function (api, where) {
 
   /* footer */
   api.add_files('components/footer/default_footer.html', 'client');
+
+  /* package */
+  api.add_files([
+    'components/package/build_status.html',
+    'components/package/report_bug_block.html',
+    'components/package/package_header_widget.html',
+    'components/package/package_navbar_right.html'
+  ],['client'])
 });
 
 Package.on_test(function (api) {

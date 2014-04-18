@@ -48,17 +48,18 @@ class @PageController extends RouteController
       callouts: []
       content: {}
       footer:
-        message: 'Little Sister Admin Template v0.0.6 by Austin Rivas 2014.'
+        message: 'Luma UI by Austin Rivas 2014.'
 
   onBeforeAction: ->
     # rest page scroll position before each load
     $('body').scrollTop 0
     # extend the defaults with the yieldTemplates and assign it to this
-    # TODO : why does this work and _.defaults @yieldTemplates, @defaults.yields does not?
     @yieldTemplates = _.extend @defaults.yields, @yieldTemplates
 
   data: ->
+    # merge the defaults in with the route options
     _.defaults @route.options, @defaults.options
+    # merge the options into the page data context
     _.defaults @data, @route.options
 
   onAfterAction: ->
