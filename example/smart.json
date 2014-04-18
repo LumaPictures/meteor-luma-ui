@@ -2,6 +2,7 @@
   "packages": {
     "luma-ui": {
       "path": ".."
-    }
+    },
+    "luma-datatables": {}
   }
 }

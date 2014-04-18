@@ -1,8 +1,10 @@
+
+
 # Layouts
 
 Each of these layouts is an [Iron Router Layout](https://github.com/EventedMind/iron-router#using-a-layout-with-yields).
 
-A layout may contain serveral `yields` which are meant to be placeholders for dynamic content specified by the layout or page controller.
+A layout may contain several `yields` which are meant to be placeholders for dynamic content specified by the layout or page controller.
 
 A layout is composed of :
 * [layout template](page/page.layout.html)

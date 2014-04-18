@@ -27,12 +27,13 @@ Package.on_use(function (api, where) {
   /* ===== Exports ===== */
 
   api.export([
-    'Pages'
+    'Routes'
   ],['client','server']);
 
   api.export([
     'PageLayoutController',
-    'FullPageLayoutController'
+    'FullPageLayoutController',
+    'ExampleLayoutController'
   ],['client']);
 
   /* ===== Models ===== */
@@ -41,22 +42,29 @@ Package.on_use(function (api, where) {
   ],['client','server']);
 
   /* ===== Routes ===== */
-  api.add_files(['routes/routes.coffee'],['client']);
+  api.add_files([
+    'router/routes.coffee'
+  ], ['client','server']);
 
   /* ===== Controllers ===== */
 
   /* Page Layout */
   api.add_files([
-    'controllers/page/page.controller.coffee',
-    'controllers/page/page.layout.html',
-    'controllers/page/page.layout.coffee'
+    'router/page/page.controller.coffee',
+    'router/page/page.layout.html',
+    'router/page/page.layout.coffee'
   ], ['client']);
 
   /* Full Page Layout */
   api.add_files([
-    'controllers/full_page/full_page.controller.coffee',
-    'controllers/full_page/full_page.layout.html',
-    'controllers/full_page/full_page.layout.coffee'
+    'router/full_page/full_page.controller.coffee',
+    'router/full_page/full_page.layout.html',
+    'router/full_page/full_page.layout.coffee'
+  ],['client']);
+
+  /* Example Page Layout */
+  api.add_files([
+    'router/example/example.controller.coffee'
   ],['client']);
 
   /* ===== Components ===== */

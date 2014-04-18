@@ -1,2 +1,2 @@
 Template.default_sidebar_content.nav_items = ->
-  Pages.find({ 'nav.priority': { $gt: 0 } },{ sort: { 'nav.priority': 1 } })
+  Routes.find({ 'nav.priority': { $gt: 0 } },{ sort: { 'nav.priority': 1 } })

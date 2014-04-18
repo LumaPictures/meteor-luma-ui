@@ -1,4 +1,4 @@
-class @ExampleController extends PageController
+class ExampleLayoutController extends PageController
   yieldTemplates:
     'example_navbar_right':
       to: 'navbar_right'
