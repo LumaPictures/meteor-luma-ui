@@ -242,7 +242,8 @@ Package.on_use(function (api, where) {
     'components/package/build_status.html',
     'components/package/report_bug_block.html',
     'components/package/package_header_widget.html',
-    'components/package/package_navbar_right.html'
+    'components/package/package_navbar_right.html',
+    'components/package/package_footer.html'
   ],['client'])
 });
 
