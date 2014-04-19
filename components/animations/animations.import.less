@@ -8,14 +8,24 @@
   width: 100%;
   height: 100%;
   z-index: 9999;
-}
-.overlay .opacity {
-  background-color: #2C3A3F;
-  filter: alpha(opacity=80);
-  opacity: 0.8;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  .opacity {
+    background-color: #2C3A3F;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .spin {
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+  }
 }
 
 .spin {
@@ -25,16 +35,6 @@
   -ms-animation: rotation 1s ease infinite;
   -o-animation: rotation 1s ease infinite;
   animation: rotation 1s ease infinite;
-}
-.overlay .spin {
-  font-size: 16px;
-  color: #fff;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -8px;
-  margin-top: -8px;
 }
 
 @-webkit-keyframes rotation {
