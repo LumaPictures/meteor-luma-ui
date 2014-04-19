@@ -5,6 +5,10 @@ class PackageLayoutController extends PageController
     'packageFooter': to: 'footer'
 
   onBeforeAction: -> super
-  data: -> super
+  data: ->
+    @data.package =
+      owner: "LumaPictures"
+      repo: "luma-ui"
+    super
   onAfterAction: -> super
   action: -> super

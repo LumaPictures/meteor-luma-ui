@@ -1,3 +1,5 @@
 <template name="reportBugBlock">
-    <a href="https://github.com/LumaPictures/luma-ui/issues/new"><i class="icon-bug"></i> <span>Report Bugs</span></a>
+    {{#with package }}
+    <a href="https://github.com/{{owner}}/{{repo}}/issues/new" class="external-link" target="_blank" ><i class="icon-bug"></i> <span>Report Bugs</span></a>
+    {{/with}}
 </template>

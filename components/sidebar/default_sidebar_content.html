@@ -1,9 +1,21 @@
 <template name="default_sidebar_content">
     <ul class="navigation">
         {{#each nav_items }}
-            {{> navItem }}
+            {{#if this.external }}
+                {{> externalNavItem }}
+            {{else}}
+                {{> navItem }}
+            {{/if}}
         {{/each}}
     </ul>
+</template>
+
+<template name="externalNavItem">
+    <li>
+        <a href="{{path}}" class="external-link" target="_blank">
+            <span>{{anchor}}</span> <i class="{{nav.icon}}"></i>
+        </a>
+    </li>
 </template>
 
 <template name="navItem">
@@ -16,7 +28,11 @@
         {{#if nav.children }}
         <ul>
             {{#each nav.children}}
-                {{> childNavItem }}
+                {{#if this.external }}
+                    {{> externalNavItem }}
+                {{else}}
+                    {{> childNavItem }}
+                {{/if}}
             {{/each}}
         </ul>
         {{/if}}
@@ -32,7 +48,11 @@
         {{#if children}}
         <ul>
             {{#each children}}
-                {{> childNavItem }}
+                {{#if this.external }}
+                    {{> externalNavItem }}
+                {{else}}
+                    {{> childNavItem }}
+                {{/if}}
             {{/each}}
         </ul>
         {{/if}}

@@ -99,7 +99,8 @@ if Meteor.isClient
         self = @
         # add each route in the all pages collection to the router
         Routes.find().forEach ( route ) ->
-          self.route route.route, route
+          unless route.external is "true"
+            self.route route.route, route
       Session.set 'routes_initialized', true
       # start routing
       Router.start()

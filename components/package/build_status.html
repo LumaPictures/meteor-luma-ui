@@ -1,3 +1,7 @@
 <template name="buildStatus">
-    <img src="https://travis-ci.org/LumaPictures/luma-ui.svg?branch=dev">
+    {{#with package}}
+    <a href="https://travis-ci.org/{{owner}}/{{repo}}" class="external-link" target="_blank">
+        <img src="https://travis-ci.org/{{owner}}/{{repo}}.svg?branch=master">
+    </a>
+    {{/with}}
 </template>

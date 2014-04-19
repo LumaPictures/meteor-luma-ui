@@ -8,6 +8,14 @@ Meteor.startup ->
         title: "Home"
         subtitle: "This isn't really home, its work."
     },{
+      route: 'gitHub'
+      path: "https://github.com/lumapictures/luma-ui"
+      anchor: "GitHub"
+      external: true
+      nav:
+        priority: 1
+        icon: 'icon-github'
+    },{
       route: 'errorPages'
       path: "/error-pages"
       controller: 'PackageLayoutController'
