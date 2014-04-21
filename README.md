@@ -4,9 +4,8 @@
 ## [Live Example](http://luma-ui.meteor.com)
 ## Contents
 * [Components](components)
-* [Controllers](controllers)
+* [Router](router)
 * [Example](example)
 * [Less](less)
 * [Models](models)
-* [Routes](routes)
 * [Static Assets](static)
