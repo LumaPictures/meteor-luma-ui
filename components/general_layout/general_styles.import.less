@@ -1,76 +1,80 @@
 /* # General styles, can be removed.
 ================================================== */
-
 /* Demo list */
 .demo-list {
   text-align: center;
   margin: 0;
   padding: 0;
-}
-.demo-list li {
-  display: inline-block;
-  margin: 0 10px;
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 }
 
 /* Demo grid */
-.demo-grid > div {
-  background-color: #fafafa;
-  border: 1px solid #ddd;
-  padding: 10px;
+.demo-grid {
+  div {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
 }
 
 /* Icons showcase */
-.icon-classes-showcase > span {
-  font-size: 12px;
-  display: inline-block;
-  width: 15em;
-  padding: 8px;
-  background: #fcfcfc;
-  border: 1px solid #ddd;
-  margin: .5em 1em .5em 0;
+.icon-classes-showcase {
+  span {
+    font-size: 12px;
+    display: inline-block;
+    width: 15em;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #ddd;
+    margin: .5em 1em .5em 0;
+    i {
+      float: left;
+      margin: 1px 6px 0 0;
+    }
+  }
 }
-.icon-classes-showcase > span > i {
-  float: left;
-  margin: 1px 6px 0 0;
-}
-
 /* Glyphs showcase */
 .glyphs {
   margin-top: -10px;
-}
-.glyphs > div {
-  font-size: 16px;
-  float: left;
-  text-align: center;
-  background: #fcfcfc;
-  border: 1px solid #ddd;
-  padding: 6px;
-  margin: 10px 20px 10px 0;
-  width: 100px;
-}
-.glyphs > div input {
-  width: 100%;
-  text-align: center;
-  padding: 3px;
-  background-color: #fff!important;
-}
-.glyphs > div > span {
-  font-size: 2em;
-  line-height: 1.5em;
+  div {
+    font-size: 16px;
+    float: left;
+    text-align: center;
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 6px;
+    margin: 10px 20px 10px 0;
+    width: 100px;
+    input {
+      width: 100%;
+      text-align: center;
+      padding: 3px;
+      background-color: #fff!important;
+    }
+    span {
+      font-size: 2em;
+      line-height: 1.5em;
+    }
+  }
 }
 
 /* jGrowl showcase */
-.jgrowl-showcase .jGrowl {
-  position: static;
-}
-.jgrowl-showcase .jGrowl:first-child {
-  margin-bottom: 10px;
-}
-.jgrowl-showcase .jGrowl .jGrowl-notification {
-  border: none;
-  display: block;
-  margin: 0;
-  width: 100%;
+.jgrowl-showcase {
+  .jGrowl {
+    position: static;
+    &:first-child {
+      margin-bottom: 10px;
+    }
+    .jGrowl-notification {
+      border: none;
+      display: block;
+      margin: 0;
+      width: 100%;
+    }
+  }
 }
 
 /* Modal showcase */
@@ -86,16 +90,12 @@
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   overflow: hidden;
+  .modal-dialog {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+  }
 }
-.modal-demo .modal-dialog {
-  padding: 0;
-  width: 100%;
-  margin: 0;
-}
-
-
-
-
 /* # General styles
 ================================================== */
 

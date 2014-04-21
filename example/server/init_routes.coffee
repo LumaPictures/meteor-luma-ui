@@ -13,7 +13,23 @@ Meteor.startup ->
       anchor: "GitHub"
       external: true
       nav:
-        priority: 1
+        priority: 1000
+        icon: 'icon-github'
+    },{
+      route: 'source'
+      path: "http://lumapictures.github.io/luma-ui/"
+      anchor: "Annotated Source"
+      external: true
+      nav:
+        priority: 1001
+        icon: 'icon-github'
+    },{
+      route: 'build'
+      path: "https://travis-ci.org/LumaPictures/luma-ui"
+      anchor: "Build Status"
+      external: true
+      nav:
+        priority: 1002
         icon: 'icon-github'
     },{
       route: 'errorPages'
