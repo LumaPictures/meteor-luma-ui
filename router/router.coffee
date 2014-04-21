@@ -23,6 +23,8 @@ Router.addRoutes = ( routes ) ->
       if Router.collection.find().count() is 0
         count = 0
         _.each routes, ( route ) ->
+          unless route.controller
+            route.controller = null
           Router.collection.insert route
           count++
         console.log( count + ' routes inserted')
