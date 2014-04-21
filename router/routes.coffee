@@ -2,11 +2,11 @@
 # ======
 # `luma-router` uses db driven routes to enable simple management of routes from an administrative backend.
 # [An example route db collection can be seen here](../example/server/init_pages.coffee)
-Routes = new Meteor.Collection 'routes'
+Router.collection = new Meteor.Collection 'routes'
 
 # Routes cannot be modified by the client by default
 
-Routes.allow
+Router.collection.allow
   insert: -> false
   update: -> false
   remove: -> false
@@ -14,8 +14,18 @@ Routes.allow
 # Currently all routes are published to the client by default
 # TODO : take user permissions into account when publishing routes
 
-if Meteor.isServer
-  Meteor.publish "all_routes", -> Routes.find()
+Router.publish = ->
+  if Meteor.isServer
+    Meteor.publish "all_routes", -> Router.collection.find()
+
+Router.addRoutes = ( routes ) ->
+  Meteor.startup ->
+    if Router.collection.find().count() is 0
+      count = 0
+      _.each routes, ( route ) ->
+        Router.collection.insert route
+        count++
+      console.log( count + ' routes inserted')
 
 # A simple route object :
 ###
@@ -82,25 +92,28 @@ if Meteor.isServer
 # To see how the yield parses the context see the [default_sidebar_content component](../components/sidebar/default_sidebar_content.html)
 
 # Initial router configuration
-if Meteor.isClient
-  Session.setDefault 'routes_initialized', false
-  Router.configure
-    # disable rendering until subscription is ready
-    autoStart: false
-    notFoundTemplate: "error404"
-    loadingTemplate: "loading"
-    waitOn: -> Meteor.subscribe 'all_routes'
+Router.initialized = false
 
-  # when the 'all_routes' subscription is ready
-  Meteor.subscribe 'all_routes', ->
-    # if the router has not been initialized yet
-    unless Session.get 'routes_initialized'
-      Router.map ->
-        self = @
-        # add each route in the all pages collection to the router
-        Routes.find().forEach ( route ) ->
-          unless route.external is "true"
-            self.route route.route, route
-      Session.set 'routes_initialized', true
-      # start routing
-      Router.start()
+Router.initialize = ->
+  if Meteor.isServer
+    Router.publish()
+  if Meteor.isClient
+    Router.configure
+      # disable rendering until subscription is ready
+      autoStart: false
+      notFoundTemplate: "error404"
+      loadingTemplate: "loading"
+      waitOn: -> Meteor.subscribe 'all_routes'
+
+    # when the 'all_routes' subscription is ready
+    Meteor.subscribe 'all_routes', ->
+      # if the router has not been initialized yet
+      unless Router.initialized
+        Router.map ->
+          self = @
+          # add each route in the all pages collection to the router
+          Router.collection.find().forEach ( route ) ->
+            unless route.external is "true"
+              self.route route.route, route
+        Router.initialized = true
+        Router.start()
