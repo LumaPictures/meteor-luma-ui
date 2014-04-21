@@ -117,3 +117,6 @@ Router.initialize = ->
               self.route route.route, route
         Router.initialized = true
         Router.start()
+
+Router.getNavItems = ->
+  Router.collection.find { 'nav.priority': { $gt: 0 } },{ sort: { 'nav.priority': 1 } }
