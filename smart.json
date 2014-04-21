@@ -3,7 +3,7 @@
   "description": "UI module for Luma Pictures",
   "homepage": "https://github.com/lumapictures/luma-ui",
   "author": "Austin Rivas <austinrivas@gmail.com> (http://github.com/austinrivas)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "git": "https://github.com/lumapictures/luma-ui.git",
   "packages": {
     "blaze-layout": {},
