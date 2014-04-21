@@ -27,10 +27,6 @@ Package.on_use(function (api, where) {
   /* ===== Exports ===== */
 
   api.export([
-    'Routes'
-  ],['client','server']);
-
-  api.export([
     'PageLayoutController',
     'FullPageLayoutController',
     'PackageLayoutController'
@@ -43,7 +39,7 @@ Package.on_use(function (api, where) {
 
   /* ===== Routes ===== */
   api.add_files([
-    'router/routes.coffee'
+    'router/router.coffee'
   ], ['client','server']);
 
   /* ===== Controllers ===== */

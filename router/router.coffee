@@ -121,10 +121,9 @@ Router.initialize = ->
 Router.getNavItems = ->
   Router.collection.find { 'nav.priority': { $gt: 0 } },{ sort: { 'nav.priority': 1 } }
 
-Router.getExternalPathFor = ( route ) ->
-  route = Router.collection.find( { route: route }, { limit : 1 } ).fetch()
-  if _.isArray route
-    route = route[0]
-    if route.path and route.external
-      return route.path
-  else return "#"
+Router.getRoute = ( route_name ) ->
+  route = Router.collection.find( { route: route_name }, { limit : 1 } )
+  if route.count()
+    route = route.fetch()[0]
+    return route
+  else throw new Error "Route for `#{ route_name }` not found."

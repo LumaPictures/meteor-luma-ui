@@ -1,5 +1,5 @@
 <template name="reportBugBlock">
-    {{#with package }}
-    <a href="https://github.com/{{owner}}/{{repo}}/issues/new" class="external-link" target="_blank" ><i class="icon-bug"></i> <span>Report Bugs</span></a>
-    {{/with}}
+    {{#a route="reportBugs" external=true }}
+        <i class="icon-bug"></i> <span>Report Bugs</span>
+    {{/a}}
 </template>

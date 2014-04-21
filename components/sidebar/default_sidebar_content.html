@@ -12,9 +12,9 @@
 
 <template name="externalNavItem">
     <li>
-        <a href="{{path}}" class="external-link" target="_blank">
-            <span>{{anchor}}</span> <i class="{{nav.icon}}"></i>
-        </a>
+        {{#a route=route external=true }}
+            <span>{{page.title}}</span> <i class="{{nav.icon}}"></i>
+        {{/a}}
     </li>
 </template>
 

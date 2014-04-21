@@ -1,7 +1,10 @@
 UI.registerHelper 'a', ->
-  if @external_link
-    console.log @route
-    @href = Router.getExternalPathFor @route
+  @route = Router.getRoute @route
+  @href = @route.path
+  @anchor = @route.page.title
+  if @route.page.subtitle
+    @title = @route.page.subtitle
+  if @external
     @target = "_blank"
     externalLinkClass = "external_link"
     if @cssClass
@@ -9,7 +12,6 @@ UI.registerHelper 'a', ->
     else @cssClass = externalLinkClass
     return Template.external_link
   else
-    @href = Router.pathFor @route
     return Template.internal_link
 
 Template.internal_link.events

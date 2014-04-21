@@ -1,5 +1,5 @@
 <template name="buildStatus">
-    {{#a route="build" external_link=true}}
+    {{#a route="build" external=true}}
         {{#with package}}
         <img src="https://travis-ci.org/{{owner}}/{{repo}}.svg?branch=master">
         {{/with}}
