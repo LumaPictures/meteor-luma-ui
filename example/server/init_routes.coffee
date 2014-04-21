@@ -22,7 +22,7 @@ Meteor.startup ->
       external: true
       nav:
         priority: 1001
-        icon: 'icon-github'
+        icon: 'icon-code'
     },{
       route: 'build'
       path: "https://travis-ci.org/LumaPictures/luma-ui"
@@ -30,7 +30,7 @@ Meteor.startup ->
       external: true
       nav:
         priority: 1002
-        icon: 'icon-github'
+        icon: 'icon-cogs'
     },{
       route: 'errorPages'
       path: "/error-pages"
