@@ -1,7 +1,7 @@
 <template name="buildStatus">
-    {{#with package}}
-    <a href="https://travis-ci.org/{{owner}}/{{repo}}" class="external-link" target="_blank">
+    {{#a route="build" external_link=true}}
+        {{#with package}}
         <img src="https://travis-ci.org/{{owner}}/{{repo}}.svg?branch=master">
-    </a>
-    {{/with}}
+        {{/with}}
+    {{/a}}
 </template>

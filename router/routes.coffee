@@ -13,19 +13,19 @@ Router.collection.allow
 
 # Currently all routes are published to the client by default
 # TODO : take user permissions into account when publishing routes
-
 Router.publish = ->
   if Meteor.isServer
     Meteor.publish "all_routes", -> Router.collection.find()
 
 Router.addRoutes = ( routes ) ->
-  Meteor.startup ->
-    if Router.collection.find().count() is 0
-      count = 0
-      _.each routes, ( route ) ->
-        Router.collection.insert route
-        count++
-      console.log( count + ' routes inserted')
+  if Meteor.isServer
+    Meteor.startup ->
+      if Router.collection.find().count() is 0
+        count = 0
+        _.each routes, ( route ) ->
+          Router.collection.insert route
+          count++
+        console.log( count + ' routes inserted')
 
 # A simple route object :
 ###
@@ -120,3 +120,11 @@ Router.initialize = ->
 
 Router.getNavItems = ->
   Router.collection.find { 'nav.priority': { $gt: 0 } },{ sort: { 'nav.priority': 1 } }
+
+Router.getExternalPathFor = ( route ) ->
+  route = Router.collection.find( { route: route }, { limit : 1 } ).fetch()
+  if _.isArray route
+    route = route[0]
+    if route.path and route.external
+      return route.path
+  else return "#"

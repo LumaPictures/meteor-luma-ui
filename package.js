@@ -69,6 +69,12 @@ Package.on_use(function (api, where) {
 
   /* ===== Components ===== */
 
+  /* Common */
+  api.add_files([
+    'components/common/anchor/anchor.html',
+    'components/common/anchor/anchor.coffee'
+  ],['client']);
+
   /* Bootstrap JS */
   api.add_files([
     'components/bootstrap/js/transition.js',
