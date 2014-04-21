@@ -25,6 +25,8 @@ Router.addRoutes = ( routes ) ->
         _.each routes, ( route ) ->
           unless route.controller
             route.controller = null
+          unless route.external
+            route.external = false
           Router.collection.insert route
           count++
         console.log( count + ' routes inserted')
