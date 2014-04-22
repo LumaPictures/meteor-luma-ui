@@ -1,5 +1,5 @@
 Package.describe({
-  summary: "Luma Pictures user interface"
+  summary: "Luma Pictures User Interface"
 });
 
 Package.on_use(function (api, where) {
