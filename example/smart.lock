@@ -5,16 +5,16 @@
       "luma-ui": {
         "path": ".."
       },
-      "luma-datatables": {}
+      "jquery-datatables": {}
     },
     "packages": {
       "luma-ui": {
         "path": ".."
       },
-      "luma-datatables": {
-        "git": "https://github.com/lumapictures/luma-datatables",
-        "tag": "v0.1.7",
-        "commit": "c14487f9a1be060372b830ca42347597b931335c"
+      "jquery-datatables": {
+        "git": "https://github.com/lumapictures/meteor-jquery-datatables",
+        "tag": "v0.1.10",
+        "commit": "7bb60caecbf98def1099469d826141a1d51cfcc3"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
