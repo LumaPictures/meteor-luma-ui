@@ -5,9 +5,12 @@
     <div class="package-header-widget">
         <div class="collapse" id="package-header-widget">
             <div class="well">
-                <ul class="info-buttons">
-                    <li>{{> reportBugBlock }}</li>
-                </ul>
+              <ul class="info-buttons">
+                {{> reportBugBlock
+                  route="reportBugs"
+                  external="true"
+                }}
+              </ul>
             </div>
         </div>
     </div>
