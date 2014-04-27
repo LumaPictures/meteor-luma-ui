@@ -1,9 +1,9 @@
 <template name="brand">
-  <a class="navbar-brand" href="{{pathFor 'home'}}" title="{{title}}">
+  {{#a route=route cssClass="navbar-brand" title=title }}
     {{#if logo }}
       <img src="{{logo}}" alt="{{alt}}">
     {{else}}
       <h1>{{heading}}</h1>
     {{/if}}
-  </a>
+  {{/a}}
 </template>
