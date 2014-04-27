@@ -8,7 +8,7 @@ Router.addRoutes [
       subtitle: "This isn't really home, its work."
   },{
     route: 'gitHub'
-    path: "https://github.com/lumapictures/luma-ui"
+    path: "https://github.com/lumapictures/meteor-luma-ui"
     external: true
     page:
       title: "GitHub"
@@ -18,14 +18,14 @@ Router.addRoutes [
       icon: 'icon-github'
   },{
     route: 'reportBugs'
-    path: "https://github.com/lumapictures/luma-ui/issues/new"
+    path: "https://github.com/lumapictures/meteor-luma-ui/issues/new"
     external: true
     page:
       title: "Report Bugs"
       subtitle: "GitHub Issues"
   },{
     route: 'source'
-    path: "http://lumapictures.github.io/luma-ui/"
+    path: "http://lumapictures.github.io/meteor-luma-ui/"
     external: true
     page:
       title: "Annotated Source"
