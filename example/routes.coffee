@@ -2,7 +2,7 @@ Router.addRoutes [
   {
     route: 'home'
     path: '/'
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Home"
       subtitle: "This isn't really home, its work."
@@ -46,7 +46,7 @@ Router.addRoutes [
   },{
     route: 'errorPages'
     path: "/error-pages"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     nav:
       priority: 0
       icon: 'icon-warning'
@@ -63,7 +63,7 @@ Router.addRoutes [
   },{
     route: "forms"
     path: "/forms"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     nav:
       priority: 9
       icon: 'icon-stack'
@@ -157,7 +157,7 @@ Router.addRoutes [
   },{
     route: "formLayouts"
     path: "/forms/form-layouts"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
         title: "Form Layouts"
         subtitle: "Getting Laid Out."
@@ -173,7 +173,7 @@ Router.addRoutes [
   },{
     route: "formValidation"
     path: "/forms/form-validation"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Form Validation"
       subtitle: "Everyone needs a little validation."
@@ -189,7 +189,7 @@ Router.addRoutes [
   },{
     route: "formComponents"
     path: "/forms/form-components"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Form Components"
       subtitle: "Forms are badass."
@@ -205,7 +205,7 @@ Router.addRoutes [
   },{
     route: "wysiwygEditors"
     path: "/forms/form-components/wysiwyg-editors"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "WYSIWYG"
       subtitle: "Awesome editors"
@@ -224,7 +224,7 @@ Router.addRoutes [
   },{
     route: "multiFileUploaders"
     path: "/forms/form-components/multi-file-uploaders"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: 'Multi File Uploaders'
       subtitle: "Two is better than one."
@@ -243,7 +243,7 @@ Router.addRoutes [
   },{
     route: "inputGrids"
     path: "/forms/form-components/input-grids"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: 'Input Grids'
       subtitle: "Welcome to the Grid."
@@ -262,7 +262,7 @@ Router.addRoutes [
   },{
     route: "selects"
     path: "/forms/form-components/selects"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Selects"
       subtitle: "You must choose wisely."
@@ -281,7 +281,7 @@ Router.addRoutes [
   },{
     route: "formElements"
     path: "/forms/form-components/form-elements"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: 'Form Elements'
       subtitle: "It's elementary my dear."
@@ -300,7 +300,7 @@ Router.addRoutes [
   },{
     route: "basicInputs"
     path: "/forms/form-components/form-elements/basic-inputs"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: 'Basic Inputs'
       subtitle: 'Sometimes old fashioned is best.'
@@ -322,7 +322,7 @@ Router.addRoutes [
   },{
     route: "styledElements"
     path: "/forms/form-components/form-elements/styled-elements"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: 'Styled Elements'
       subtitle: 'Form swag.'
@@ -344,7 +344,7 @@ Router.addRoutes [
   },{
     route: "unstyledElements"
     path: "/forms/form-components/form-elements/unstyled-elements"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: 'Unstyled Elements'
       subtitle: "Not ugly, just unstyled."
@@ -363,7 +363,7 @@ Router.addRoutes [
   },{
     route: "spinners"
     path: "/forms/form-components/form-elements/spinners"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: 'Spinners'
       subtitle: 'Right round baby.'
@@ -385,7 +385,7 @@ Router.addRoutes [
   },{
     route: "formSnippets"
     path: "/forms/form-snippets"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Form Snippets"
       subtitle: "Snip Snip."
@@ -401,7 +401,7 @@ Router.addRoutes [
   },{
     route: "bugReportForm"
     path: "/forms/form-snippets/bug-report-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Bug Report Form"
       subtitle: "I hate bugs."
@@ -415,7 +415,7 @@ Router.addRoutes [
   },{
     route: "jobApplicationForm"
     path: "/forms/form-snippets/job-application-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Job Application Form"
       subtitle: "Work sucks, but being broke is worse."
@@ -429,7 +429,7 @@ Router.addRoutes [
   },{
     route: "simpleContactForm"
     path: "/forms/form-snippets/simple-contact-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Simple Contact Form"
       subtitle: "Let me get those digits."
@@ -443,7 +443,7 @@ Router.addRoutes [
   },{
     route: "advancedContactForm"
     path: "/forms/form-snippets/advanced-contact-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Advanced Contact Form"
       subtitle: "For that special kind of contact."
@@ -457,7 +457,7 @@ Router.addRoutes [
   },{
     route: "simpleRegistrationForm"
     path: "/forms/form-snippets/simple-registration-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Simple Registration Form"
       subtitle: "You're in the system, man."
@@ -471,7 +471,7 @@ Router.addRoutes [
   },{
     route: "seperatedForm"
     path: "/forms/form-snippets/seperated-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Seperated Form"
       subtitle: "You gotta keep 'em seperated."
@@ -485,7 +485,7 @@ Router.addRoutes [
   },{
     route: "surveyForm"
     path: "/forms/form-snippets/survey-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Survey Form"
       subtitle: "Everyone hates surveys, except these of course."
@@ -499,7 +499,7 @@ Router.addRoutes [
   },{
     route: "feedbackForm"
     path: "/forms/form-snippets/feedback-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Feedback Form"
       subtitle: "My foot gives great feedback."
@@ -513,7 +513,7 @@ Router.addRoutes [
   },{
     route: "subscribeForm"
     path: "/forms/form-snippets/subscribe-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Subscription Form"
       subtitle: "Want some magazines?"
@@ -527,7 +527,7 @@ Router.addRoutes [
   },{
     route: "shippingInformationForm"
     path: "/forms/form-snippets/shipping-information-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Shipping Information Form"
       subtitle: "Where are we sending your shit?"
@@ -541,7 +541,7 @@ Router.addRoutes [
   },{
     route: "shippingMethodForm"
     path: "/forms/form-snippets/shipping-method-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Shipping Method Form"
       subtitle: "How do you want your shit wrapped?"
@@ -555,7 +555,7 @@ Router.addRoutes [
   },{
     route: "billingAddressForm"
     path: "/forms/form-snippets/billing-address-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Billing Address Form"
       subtitle: "Whose paying for this shit?"
@@ -569,7 +569,7 @@ Router.addRoutes [
   },{
     route: "paymentInformationForm"
     path: "/forms/form-snippets/payment-information-form"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Payment Information Form"
       subtitle: "And now I have your credit card number..."
@@ -583,7 +583,7 @@ Router.addRoutes [
   },{
     route: "interfaceComponents"
     path: "/interface-components"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     nav:
       priority: 10
       icon: 'icon-grid'
@@ -636,7 +636,7 @@ Router.addRoutes [
   },{
     route: "visuals"
     path: "/interface-components/visuals"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Visuals & Notifications"
       subtitle: "Popups and shit."
@@ -652,7 +652,7 @@ Router.addRoutes [
   },{
     route: "navs"
     path: "/interface-components/navs"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Navs"
       subtitle: "Drop it like its hot."
@@ -668,7 +668,7 @@ Router.addRoutes [
   },{
     route: "panelOptions"
     path: "/interface-components/panel-options"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Panel Options"
       subtitle: "More options..."
@@ -684,7 +684,7 @@ Router.addRoutes [
   },{
     route: "navbars"
     path: "/interface-components/navbars"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Navbars"
       subtitle: "Get where you need to be."
@@ -700,7 +700,7 @@ Router.addRoutes [
   },{
     route: "infoBlocks"
     path: "/interface-components/info-blocks"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Info Blocks"
       subtitle: "Like Minecraft, but not."
@@ -716,7 +716,7 @@ Router.addRoutes [
   },{
     route: "icons"
     path: "/interface-components/icons"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Icons"
       subtitle: "Like Minecraft, but not."
@@ -732,7 +732,7 @@ Router.addRoutes [
   },{
     route: "buttons"
     path: "/interface-components/buttons"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Buttons"
       subtitle: "Don't touch anything."
@@ -748,7 +748,7 @@ Router.addRoutes [
   },{
     route: "calendar"
     path: "/interface-components/calendar"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Calendar"
       subtitle: "Now you don't have an excuse for."
@@ -764,7 +764,7 @@ Router.addRoutes [
   },{
     route: "typography"
     path: "/interface-components/typography"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Typography"
       subtitle: "Like caligraphy, but easier."
@@ -780,7 +780,7 @@ Router.addRoutes [
   },{
     route: "gallery"
     path: "/interface-components/gallery"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Gallery"
       subtitle: "Image and Video gallery."
@@ -796,7 +796,7 @@ Router.addRoutes [
   },{
     route: "headerElements"
     path: "/interface-components/header-elements"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Page Header Elements"
       subtitle: "Page header area custom elements."
@@ -812,7 +812,7 @@ Router.addRoutes [
   },{
     route: "contentGrid"
     path: "/interface-components/content-grid"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Content Grid"
       subtitle: "Bootstrap responsive content grid."
@@ -828,7 +828,7 @@ Router.addRoutes [
   },{
     route: "invoices"
     path: "/invoices"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     nav:
       priority: 4
       icon: 'icon-coin'
@@ -845,7 +845,7 @@ Router.addRoutes [
   },{
     route: "invoiceTemplate"
     path: "/invoices/template"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Invoice Template"
       subtitle: "Stop repeating yourself."
@@ -856,7 +856,7 @@ Router.addRoutes [
   },{
     route: "invoiceList"
     path: "/invoices/list"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Invoice List"
       subtitle: "Time to break some kneecaps."
@@ -876,7 +876,7 @@ Router.addRoutes [
   },{
     route: "search"
     path: "/search"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     nav:
       priority: 6
       icon: 'icon-search3'
@@ -886,7 +886,7 @@ Router.addRoutes [
   },{
     route: "support"
     path: "/support"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     nav:
       priority: 5
       icon: 'icon-bubble6'
@@ -906,7 +906,7 @@ Router.addRoutes [
   },{
     route: "faq"
     path: "/support/faq"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "FAQ"
       subtitle: "Let me Google that for you."
@@ -917,7 +917,7 @@ Router.addRoutes [
   },{
     route: "chatWithTabs"
     path: "/support/chat-with-tabs"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Chat With Tabs"
       subtitle: "Figure it out."
@@ -928,7 +928,7 @@ Router.addRoutes [
   },{
     route: "chatWithContacts"
     path: "/support/chat-with-contacts"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Chat With Contacts"
       subtitle: "Figure it out."
@@ -939,7 +939,7 @@ Router.addRoutes [
   },{
     route: "tables"
     path: "/tables"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     nav:
       priority: 8
       icon: 'icon-table2'
@@ -956,7 +956,7 @@ Router.addRoutes [
   },{
     route: "staticTables"
     path: "/tables/static"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Static Tables"
       subtitle: "So good it doesn't have to change."
@@ -967,7 +967,7 @@ Router.addRoutes [
   },{
     route: "datatables"
     path: "/tables/datatables"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Datatables"
       subtitle: "Quick, responsive, and flexible."
@@ -1089,7 +1089,7 @@ Router.addRoutes [
   },{
     route: "taskManager"
     path: "/task-manager"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     nav:
       priority: 2
       icon: 'icon-numbered-list'
@@ -1114,7 +1114,7 @@ Router.addRoutes [
   },{
     route: "taskGrid"
     path: "/task-manager/task-grid"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Task Grid"
       subtitle: "Task grid with options bar"
@@ -1125,7 +1125,7 @@ Router.addRoutes [
   },{
     route: "taskList"
     path: "/task-manager/task-list"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Task List"
       subtitle: "Task list inside data table"
@@ -1136,7 +1136,7 @@ Router.addRoutes [
   },{
     route: "taskDetail"
     path: "/task-manager/task-detail"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Task Detail"
       subtitle: "Detailed task layout example"
@@ -1147,7 +1147,7 @@ Router.addRoutes [
   },{
     route: "user"
     path: "/user"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     nav:
       priority: 3
       icon: 'icon-user'
@@ -1167,7 +1167,7 @@ Router.addRoutes [
   },{
     route: "team"
     path: "/user/team"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Team"
       subtitle: "Because you can't do everything yourself."
@@ -1178,7 +1178,7 @@ Router.addRoutes [
   },{
     route: "contactList"
     path: "/user/contacts"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Contacts"
       subtitle: "Now you don't have an excuse for forgetting their name."
@@ -1189,7 +1189,7 @@ Router.addRoutes [
   },{
     route: "profile"
     path: "/user/profile"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     page:
       title: "Austin Rivas"
       subtitle: "Witty Tagline."
@@ -1200,7 +1200,7 @@ Router.addRoutes [
   },{
     route: 'dashboard'
     path: "/dashboard"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     nav:
       priority: 1
       icon: 'icon-screen2'
@@ -1246,7 +1246,7 @@ Router.addRoutes [
   },{
     route: "charts"
     path: "/charts"
-    controller: 'PackageLayoutController'
+    controller: 'ExampleController'
     nav:
       priority: 7
       icon: 'icon-bars'

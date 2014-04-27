@@ -1,7 +1,7 @@
 <template name="default_navbar_brand">
-    <!-- navbarBrand -->
-    {{#with navbar_brand}}
-    <a class="navbar-brand" href="{{pathFor 'home'}}"><img src="{{logo}}" alt="{{name}}"></a>
-    {{/with}}
-    <!-- /navbarBrand -->
+    {{> brand
+      title="Default Brand"
+      logo="/static/images/logo.png"
+      alt="Default Brand"
+    }}
 </template>

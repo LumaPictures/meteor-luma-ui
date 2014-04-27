@@ -177,6 +177,7 @@ Package.on_use(function (api, where) {
 
   /* navbar */
   api.add_files([
+    'components/navbar/brand.html',
     'components/navbar/default_navbar.html',
     'components/navbar/default_navbar_brand.html',
     'components/navbar/default_navbar_header.html',
@@ -245,6 +246,7 @@ Package.on_use(function (api, where) {
     'components/package/report_bug_block.html',
     'components/package/package_header_widget.html',
     'components/package/package_navbar_right.html',
+    'components/package/package_navbar_brand.html',
     'components/package/package_footer.html'
   ],['client'])
 });
