@@ -58,7 +58,7 @@ Package.on_use(function (api, where) {
     'router/full_page/full_page.layout.coffee'
   ],['client']);
 
-  /* Example Page Layout */
+  /* Package Page Layout */
   api.add_files([
     'router/package/package.controller.coffee'
   ],['client']);
@@ -180,30 +180,10 @@ Package.on_use(function (api, where) {
     'components/navbar/brand.html'
   ], 'client');
 
-  /* page header */
-  api.add_files([
-    'components/page_header/default_page_header.html',
-    'components/page_header/default_page_title.html',
-    'components/page_header/default_page_header_widget.html'
-  ], 'client' );
-
   /* date_range */
   api.add_files([
     'components/date_range/lib/daterangepicker.js',
     'components/date_range/date_range.html'
-  ], 'client');
-
-  /* breadcrumbs */
-  api.add_files([
-    'components/breadcrumbs/default_breadcrumbs_line.html',
-    'components/breadcrumbs/default_breadcrumbs.html'
-  ], 'client');
-
-  /* callouts */
-  api.add_files([
-    'components/callouts/default_callouts.html',
-    'components/callouts/default_callout.html',
-    'components/callouts/default_alert.html'
   ], 'client');
 
   /* pagination */
@@ -225,9 +205,6 @@ Package.on_use(function (api, where) {
     'components/search/search_form.html',
     'components/search/search_line.html'
   ], 'client');
-
-  /* footer */
-  api.add_files('components/footer/default_footer.html', 'client');
 
   /* TravisCI */
   api.add_files('components/travisCI/build_status.html', 'client');
@@ -253,6 +230,33 @@ Package.on_use(function (api, where) {
       'router/page/components/sidebar/default_sidebar_content.html',
       'router/page/components/sidebar/default_sidebar_content.coffee'
     ], 'client' );
+
+    /* page header */
+    api.add_files([
+      /* TODO : this should be a common component */
+      'router/page/components/page_header/default_page_header.html',
+      /* TODO : this should be a common component */
+      'router/page/components/page_header/default_page_title.html',
+      'router/page/components/page_header/default_page_header_widget.html'
+    ], 'client' );
+
+    /* breadcrumbs */
+    api.add_files([
+      /* TODO : this should be a common component */
+      'router/page/components/breadcrumbs/default_breadcrumbs_line.html',
+      /* TODO : this should be a common component */
+      'router/page/components/breadcrumbs/default_breadcrumbs.html'
+    ], 'client');
+
+    /* callouts */
+    api.add_files([
+      'router/page/components/callouts/default_callouts.html',
+      'router/page/components/callouts/default_callout.html',
+      'router/page/components/callouts/default_alert.html'
+    ], 'client');
+
+    /* footer */
+    api.add_files('router/page/components/footer/default_footer.html', 'client');
 
   /* package layout */
   api.add_files([
