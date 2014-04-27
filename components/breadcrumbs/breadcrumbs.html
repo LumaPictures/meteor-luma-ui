@@ -1,0 +1,9 @@
+<template name="breadcrumbs">
+  <ul class="breadcrumb">
+    <li>{{> a route=root }}</li>
+    {{#each parents}}
+    <li>{{> a route=route }}</li>
+    {{/each}}
+    <li class="active">{{active}}</li>
+  </ul>
+</template>

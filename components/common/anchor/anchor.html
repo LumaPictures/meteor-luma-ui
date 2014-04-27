@@ -1,5 +1,9 @@
 <template name="anchor">
     <a id="{{id}}" href="{{href}}" class="{{cssClass}}" target="{{target}}" title="{{title}}">
+      {{#if UI.contentBlock }}
         {{> UI.contentBlock }}
+      {{else}}
+        {{anchor}}
+      {{/if}}
     </a>
 </template>

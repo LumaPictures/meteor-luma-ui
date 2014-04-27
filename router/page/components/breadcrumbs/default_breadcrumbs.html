@@ -1,9 +1,7 @@
 <template name="default_breadcrumbs">
-<ul class="breadcrumb">
-    <li><a href="{{pathFor 'home'}}">Home</a></li>
-    {{#each breadcrumbs}}
-        <li><a href="{{pathFor route}}">{{title}}</a></li>
-    {{/each}}
-    <li class="active">{{page.title}}</li>
-</ul>
+{{> breadcrumbs
+    root = "home"
+    active = page.title
+    parents = breadcrumbs
+}}
 </template>

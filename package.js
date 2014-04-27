@@ -11,7 +11,7 @@ Package.on_use(function (api, where) {
     'underscore',
     'iron-router',
     'coffeescript'
-  ],['client', 'server']);
+  ],[ 'client', 'server' ]);
 
   api.use([
     'ui',
@@ -22,7 +22,7 @@ Package.on_use(function (api, where) {
     'jquery-ui',
     'less',
     'iron-router-active'
-  ], ['client']);
+  ], [ 'client' ]);
 
   /* ===== Exports ===== */
 
@@ -30,17 +30,17 @@ Package.on_use(function (api, where) {
     'PageLayoutController',
     'FullPageLayoutController',
     'PackageLayoutController'
-  ],['client']);
+  ],[ 'client' ]);
 
   /* ===== Models ===== */
   api.add_files([
     'models/page.model.coffee'
-  ],['client','server']);
+  ],[ 'client','server' ]);
 
   /* ===== Routes ===== */
   api.add_files([
     'router/router.coffee'
-  ], ['client','server']);
+  ], [ 'client','server' ]);
 
   /* ===== Controllers ===== */
 
@@ -49,19 +49,19 @@ Package.on_use(function (api, where) {
     'router/page/page.controller.coffee',
     'router/page/page.layout.html',
     'router/page/page.layout.coffee'
-  ], ['client']);
+  ], [ 'client' ]);
 
   /* Full Page Layout */
   api.add_files([
     'router/full_page/full_page.controller.coffee',
     'router/full_page/full_page.layout.html',
     'router/full_page/full_page.layout.coffee'
-  ],['client']);
+  ],[ 'client' ]);
 
   /* Package Page Layout */
   api.add_files([
     'router/package/package.controller.coffee'
-  ],['client']);
+  ],[ 'client' ]);
 
   /* ===== Components ===== */
 
@@ -70,7 +70,13 @@ Package.on_use(function (api, where) {
     'components/common/anchor/anchor.html',
     'components/common/anchor/anchor.coffee',
     'components/common/brand/brand.html'
-  ],['client']);
+  ],[ 'client' ]);
+
+  /* Breadcrumbs */
+  api.add_files([
+    'components/breadcrumbs/breadcrumbs.html',
+    'components/breadcrumbs/breadcrumbsLine.html'
+  ], [ 'client' ]);
 
   /* Footer */
   api.add_files(['components/footer/footer.html'], ['client']);

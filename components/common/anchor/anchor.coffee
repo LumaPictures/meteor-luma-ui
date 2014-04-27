@@ -12,9 +12,7 @@
 ###
   + Dead Simple Link
   ```html
-    {{#a route="home" }}
-      Go Home
-    {{/a}}
+    {{> a route="home" }}
   ```
 
   + More Complex Link
@@ -37,9 +35,12 @@ UI.registerHelper 'a', ->
   if "path" of @route
     @href = @route.path
   else @href = '#'
-  # Unless already defined the anchor title attr is the route page subtitle.
-  if "subtitle" of @route.page
-    @title ?= @route.page.subtitle
+  if @route.page
+    if @route.page.title
+      @anchor ?= @route.page.title
+    # Unless already defined the anchor title attr is the route page subtitle.
+    if @route.page.subtitle
+      @title ?= @route.page.subtitle
   # Route is external or the external property is true.
   if @external or @route.external
     # Open link in a new tab.
