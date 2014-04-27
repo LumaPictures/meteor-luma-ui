@@ -68,7 +68,8 @@ Package.on_use(function (api, where) {
   /* Common */
   api.add_files([
     'components/common/anchor/anchor.html',
-    'components/common/anchor/anchor.coffee'
+    'components/common/anchor/anchor.coffee',
+    'components/common/brand/brand.html'
   ],['client']);
 
   /* Footer */
@@ -177,11 +178,6 @@ Package.on_use(function (api, where) {
 
   /* select2 */
   api.add_files('components/select2/lib/select2.min.js', 'client');
-
-  /* navbar */
-  api.add_files([
-    'components/navbar/brand.html'
-  ], 'client');
 
   /* date_range */
   api.add_files([
