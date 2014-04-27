@@ -177,19 +177,8 @@ Package.on_use(function (api, where) {
 
   /* navbar */
   api.add_files([
-    'components/navbar/brand.html',
-    'components/navbar/default_navbar.html',
-    'components/navbar/default_navbar_brand.html',
-    'components/navbar/default_navbar_header.html',
-    'components/navbar/default_navbar_right.html'
+    'components/navbar/brand.html'
   ], 'client');
-
-  /* sidebar */
-  api.add_files([
-    'components/sidebar/default_sidebar.html',
-    'components/sidebar/default_sidebar_content.html',
-    'components/sidebar/default_sidebar_content.coffee'
-  ], 'client' );
 
   /* page header */
   api.add_files([
@@ -240,14 +229,37 @@ Package.on_use(function (api, where) {
   /* footer */
   api.add_files('components/footer/default_footer.html', 'client');
 
-  /* package */
+  /* TravisCI */
+  api.add_files('components/travisCI/build_status.html', 'client');
+
+  /* GitHub */
+  api.add_files('components/github/report_bug_block.html', 'client');
+
+  /* page layout */
+    /* navbar */
+    api.add_files([
+      /* TODO : this should be a common component */
+      'router/page/components/navbar/default_navbar.html',
+      'router/page/components/navbar/default_navbar_brand.html',
+      /* TODO : this should be a common component */
+      'router/page/components/navbar/default_navbar_header.html',
+      'router/page/components/navbar/default_navbar_right.html'
+    ], ['client']);
+
+    /* sidebar */
+    api.add_files([
+      'router/page/components/sidebar/default_sidebar.html',
+      /* TODO : this should be a common component */
+      'router/page/components/sidebar/default_sidebar_content.html',
+      'router/page/components/sidebar/default_sidebar_content.coffee'
+    ], 'client' );
+
+  /* package layout */
   api.add_files([
-    'components/package/build_status.html',
-    'components/package/report_bug_block.html',
-    'components/package/package_header_widget.html',
-    'components/package/package_navbar_right.html',
-    'components/package/package_navbar_brand.html',
-    'components/package/package_footer.html'
+    'router/package/components/package_header_widget.html',
+    'router/package/components/package_navbar_right.html',
+    'router/package/components/package_navbar_brand.html',
+    'router/package/components/package_footer.html'
   ],['client'])
 });
 
