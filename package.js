@@ -72,6 +72,11 @@ Package.on_use(function (api, where) {
     'components/common/brand/brand.html'
   ],[ 'client' ]);
 
+  api.add_files([
+    'components/page_header/pageHeader.html',
+    'components/page_header/pageTitle.html'
+  ], [ 'client' ]);
+
   /* Breadcrumbs */
   api.add_files([
     'components/breadcrumbs/breadcrumbs.html',

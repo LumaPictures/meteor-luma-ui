@@ -1,8 +1,8 @@
 <template name="default_page_header">
-    <div class="page-header">
-        {{> yield region='page_title' }}
-        {{> yield region='page_header_widget' }}
-    </div>
-    {{> yield region='breadcrumbs_line' }}
-    {{> yield region='callouts' }}
+  {{#pageHeader }}
+    {{> yield region='page_title' }}
+    {{> yield region='page_header_widget' }}
+  {{/pageHeader}}
+  {{> yield region='breadcrumbs_line' }}
+  {{> yield region='callouts' }}
 </template>

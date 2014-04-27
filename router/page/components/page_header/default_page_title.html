@@ -1,9 +1,6 @@
 <template name="default_page_title">
-    <!-- Page title -->
-    {{#with page }}
-    <div class="page-title">
-        <h3>{{title}}<small>{{subtitle}}</small></h3>
-    </div>
-    {{/with}}
-    <!-- /page title-->
+  {{> pageTitle
+      title = page.title
+      subtitle = page.subtitle
+  }}
 </template>
