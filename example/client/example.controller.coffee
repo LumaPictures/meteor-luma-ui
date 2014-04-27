@@ -4,6 +4,6 @@ class @ExampleController extends PackageLayoutController
       name: "Luma UI"
       description: "Luma Pictures User Interface"
       logo: "/static/images/logo.png"
-      owner: "lumapictures"
-      repo: "luma-ui"
+      owner: "LumaPictures"
+      repo: "meteor-luma-ui"
     super

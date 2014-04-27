@@ -1,8 +1,12 @@
 <template name="packageFooter">
-    <!-- Footer -->
-    <div class="footer clearfix">
-        <div class="pull-left">{{footer.message}}</div>
-        <div class="pull-right">{{> buildStatus }}</div>
+  {{#footer }}
+    <div class="pull-left">{{footer.message}}</div>
+    <div class="pull-right">
+      {{> buildStatus
+          route="build"
+          owner=package.owner
+          repo=package.repo
+      }}
     </div>
-    <!-- /footer -->
+  {{/footer}}
 </template>

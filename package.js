@@ -71,6 +71,9 @@ Package.on_use(function (api, where) {
     'components/common/anchor/anchor.coffee'
   ],['client']);
 
+  /* Footer */
+  api.add_files(['components/footer/footer.html'], ['client']);
+
   /* Bootstrap JS */
   api.add_files([
     'components/bootstrap/js/transition.js',
