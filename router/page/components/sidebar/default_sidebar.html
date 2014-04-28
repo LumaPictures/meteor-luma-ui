@@ -1,9 +1,5 @@
 <template name="default_sidebar">
-    <!-- default sidebar -->
-    <div class="sidebar collapse">
-        <div class="sidebar-content">
-            {{> yield region='sidebar_content'}}
-        </div>
-    </div>
-    <!-- /default sidebar -->
+  {{#sidebar }}
+    {{> yield region='sidebar_content'}}
+  {{/sidebar}}
 </template>

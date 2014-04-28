@@ -20,8 +20,7 @@ Package.on_use(function (api, where) {
     'blaze-layout',
     'jquery',
     'jquery-ui',
-    'less',
-    'iron-router-active'
+    'less'
   ], [ 'client' ]);
 
   /* ===== Exports ===== */
@@ -69,9 +68,25 @@ Package.on_use(function (api, where) {
   api.add_files([
     'components/common/anchor/anchor.html',
     'components/common/anchor/anchor.coffee',
-    'components/common/brand/brand.html'
+    'components/common/brand/brand.html',
+    'components/common/icon/icon.html'
   ],[ 'client' ]);
 
+  /* page */
+  api.add_files([
+    'components/page_content/pageContainer.html',
+    'components/page_content/pageContent.html'
+  ], [ 'client' ]);
+
+  /* navbar */
+  api.add_files([
+    'components/navbar/navbar.html',
+    'components/navbar/navbarRight.html',
+    'components/navbar/navbarHeader.html',
+    'components/navbar/navbarToggle.html'
+  ], [ 'client' ]);
+
+  /* page header */
   api.add_files([
     'components/page_header/pageHeader.html',
     'components/page_header/pageTitle.html'
@@ -81,6 +96,19 @@ Package.on_use(function (api, where) {
   api.add_files([
     'components/breadcrumbs/breadcrumbs.html',
     'components/breadcrumbs/breadcrumbsLine.html'
+  ], [ 'client' ]);
+
+  /* sidebar */
+  api.add_files([
+    'components/sidebar/sidebar.html',
+    'components/sidebar/sidebarToggle.html',
+    'components/sidebar/sidebarToggle.coffee'
+  ], [ 'client' ]);
+
+  /* navigation */
+  api.add_files([
+    'components/navigation/navigation.html',
+    'components/navigation/navigation.coffee'
   ], [ 'client' ]);
 
   /* Footer */
@@ -236,25 +264,19 @@ Package.on_use(function (api, where) {
     /* sidebar */
     api.add_files([
       'router/page/components/sidebar/default_sidebar.html',
-      /* TODO : this should be a common component */
-      'router/page/components/sidebar/default_sidebar_content.html',
-      'router/page/components/sidebar/default_sidebar_content.coffee'
+      'router/page/components/sidebar/default_sidebar_content.html'
     ], 'client' );
 
     /* page header */
     api.add_files([
-      /* TODO : this should be a common component */
       'router/page/components/page_header/default_page_header.html',
-      /* TODO : this should be a common component */
       'router/page/components/page_header/default_page_title.html',
       'router/page/components/page_header/default_page_header_widget.html'
     ], 'client' );
 
     /* breadcrumbs */
     api.add_files([
-      /* TODO : this should be a common component */
       'router/page/components/breadcrumbs/default_breadcrumbs_line.html',
-      /* TODO : this should be a common component */
       'router/page/components/breadcrumbs/default_breadcrumbs.html'
     ], 'client');
 

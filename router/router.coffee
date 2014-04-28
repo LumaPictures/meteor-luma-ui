@@ -108,7 +108,6 @@ Router.initialize = ->
       notFoundTemplate: "error404"
       loadingTemplate: "loading"
       waitOn: -> Meteor.subscribe 'all_routes'
-
     # when the 'all_routes' subscription is ready
     Meteor.subscribe 'all_routes', ->
       # if the router has not been initialized yet
@@ -128,6 +127,60 @@ Router.getNavItems = ->
 Router.getRoute = ( route_name ) ->
   route = Router.collection.find( { route: route_name }, { limit : 1 } )
   if route.count()
-    route = route.fetch()[0]
-    return route
+    return route.fetch()[0]
   else throw new Error "Route for `#{ route_name }` not found."
+
+Router.regex = ( expression ) -> new RegExp expression, "i"
+
+Router.testRoutes = ( routeNames ) ->
+  reg = Router.regex routeNames
+  return Router.current() and reg.test Router.current().route.name
+
+Router.testPaths = ( paths ) ->
+  reg = Router.regex paths
+  return Router.current() and reg.test Router.current().path
+
+Router.isActiveRoute = ( routes, className ) ->
+  className = className or "active"
+  if Router.testRoutes routes
+    return className
+  else return false
+
+Router.isActivePath = ( paths, className ) ->
+  className = className or "active"
+  if Router.testPaths paths
+    return className
+  else return false
+
+Router.isNotActiveRoute = ( routes, className ) ->
+  className = className or "disabled"
+  if not Router.testRoutes routes
+    return className
+  else return false
+
+Router.isNotActivePath = ( paths, className ) ->
+  className = className or "disabled"
+  if not Router.testPaths paths
+    return className
+  else return false
+
+if Meteor.isClient
+  UI.registerHelper "isActiveRoute", ( routes, options ) ->
+    options = options.hash or {}
+    className = options.className or null
+    return Router.isActiveRoute( routes, className ) or null
+
+  UI.registerHelper "isActivePath", (paths, options) ->
+    options = options.hash or {}
+    className = options.className or null
+    return Router.isActivePath( paths, className ) or null
+
+  UI.registerHelper "isNotActiveRoute", (routes, options) ->
+    options = options.hash or {}
+    className = options.className or null
+    return Router.isNotActiveRoute( routes, className ) or null
+
+  UI.registerHelper "isNotActivePath", (paths, options) ->
+    options = options.hash or {}
+    className = options.className or null
+    return Router.isNotActivePath( paths, className ) or null
