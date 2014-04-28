@@ -1,1 +1,0 @@
-Template.default_sidebar_content.nav_items = -> Router.getNavItems()

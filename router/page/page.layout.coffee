@@ -1,6 +1,4 @@
 Template.page_layout.rendered = ->
-  console.log "page_layout rendered"
-
   # # Body Layout
   $("body").attr 'class', 'sidebar-wide navbar-fixed'
 
@@ -736,16 +734,6 @@ Template.page_layout.rendered = ->
   $.jGrowl.defaults.closer = false
   $.jGrowl.defaults.easing = "easeInOutCirc"
 
-  #===== Collapsible navigation =====/
-  # https://github.com/juven14/Collapsible
-  # any elements with the default open ids will be open on render
-  #
-  $(".sidebar-wide li:not(.disabled) .expand, .sidebar-narrow .navigation > li ul .expand").collapsible
-    defaultOpen: "first-level,second-level,third-level"
-    cssOpen: "level-opened"
-    cssClose: "level-closed"
-    speed: 150
-
 
   # # Default Layout Options
   #     ==================================================
@@ -800,20 +788,12 @@ Template.page_layout.rendered = ->
     ), 5000
 
 
-  #===== Hiding sidebar =====//
-  $(".sidebar-toggle").click ->
-    $(".page-container").toggleClass "sidebar-hidden"
-
-
-  #===== Disabling main navigation links =====//
-  $(".navigation li.disabled a, .navbar-nav > .disabled > a").click (e) ->
-    e.preventDefault()
-
-
   #===== Toggling active class in accordion groups =====//
   $(".panel-trigger").click (e) ->
     e.preventDefault()
     $(this).toggleClass "active"
+
+  $(".navbar-nav > .disabled > a").click (e) -> e.preventDefault()
 
 
 

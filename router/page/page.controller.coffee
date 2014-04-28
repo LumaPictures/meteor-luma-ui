@@ -32,18 +32,21 @@ class @PageController extends RouteController
     # default options and contexts to provide to the page
     options:
       navbar: {}
-      navbar_header: {}
-      navbar_brand:
-        name: 'luma-ui'
-        logo: '/static/images/logo.png'
-      navbar_right: {}
+      navbarHeader: {}
+      navbarBrand:
+        route: "home"
+        title: "Default Brand"
+        logo: "/static/images/logo.png"
+        alt: "Default Brand"
+      navbarRight: {}
       sidebar: {}
-      sidebar_content: {}
-      page_header: {}
-      page: {
+      sidebarContent:
+        message: 'test'
+        navItems: Router.getNavItems()
+      pageHeader: {}
+      page:
         title: "Default Title"
         subtitle: "Default Subtitle"
-      }
       breadcrumbs: []
       callouts: []
       content: {}
@@ -52,7 +55,7 @@ class @PageController extends RouteController
 
   onBeforeAction: ->
     # rest page scroll position before each load
-    $('body').scrollTop 0
+    $( 'body' ).scrollTop 0
     # extend the defaults with the yieldTemplates and assign it to this
     @yieldTemplates = _.extend @defaults.yields, @yieldTemplates
 

@@ -1,0 +1,13 @@
+<template name="breadcrumbsLine">
+  <div class="breadcrumb-line">
+    {{> yield region='breadcrumbs' }}
+    {{#if UI.contentBlock }}
+      <div class="breadcrumb-toggle">
+        <a data-toggle="collapse" data-target=".breadcrumb-buttons"><i></i></a>
+      </div>
+      <ul class="breadcrumb-buttons collapse">
+          {{> UI.contentBlock }}
+      </ul>
+    {{/if}}
+  </div>
+</template>

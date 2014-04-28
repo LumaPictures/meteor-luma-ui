@@ -1,0 +1,61 @@
+<template name="navigation">
+  <ul class="navigation">
+    {{#each navItems }}
+      {{> navItem }}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="navItem">
+  {{#unless external}}
+    {{> internalNavItem }}
+  {{else}}
+    {{> externalNavItem }}
+  {{/unless}}
+</template>
+
+<template name="navAnchor">
+  {{#a route=route }}
+    <span>{{title}}</span> {{#if icon}}{{> icon iconClass=icon }}{{/if}}
+  {{/a}}
+</template>
+
+<template name="externalNavItem">
+  <li>
+    {{> navAnchor route=route title=page.title icon=nav.icon }}
+  </li>
+</template>
+
+<template name="internalNavItem">
+  <li class="{{ isActivePath path }}">
+    {{#if canExpand }}
+      <a href="#{{route}}" class="expand" data-toggle="collapse">
+        <span>{{page.title}}</span> {{> icon iconClass=nav.icon }}
+      </a>
+      <ul id="{{route}}" class="collapse {{isExpanded}}">
+        {{#each nav.children }}
+          {{> childNavItem }}
+        {{/each}}
+      </ul>
+    {{else}}
+      {{> navAnchor title=page.title route=route icon=nav.icon }}
+    {{/if}}
+  </li>
+</template>
+
+<template name="childNavItem">
+  <li class="{{ isActiveRoute route }}">
+    {{#if canExpand }}
+      <a href="#{{route}}" class="expand" data-toggle="collapse">
+        <span>{{title}}</span>
+      </a>
+      <ul id="{{route}}" class="collapse {{isExpanded}}">
+        {{#each children }}
+          {{> childNavItem }}
+        {{/each}}
+      </ul>
+    {{else}}
+      {{> navAnchor route=route title=title }}
+    {{/if}}
+  </li>
+</template>

@@ -35,7 +35,7 @@ Router.addRoutes [
       icon: 'icon-code'
   },{
     route: 'build'
-    path: "https://travis-ci.org/LumaPictures/luma-ui"
+    path: "https://travis-ci.org/LumaPictures/meteor-luma-ui"
     external: true
     page:
       title: "Build Status"

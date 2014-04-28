@@ -1,11 +1,9 @@
-<template name="external_link">
+<template name="anchor">
     <a id="{{id}}" href="{{href}}" class="{{cssClass}}" target="{{target}}" title="{{title}}">
+      {{#if UI.contentBlock }}
         {{> UI.contentBlock }}
-    </a>
-</template>
-
-<template name="internal_link">
-    <a id="{{id}}" href="{{href}}" class="{{cssClass}}" target="{{target}}" title="{{title}}">
-        {{> UI.contentBlock }}
+      {{else}}
+        {{anchor}}
+      {{/if}}
     </a>
 </template>

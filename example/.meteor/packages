@@ -14,6 +14,5 @@ spacebars
 templating
 blaze-layout
 iron-router
-iron-router-active
 luma-ui
 jquery-datatables

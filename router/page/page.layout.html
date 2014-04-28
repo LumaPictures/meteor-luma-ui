@@ -1,15 +1,11 @@
 <template name="page_layout">
-    {{> yield region='navbar' }}
-    <!-- Page container -->
-    <div class="page-container">
-        {{> yield region='sidebar' }}
-        <!-- Page content -->
-        <div class="page-content">
-            {{> yield region='page_header' }}
-            {{> yield }}
-            {{> yield region='footer' }}
-        </div>
-        <!-- /page content -->
-    </div>
-    <!-- /page container -->
+  {{> yield region='navbar' }}
+  {{#pageContainer}}
+    {{> yield region='sidebar' }}
+    {{#pageContent}}
+      {{> yield region='page_header' }}
+      {{> yield }}
+      {{> yield region='footer' }}
+    {{/pageContent}}
+  {{/pageContainer}}
 </template>

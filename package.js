@@ -11,7 +11,7 @@ Package.on_use(function (api, where) {
     'underscore',
     'iron-router',
     'coffeescript'
-  ],['client', 'server']);
+  ],[ 'client', 'server' ]);
 
   api.use([
     'ui',
@@ -20,9 +20,8 @@ Package.on_use(function (api, where) {
     'blaze-layout',
     'jquery',
     'jquery-ui',
-    'less',
-    'iron-router-active'
-  ], ['client']);
+    'less'
+  ], [ 'client' ]);
 
   /* ===== Exports ===== */
 
@@ -30,17 +29,17 @@ Package.on_use(function (api, where) {
     'PageLayoutController',
     'FullPageLayoutController',
     'PackageLayoutController'
-  ],['client']);
+  ],[ 'client' ]);
 
   /* ===== Models ===== */
   api.add_files([
     'models/page.model.coffee'
-  ],['client','server']);
+  ],[ 'client','server' ]);
 
   /* ===== Routes ===== */
   api.add_files([
     'router/router.coffee'
-  ], ['client','server']);
+  ], [ 'client','server' ]);
 
   /* ===== Controllers ===== */
 
@@ -49,27 +48,68 @@ Package.on_use(function (api, where) {
     'router/page/page.controller.coffee',
     'router/page/page.layout.html',
     'router/page/page.layout.coffee'
-  ], ['client']);
+  ], [ 'client' ]);
 
   /* Full Page Layout */
   api.add_files([
     'router/full_page/full_page.controller.coffee',
     'router/full_page/full_page.layout.html',
     'router/full_page/full_page.layout.coffee'
-  ],['client']);
+  ],[ 'client' ]);
 
   /* Package Page Layout */
   api.add_files([
     'router/package/package.controller.coffee'
-  ],['client']);
+  ],[ 'client' ]);
 
   /* ===== Components ===== */
 
   /* Common */
   api.add_files([
     'components/common/anchor/anchor.html',
-    'components/common/anchor/anchor.coffee'
-  ],['client']);
+    'components/common/anchor/anchor.coffee',
+    'components/common/brand/brand.html',
+    'components/common/icon/icon.html'
+  ],[ 'client' ]);
+
+  /* page */
+  api.add_files([
+    'components/page_content/pageContainer.html',
+    'components/page_content/pageContent.html'
+  ], [ 'client' ]);
+
+  /* navbar */
+  api.add_files([
+    'components/navbar/navbar.html',
+    'components/navbar/navbarRight.html',
+    'components/navbar/navbarHeader.html',
+    'components/navbar/navbarToggle.html'
+  ], [ 'client' ]);
+
+  /* page header */
+  api.add_files([
+    'components/page_header/pageHeader.html',
+    'components/page_header/pageTitle.html'
+  ], [ 'client' ]);
+
+  /* Breadcrumbs */
+  api.add_files([
+    'components/breadcrumbs/breadcrumbs.html',
+    'components/breadcrumbs/breadcrumbsLine.html'
+  ], [ 'client' ]);
+
+  /* sidebar */
+  api.add_files([
+    'components/sidebar/sidebar.html',
+    'components/sidebar/sidebarToggle.html',
+    'components/sidebar/sidebarToggle.coffee'
+  ], [ 'client' ]);
+
+  /* navigation */
+  api.add_files([
+    'components/navigation/navigation.html',
+    'components/navigation/navigation.coffee'
+  ], [ 'client' ]);
 
   /* Footer */
   api.add_files(['components/footer/footer.html'], ['client']);
@@ -178,11 +218,6 @@ Package.on_use(function (api, where) {
   /* select2 */
   api.add_files('components/select2/lib/select2.min.js', 'client');
 
-  /* navbar */
-  api.add_files([
-    'components/navbar/brand.html'
-  ], 'client');
-
   /* date_range */
   api.add_files([
     'components/date_range/lib/daterangepicker.js',
@@ -229,25 +264,19 @@ Package.on_use(function (api, where) {
     /* sidebar */
     api.add_files([
       'router/page/components/sidebar/default_sidebar.html',
-      /* TODO : this should be a common component */
-      'router/page/components/sidebar/default_sidebar_content.html',
-      'router/page/components/sidebar/default_sidebar_content.coffee'
+      'router/page/components/sidebar/default_sidebar_content.html'
     ], 'client' );
 
     /* page header */
     api.add_files([
-      /* TODO : this should be a common component */
       'router/page/components/page_header/default_page_header.html',
-      /* TODO : this should be a common component */
       'router/page/components/page_header/default_page_title.html',
       'router/page/components/page_header/default_page_header_widget.html'
     ], 'client' );
 
     /* breadcrumbs */
     api.add_files([
-      /* TODO : this should be a common component */
       'router/page/components/breadcrumbs/default_breadcrumbs_line.html',
-      /* TODO : this should be a common component */
       'router/page/components/breadcrumbs/default_breadcrumbs.html'
     ], 'client');
 
