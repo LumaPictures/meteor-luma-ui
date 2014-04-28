@@ -1,4 +1,4 @@
-# Luma Pictures User Interface [![Build Status](https://travis-ci.org/LumaPictures/eteor-luma-ui.svg?branch=dev)](https://travis-ci.org/LumaPictures/meteor-luma-ui)
+# Luma Pictures User Interface [![Build Status](https://travis-ci.org/LumaPictures/meteor-luma-ui.svg?branch=master)](https://travis-ci.org/LumaPictures/meteor-luma-ui)
 ## [Annotated Source](http://lumapictures.github.io/meteor-luma-ui)
 ## [Setup](SETUP.md)
 ## [Live Example](http://luma-ui.meteor.com)
