@@ -41,7 +41,6 @@ class @PageController extends RouteController
       navbarRight: {}
       sidebar: {}
       sidebarContent:
-        message: 'test'
         navItems: Router.getNavItems()
       pageHeader: {}
       page:
