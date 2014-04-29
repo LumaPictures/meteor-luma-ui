@@ -1,0 +1,43 @@
+<template name="panel">
+  <div class="panel {{#if styles}}{{styles}}{{else}}panel-default{{/if}}">
+    {{#if UI.contentBlock }}
+      {{> UI.contentBlock }}
+    {{/if}}
+  </div>
+</template>
+
+<template name="panelHeading">
+  <div class="panel-heading">
+    <h6 class="panel-title">
+      {{#if icon}}{{> icon iconClass=icon }}{{/if}}
+      {{title}}
+    </h6>
+    {{#if UI.contentBlock }}
+      {{> UI.contentBlock }}
+    {{/if}}
+  </div>
+</template>
+
+<template name="panelIconGroup">
+  <div class="panel-icons-group">
+    {{#if UI.contentBlock }}
+      {{> UI.contentBlock }}
+    {{/if}}
+  </div>
+</template>
+
+<template name="pullRight">
+  <div class="pull-right">
+    {{#if UI.contentBlock }}
+      {{> UI.contentBlock }}
+    {{/if}}
+  </div>
+</template>
+
+<template name="panelBody">
+  <div class="panel-body">
+    {{#if UI.contentBlock }}
+      {{> UI.contentBlock }}
+    {{/if}}
+  </div>
+</template>
