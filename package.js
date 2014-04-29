@@ -131,6 +131,8 @@ Package.on_use(function (api, where) {
     'components/bootstrap/js/affix.js'
   ], ['client']);
 
+  api.add_files(['components/stats/stats.html'], ['client']);
+
   /* Moment */
   api.add_files('components/moment/lib/moment.min.js', 'client');
 
