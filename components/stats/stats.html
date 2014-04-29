@@ -1,0 +1,17 @@
+<template name="stats">
+  <ul class="page-stats {{styles}}">
+    {{> UI.contentBlock }}
+  </ul>
+</template>
+
+<template name="statsShowcase">
+  <li class="{{styles}}">
+    <div class="page-stats-showcase">
+      <span>{{title}}</span>
+      <h2>{{currentValue}}</h2>
+    </div>
+    {{#with .. }}
+      {{> UI.contentBlock }}
+    {{/with}}
+  </li>
+</template>

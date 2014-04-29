@@ -59,11 +59,12 @@ class @PageController extends RouteController
     @yieldTemplates = _.extend @defaults.yields, @yieldTemplates
 
   data: ->
-    # merge the defaults in with the route options
-    _.defaults @route.options, @defaults.options
-    # merge the options into the page data context
-    _.defaults @data, @route.options
+    if @ready()
+      # merge the defaults in with the route options
+      _.defaults @route.options, @defaults.options
+      # merge the options into the page data context
+      _.defaults @data, @route.options
 
   onAfterAction: ->
 
-  action: -> @render()
+  action: -> @render() if @ready()
