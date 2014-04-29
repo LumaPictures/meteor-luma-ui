@@ -725,9 +725,10 @@ Template.page_layout.rendered = ->
   $(".color-picker-hex").colorpicker format: "hex"
 
   # Change navbar background color
-  topStyle = $(".navbar-inverse")[0].style
-  $(".change-navbar-color").colorpicker().on "changeColor", (ev) ->
-    topStyle.background = ev.color.toHex()
+  if $(".navbar-inverse")[0]
+    topStyle = $(".navbar-inverse")[0].style
+    $(".change-navbar-color").colorpicker().on "changeColor", (ev) ->
+      topStyle.background = ev.color.toHex()
 
 
   #===== jGrowl notifications defaults =====//
