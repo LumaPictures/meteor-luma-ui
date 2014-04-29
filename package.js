@@ -113,7 +113,10 @@ Package.on_use(function (api, where) {
   ], [ 'client' ]);
 
   /* Footer */
-  api.add_files(['components/footer/footer.html'], ['client']);
+  api.add_files(['components/footer/footer.html'], [ 'client' ]);
+
+  /* Panels */
+  api.add_files(['components/panels/panels.html'],[ 'client' ]);
 
   /* Bootstrap JS */
   api.add_files([
