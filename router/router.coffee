@@ -20,16 +20,15 @@ Router.publish = ->
 Router.addRoutes = ( routes ) ->
   if Meteor.isServer
     Meteor.startup ->
-      if Router.collection.find().count() is 0
-        count = 0
-        _.each routes, ( route ) ->
-          unless route.controller
-            route.controller = null
-          unless route.external
-            route.external = false
-          Router.collection.insert route
-          count++
-        console.log( count + ' routes inserted')
+      count = 0
+      _.each routes, ( route ) ->
+        unless route.controller
+          route.controller = null
+        unless route.external
+          route.external = false
+        Router.collection.upsert { route: route.route }, { $set: route }
+        count++
+      console.log( count + ' routes inserted')
 
 # A simple route object :
 ###
