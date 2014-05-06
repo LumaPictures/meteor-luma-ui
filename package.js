@@ -137,7 +137,10 @@ Package.on_use(function (api, where) {
   api.add_files(['components/stats/stats.html'], ['client']);
 
   /* Moment */
-  api.add_files('components/moment/lib/moment.min.js', 'client');
+  api.add_files([
+    'components/moment/lib/moment.min.js',
+    'components/moment/lib/moment.recur.js'
+  ], 'client');
 
   /* Error Pages */
   api.add_files([
