@@ -1,6 +1,34 @@
 <template name="visuals">
     <!-- visuals -->
-    <!-- Modal options -->
+    {{> modalOptions }}
+    {{> defaultModal }}
+    {{> iconifiedModal }}
+    {{> formModal }}
+    {{> tableModal }}
+    {{> remotePathModal }}
+    {{> tabbedModal }}
+    {{> wysiwygModal }}
+    {{> largeModal }}
+    {{> smallModal }}
+    {{> jGrowlNotifications }}
+    <hr>
+    {{> spinnerExamples }}
+    {{> progressBars }}
+    {{> alerts }}
+    {{> contextualBackgrounds }}
+    {{> alertBlocks }}
+    {{> tooltips }}
+    {{> popovers }}
+    {{> datePicker }}
+    {{> sliders }}
+    {{> colorAndTimePickers }}
+    {{> labelsAndBadges }}
+    <hr>
+    {{> paginationStyles }}
+    {{> pagers }}
+</template>
+
+<template name="modalOptions">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble4"></i> Modals</h6></div>
         <div class="panel-body">
@@ -47,10 +75,9 @@
             </div>
         </div>
     </div>
-    <!-- /modal options -->
+</template>
 
-
-    <!-- Default modal -->
+<template name="defaultModal">
     <div id="default_modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -81,10 +108,9 @@
             </div>
         </div>
     </div>
-    <!-- /default modal -->
+</template>
 
-
-    <!-- Iconified modal -->
+<template name="iconifiedModal">
     <div id="iconified_modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -114,10 +140,9 @@
             </div>
         </div>
     </div>
-    <!-- /iconified modal -->
+</template>
 
-
-    <!-- Form modal -->
+<template name="formModal">
     <div id="form_modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -218,10 +243,9 @@
             </div>
         </div>
     </div>
-    <!-- /form modal -->
+</template>
 
-
-    <!-- Modal with table -->
+<template name="tableModal">
     <div id="table_modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -327,10 +351,9 @@
             </div>
         </div>
     </div>
-    <!-- /modal with table -->
+</template>
 
-
-    <!-- Modal with remote path -->
+<template name="remotePathModal">
     <div id="remote_modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -350,10 +373,9 @@
             </div>
         </div>
     </div>
-    <!-- /modal with remote path -->
+</template>
 
-
-    <!-- Modal with tabs -->
+<template name="tabbedModal">
     <div id="tabs_modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -471,10 +493,9 @@
             </div>
         </div>
     </div>
-    <!-- /modal with tabs -->
+</template>
 
-
-    <!-- Modal with WYSIWYG editor -->
+<template name="wysiwygModal">
     <div id="editor_modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -494,10 +515,9 @@
             </div>
         </div>
     </div>
-    <!-- /modal with WYSIWYG editor -->
+</template>
 
-
-    <!-- Large modal -->
+<template name="largeModal">
     <div id="large_modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -517,10 +537,9 @@
             </div>
         </div>
     </div>
-    <!-- /large modal -->
+</template>
 
-
-    <!-- Small modal -->
+<template name="smallModal">
     <div id="small_modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -540,10 +559,9 @@
             </div>
         </div>
     </div>
-    <!-- /small modal -->
+</template>
 
-
-    <!-- jGrowl notifications -->
+<template name="jGrowlNotifications">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble-check"></i> Growl notifications</h6></div>
         <div class="panel-body">
@@ -606,13 +624,9 @@
             </div>
         </div>
     </div>
-    <!-- /jGrowl notifications -->
+</template>
 
-
-    <hr>
-
-
-    <!-- Spinners -->
+<template name="spinnerExamples">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h6 class="panel-title"><i class="icon-spinner7 spin"></i> Spinners</h6>
@@ -635,10 +649,9 @@
             </div>
         </div>
     </div>
-    <!-- /spinners -->
+</template>
 
-
-    <!-- Progress bars -->
+<template name="progressBars">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-settings"></i> Progress bars</h6></div>
         <div class="panel-body">
@@ -754,10 +767,9 @@
             </div>
         </div>
     </div>
-    <!-- /progress bars -->
+</template>
 
-
-    <!-- Alerts -->
+<template name="alerts">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble-plus"></i> Alerts</h6></div>
         <div class="panel-body">
@@ -782,10 +794,9 @@
             </div>
         </div>
     </div>
-    <!-- /alerts -->
+</template>
 
-
-    <!-- Contextual backgrounds -->
+<template name="contextualBackgrounds">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-droplet"></i> Contextual backgrounds</h6></div>
         <div class="panel-body">
@@ -796,10 +807,9 @@
             <div class="bg-danger with-padding">Donec ullamcorper nulla non metus auctor fringilla.</div>
         </div>
     </div>
-    <!-- /contextual backgrounds -->
+</template>
 
-
-    <!-- Alert blocks -->
+<template name="alertBlocks">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble-plus"></i> Alerts</h6></div>
         <div class="panel-body">
@@ -854,10 +864,9 @@
             </div>
         </div>
     </div>
-    <!-- /alert blocks -->
+</template>
 
-
-    <!-- Tooltips -->
+<template name="tooltips">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble6"></i> Tooltips</h6></div>
         <div class="panel-body">
@@ -869,10 +878,9 @@
             </div>
         </div>
     </div>
-    <!-- /tooltips -->
+</template>
 
-
-    <!-- Popover -->
+<template name="popovers">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble-dots"></i> Popovers</h6></div>
         <div class="panel-body">
@@ -936,10 +944,9 @@
             </div>
         </div>
     </div>
-    <!-- /popover -->
+</template>
 
-
-    <!-- Datepicker -->
+<template name="datePicker">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-bubble4"></i> Date picker</h6></div>
         <div class="panel-body">
@@ -999,10 +1006,9 @@
             </div>
         </div>
     </div>
-    <!-- /datepicker -->
+</template>
 
-
-    <!-- Sliders -->
+<template name="sliders">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-settings"></i> Sliders</h6></div>
         <div class="panel-body form-horizontal form-bordered">
@@ -1058,10 +1064,9 @@
             </div>
         </div>
     </div>
-    <!-- /sliders -->
+</template>
 
-
-    <!-- Color & time pickers -->
+<template name="colorAndTimePickers">
     <div class="row">
         <div class="col-md-6">
             <div class="panel panel-default">
@@ -1149,10 +1154,9 @@
             </div>
         </div>
     </div>
-    <!-- /color & time pickers -->
+</template>
 
-
-    <!-- Labels and badges -->
+<template name="labelsAndBadges">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-new"></i> Labels</h6></div>
         <table class="table table-striped table-bordered">
@@ -1194,13 +1198,9 @@
             </tbody>
         </table>
     </div>
-    <!-- /label and badges -->
+</template>
 
-
-    <hr>
-
-
-    <!-- Pagination -->
+<template name="paginationStyles">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-tab"></i> Pagination</h6></div>
         <div class="panel-body">
@@ -1327,10 +1327,9 @@
 
         </div>
     </div>
-    <!-- /pagination -->
+</template>
 
-
-    <!-- Pager -->
+<template name="pagers">
     <div class="panel panel-default">
         <div class="panel-heading"><h6 class="panel-title"><i class="icon-embed"></i> Pager</h6></div>
         <div class="panel-body">
@@ -1367,6 +1366,5 @@
             </div>
         </div>
     </div>
-    <!-- /pager -->
-    <!-- /visuals -->
 </template>
+
