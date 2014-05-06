@@ -139,7 +139,8 @@ Package.on_use(function (api, where) {
   /* Moment */
   api.add_files([
     'components/moment/lib/moment.min.js',
-    'components/moment/lib/moment.recur.js'
+    'components/moment/lib/moment.recur.js',
+    'components/moment/lib/moment.range.js'
   ], 'client');
 
   /* Error Pages */
