@@ -72,6 +72,11 @@ Package.on_use(function (api, where) {
     'components/common/icon/icon.html'
   ],[ 'client' ]);
 
+  api.add_files([
+    'components/labels/label.html',
+    'components/labels/badge.html'
+  ], [ 'client' ]);
+
   /* page */
   api.add_files([
     'components/page_content/pageContainer.html',

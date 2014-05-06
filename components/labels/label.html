@@ -1,0 +1,9 @@
+<template name="label">
+    <span class="label {{styles}}">
+        {{#if UI.contentBlock }}
+            {{> UI.contentBlock }}
+        {{else}}
+            {{label}}
+        {{/if}}
+    </span>
+</template>
