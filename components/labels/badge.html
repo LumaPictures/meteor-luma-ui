@@ -1,0 +1,9 @@
+<template name="badge">
+    <span class="badge {{styles}}">
+        {{#if UI.contentBlock }}
+            {{> UI.contentBlock }}
+        {{else}}
+            {{value}}
+        {{/if}}
+    </span>
+</template>
