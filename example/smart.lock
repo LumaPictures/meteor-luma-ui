@@ -13,8 +13,8 @@
       },
       "jquery-datatables": {
         "git": "https://github.com/lumapictures/meteor-jquery-datatables",
-        "tag": "v0.1.10",
-        "commit": "7bb60caecbf98def1099469d826141a1d51cfcc3"
+        "tag": "v0.1.24",
+        "commit": "b9855a029825843fb82aeaebc9c8f6a49dfc019f"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
