@@ -6,6 +6,8 @@ class PackageLayoutController extends PageController
     'packageFooter': to: 'footer'
 
   onBeforeAction: -> super
-  data: -> super
+  data: ->
+    @data.package = Meteor.settings.public.package
+    super
   onAfterAction: -> super
   action: -> super
