@@ -69,13 +69,10 @@ Package.on_use(function (api, where) {
     'components/common/anchor/anchor.html',
     'components/common/anchor/anchor.coffee',
     'components/common/brand/brand.html',
-    'components/common/icon/icon.html'
-  ],[ 'client' ]);
-
-  api.add_files([
+    'components/common/icon/icon.html',
     'components/labels/label.html',
     'components/labels/badge.html'
-  ], [ 'client' ]);
+  ],[ 'client' ]);
 
   /* page */
   api.add_files([
