@@ -3,6 +3,7 @@
     "luma-ui": {
       "path": ".."
     },
-    "jquery-datatables": {}
+    "jquery-datatables": {},
+    "jquery-select2": {}
   }
 }

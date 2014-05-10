@@ -1,510 +1,169 @@
 <template name="selects">
     <!-- selects -->
     <form class="form-horizontal" action="#" role="form">
-    <div class="row">
-    <div class="col-md-6">
-        <div class="panel panel-default">
-            <div class="panel-heading"><h6 class="panel-title"><i class="icon-checkbox-checked"></i> Multiselect</h6></div>
-            <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h6 class="panel-title"><i class="icon-checkbox-checked"></i> Multiselect</h6></div>
+                    <div class="panel-body">
 
-                <div class="alert alert-success fade in block-inner">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
-                    Multiselect plugin, based on bootstrap button groups and dropdowns
-                </div>
+                        <div class="alert alert-success fade in block-inner">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            Multiselect plugin, based on bootstrap button groups and dropdowns
+                        </div>
 
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Multiple select: </label>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Multiple select: </label>
 
-                    <div class="col-sm-10">
-                        <select multiple="multiple" class="multi-select" tabindex="2">
-                            <option value="Cambodia">Cambodia</option>
-                            <option value="Cameroon">Cameroon</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Cape Verde">Cape Verde</option>
-                        </select>
+                            <div class="col-sm-10">
+                                <select multiple="multiple" class="multi-select" tabindex="2">
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Single select: </label>
+
+                            <div class="col-sm-10">
+                                <select class="multi-select" tabindex="2">
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Select All option: </label>
+
+                            <div class="col-sm-10">
+                                <select multiple="multiple" class="multi-select-all" tabindex="2">
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Disabled: </label>
+
+                            <div class="col-sm-10">
+                                <select multiple="multiple" class="multi-select" disabled="disabled" tabindex="2">
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">With selected values: </label>
+
+                            <div class="col-sm-10">
+                                <select multiple="multiple" class="multi-select" tabindex="2">
+                                    <option value="Cambodia" selected="selected">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada" selected="selected">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">With disabled values: </label>
+
+                            <div class="col-sm-10">
+                                <select multiple="multiple" class="multi-select" tabindex="2">
+                                    <option value="Cambodia" disabled="disabled">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada" disabled="disabled">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">onChange event: </label>
+
+                            <div class="col-sm-10">
+                                <select multiple="multiple" class="multi-select-onchange" tabindex="2">
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Themed button: </label>
+
+                            <div class="col-sm-10">
+                                <select multiple="multiple" class="multi-select-color" tabindex="2">
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Right aligned dropdown: </label>
+
+                            <div class="col-sm-10">
+                                <select multiple="multiple" class="multi-select-right">
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Using "data-role" attribute: </label>
+
+                            <div class="col-sm-10">
+                                <select multiple="multiple" data-role="multiselect">
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Optgroups: </label>
+
+                            <div class="col-sm-10">
+                                <select class="multi-select" multiple="multiple">
+                                    <option value="lab">Lab Course</option>
+                                    <option value="proseminar">Proseminar</option>
+                                    <optgroup label="Mathematics">
+                                        <option value="analysis">Analysis</option>
+                                        <option value="algebra">Linear Algebra</option>
+                                    </optgroup>
+                                    <optgroup label="Computer Science">
+                                        <option value="programming">Intro to Programming</option>
+                                        <option value="automata">Automata Theory</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Single select: </label>
-
-                    <div class="col-sm-10">
-                        <select class="multi-select" tabindex="2">
-                            <option value="Cambodia">Cambodia</option>
-                            <option value="Cameroon">Cameroon</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Cape Verde">Cape Verde</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Select All option: </label>
-
-                    <div class="col-sm-10">
-                        <select multiple="multiple" class="multi-select-all" tabindex="2">
-                            <option value="Cambodia">Cambodia</option>
-                            <option value="Cameroon">Cameroon</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Cape Verde">Cape Verde</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Disabled: </label>
-
-                    <div class="col-sm-10">
-                        <select multiple="multiple" class="multi-select" disabled="disabled" tabindex="2">
-                            <option value="Cambodia">Cambodia</option>
-                            <option value="Cameroon">Cameroon</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Cape Verde">Cape Verde</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">With selected values: </label>
-
-                    <div class="col-sm-10">
-                        <select multiple="multiple" class="multi-select" tabindex="2">
-                            <option value="Cambodia" selected="selected">Cambodia</option>
-                            <option value="Cameroon">Cameroon</option>
-                            <option value="Canada" selected="selected">Canada</option>
-                            <option value="Cape Verde">Cape Verde</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">With disabled values: </label>
-
-                    <div class="col-sm-10">
-                        <select multiple="multiple" class="multi-select" tabindex="2">
-                            <option value="Cambodia" disabled="disabled">Cambodia</option>
-                            <option value="Cameroon">Cameroon</option>
-                            <option value="Canada" disabled="disabled">Canada</option>
-                            <option value="Cape Verde">Cape Verde</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">onChange event: </label>
-
-                    <div class="col-sm-10">
-                        <select multiple="multiple" class="multi-select-onchange" tabindex="2">
-                            <option value="Cambodia">Cambodia</option>
-                            <option value="Cameroon">Cameroon</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Cape Verde">Cape Verde</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Themed button: </label>
-
-                    <div class="col-sm-10">
-                        <select multiple="multiple" class="multi-select-color" tabindex="2">
-                            <option value="Cambodia">Cambodia</option>
-                            <option value="Cameroon">Cameroon</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Cape Verde">Cape Verde</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Right aligned dropdown: </label>
-
-                    <div class="col-sm-10">
-                        <select multiple="multiple" class="multi-select-right">
-                            <option value="Cambodia">Cambodia</option>
-                            <option value="Cameroon">Cameroon</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Cape Verde">Cape Verde</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Using "data-role" attribute: </label>
-
-                    <div class="col-sm-10">
-                        <select multiple="multiple" data-role="multiselect">
-                            <option value="Cambodia">Cambodia</option>
-                            <option value="Cameroon">Cameroon</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Cape Verde">Cape Verde</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">Optgroups: </label>
-
-                    <div class="col-sm-10">
-                        <select class="multi-select" multiple="multiple">
-                            <option value="lab">Lab Course</option>
-                            <option value="proseminar">Proseminar</option>
-                            <optgroup label="Mathematics">
-                                <option value="analysis">Analysis</option>
-                                <option value="algebra">Linear Algebra</option>
-                            </optgroup>
-                            <optgroup label="Computer Science">
-                                <option value="programming">Intro to Programming</option>
-                                <option value="automata">Automata Theory</option>
-                            </optgroup>
-                        </select>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </div>
-
-    <div class="col-md-6">
-    <div class="panel panel-default">
-    <div class="panel-heading"><h6 class="panel-title"><i class="icon-menu5"></i> Selects</h6></div>
-    <div class="panel-body">
-
-    <div class="alert alert-success fade in block-inner">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        Select2 plugin: standard styled selects, select with search and multiple selects
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Fixed select: </label>
-
-        <div class="col-sm-10">
-            <select data-placeholder="Choose a Country..." class="select" tabindex="2">
-                <option value=""></option>
-                <option value="Cambodia">Cambodia</option>
-                <option value="Cameroon">Cameroon</option>
-                <option value="Canada">Canada</option>
-                <option value="Cape Verde">Cape Verde</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Liquid select: </label>
-
-        <div class="col-sm-10">
-            <select data-placeholder="Choose a Country..." class="select-liquid" tabindex="2">
-                <option value=""></option>
-                <option value="Cambodia">Cambodia</option>
-                <option value="Cameroon">Cameroon</option>
-                <option value="Canada">Canada</option>
-                <option value="Cape Verde">Cape Verde</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Full width select: </label>
-
-        <div class="col-sm-10">
-            <select data-placeholder="Choose a Country..." class="select-full" tabindex="2">
-                <option value=""></option>
-                <option value="Cambodia">Cambodia</option>
-                <option value="Cameroon">Cameroon</option>
-                <option value="Canada">Canada</option>
-                <option value="Cape Verde">Cape Verde</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Select with optgroups: </label>
-
-        <div class="col-sm-10">
-            <select class="select">
-                <optgroup label="Alaskan/Hawaiian Time Zone">
-                    <option value="AK">Alaska</option>
-                    <option value="HI">Hawaii</option>
-                </optgroup>
-                <optgroup label="Pacific Time Zone">
-                    <option value="CA">California</option>
-                    <option value="NV">Nevada</option>
-                    <option value="OR">Oregon</option>
-                    <option value="WA">Washington</option>
-                </optgroup>
-                <optgroup label="Mountain Time Zone">
-                    <option value="AZ">Arizona</option>
-                    <option value="CO">Colorado</option>
-                    <option value="ID">Idaho</option>
-                    <option value="MT">Montana</option>
-                    <option value="NE">Nebraska</option>
-                    <option value="NM">New Mexico</option>
-                    <option value="ND">North Dakota</option>
-                    <option value="UT">Utah</option>
-                    <option value="WY">Wyoming</option>
-                </optgroup>
-                <optgroup label="Central Time Zone">
-                    <option value="AL">Alabama</option>
-                    <option value="AR">Arkansas</option>
-                    <option value="IL">Illinois</option>
-                    <option value="IA">Iowa</option>
-                    <option value="KS">Kansas</option>
-                    <option value="KY">Kentucky</option>
-                    <option value="LA">Louisiana</option>
-                </optgroup>
-                <optgroup label="Eastern Time Zone">
-                    <option value="CT">Connecticut</option>
-                    <option value="DE">Delaware</option>
-                    <option value="FL">Florida</option>
-                    <option value="GA">Georgia</option>
-                    <option value="IN">Indiana</option>
-                    <option value="ME">Maine</option>
-                    <option value="MD">Maryland</option>
-                    <option value="MA">Massachusetts</option>
-                </optgroup>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Select with search: </label>
-
-        <div class="col-sm-10">
-            <select data-placeholder="Choose a Country..." class="select-search" tabindex="2">
-                <option value=""></option>
-                <option value="Cambodia">Cambodia</option>
-                <option value="Cameroon">Cameroon</option>
-                <option value="Canada">Canada</option>
-                <option value="Cape Verde">Cape Verde</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Disabled select: </label>
-
-        <div class="col-sm-10">
-            <select data-placeholder="Choose a Country..." class="select select-disabled" tabindex="2">
-                <option value=""></option>
-                <option value="Cambodia">Cambodia</option>
-                <option value="Cameroon">Cameroon</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Clear results: </label>
-
-        <div class="col-sm-10">
-            <select data-placeholder="Choose a Country..." class="clear-results" tabindex="2">
-                <option value=""></option>
-                <option value="Cambodia">Cambodia</option>
-                <option value="Cameroon" selected>Cameroon</option>
-                <option value="Canada">Canada</option>
-                <option value="Cape Verde">Cape Verde</option>
-                <option value="Cayman Islands">Cayman Islands</option>
-                <option value="Central African Republic">Central African Republic</option>
-                <option value="Chad">Chad</option>
-                <option value="Chile">Chile</option>
-                <option value="China">China</option>
-                <option value="Christmas Island">Christmas Island</option>
-                <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-                <option value="Colombia">Colombia</option>
-                <option value="Comoros">Comoros</option>
-                <option value="Congo">Congo</option>
-                <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
-                <option value="Cook Islands">Cook Islands</option>
-                <option value="Costa Rica">Costa Rica</option>
-                <option value="Cote D'ivoire">Cote D'ivoire</option>
-                <option value="Croatia">Croatia</option>
-                <option value="Cuba">Cuba</option>
-                <option value="Cyprus">Cyprus</option>
-                <option value="Czech Republic">Czech Republic</option>
-                <option value="Denmark">Denmark</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Select with minimum: </label>
-
-        <div class="col-sm-10">
-            <select data-placeholder="Choose a Country..." class="minimum-select" tabindex="2">
-                <option value=""></option>
-                <option value="Cambodia">Cambodia</option>
-                <option value="Cameroon">Cameroon</option>
-                <option value="Canada">Canada</option>
-                <option value="Cape Verde">Cape Verde</option>
-                <option value="Cayman Islands">Cayman Islands</option>
-                <option value="Central African Republic">Central African Republic</option>
-                <option value="Chad">Chad</option>
-                <option value="Chile">Chile</option>
-                <option value="China">China</option>
-                <option value="Christmas Island">Christmas Island</option>
-                <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-                <option value="Colombia">Colombia</option>
-                <option value="Comoros">Comoros</option>
-                <option value="Congo">Congo</option>
-                <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
-                <option value="Cook Islands">Cook Islands</option>
-                <option value="Costa Rica">Costa Rica</option>
-                <option value="Cote D'ivoire">Cote D'ivoire</option>
-                <option value="Croatia">Croatia</option>
-                <option value="Cuba">Cuba</option>
-                <option value="Cyprus">Cyprus</option>
-                <option value="Czech Republic">Czech Republic</option>
-                <option value="Denmark">Denmark</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Multiple with search: </label>
-
-        <div class="col-sm-10">
-            <select data-placeholder="Your Favorite Football Team" class="select-multiple" multiple="multiple" tabindex="2">
-                <optgroup label="NFC EAST">
-                    <option>Dallas Cowboys</option>
-                    <option selected="selected">New York Giants</option>
-                    <option>Philadelphia Eagles</option>
-                    <option>Washington Redskins</option>
-                </optgroup>
-                <optgroup label="NFC NORTH">
-                    <option selected="selected">Chicago Bears</option>
-                    <option>Detroit Lions</option>
-                    <option>Green Bay Packers</option>
-                    <option>Minnesota Vikings</option>
-                </optgroup>
-                <optgroup label="NFC SOUTH">
-                    <option selected="selected">Atlanta Falcons</option>
-                    <option>Carolina Panthers</option>
-                    <option>New Orleans Saints</option>
-                    <option>Tampa Bay Buccaneers</option>
-                </optgroup>
-                <optgroup label="NFC WEST">
-                    <option>Arizona Cardinals</option>
-                    <option>St. Louis Rams</option>
-                    <option>San Francisco 49ers</option>
-                    <option>Seattle Seahawks</option>
-                </optgroup>
-                <optgroup label="AFC EAST">
-                    <option>Buffalo Bills</option>
-                    <option>Miami Dolphins</option>
-                    <option>New England Patriots</option>
-                    <option>New York Jets</option>
-                </optgroup>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label">With maximum input: </label>
-
-        <div class="col-sm-10">
-            <select data-placeholder="Your Favorite Football Team" multiple="multiple" tabindex="2" class="maximum-select">
-                <option value=""></option>
-                <optgroup label="NFC EAST">
-                    <option>Dallas Cowboys</option>
-                    <option>New York Giants</option>
-                    <option>Philadelphia Eagles</option>
-                    <option>Washington Redskins</option>
-                </optgroup>
-                <optgroup label="NFC NORTH">
-                    <option>Chicago Bears</option>
-                    <option>Detroit Lions</option>
-                    <option>Green Bay Packers</option>
-                    <option>Minnesota Vikings</option>
-                </optgroup>
-                <optgroup label="NFC SOUTH">
-                    <option>Atlanta Falcons</option>
-                    <option>Carolina Panthers</option>
-                    <option>New Orleans Saints</option>
-                    <option>Tampa Bay Buccaneers</option>
-                </optgroup>
-                <optgroup label="NFC WEST">
-                    <option>Arizona Cardinals</option>
-                    <option>St. Louis Rams</option>
-                    <option>San Francisco 49ers</option>
-                    <option>Seattle Seahawks</option>
-                </optgroup>
-                <optgroup label="AFC EAST">
-                    <option selected="selected">Buffalo Bills</option>
-                    <option>Miami Dolphins</option>
-                    <option>New England Patriots</option>
-                    <option>New York Jets</option>
-                </optgroup>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Minimum characters: </label>
-
-        <div class="col-sm-10">
-            <select data-placeholder="Your Favorite Football Team" multiple="multiple" tabindex="2"
-                    class="minimum-multiple-select">
-                <option value=""></option>
-                <optgroup label="NFC EAST">
-                    <option>Dallas Cowboys</option>
-                    <option>New York Giants</option>
-                    <option selected="selected">Philadelphia Eagles</option>
-                    <option selected="selected">Washington Redskins</option>
-                </optgroup>
-                <optgroup label="NFC NORTH">
-                    <option>Chicago Bears</option>
-                    <option>Detroit Lions</option>
-                    <option>Green Bay Packers</option>
-                    <option>Minnesota Vikings</option>
-                </optgroup>
-                <optgroup label="NFC SOUTH">
-                    <option>Atlanta Falcons</option>
-                    <option>Carolina Panthers</option>
-                    <option>New Orleans Saints</option>
-                    <option>Tampa Bay Buccaneers</option>
-                </optgroup>
-                <optgroup label="NFC WEST">
-                    <option>Arizona Cardinals</option>
-                    <option>St. Louis Rams</option>
-                    <option>San Francisco 49ers</option>
-                    <option>Seattle Seahawks</option>
-                </optgroup>
-                <optgroup label="AFC EAST">
-                    <option>Buffalo Bills</option>
-                    <option>Miami Dolphins</option>
-                    <option>New England Patriots</option>
-                    <option>New York Jets</option>
-                </optgroup>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-sm-2 control-label">Disabled state: </label>
-
-        <div class="col-sm-10">
-            <select data-placeholder="Your Favorite Football Team" class="select select-disabled" multiple="multiple"
-                    tabindex="2">
-                <option value=""></option>
-                <optgroup label="NFC EAST">
-                    <option>Dallas Cowboys</option>
-                    <option>New York Giants</option>
-                    <option selected="selected">Philadelphia Eagles</option>
-                    <option selected="selected">Washington Redskins</option>
-                </optgroup>
-                <optgroup label="NFC NORTH">
-                    <option>Chicago Bears</option>
-                    <option>Detroit Lions</option>
-                    <option>Green Bay Packers</option>
-                    <option>Minnesota Vikings</option>
-                </optgroup>
-            </select>
-        </div>
-    </div>
-
-    </div>
-    </div>
-    </div>
-    </div>
     </form>
     <!-- /selects -->
 </template>

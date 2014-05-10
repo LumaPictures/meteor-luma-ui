@@ -228,9 +228,6 @@ Package.on_use(function (api, where) {
   /* bootstrap switch */
   api.add_files('components/bootstrap_switch/lib/switch.min.js', 'client');
 
-  /* select2 */
-  api.add_files('components/select2/lib/select2.min.js', 'client');
-
   /* date_range */
   api.add_files([
     'components/date_range/lib/daterangepicker.js',
