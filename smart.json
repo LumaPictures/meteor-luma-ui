@@ -8,6 +8,7 @@
   "packages": {
     "blaze-layout": {},
   	"iron-router": {},
+    "iron-router-progress": {},
     "jquery-ui": {}
   }
 }

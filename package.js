@@ -20,7 +20,8 @@ Package.on_use(function (api, where) {
     'blaze-layout',
     'jquery',
     'jquery-ui',
-    'less'
+    'less',
+    'iron-router-progress'
   ], [ 'client' ]);
 
   /* ===== Exports ===== */
