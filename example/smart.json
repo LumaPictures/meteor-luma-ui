@@ -4,6 +4,7 @@
       "path": ".."
     },
     "jquery-datatables": {},
-    "jquery-select2": {}
+    "jquery-select2": {},
+    "githubReadme": {}
   }
 }

@@ -2,83 +2,6 @@ Template.page_layout.rendered = ->
   # # Body Layout
   $("body").attr 'class', 'sidebar-wide navbar-fixed'
 
-  #===== Default select =====//
-  $(".select").select2
-    minimumResultsForSearch: "-1"
-    width: 200
-
-
-  #===== Liquid select =====//
-  $(".select-liquid").select2
-    minimumResultsForSearch: "-1"
-    width: "off"
-
-
-  #===== Full width select =====//
-  $(".select-full").select2
-    minimumResultsForSearch: "-1"
-    width: "100%"
-
-
-  #===== Select with filter input =====//
-  $(".select-search").select2 width: 200
-
-  #===== Multiple select =====//
-  $(".select-multiple").select2 width: "100%"
-
-  #===== Loading data select =====//
-  $("#loading-data").select2
-    placeholder: "Enter at least 1 character"
-    allowClear: true
-    minimumInputLength: 1
-    query: (query) ->
-      data =
-        results: []
-      i = undefined
-      j = undefined
-      s = undefined
-      i = 1
-      while i < 5
-        s = ""
-        j = 0
-        while j < i
-          s = s + query.term
-          j++
-        data.results.push
-          id: query.term + i
-          text: s
-
-        i++
-      query.callback data
-
-
-  #===== Select with maximum =====//
-  $(".maximum-select").select2
-    maximumSelectionSize: 3
-    width: "100%"
-
-
-  #===== Allow clear results select =====//
-  $(".clear-results").select2
-    placeholder: "Select a State"
-    allowClear: true
-    width: 200
-
-
-  #===== Select with minimum =====//
-  $(".minimum-select").select2
-    minimumInputLength: 2
-    width: 200
-
-
-  #===== Multiple select with minimum =====//
-  $(".minimum-multiple-select").select2
-    minimumInputLength: 2
-    width: "100%"
-
-
-  #===== Disabled select =====//
-  $(".select-disabled").select2 "enable", false
 
   # # Form Validation
   #     ==================================================
@@ -738,27 +661,6 @@ Template.page_layout.rendered = ->
 
   # # Default Layout Options
   #     ==================================================
-
-  #===== Panel Options (collapsing, closing) =====//
-
-  # Collapsing
-  $("[data-panel=collapse]").click (e) ->
-    e.preventDefault()
-    $target = $(this).parent().parent().next("div")
-    if $target.is(":visible")
-      $(this).children("i").removeClass "icon-arrow-up9"
-      $(this).children("i").addClass "icon-arrow-down9"
-    else
-      $(this).children("i").removeClass "icon-arrow-down9"
-      $(this).children("i").addClass "icon-arrow-up9"
-    $target.slideToggle 200
-
-
-  # Closing
-  $("[data-panel=close]").click (e) ->
-    e.preventDefault()
-    $panelContent = $(this).parent().parent().parent()
-    $panelContent.slideUp(200).remove 200
 
 
   #===== Showing spinner animation demo =====//

@@ -1,3 +1,17 @@
 <template name="home">
-{{> homeBlocks }}
+  {{getGithubReadme name="meteor-luma-ui" owner="LumaPictures"}}
+  {{#panel styles="panel-info" }}
+    {{#panelHeading icon="icon-github" title="README.md" }}
+      {{#panelIconGroup}}
+        {{> panelToggle }}
+      {{/panelIconGroup}}
+    {{/panelHeading}}
+    {{#panelBody}}
+      {{#if githubReadme}}
+        {{{githubReadme}}}
+      {{else}}
+        <h3>Loading...</h3>
+      {{/if}}
+    {{/panelBody}}
+  {{/panel}}
 </template>

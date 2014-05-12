@@ -119,7 +119,10 @@ Package.on_use(function (api, where) {
   api.add_files(['components/footer/footer.html'], [ 'client' ]);
 
   /* Panels */
-  api.add_files(['components/panels/panels.html'],[ 'client' ]);
+  api.add_files([
+    'components/panels/panels.html',
+    'components/panels/panels.coffee'
+  ],[ 'client' ]);
 
   /* Bootstrap JS */
   api.add_files([
