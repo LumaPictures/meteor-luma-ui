@@ -3,7 +3,7 @@
   "description": "Luma Pictures User Interface",
   "homepage": "https://github.com/lumapictures/meteor-luma-ui",
   "author": "Austin Rivas <austinrivas@gmail.com> (http://github.com/austinrivas)",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "git": "https://github.com/lumapictures/meteor-luma-ui.git",
   "packages": {
     "blaze-layout": {},
