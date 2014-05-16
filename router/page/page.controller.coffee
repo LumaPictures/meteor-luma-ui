@@ -50,7 +50,7 @@ class @PageController extends RouteController
       callouts: []
       content: {}
       footer:
-        message: 'Luma UI by Austin Rivas 2014.'
+        message: 'Luma UI | Luma Pictures © 2014.'
 
   onBeforeAction: ->
     # rest page scroll position before each load
