@@ -10,7 +10,8 @@ Package.on_use(function (api, where) {
     'standard-app-packages',
     'underscore',
     'iron-router',
-    'coffeescript'
+    'coffeescript',
+    'luma-router'
   ],[ 'client', 'server' ]);
 
   api.use([
@@ -19,7 +20,6 @@ Package.on_use(function (api, where) {
     'spacebars',
     'blaze-layout',
     'jquery',
-    'jquery-ui',
     'less',
     'iron-router-progress'
   ], [ 'client' ]);
@@ -36,11 +36,6 @@ Package.on_use(function (api, where) {
   api.add_files([
     'models/page.model.coffee'
   ],[ 'client','server' ]);
-
-  /* ===== Routes ===== */
-  api.add_files([
-    'router/router.coffee'
-  ], [ 'client','server' ]);
 
   /* ===== Controllers ===== */
 
@@ -67,8 +62,6 @@ Package.on_use(function (api, where) {
 
   /* Common */
   api.add_files([
-    'components/common/anchor/anchor.html',
-    'components/common/anchor/anchor.coffee',
     'components/common/brand/brand.html',
     'components/common/icon/icon.html',
     'components/labels/label.html',

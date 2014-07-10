@@ -9,6 +9,8 @@
     "blaze-layout": {},
   	"iron-router": {},
     "iron-router-progress": {},
-    "jquery-ui": {}
+    "luma-router": {
+      "path": "~/workspace/packages/luma-router"
+    }
   }
 }

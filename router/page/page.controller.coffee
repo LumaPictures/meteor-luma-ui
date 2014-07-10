@@ -41,7 +41,7 @@ class @PageController extends RouteController
       navbarRight: {}
       sidebar: {}
       sidebarContent:
-        navItems: Router.getNavItems()
+        navItems: Luma.Router.getNavItems()
       pageHeader: {}
       page:
         title: "Default Title"
