@@ -1,6 +1,8 @@
 class @PageController extends RouteController
+
   # this controller uses the page layout
   layoutTemplate: "page_layout"
+
   # default values for all routes using this controller and controllers extending this
   defaults:
     # default templates to yield if none is specified
@@ -29,6 +31,7 @@ class @PageController extends RouteController
         to: 'breadcrumbs'
       'default_footer':
         to: 'footer'
+
     # default options and contexts to provide to the page
     options:
       navbar: {}
@@ -58,13 +61,9 @@ class @PageController extends RouteController
     # extend the defaults with the yieldTemplates and assign it to this
     @yieldTemplates = _.extend @defaults.yields, @yieldTemplates
 
-  data: ->
-    if @ready()
-      # merge the defaults in with the route options
-      _.defaults @route.options, @defaults.options
-      # merge the options into the page data context
-      _.defaults @data, @route.options
+  # merge the defaults in with the route options
+  data: -> return _.defaults @route.options, @defaults.options if @ready()
 
-  onAfterAction: ->
+  onAfterAction: -> return
 
   action: -> @render() if @ready()
