@@ -2,9 +2,10 @@ Template.page_layout.rendered = ->
   # # Body Layout
   $("body").attr 'class', 'sidebar-wide navbar-fixed'
 
+  $(".navbar-nav > .disabled > a").click (e) -> e.preventDefault()
 
+###
   # # Form Validation
-  #     ==================================================
   $(".validate").validate
     errorPlacement: (error, element) ->
       if element.parent().parent().attr("class") is "checker" or element.parent().parent().attr("class") is "choice"
@@ -86,23 +87,23 @@ Template.page_layout.rendered = ->
 
 
   # # Bootstrap Multiselects
-  #     ==================================================
+  #     ==
 
-  #===== Default multiselect =====//
+  # Default multiselect //
   $(".multi-select").multiselect
     buttonClass: "btn btn-default"
     onChange: (element, checked) ->
       $.uniform.update()
 
 
-  #===== Multiselect with colored button =====//
+  # Multiselect with colored button //
   $(".multi-select-color").multiselect
     buttonClass: "btn btn-info"
     onChange: (element, checked) ->
       $.uniform.update()
 
 
-  #===== Multiselect with "Select All" option =====//
+  # Multiselect with "Select All" option //
   $(".multi-select-all").multiselect
     buttonClass: "btn btn-default"
     includeSelectAllOption: true
@@ -110,7 +111,7 @@ Template.page_layout.rendered = ->
       $.uniform.update()
 
 
-  #===== onChange function =====//
+  # onChange function //
   $(".multi-select-onchange").multiselect
     buttonClass: "btn btn-default"
     onChange: (element, checked) ->
@@ -121,7 +122,7 @@ Template.page_layout.rendered = ->
         life: 1500
 
 
-  #===== Right aligned multiselect dropdown =====//
+  # Right aligned multiselect dropdown //
   $(".multi-select-right").multiselect
     buttonClass: "btn btn-default"
     dropRight: true
@@ -129,7 +130,7 @@ Template.page_layout.rendered = ->
       $.uniform.update()
 
 
-  #===== Search field select =====//
+  # Search field select //
   $(".multi-select-search").multiselect
     buttonClass: "btn btn-link btn-lg btn-icon"
     dropRight: true
@@ -144,9 +145,9 @@ Template.page_layout.rendered = ->
 
 
   # # jQuery UI Components
-  #     ==================================================
+  #
 
-  #===== jQuery UI Autocomplete =====//
+  # jQuery UI Autocomplete //
   availableTags = [
     "ActionScript"
     "AppleScript"
@@ -173,7 +174,7 @@ Template.page_layout.rendered = ->
   ]
   $(".autocomplete").autocomplete source: availableTags
 
-  #===== Jquery UI sliders =====//
+  # Jquery UI sliders //
   $("#default-slider").slider()
   $("#increments-slider").slider
     value: 100
@@ -220,7 +221,7 @@ Template.page_layout.rendered = ->
 
   $("#max-amount, #max-amount1").val $("#slider-range-max, #slider-range-max1").slider("value")
 
-  #===== Spinner options =====//
+  # Spinner options //
   $("#spinner-default").spinner()
   $("#spinner-decimal").spinner
     step: 0.01
@@ -275,7 +276,7 @@ Template.page_layout.rendered = ->
     $("#spinner-time").timespinner "value", current
 
 
-  #===== jQuery UI Datepicker =====//
+  # jQuery UI Datepicker //
   $(".datepicker").datepicker showOtherMonths: true
   $(".datepicker-inline").datepicker showOtherMonths: true
   $(".datepicker-multiple").datepicker
@@ -310,17 +311,17 @@ Template.page_layout.rendered = ->
     showOtherMonths: true
 
   # # Bootstrap Plugins
-  #     ==================================================
+  #
 
-  #===== Tooltip =====//
+  # Tooltip //
   $(".tip").tooltip()
 
-  #===== Popover =====//
+  # Popover //
   $("[data-toggle=popover]").popover().click (e) ->
     e.preventDefault()
 
 
-  #===== Loading button =====//
+  # Loading button //
   $(".btn-loading").click ->
     btn = $(this)
     btn.button "loading"
@@ -329,24 +330,24 @@ Template.page_layout.rendered = ->
     ), 3000
 
 
-  #===== Add fadeIn animation to dropdown =====//
+  # Add fadeIn animation to dropdown //
   $(".dropdown, .btn-group").on "show.bs.dropdown", (e) ->
     $(this).find(".dropdown-menu").first().stop(true, true).fadeIn 100
 
 
-  #===== Add fadeOut animation to dropdown =====//
+  # Add fadeOut animation to dropdown //
   $(".dropdown, .btn-group").on "hide.bs.dropdown", (e) ->
     $(this).find(".dropdown-menu").first().stop(true, true).fadeOut 100
 
 
-  #===== Prevent dropdown from closing on click =====//
+  # Prevent dropdown from closing on click //
   $(".popup").click (e) ->
     e.stopPropagation()
 
   # # Form Related Plugins
-  #     ==================================================
+  #
 
-  #===== Pluploader (multiple file uploader) =====//
+  # Pluploader (multiple file uploader) //
   $(".multiple-uploader").pluploadQueue
     runtimes: "html5, html4"
     url: "../upload.php"
@@ -370,39 +371,39 @@ Template.page_layout.rendered = ->
       quality: 90
 
 
-  #===== WYSIWYG editor =====//
+  # WYSIWYG editor //
   #$(".editor").wysihtml5 stylesheets: "static/css/wysihtml5/wysiwyg-color.css"
 
-  #===== Elastic textarea =====//
+  # Elastic textarea //
   $(".elastic").autosize()
 
-  #===== Dual select boxes =====//
+  # Dual select boxes //
   $.configureBoxes()
 
-  #===== Input limiter =====//
+  # Input limiter //
   $(".limited").inputlimiter
     limit: 100
     boxId: "limit-text"
     boxAttach: false
 
 
-  #===== Tags Input =====//
+  # Tags Input //
   $(".tags").tagsInput width: "100%"
   $(".tags-autocomplete").tagsInput
     width: "100%"
     autocomplete_url: "tags_autocomplete.html"
 
 
-  #===== Form elements styling =====//
+  # Form elements styling //
   $(".styled, .multiselect-container input").uniform
     radioClass: "choice"
     selectAutoWidth: false
 
 
   # # Interface Related Plugins
-  #     ==================================================
+  #
 
-  #===== Sparkline charts =====//
+  # Sparkline charts //
   $(".bar-danger").sparkline "html",
     type: "bar"
     barColor: "#D65C4F"
@@ -462,10 +463,10 @@ Template.page_layout.rendered = ->
     $.sparkline_display_visible()
 
 
-  #===== Fancy box (lightbox plugin) =====//
+  # Fancy box (lightbox plugin) //
   $(".lightbox").fancybox padding: 1
 
-  #===== DateRangePicker plugin =====//
+  # DateRangePicker plugin //
   $("#reportrange").daterangepicker
     startDate: moment().subtract("days", 29)
     endDate: moment()
@@ -551,10 +552,10 @@ Template.page_layout.rendered = ->
     $(".range").removeClass "range-shown"
 
 
-  #===== Bootstrap switches =====//
+  # Bootstrap switches //
   $(".switch").bootstrapSwitch()
 
-  #===== Fullcalendar =====//
+  # Fullcalendar //
   date = new Date()
   d = date.getDate()
   m = date.getMonth()
@@ -625,10 +626,10 @@ Template.page_layout.rendered = ->
     $(".fullcalendar").fullCalendar "render"
 
 
-  #===== Code prettifier =====//
+  # Code prettifier //
   window.prettyPrint and prettyPrint()
 
-  #===== Time pickers =====//
+  # Time pickers //
   $("#defaultValueExample, #time").timepicker scrollDefaultNow: true
   $("#durationExample").timepicker
     minTime: "2:00pm"
@@ -643,7 +644,7 @@ Template.page_layout.rendered = ->
   $("#timeformatExample1, #timeformatExample3").timepicker timeFormat: "H:i:s"
   $("#timeformatExample2, #timeformatExample4").timepicker timeFormat: "h:i A"
 
-  #===== Color picker =====//
+  # Color picker //
   $(".color-picker").colorpicker()
   $(".color-picker-hex").colorpicker format: "hex"
 
@@ -654,16 +655,16 @@ Template.page_layout.rendered = ->
       topStyle.background = ev.color.toHex()
 
 
-  #===== jGrowl notifications defaults =====//
+  # jGrowl notifications defaults //
   $.jGrowl.defaults.closer = false
   $.jGrowl.defaults.easing = "easeInOutCirc"
 
 
   # # Default Layout Options
-  #     ==================================================
+  #
 
 
-  #===== Showing spinner animation demo =====//
+  # Showing spinner animation demo //
   $(".run-first").click ->
     $("body").append "<div class=\"overlay\"><div class=\"opacity\"></div><i class=\"icon-spinner2 spin\"></i></div>"
     $(".overlay").fadeIn 150
@@ -691,12 +692,11 @@ Template.page_layout.rendered = ->
     ), 5000
 
 
-  #===== Toggling active class in accordion groups =====//
+  # Toggling active class in accordion groups
   $(".panel-trigger").click (e) ->
     e.preventDefault()
     $(this).toggleClass "active"
-
-  $(".navbar-nav > .disabled > a").click (e) -> e.preventDefault()
+###
 
 
 

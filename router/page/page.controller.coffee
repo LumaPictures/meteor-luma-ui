@@ -1,5 +1,8 @@
 class @PageController extends RouteController
 
+  get: ( key ) -> Session.get "#{ @route.name }:#{ key }"
+  set: ( key, value ) -> Session.set "#{ @route.name }:#{ key }", value
+
   # this controller uses the page layout
   layoutTemplate: "page_layout"
 
