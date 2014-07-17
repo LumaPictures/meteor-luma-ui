@@ -68,15 +68,17 @@ class @PageController extends RouteController
 
 if Meteor.isClient
 
-  UI.registerHelper 'navbar', -> Session.get "navbar"
+  UI.registerHelper 'navbar', -> return if @navbar then @navbar else Session.get 'navbar'
 
-  UI.registerHelper 'page', -> Session.get 'page'
+  UI.registerHelper 'page', ->  return if @page then @page else Session.get 'page'
+
+  UI.registerHelper 'breadcrumbs', -> return if @breadcrumbs then @breadcrumbs else Session.get 'breadcrumbs'
 
   UI.registerHelper 'sidebar', ->
-    sidebar = Session.get "sidebar"
+    sidebar = if @sidebar then @sidebar else Session.get "sidebar"
     sidebar ?=
       content:
         navItems: Luma.Router.getNavItems()
     return sidebar
 
-  UI.registerHelper 'footer', Session.get 'footer'
+  UI.registerHelper 'footer', -> return if @footer then @footer else Session.get 'footer'
