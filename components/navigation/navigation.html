@@ -22,7 +22,7 @@
 
 <template name="externalNavItem">
   <li>
-    {{> navAnchor route=route title=page.title icon=nav.icon }}
+    {{> navAnchor route=route title=contexts.page.title icon=nav.icon }}
   </li>
 </template>
 
@@ -30,7 +30,7 @@
   <li class="{{ isActivePath path }}">
     {{#if canExpand }}
       <a href="#{{route}}" class="expand" data-toggle="collapse">
-        <span>{{page.title}}</span> {{> icon iconClass=nav.icon }}
+        <span>{{contexts.page.title}}</span> {{> icon iconClass=nav.icon }}
       </a>
       <ul id="{{route}}" class="collapse {{isExpanded}}">
         {{#each nav.children }}
@@ -38,7 +38,7 @@
         {{/each}}
       </ul>
     {{else}}
-      {{> navAnchor title=page.title route=route icon=nav.icon }}
+      {{> navAnchor title=contexts.page.title route=route icon=nav.icon }}
     {{/if}}
   </li>
 </template>
