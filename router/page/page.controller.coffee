@@ -29,7 +29,7 @@ class @PageController extends RouteController
     'default_footer':
       to: 'footer'
 
-  defaults:
+  contexts:
     navbar:
       header: {}
       brand:
@@ -50,21 +50,24 @@ class @PageController extends RouteController
   onBeforeAction: ->
     # rest page scroll position before each load
     $( 'body' ).scrollTop 0
-    # extend the defaults with the yieldTemplates and assign it to this
-    _.extend @yieldTemplates, @route.options.yieldTemplates if @route.options.yieldTemplates
-    # set all the route options to namespaced session variables
-    for key, value of @defaults
-      route_value = if @route.options[ key ] then @route.options[ key ] else {}
-      Session.set key, _.extend value, route_value
-
-    _.extend @content, @route.options.content if @route.options.content
 
   # merge the defaults in with the route options
-  data: -> return @content if @ready()
+  data: ->
+    # set all the route options as session variables
+    for key, value of @contexts
+      route_value = {}
+      if @route.options.contexts
+        route_value = @route.options.contexts[ key ] if @route.options.contexts[ key ]
+      Session.set key, _.extend value, route_value
+
+    # extend the page content with the route content if it exists
+    _.extend @content, @route.options.content if @route.options.content
+
+    return @content if @ready()
 
   action: -> if @ready() then @render() else @render 'loading'
 
-  onAfterAction: -> @content = {}
+  onAfterAction: -> return
 
 if Meteor.isClient
 
