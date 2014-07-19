@@ -85,3 +85,5 @@ if Meteor.isClient
     return sidebar
 
   UI.registerHelper 'footer', -> return Session.get 'footer'
+
+  UI.registerHelper 'toJSON', ( object ) -> JSON.stringify object, true, 2
