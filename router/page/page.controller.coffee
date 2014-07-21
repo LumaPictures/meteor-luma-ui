@@ -37,6 +37,7 @@ class @PageController extends RouteController
         title: "Default Brand"
         logo: "/static/images/logo.png"
         alt: "Default Brand"
+    portlet_containers: []
     page:
       title: "Shot Elements"
       subtitle: "Manage shot elements"
@@ -59,6 +60,19 @@ class @PageController extends RouteController
       if @route.options.contexts
         route_value = @route.options.contexts[ key ] if @route.options.contexts[ key ]
       Session.set key, _.extend value, route_value
+
+    # set all the route portlets as session variables
+    for key, portlet of @route.options.portlets
+      if portlet.config
+        user = Meteor.user()
+        user.profile.portlets[ @route.name ] = {} unless user.profile.portlets[ @route.name ]
+        unless user.profile.portlets[ @route.name ][ portlet.region ]
+          user.profile.portlets[ @route.name ][ portlet.region ] = portlet
+          Meteor.users.update _id: user._id,
+            $set:
+              'profile.portlets': user.profile.portlets
+        portlet = Meteor.user().profile.portlets[ @route.name ][ portlet.region ]
+      Session.set "portlet:#{ portlet.region }", portlet
 
     # extend the page content with the route content if it exists
     _.extend @content, @route.options.content if @route.options.content
