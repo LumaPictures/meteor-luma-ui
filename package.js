@@ -84,9 +84,9 @@ Package.on_use(function (api, where) {
 
   /* page header */
   api.add_files([
-    'components/page_header/pageHeader.html',
-    'components/page_header/pageTitle.html',
-    'components/page_header/pageHeaderWidget.html'
+    'components/page_header/page_header.html',
+    'components/page_header/page_title.html',
+    'components/page_header/page_header_widget.html'
   ], [ 'client' ]);
 
   /* Breadcrumbs */

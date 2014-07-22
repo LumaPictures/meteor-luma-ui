@@ -67,7 +67,9 @@ class @PageController extends RouteController
         user = Meteor.user()
         user.profile.portlets[ @route.name ] = {} unless user.profile.portlets[ @route.name ]
         unless user.profile.portlets[ @route.name ][ portlet.region ]
+          console.log "portlet config added", portlet
           user.profile.portlets[ @route.name ][ portlet.region ] = portlet
+          console.log "portlet object", user.profile.portlets
           Meteor.users.update _id: user._id,
             $set:
               'profile.portlets': user.profile.portlets
@@ -77,7 +79,7 @@ class @PageController extends RouteController
     # extend the page content with the route content if it exists
     _.extend @content, @route.options.content if @route.options.content
 
-    return @content if @ready()
+    return @content
 
   action: -> if @ready() then @render() else @render 'loading'
 
