@@ -289,8 +289,7 @@ Package.on_use(function (api, where) {
     /* callouts */
     api.add_files([
       'router/page/components/callouts/default_callouts.html',
-      'router/page/components/callouts/default_callout.html',
-      'router/page/components/callouts/default_alert.html'
+      'router/page/components/callouts/default_callout.html'
     ], 'client');
 
     /* footer */
