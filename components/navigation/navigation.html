@@ -1,35 +1,40 @@
 <template name="navigation">
   <ul class="navigation">
-    {{#each navItems }}
-      {{> navItem }}
+    {{#each nav_items }}
+      {{> nav_item }}
     {{/each}}
   </ul>
 </template>
 
-<template name="navItem">
-  {{#unless external}}
-    {{> internalNavItem }}
-  {{else}}
-    {{> externalNavItem }}
-  {{/unless}}
+<template name="nav_item">
+    {{#with options }}
+    <li class="{{ isActivePath path }}">
+        {{#if canExpand }}
+        <a href="#route-{{../name}}" class="expand" data-toggle="collapse">
+            <span>{{contexts.page.title}}</span> {{> icon styles=nav.icon }}
+        </a>
+        <ul id="route-{{../name}}" class="collapse {{isExpanded}}">
+            {{#each nav.children }}
+            {{> child_nav_item }}
+            {{/each}}
+        </ul>
+        {{else}}
+        {{> nav_anchor title=contexts.page.title route=../name icon=nav.icon }}
+        {{/if}}
+    </li>
+    {{/with}}
 </template>
 
-<template name="navAnchor">
-  {{#a route=route }}
+<template name="nav_anchor">
+  <a href="{{pathFor route }}">
     <span>{{title}}</span> {{#if icon}}{{> icon styles=icon }}{{/if}}
-  {{/a}}
-</template>
-
-<template name="externalNavItem">
-  <li>
-    {{> navAnchor route=route title=contexts.page.title icon=nav.icon }}
-  </li>
+  </a>
 </template>
 
 <template name="internalNavItem">
   <li class="{{ isActivePath path }}">
     {{#if canExpand }}
-      <a href="#{{route}}" class="expand" data-toggle="collapse">
+      <a href="#route-{{route}}" class="expand" data-toggle="collapse">
         <span>{{contexts.page.title}}</span> {{> icon iconClass=nav.icon }}
       </a>
       <ul id="{{route}}" class="collapse {{isExpanded}}">

@@ -1,8 +1,16 @@
 <template name="default_navbar">
   {{#navbar}}
-    {{> yield region='navbar_header' }}
+    {{#navbarHeader }}
+        {{> brand
+            route=navbar.brand.route
+            title=navbar.brand.title
+            logo=navbar.brand.logo
+            alt=navbar.brand.alt
+        }}
+        {{> sidebarToggle }}
+    {{/navbarHeader }}
     {{#navbarRight}}
-      {{> yield region='navbar_right' }}
+      {{> yield region='user_menu' }}
     {{/navbarRight}}
   {{/navbar}}
 </template>

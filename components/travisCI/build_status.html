@@ -1,5 +1,5 @@
 <template name="buildStatus">
-    {{#a route=route external=true}}
+    <a href="{{pathFor route}}" target="_blank">
         <img src="https://travis-ci.org/{{owner}}/{{repo}}.svg?branch=master">
-    {{/a}}
+    </a>
 </template>

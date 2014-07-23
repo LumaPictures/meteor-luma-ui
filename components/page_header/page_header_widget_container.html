@@ -1,0 +1,14 @@
+<template name="page_header_widget_container">
+    <div class="visible-xs header-element-toggle">
+        <a class="btn btn-primary btn-icon" data-toggle="collapse" data-target="#page-header-widget">
+            <i class="{{#if icon}}{{icon}}{{else}}icon-info{{/if}}"></i>
+        </a>
+    </div>
+    <div class="page-header-widget">
+        <div class="collapse" id="page-header-widget">
+            <div class="well">
+                {{> UI.contentBlock }}
+            </div>
+        </div>
+    </div>
+</template>

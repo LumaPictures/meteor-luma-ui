@@ -24,19 +24,6 @@ Package.on_use(function (api, where) {
     'iron-router-progress'
   ], [ 'client' ]);
 
-  /* ===== Exports ===== */
-
-  api.export([
-    'PageLayoutController',
-    'FullPageLayoutController',
-    'PackageLayoutController'
-  ],[ 'client' ]);
-
-  /* ===== Models ===== */
-  api.add_files([
-    'models/page.model.coffee'
-  ],[ 'client','server' ]);
-
   /* ===== Controllers ===== */
 
   /* Page Layout */
@@ -84,15 +71,22 @@ Package.on_use(function (api, where) {
 
   /* page header */
   api.add_files([
-    'components/page_header/page_header.html',
-    'components/page_header/page_title.html',
-    'components/page_header/page_header_widget.html'
+    'components/page_header/page_header_container.html',
+    'components/page_header/page_title_container.html',
+    'components/page_header/page_header_widget_container.html'
   ], [ 'client' ]);
 
   /* Breadcrumbs */
   api.add_files([
     'components/breadcrumbs/breadcrumbs.html',
-    'components/breadcrumbs/breadcrumbsLine.html'
+    'components/breadcrumbs/breadcrumbs.coffee',
+    'components/breadcrumbs/breadcrumbs_line.html',
+    'components/breadcrumbs/breadcrumbs_line_buttons_container.html'
+  ], [ 'client' ]);
+
+  // callouts
+  api.add_files([
+    'components/callouts/callout.html'
   ], [ 'client' ]);
 
   /* sidebar */
@@ -109,13 +103,15 @@ Package.on_use(function (api, where) {
   ], [ 'client' ]);
 
   /* Footer */
-  api.add_files(['components/footer/footer.html'], [ 'client' ]);
+  api.add_files([
+    'components/footer/footer_container.html'
+  ], [ 'client' ]);
 
   /* Panels */
   api.add_files([
     'components/panels/panels.html',
     'components/panels/panels.coffee'
-  ],[ 'client' ]);
+  ], [ 'client' ]);
 
   /* Bootstrap JS */
   api.add_files([
@@ -131,7 +127,7 @@ Package.on_use(function (api, where) {
     'components/bootstrap/js/scrollspy.js',
     'components/bootstrap/js/tab.js',
     'components/bootstrap/js/affix.js'
-  ], ['client']);
+  ], [ 'client' ]);
 
   api.add_files(['components/stats/stats.html'], ['client']);
 
@@ -257,43 +253,34 @@ Package.on_use(function (api, where) {
   api.add_files('components/github/report_bug_block.html', 'client');
 
   /* page layout */
-    /* navbar */
-    api.add_files([
-      /* TODO : this should be a common component */
-      'router/page/components/navbar/default_navbar.html',
-      'router/page/components/navbar/default_navbar_brand.html',
-      /* TODO : this should be a common component */
-      'router/page/components/navbar/default_navbar_header.html',
-      'router/page/components/navbar/default_navbar_right.html'
-    ], ['client']);
+  /* navbar */
+  api.add_files([
+    'router/page/components/navbar/default_navbar.html'
+  ], [ 'client' ]);
 
-    /* sidebar */
-    api.add_files([
-      'router/page/components/sidebar/default_sidebar.html',
-      'router/page/components/sidebar/default_sidebar_content.html'
-    ], 'client' );
+  api.add_files([
+    'router/page/components/user_menu/default_user_menu.html'
+  ], [ 'client' ]);
 
-    /* page header */
-    api.add_files([
-      'router/page/components/page_header/default_page_header.html',
-      'router/page/components/page_header/default_page_title.html',
-      'router/page/components/page_header/default_page_header_widget.html'
-    ], 'client' );
+  /* sidebar */
+  api.add_files([
+    'router/page/components/sidebar/default_sidebar.html',
+    'router/page/components/sidebar/default_sidebar.coffee'
+  ], [ 'client' ]);
 
-    /* breadcrumbs */
-    api.add_files([
-      'router/page/components/breadcrumbs/default_breadcrumbs_line.html',
-      'router/page/components/breadcrumbs/default_breadcrumbs.html'
-    ], 'client');
+  /* page header */
+  api.add_files([
+    'router/page/components/page_header/default_page_header.html',
+    'router/page/components/page_header/default_page_header.coffee',
+    'router/page/components/page_header/default_page_title.html',
+    'router/page/components/page_header/default_page_title.coffee'
 
-    /* callouts */
-    api.add_files([
-      'router/page/components/callouts/default_callouts.html',
-      'router/page/components/callouts/default_callout.html'
-    ], 'client');
+  ], [ 'client' ]);
 
-    /* footer */
-    api.add_files('router/page/components/footer/default_footer.html', 'client');
+  /* footer */
+  api.add_files([
+    'router/page/components/footer/default_footer.html'
+  ], [ 'client' ]);
 
   /* package layout */
   api.add_files([
@@ -301,7 +288,7 @@ Package.on_use(function (api, where) {
     'router/package/components/package_navbar_right.html',
     'router/package/components/package_navbar_brand.html',
     'router/package/components/package_footer.html'
-  ],['client'])
+  ], [ 'client' ]);
 });
 
 Package.on_test(function (api) {

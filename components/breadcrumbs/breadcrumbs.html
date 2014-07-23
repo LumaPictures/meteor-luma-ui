@@ -1,8 +1,8 @@
 <template name="breadcrumbs">
   <ul class="breadcrumb">
-    <li>{{#a route=root }}{{> icon styles="icon-home" }}{{/a}}</li>
+    <li><a href="{{pathFor root}}">{{> icon styles="icon-home" }}</a></li>
     {{#each parents}}
-    <li>{{> a route=route }}</li>
+    <li><a href="{{pathFor route}}">{{title}}</a></li>
     {{/each}}
     <li class="active">{{active}}</li>
   </ul>

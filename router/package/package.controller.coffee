@@ -1,4 +1,4 @@
-class PackageLayoutController extends PageController
+class Luma.Controllers.Package extends Luma.Controllers.Page
   yieldTemplates:
     'packageNavbarBrand': to: 'navbar_brand'
     'packageNavbarRight': to: 'navbar_right'

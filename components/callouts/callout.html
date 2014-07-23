@@ -1,0 +1,9 @@
+<template name="callout">
+    <div class="callout fade in {{styles}}">
+        {{#if dismiss }}
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        {{/if}}
+        <h5>{{title}}</h5>
+        <p>{{message}}</p>
+    </div>
+</template>

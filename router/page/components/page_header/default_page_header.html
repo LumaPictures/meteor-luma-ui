@@ -1,8 +1,13 @@
 <template name="default_page_header">
-  {{#pageHeader }}
-    {{> yield region='page_title' }}
-    {{> yield region='page_header_widget' }}
-  {{/pageHeader}}
-  {{> yield region='breadcrumbs_line' }}
-  {{> yield region='callouts' }}
+    {{#page_header_container}}
+        {{#page_title_container}}
+            {{> yield region='page_title' }}
+        {{/page_title_container}}
+    {{/page_header_container}}
+    {{#breadcrumbs_line}}
+        {{> breadcrumbs
+            root="home"
+            parents=breadcrumb_items
+        }}
+    {{/breadcrumbs_line}}
 </template>
