@@ -1,4 +1,4 @@
-Template.panelToggle.events
+Template.panel_toggle.events
   "click a": ( event, template ) ->
     $target = $( event.currentTarget ).parent().parent().next("div")
     if $target.is(":visible")
@@ -9,7 +9,7 @@ Template.panelToggle.events
       $( event.currentTarget ).children("i").addClass "icon-arrow-up9"
     $target.slideToggle 200
 
-Template.panelRemove.events
+Template.panel_remove.events
   "click a": ( event, template ) ->
     $panelContent = $( event.currentTarget ).parent().parent().parent()
     $panelContent.slideUp( 200 ).remove 200

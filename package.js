@@ -50,6 +50,7 @@ Package.on_use(function (api, where) {
   /* Common */
   api.add_files([
     'components/common/brand/brand.html',
+    'components/common/brand/brand.coffee',
     'components/common/icon/icon.html',
     'components/labels/label.html',
     'components/labels/badge.html'
@@ -212,7 +213,11 @@ Package.on_use(function (api, where) {
   api.add_files([
     'components/multi_file_upload/lib/plupload.full.min.js',
     'components/multi_file_upload/lib/plupload.queue.min.js'
-  ], 'client')
+  ], [ 'client' ]);
+
+  api.add_files([
+    'components/login/login_wrapper.html'
+  ],[ 'client' ]);
 
   /* multiselect */
   api.add_files('components/multiselect/lib/multiselect.js', 'client');

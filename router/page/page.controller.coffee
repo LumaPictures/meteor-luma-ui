@@ -18,19 +18,15 @@ class Luma.Controllers.Page extends Luma.Controllers.Base
       to: 'footer'
 
   contexts:
-    navbar:
-      header: {}
-      brand:
-        route: "home"
-        title: ""
-        logo: "/static/images/logo.png"
-        alt: ""
-    portlet_containers: []
+    brand:
+      route: "home"
+      title: ""
+      logo: "/static/images/logo.png"
+      alt: ""
     page:
       title: "Shot Elements"
       subtitle: "Manage shot elements"
     breadcrumbs: []
-    callouts: []
     footer:
       message: "Luma UI | Luma Pictures © 2014."
 
@@ -53,15 +49,15 @@ class Luma.Controllers.Page extends Luma.Controllers.Base
     for key, portlet of @route.options.portlets
       if portlet.config
         user = Meteor.user()
-        user.profile.portlets[ @route.name ] = {} unless user.profile.portlets[ @route.name ]
-        unless user.profile.portlets[ @route.name ][ portlet.region ]
-          console.log "portlet config added", portlet
-          user.profile.portlets[ @route.name ][ portlet.region ] = portlet
-          console.log "portlet object", user.profile.portlets
-          Meteor.users.update _id: user._id,
-            $set:
-              'profile.portlets': user.profile.portlets
-        portlet = Meteor.user().profile.portlets[ @route.name ][ portlet.region ]
+        if user
+          portlets = user.profile.portlets
+          portlets[ @route.name ] = {} unless portlets[ @route.name ]
+          unless portlets[ @route.name ][ portlet.region ]
+            portlets[ @route.name ][ portlet.region ] = portlet
+            Meteor.users.update _id: user._id,
+              $set:
+                'profile.portlets': portlets
+          portlet = Meteor.user().profile.portlets[ @route.name ][ portlet.region ]
       Session.set "portlet:#{ portlet.region }", portlet
 
     # extend the page content with the route content if it exists
@@ -69,16 +65,6 @@ class Luma.Controllers.Page extends Luma.Controllers.Base
 
     return @content
 
-  action: -> if @ready() then @render() else @render 'loading'
-
-  onAfterAction: -> return
-
 if Meteor.isClient
-
-  UI.registerHelper 'navbar', -> return Session.get 'navbar'
-
-  UI.registerHelper 'breadcrumbs', -> return Session.get 'breadcrumbs'
-
-  UI.registerHelper 'footer', -> return Session.get 'footer'
 
   UI.registerHelper 'toJSON', ( object ) -> JSON.stringify object, true, 2

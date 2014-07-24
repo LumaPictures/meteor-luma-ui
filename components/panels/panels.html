@@ -1,56 +1,36 @@
 <template name="panel">
   <div class="panel {{#if styles}}{{styles}}{{else}}panel-default{{/if}}">
-    {{#if UI.contentBlock }}
-      {{> UI.contentBlock }}
-    {{/if}}
+    {{> UI.contentBlock }}
   </div>
 </template>
 
-<template name="panelHeading">
+<template name="panel_heading">
   <div class="panel-heading">
     <h6 class="panel-title">
       {{#if icon}}{{> icon styles=icon }}{{/if}}
       {{title}}
     </h6>
-    {{#if UI.contentBlock }}
       {{> UI.contentBlock }}
-    {{/if}}
   </div>
 </template>
 
-<template name="panelIconGroup">
-  <div class="panel-icons-group">
-    {{#if UI.contentBlock }}
-      {{> UI.contentBlock }}
-    {{/if}}
-  </div>
+<template name="panel_icon_group">
+    <div class="panel-icons-group">
+        {{> UI.contentBlock }}
+    </div>
 </template>
 
-<template name="pullRight">
-  <div class="pull-right">
-    {{#if UI.contentBlock }}
-      {{> UI.contentBlock }}
-    {{/if}}
-  </div>
-</template>
-
-<template name="panelBody">
+<template name="panel_body">
   <div class="panel-body">
-    {{#if UI.contentBlock }}
       {{> UI.contentBlock }}
-    {{/if}}
   </div>
 </template>
 
 
-<template name="panelToggle">
+<template name="panel_toggle">
   <a href="#" class="btn btn-link btn-icon panel-toggle"><i class="icon-arrow-up9"></i></a>
 </template>
 
-<template name="panelRemove">
+<template name="panel_remove">
   <a href="#" class="btn btn-link btn-icon panel-remove"><i class="icon-cancel-circle"></i></a>
-</template>
-
-<template name="panelModal">
-  <a data-toggle="modal" role="button" href="#options-modal" class="btn btn-link btn-icon"><i class="icon-cog4"></i></a>
 </template>
