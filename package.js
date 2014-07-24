@@ -21,7 +21,8 @@ Package.on_use(function (api, where) {
     'blaze-layout',
     'jquery',
     'less',
-    'iron-router-progress'
+    'iron-router-progress',
+    'reactive-dict'
   ], [ 'client' ]);
 
   /* ===== Controllers ===== */
@@ -150,7 +151,8 @@ Package.on_use(function (api, where) {
     'components/modals/modal_launcher.coffee',
     'components/modals/modal_header.html',
     'components/modals/modal_body.html',
-    'components/modals/modal.html'
+    'components/modals/modal.html',
+    'components/modals/modal.coffee'
   ], [ 'client' ]);
 
   /* Error Pages */
