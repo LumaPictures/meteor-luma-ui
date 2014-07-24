@@ -114,6 +114,11 @@ Package.on_use(function (api, where) {
     'components/panels/panels.coffee'
   ], [ 'client' ]);
 
+  // alert
+  api.add_files([
+    'components/alert/alert.html'
+  ], [ 'client' ]);
+
   /* Bootstrap JS */
   api.add_files([
     'components/bootstrap/js/transition.js',
@@ -138,6 +143,15 @@ Package.on_use(function (api, where) {
     'components/moment/lib/moment.recur.js',
     'components/moment/lib/moment.range.js'
   ], 'client');
+
+  // modals
+  api.add_files([
+    'components/modals/modal_launcher.html',
+    'components/modals/modal_launcher.coffee',
+    'components/modals/modal_header.html',
+    'components/modals/modal_body.html',
+    'components/modals/modal.html'
+  ], [ 'client' ]);
 
   /* Error Pages */
   api.add_files([

@@ -1,0 +1,8 @@
+<template name="alert">
+    {{#if trigger}}
+    <div class="alert alert-{{status}} fade in block-inner">
+        {{#if dismissable}}<button type="button" class="close" data-dismiss="alert">x</button>{{/if}}
+        {{> UI.contentBlock }}
+    </div>
+    {{/if}}
+</template>
