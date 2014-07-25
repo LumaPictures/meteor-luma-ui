@@ -185,6 +185,9 @@ Package.on_use(function (api, where) {
   /* timepicker */
   api.add_files('components/time_picker/lib/timepicker.min.js', 'client');
 
+  // tabs
+  api.add_files('components/tabs/tabs.html', 'client');
+
   /* charts */
   api.add_files([
     'components/charts/lib/flot/flot.js',

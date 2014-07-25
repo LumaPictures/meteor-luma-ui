@@ -1,0 +1,27 @@
+<template name="tabs">
+    <div class="tabbable">
+        <ul class="nav nav-tabs">
+            {{> UI.contentBlock }}
+        </ul>
+    </div>
+</template>
+
+<template name="tab">
+    <li class="{{#if active}}active{{/if}}">
+        <a href="#{{selector}}" data-toggle="tab">
+            {{> icon styles=icon }} {{label}}
+        </a>
+    </li>
+</template>
+
+<template name="tab_content_container">
+    <div class="tab-content">
+        {{> UI.contentBlock }}
+    </div>
+</template>
+
+<template name="tab_content">
+    <div class="tab-pane fade {{#if active}}active in{{/if}}" id="{{selector}}">
+        {{> UI.contentBlock }}
+    </div>
+</template>

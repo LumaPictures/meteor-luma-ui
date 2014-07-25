@@ -2,11 +2,11 @@ Template.panel_toggle.events
   "click a": ( event, template ) ->
     $target = $( event.currentTarget ).parent().parent().next("div")
     if $target.is(":visible")
-      $( event.currentTarget ).children("i").removeClass "icon-arrow-up9"
-      $( event.currentTarget ).children("i").addClass "icon-arrow-down9"
+      $( event.currentTarget ).children("i").removeClass "icon-minus"
+      $( event.currentTarget ).children("i").addClass "icon-plus"
     else
-      $( event.currentTarget ).children("i").removeClass "icon-arrow-down9"
-      $( event.currentTarget ).children("i").addClass "icon-arrow-up9"
+      $( event.currentTarget ).children("i").removeClass "icon-plus"
+      $( event.currentTarget ).children("i").addClass "icon-minus"
     $target.slideToggle 200
 
 Template.panel_remove.events

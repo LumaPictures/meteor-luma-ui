@@ -2,10 +2,9 @@ Luma.Modal =
 
   _dictionary: new ReactiveDict()
 
-  show: ( selector, options = {} ) ->
+  show: ( selector ) ->
     @hide_all()
     @_dictionary.set selector, true
-    selector = "##{ selector }"
 
   hide: ( selector ) -> @_dictionary.set selector, false
 
