@@ -1,47 +1,60 @@
 //
 // Badges
-// --------------------------------------------------
+// ------
+#Badges {
 
+  // Base classes
+  // ------------
+  .base () {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: @font-size-small;
+    font-weight: @badge-font-weight;
+    color: @badge-color;
+    line-height: @badge-line-height;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-align: center;
+    background-color: @badge-bg;
+    border-radius: @badge-border-radius;
 
-// Base classes
-.badge {
-  display: inline-block;
-  min-width: 10px;
-  padding: 3px 7px;
-  font-size: @font-size-small;
-  font-weight: @badge-font-weight;
-  color: @badge-color;
-  line-height: @badge-line-height;
-  vertical-align: baseline;
-  white-space: nowrap;
-  text-align: center;
-  background-color: @badge-bg;
-  border-radius: @badge-border-radius;
+    // Empty badges collapse automatically (not available in IE8)
+    &:empty {
+      display: none;
+    }
 
-  // Empty badges collapse automatically (not available in IE8)
-  &:empty {
-    display: none;
+    // Quick fix for badges in buttons
+    .btn & {
+      position: relative;
+      top: -1px;
+    }
+    .btn-xs & {
+      top: 0;
+      padding: 1px 5px;
+    }
   }
 
-  // Quick fix for badges in buttons
-  .btn & {
-    position: relative;
-    top: -1px;
-  }
-  .btn-xs & {
-    top: 0;
-    padding: 1px 5px;
+  // Hover state
+  // -----------
+  // usually only applied to links
+  .hover-state () {
+    &:hover,
+    &:focus {
+      color: @badge-link-hover-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 }
 
-// Hover state, but only for links
+.badge {
+  #Badges.base;
+}
+
+
 a.badge {
-  &:hover,
-  &:focus {
-    color: @badge-link-hover-color;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  #Badges.hover-state;
 }
 
 // Account for counters in navs

@@ -29,30 +29,30 @@ Package.on_use(function (api, where) {
 
   /* Page Layout */
   api.add_files([
-    'router/page/page.controller.coffee',
-    'router/page/page.layout.html',
-    'router/page/page.layout.coffee'
+    'controllers/page/page.controller.coffee',
+    'controllers/page/page.layout.html',
+    'controllers/page/page.layout.coffee'
   ], [ 'client' ]);
 
   /* Full Page Layout */
   api.add_files([
-    'router/full_page/full_page.controller.coffee',
-    'router/full_page/full_page.layout.html',
-    'router/full_page/full_page.layout.coffee'
+    'controllers/full_page/full_page.controller.coffee',
+    'controllers/full_page/full_page.layout.html',
+    'controllers/full_page/full_page.layout.coffee'
   ],[ 'client' ]);
 
   /* Package Page Layout */
   api.add_files([
-    'router/package/package.controller.coffee'
+    'controllers/package/package.controller.coffee'
   ],[ 'client' ]);
 
   /* ===== Components ===== */
 
   /* Common */
   api.add_files([
-    'components/common/brand/brand.html',
-    'components/common/brand/brand.coffee',
-    'components/common/icon/icon.html',
+    'components/brand/brand.html',
+    'components/brand/brand.coffee',
+    'components/icon/icon.html',
     'components/labels/label.html',
     'components/labels/badge.html'
   ],[ 'client' ]);
@@ -161,60 +161,11 @@ Package.on_use(function (api, where) {
     'components/error_pages/error_404.html'
   ],['client']);
 
-  /* colorpicker */
-  api.add_files('components/colorpicker/lib/colorpicker.js', 'client');
-
-  /* collapsible */
-  api.add_files('components/collapsible/lib/collapsible.min.js', 'client');
-
-  /* fancybox */
-  api.add_files('components/fancybox/lib/fancybox.min.js', 'client');
-
-  /* full_calendar */
-  api.add_files('components/full_calendar/lib/fullcalendar.min.js', 'client');
-
-  /* jGrowl */
-  api.add_files('components/jGrowl/lib/jgrowl.min.js', 'client');
-
   /* hover dropdown */
   api.add_files('components/hover_dropdown/lib/hover_dropdown.min.js', 'client');
 
-  /* code_prettify */
-  api.add_files('components/code_prettify/lib/prettify.js', 'client');
-
-  /* timepicker */
-  api.add_files('components/time_picker/lib/timepicker.min.js', 'client');
-
   // tabs
   api.add_files('components/tabs/tabs.html', 'client');
-
-  /* charts */
-  api.add_files([
-    'components/charts/lib/flot/flot.js',
-    'components/charts/lib/flot/flot.animator.min.js',
-    'components/charts/lib/flot/flot.orderbars.js',
-    'components/charts/lib/flot/flot.pie.js',
-    'components/charts/lib/flot/flot.resize.min.js',
-    'components/charts/lib/flot/flot.time.js',
-    'components/charts/lib/sparkline/sparkline.min.js',
-    'components/charts/lib/excanvas/excanvas.min.js'
-  ], 'client');
-
-  /* Globalize */
-  api.add_files([
-    'components/globalize/lib/globalize.js',
-    'components/globalize/lib/globalize.culture.de-DE.js',
-    'components/globalize/lib/globalize.culture.ja-JP.js'
-  ], 'client');
-
-  /* tags */
-  api.add_files('components/tags/lib/tags.min.js', 'client');
-
-  /* validate */
-  api.add_files('components/validate/lib/validate.min.js', 'client');
-
-  /* list box */
-  api.add_files('components/listbox/lib/listbox.js', 'client');
 
   /* input mask */
   api.add_files('components/input_mask/lib/inputmask.js', 'client');
@@ -222,46 +173,15 @@ Package.on_use(function (api, where) {
   /* input limit */
   api.add_files('components/input_limit/lib/inputlimit.min.js', 'client');
 
-  /* autosize */
-  api.add_files('components/autosize/lib/autosize.js', 'client');
-
   /* uniform */
   api.add_files('components/uniform/lib/uniform.min.js', 'client');
-
-  /* multi file upload */
-  api.add_files([
-    'components/multi_file_upload/lib/plupload.full.min.js',
-    'components/multi_file_upload/lib/plupload.queue.min.js'
-  ], [ 'client' ]);
 
   api.add_files([
     'components/login/login_wrapper.html'
   ],[ 'client' ]);
 
-  /* multiselect */
-  api.add_files('components/multiselect/lib/multiselect.js', 'client');
-
-  /* bootstrap switch */
-  api.add_files('components/bootstrap_switch/lib/switch.min.js', 'client');
-
-  /* date_range */
-  api.add_files([
-    'components/date_range/lib/daterangepicker.js',
-    'components/date_range/date_range.html'
-  ], 'client');
-
   /* pagination */
   api.add_files( 'components/pagination/pagination.html', 'client');
-
-  /* wysihtml5
-  api.add_files('components/wysihtml5/lib/wysihtml5-0.3.0.js', 'client');
-  api.add_files('components/wysihtml5/lib/bootstrap3-wysihtml5.js', 'client');
-  api.add_files('components/wysihtml5/lib/toolbar.js','client');
-  api.export('wysihtml5','client');
-  */
-
-  /* selectors */
-  api.add_files('components/language_selector/language_selector.html', 'client');
 
   /* search */
   api.add_files([
@@ -279,39 +199,39 @@ Package.on_use(function (api, where) {
   /* page layout */
   /* navbar */
   api.add_files([
-    'router/page/components/navbar/default_navbar.html'
+    'controllers/page/components/navbar/default_navbar.html'
   ], [ 'client' ]);
 
   api.add_files([
-    'router/page/components/user_menu/default_user_menu.html'
+    'controllers/page/components/user_menu/default_user_menu.html'
   ], [ 'client' ]);
 
   /* sidebar */
   api.add_files([
-    'router/page/components/sidebar/default_sidebar.html',
-    'router/page/components/sidebar/default_sidebar.coffee'
+    'controllers/page/components/sidebar/default_sidebar.html',
+    'controllers/page/components/sidebar/default_sidebar.coffee'
   ], [ 'client' ]);
 
   /* page header */
   api.add_files([
-    'router/page/components/page_header/default_page_header.html',
-    'router/page/components/page_header/default_page_header.coffee',
-    'router/page/components/page_header/default_page_title.html',
-    'router/page/components/page_header/default_page_title.coffee'
+    'controllers/page/components/page_header/default_page_header.html',
+    'controllers/page/components/page_header/default_page_header.coffee',
+    'controllers/page/components/page_header/default_page_title.html',
+    'controllers/page/components/page_header/default_page_title.coffee'
 
   ], [ 'client' ]);
 
   /* footer */
   api.add_files([
-    'router/page/components/footer/default_footer.html'
+    'controllers/page/components/footer/default_footer.html'
   ], [ 'client' ]);
 
   /* package layout */
   api.add_files([
-    'router/package/components/package_header_widget.html',
-    'router/package/components/package_navbar_right.html',
-    'router/package/components/package_navbar_brand.html',
-    'router/package/components/package_footer.html'
+    'controllers/package/components/package_header_widget.html',
+    'controllers/package/components/package_navbar_right.html',
+    'controllers/package/components/package_navbar_brand.html',
+    'controllers/package/components/package_footer.html'
   ], [ 'client' ]);
 });
 
