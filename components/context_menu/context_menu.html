@@ -1,0 +1,11 @@
+<template name="context_menu">
+    {{#if context_menu }}
+    <ul id="context-menu" class="dropdown-menu multi-level"
+        role="menu"
+        aria-labelledby="dropdownMenu"
+        style="left:{{context_menu.position.x}}px;top:{{context_menu.position.y}}px;"
+    >
+        {{> UI.dynamic template=context_menu.template data=context_menu.data }}
+    </ul>
+    {{/if}}
+</template>

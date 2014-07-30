@@ -190,6 +190,12 @@ Package.on_use(function (api, where) {
     'components/search/search_line.html'
   ], 'client');
 
+  api.add_files([
+    'components/context_menu/context_menu.html',
+    'components/context_menu/context_menu.coffee',
+    'components/context_menu/context_submenu.html'
+  ], [ 'client' ]);
+
   /* TravisCI */
   api.add_files('components/travisCI/build_status.html', 'client');
 
