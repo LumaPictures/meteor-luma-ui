@@ -1,4 +1,4 @@
-class @ContextMenu
+class Luma.ContextMenu
 
   @selector: '#context-menu'
 
@@ -62,26 +62,26 @@ class @ContextMenu
     @set_data null
     @set_isRendered false
 
-Template.context_menu.created = -> ContextMenu.hide()
+Template.context_menu.created = -> Luma.ContextMenu.hide()
 
 Template.context_menu.rendered = ->
-  ContextMenu.autorun = Deps.autorun ->
-    isRendered = ContextMenu.get_isRendered()
+  Luma.ContextMenu.autorun = Deps.autorun ->
+    isRendered = Luma.ContextMenu.get_isRendered()
     if isRendered
-      $( 'body' ).on 'click', ContextMenu.is_click_outside
+      $( 'body' ).on 'click', Luma.ContextMenu.is_click_outside
     else
-      $( 'body' ).off 'click', ContextMenu.is_click_outside
+      $( 'body' ).off 'click', Luma.ContextMenu.is_click_outside
 
 Template.context_menu.destroyed = ->
-  ContextMenu.hide()
-  ContextMenu.autorun.stop()
+  Luma.ContextMenu.hide()
+  Luma.ContextMenu.autorun.stop()
 
 Template.context_menu.helpers
   context_menu: ->
-    template = ContextMenu.get_template()
-    data = ContextMenu.get_data()
-    isRendered = ContextMenu.get_isRendered()
-    position = ContextMenu.get_position()
+    template = Luma.ContextMenu.get_template()
+    data = Luma.ContextMenu.get_data()
+    isRendered = Luma.ContextMenu.get_isRendered()
+    position = Luma.ContextMenu.get_position()
     if template and data and isRendered
       return {
         template: template
