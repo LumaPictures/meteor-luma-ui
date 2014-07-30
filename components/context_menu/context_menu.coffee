@@ -29,8 +29,8 @@ class Luma.ContextMenu
   @set_position: ( event ) ->
     if _.isNumber event.pageX
       event.pageX = if event.pageX > 20 then event.pageX - 20 else event.pageX
-    ContextMenu.set "pageX", event.pageX
-    ContextMenu.set "pageY", event.pageY
+    Luma.ContextMenu.set "pageX", event.pageX
+    Luma.ContextMenu.set "pageY", event.pageY
 
   @get_position: ->
     x = ContextMenu.get "pageX"
@@ -41,14 +41,14 @@ class Luma.ContextMenu
     }
 
   @reset_position: ->
-    ContextMenu.set "pageX", undefined
-    ContextMenu.set "pageY", undefined
+    Luma.ContextMenu.set "pageX", undefined
+    Luma.ContextMenu.set "pageY", undefined
 
   @is_click_outside: ( event ) ->
-    $container = $( ContextMenu.selector )
+    $container = $( Luma.ContextMenu.selector )
     unless $container is event.target
       if $container.has( event.target ).length is 0
-        ContextMenu.hide()
+        Luma.ContextMenu.hide()
 
   @show: ( event, template, data ) ->
     event.preventDefault()

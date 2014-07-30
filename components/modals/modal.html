@@ -1,9 +1,14 @@
 <template name="modal">
-    <div id="{{selector}}" class="modal fade" tabindex="-1" role="dialog">
+    {{#if modal}}
+    <div id="modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                {{> UI.contentBlock }}
+                {{> modal_header label=modal.label }}
+                {{#modal_body}}
+                    {{> UI.dynamic template=modal.template data=modal.data }}
+                {{/modal_body}}
             </div>
         </div>
     </div>
+    {{/if}}
 </template>

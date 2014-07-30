@@ -1,39 +1,77 @@
-Luma.Modal =
+class Luma.Modal
 
-  _dictionary: new ReactiveDict()
+  @selector: '#modal'
 
-  show: ( selector ) ->
-    @hide_all()
-    @_dictionary.set selector, true
+  @_dictionary: new ReactiveDict()
 
-  hide: ( selector ) -> @_dictionary.set selector, false
+  @get: ( key ) -> @_dictionary.get key
 
-  hide_all: ->
-    for key of @_dictionary.keys
-      @_dictionary.set key, false
+  @set: ( key, value ) -> @_dictionary.set key, value
 
-  is_visible: ( selector ) -> @_dictionary.get selector
+  @get_template: -> @_dictionary.get "template"
+
+  @set_template: ( template ) ->
+    check template, String if template
+    @set "template", template
+
+  @get_data: -> @_dictionary.get "data"
+
+  @set_data: ( data ) ->
+    check data, Object if data
+    @set "data", data
+
+  @get_isRendered: -> @_dictionary.get "is_rendered"
+
+  @set_isRendered: ( isRendered ) ->
+    check isRendered, Boolean
+    @set "is_rendered", isRendered
+
+  @is_click_outside: ( event ) ->
+    $container = $( Luma.Modal.selector )
+    unless $container is event.target
+      if $container.has( event.target ).length is 0
+        Luma.Modal.hide()
+
+  @show: ( event, template, data ) ->
+    event.preventDefault()
+    @set_template template
+    @set_data data
+    @set_isRendered true
+
+  @hide: ->
+    $( Luma.Modal.selector ).modal "hide"
+    $( '.modal-backdrop' ).remove()
+    @set_template null
+    @set_data null
+    @set_isRendered false
+
+Template.modal.created = -> Luma.Modal.hide()
 
 Template.modal.rendered = ->
-  options = @data.option or {}
-  selector = @data.selector
-  $selector = "##{ selector }"
-  $( $selector ).modal options
-  $container = $( "#{ $selector } .modal-dialog" )
-  $('body').on "click", ( event ) ->
-    unless $container.is event.target
-      if $container.has( event.target ).length is 0
-        Luma.Modal.hide selector
-
+  Luma.Modal.autorun = Deps.autorun ->
+    isRendered = Luma.Modal.get_isRendered()
+    if isRendered
+      $( 'body' ).on 'click', Luma.Modal.is_click_outside
+      Deps.afterFlush -> $( Luma.Modal.selector ).modal()
+    else
+      $( 'body' ).off 'click', Luma.Modal.is_click_outside
 
 Template.modal.destroyed = ->
-  selector = "##{ @data.selector }"
-  $( selector ).modal 'hide'
-  $('body').unbind 'click'
-  $('.modal-backdrop').remove()
+  Luma.Modal.hide()
+  Luma.Modal.autorun.stop()
 
-Template.modal.events
+Template.modal.helpers
+  modal: ->
+    template = Luma.Modal.get_template()
+    data = Luma.Modal.get_data()
+    isRendered = Luma.Modal.get_isRendered()
+    if template and data and isRendered
+      return {
+        template: template
+        data: data
+      }
+    else return false
 
-  'click .close': ( event, template ) -> Luma.Modal.hide template.data.selector
+Template.modal_header.events
 
-UI.registerHelper 'is_modal_visible', ( selector ) -> return  Luma.Modal.is_visible selector
+  "click .close": -> Luma.Modal.hide()
