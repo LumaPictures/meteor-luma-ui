@@ -65,10 +65,14 @@ Template.modal.helpers
     template = Luma.Modal.get_template()
     data = Luma.Modal.get_data()
     isRendered = Luma.Modal.get_isRendered()
+    label = Luma.Modal.get "label"
+    icon = Luma.Modal.get "icon"
     if template and data and isRendered
       return {
         template: template
         data: data
+        label: label
+        icon: icon
       }
     else return false
 

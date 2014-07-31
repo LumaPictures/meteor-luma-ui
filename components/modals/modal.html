@@ -3,7 +3,7 @@
     <div id="modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                {{> modal_header label=modal.label }}
+                {{> modal_header label=modal.label icon=modal.icon }}
                 {{#modal_body}}
                     {{> UI.dynamic template=modal.template data=modal.data }}
                 {{/modal_body}}

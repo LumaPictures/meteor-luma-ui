@@ -1,0 +1,73 @@
+/*===== Page title statistics =====*/
+
+.statistics {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 1;
+}
+.statistics > li {
+  min-width: 130px;
+  margin: 5px 25px;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+.statistics > li > span {
+  font-size: 11px;
+  margin-top: 8px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.statistics.list-justified > li {
+  margin: 0;
+  padding-left: 50px;
+}
+.statistics.list-justified > li:first-child {
+  padding-left: 0;
+}
+
+.statistics-info {
+  margin-bottom: 8px;
+}
+.statistics-info > a {
+  display: inline-block;
+  float: left;
+  margin-right: 8px;
+}
+.statistics-info > a > i {
+  color: white;
+  padding: 5px 6px 6px 6px;
+  margin: 0;
+  display: block;
+}
+.statistics-info > strong {
+  font-size: 22px;
+  font-weight: 600;
+  display: block;
+  float: left;
+  margin-top: 2px;
+}
+
+@media (max-width: 479px) {
+  .statistics > li {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .statistics.list-justified > li {
+    padding-left: 0;
+  }
+  .statistics.list-justified li {
+    margin-top: 20px;
+  }
+  .statistics.list-justified li:first-child {
+    margin-top: 0;
+  }
+}

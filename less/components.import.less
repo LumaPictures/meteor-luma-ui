@@ -52,6 +52,8 @@
 /* Flags */
 @import "../packages/luma-ui/components/flags/flags.import.less";
 
+@import "../packages/luma-ui/components/stats/stats.import.less";
+
 @import "../packages/luma-ui/components/general_layout/general_styles.import.less";
 
 
@@ -377,6 +379,252 @@
 
 .status-warning {
   background-color: #E7804F;
+}
+
+/*===== Info buttons =====*/
+
+.info-buttons {
+  margin-left: 0;
+  margin-right: 0;
+}
+.info-buttons a {
+  display: block;
+  color: #505050;
+  padding: 10px 12px;
+  text-align: center;
+  position: relative;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+}
+.info-buttons a + a {
+  border-left: 0;
+}
+.info-buttons a i {
+  font-size: 32px;
+  margin: 0;
+  display: block;
+  font-weight: normal;
+}
+.info-buttons a span {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 12px;
+}
+.info-buttons a strong {
+  position: absolute;
+  right: -1px;
+  top: -1px;
+}
+.info-buttons a:hover {
+  background-color: #fcfcfc;
+  border-color: #e5e5e5;
+  color: #2A6496;
+}
+.info-buttons a:active,
+.info-buttons a:focus {
+  color: #3792A8;
+  border-color: #d5d5d5;
+}
+
+
+
+
+
+/*===== Info blocks =====*/
+
+.info-blocks {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+}
+.info-blocks > li {
+  display: inline-block;
+  text-align: center;
+  min-width: 150px;
+  white-space: nowrap;
+  margin: 0 10px 5px 10px;
+}
+.info-blocks > li > a > i {
+  font-size: 48px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.info-blocks > li > a:hover {
+  opacity: 0.8;
+  filter: alpha(Opacity=80);
+  color: #fff;
+}
+
+.top-info {
+  margin: 16px 14px 14px 14px;
+}
+.top-info > a {
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.top-info > a:hover {
+  opacity: 0.8;
+  filter: alpha(Opacity=80);
+  color: #fff;
+}
+.top-info > small {
+  font-size: 11px;
+  display: block;
+  margin-top: -2px;
+}
+
+.bottom-info {
+  display: block;
+  font-size: 11px;
+  padding: 4px 8px 5px 8px;
+  font-weight: 600;
+  border-radius: 0 0 2px 2px;
+  -webkit-border-radius: 0 0 2px 2px;
+  -moz-border-radius: 0 0 2px 2px;
+}
+
+@media (max-width: 478px) {
+  .info-blocks > li {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+
+
+
+
+/*===== Page stats =====*/
+
+.page-stats {
+  margin-left: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+}
+.page-stats li {
+  padding: 12px 18px;
+  display: inline-block;
+}
+.page-stats li.bg-default {
+  background-color: transparent;
+  border: none;
+}
+.page-stats li.bg-default + li {
+  border-left: 0;
+}
+.page-stats li:first-child {
+  border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+}
+.page-stats li:last-child {
+  border-radius: 0 2px 2px 0;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+}
+
+.page-stats-showcase {
+  float: left;
+  margin-right: 18px;
+}
+.page-stats-showcase span {
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+.page-stats-showcase h2 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@media (max-width: 991px) {
+  .page-stats.list-justified li.background-default {
+    border-left: 1px solid #ddd;
+  }
+  .page-stats.list-justified li {
+    margin-top: 20px;
+  }
+  .page-stats.list-justified li:first-child {
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+
+
+/*===== Other styles =====*/
+
+.block {
+  margin-bottom: 35px;
+}
+.block-inner {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.with-padding {
+  padding: 16px;
+}
+
+.subtitle {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.subtitle i {
+  float: left;
+  margin: 0 6px 0 0;
+  color: white;
+}
+
+.language.dropdown > a > img {
+  float: left;
+  margin: 0 6px 0 0;
+}
+
+label.error {
+  margin-top: 6px;
+  margin-bottom: 0;
+  color: #fff;
+  background-color: #D65C4F;
+  display: table;
+  padding: 5px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+}
+label.error.valid {
+  background-color: #65B688;
+}
+
+.mandatory {
+  color: #b94a48;
+  margin-left: 2px;
+}
+
+ul.list-justified li {
+  float: none;
+  width: 1%;
+  display: table-cell;
+}
+
+@media (max-width: 991px) {
+  ul.list-justified li {
+    display: block;
+    width: auto;
+  }
 }
 
 
