@@ -18,7 +18,6 @@ Package.on_use(function (api, where) {
     'ui',
     'templating',
     'spacebars',
-    'blaze-layout',
     'jquery',
     'less',
     'iron-router-progress'
