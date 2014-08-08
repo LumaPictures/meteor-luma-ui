@@ -16,7 +16,9 @@
 
 <template name="navAnchor">
   {{#a route=route }}
-    <span>{{title}}</span> {{#if icon}}{{> icon styles=icon }}{{/if}}
+    {{#with ..}}
+      <span>{{title}}</span> {{#if icon}}{{> icon styles=icon }}{{/if}}
+    {{/with}}
   {{/a}}
 </template>
 
