@@ -1,5 +1,5 @@
 Package.describe({
-  name: "luma:luma-ui",
+  name: "luma:ui",
   summary: "Luma Pictures User Interface",
   git: "https://github.com/lumapictures/meteor-luma-ui.git",
   version: "0.1.28"
@@ -15,9 +15,9 @@ Package.onUse(function (api) {
   api.use([
     'standard-app-packages',
     'underscore',
-    'iron-router',
+    'iron:router@0.9.3',
     'coffeescript',
-    'luma-router'
+    'luma:router@0.0.9'
   ],[ 'client', 'server' ]);
 
   api.use([
@@ -26,7 +26,7 @@ Package.onUse(function (api) {
     'spacebars',
     'jquery',
     'less',
-    'iron-router-progress'
+    'mrt:iron-router-progress@0.9.2'
   ], [ 'client' ]);
 
   /* ===== Exports ===== */
@@ -314,7 +314,7 @@ Package.onTest(function (api) {
     'coffeescript',
     'tinytest',
     'test-helpers',
-    'luma-ui'
+    'luma:ui'
   ], ['client', 'server']);
 
   api.add_files(['tests/luma-ui.test.coffee'],['client', 'server']);
