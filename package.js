@@ -1,8 +1,14 @@
 Package.describe({
-  summary: "Luma Pictures User Interface"
+  name: "luma:luma-ui",
+  summary: "Luma Pictures User Interface",
+  git: "https://github.com/lumapictures/meteor-luma-ui.git",
+  version: "0.1.28"
 });
 
-Package.on_use(function (api, where) {
+Package.onUse(function (api) {
+
+  if (api.versionsFrom)
+    api.versionsFrom('METEOR@0.9.0');
 
   /* ===== Dependencies ===== */
 
@@ -303,7 +309,7 @@ Package.on_use(function (api, where) {
   ],['client'])
 });
 
-Package.on_test(function (api) {
+Package.onTest(function (api) {
   api.use([
     'coffeescript',
     'tinytest',
